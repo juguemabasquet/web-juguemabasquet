@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y94JLWG29B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y94JLWG29B');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Entrevistes · Juguem a Bàsquet · Badalona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #FF6A1A;
+  --orange-dark: #cc4d0e;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --bg: #f5f5f3;
+  --bg2: #eeede9;
+  --text: #111111;
+  --muted: #666666;
+  --border: rgba(0,0,0,.1);
+  --dim: rgba(0,0,0,.04);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+
+/* ── NAV (negre) ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(10,10,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-ball{width:36px;height:36px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.nav-name{font-family:'Bungee',sans-serif;font-size:14px;color:#fff;letter-spacing:1px;}
+.nav-back{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:6px 16px;transition:all .2s;}
+.nav-back:hover{color:var(--orange);border-color:var(--orange);}
+.nav-link{color:rgba(255,255,255,.55);font-size:13px;font-weight:600;text-decoration:none;transition:color .2s;}
+.nav-link:hover{color:#fff;}
+@media(max-width:700px){.nav ul{display:none!important;}}
+
+/* ── HERO (negre) ── */
+.hero{background:var(--black);min-height:52vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 48px 70px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(255,106,26,.14) 0%,transparent 70%);}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,106,26,.12);border:1px solid rgba(255,106,26,.3);border-radius:20px;padding:6px 18px;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:22px;position:relative;}
+.hero h1{font-family:'Bungee',sans-serif;font-size:clamp(48px,8vw,96px);line-height:.93;letter-spacing:-2px;position:relative;color:#fff;}
+.hero h1 span{color:var(--orange);}
+.hero-sub{max-width:580px;margin:20px auto 0;font-size:17px;color:rgba(255,255,255,.5);line-height:1.7;position:relative;}
+
+/* ── TABS DE CATEGORIA ── */
+.cats-bar{background:#fff;border-bottom:1px solid var(--border);padding:0 48px;display:flex;gap:0;overflow-x:auto;}
+.cat-btn{padding:16px 20px;font-size:13px;font-weight:700;color:var(--muted);border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;letter-spacing:.5px;}
+.cat-btn.active{color:var(--orange);border-bottom-color:var(--orange);}
+.cat-btn:hover{color:var(--text);}
+
+/* ── ENTREVISTA DESTACADA ── */
+.featured-wrap{padding:56px 48px;max-width:1200px;margin:0 auto;}
+.feat-label{display:flex;align-items:center;gap:10px;margin-bottom:32px;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--orange);}
+.feat-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+.interview-card{background:#fff;border:1px solid var(--border);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:300px 1fr;box-shadow:0 4px 28px rgba(0,0,0,.07);}
+@media(max-width:900px){.interview-card{grid-template-columns:1fr;}}
+
+/* Perfil (negre) */
+.int-profile{background:linear-gradient(160deg,#1a1a1a,#0d0d0d);padding:38px 30px;display:flex;flex-direction:column;gap:20px;}
+.profile-photo{width:100px;height:100px;border-radius:18px;background:linear-gradient(135deg,var(--orange),var(--orange-dark));display:flex;align-items:center;justify-content:center;font-size:48px;flex-shrink:0;}
+.profile-nick{font-family:'Bungee',sans-serif;font-size:30px;color:var(--orange);letter-spacing:-1px;}
+.profile-name{font-family:'Bungee',sans-serif;font-size:24px;color:#fff;letter-spacing:-1px;line-height:1.1;}
+.profile-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.7;}
+.profile-facts{display:flex;flex-direction:column;gap:10px;}
+.pf-row{display:flex;gap:8px;font-size:12px;}
+.pf-icon{font-size:13px;flex-shrink:0;margin-top:1px;}
+.pf-label{color:rgba(255,255,255,.4);}
+.pf-val{font-weight:700;color:#fff;}
+.profile-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.ptag{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:20px;}
+.ptag-o{background:rgba(255,106,26,.2);color:var(--orange);border:1px solid rgba(255,106,26,.3);}
+.ptag-w{background:rgba(255,255,255,.07);color:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.1);}
+
+/* Entrevista (blanc) */
+.int-body{padding:40px 44px;display:flex;flex-direction:column;gap:26px;background:#fff;}
+@media(max-width:700px){.int-body{padding:26px 22px;}}
+.int-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--border);}
+.meta-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);}
+.meta-txt{font-size:12px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.int-quote{font-size:18px;font-weight:600;font-style:italic;line-height:1.65;border-left:3px solid var(--orange);padding-left:18px;color:var(--text);}
+.qa-list{display:flex;flex-direction:column;gap:20px;}
+.qa-item{}
+.qa-q{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;}
+.q-dot{flex-shrink:0;width:26px;height:26px;border-radius:8px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:'Bungee',sans-serif;font-size:12px;color:#fff;margin-top:1px;}
+.q-txt{font-size:14px;font-weight:700;color:var(--text);line-height:1.5;}
+.qa-a{padding-left:36px;font-size:14px;color:var(--muted);line-height:1.75;}
+.qa-a strong{color:var(--text);}
+.int-pending{margin-top:4px;padding:16px 20px;background:#fff8f5;border:1px dashed rgba(255,106,26,.3);border-radius:10px;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;}
+
+/* ── GRID D'ENTREVISTES ── */
+.all-wrap{background:var(--bg2);padding:64px 48px;}
+.all-inner{max-width:1200px;margin:0 auto;}
+.sec-header{display:flex;align-items:baseline;gap:16px;margin-bottom:40px;border-bottom:1px solid var(--border);padding-bottom:16px;}
+.sec-num{font-family:'Bungee',sans-serif;font-size:12px;color:var(--orange);letter-spacing:3px;}
+.sec-title{font-family:'Bungee',sans-serif;font-size:clamp(22px,3.5vw,36px);letter-spacing:-1px;color:var(--text);}
+.sec-title span{color:var(--orange);}
+
+.int-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;}
+.igcard{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:all .2s;}
+.igcard.live{border-left:3px solid var(--orange);cursor:pointer;}
+.igcard.live:hover{box-shadow:0 4px 18px rgba(255,106,26,.12);transform:translateY(-2px);}
+.igcard.soon{opacity:.55;}
+.igcard.wanted{background:#fff8f5;border-color:rgba(255,106,26,.2);}
+.ig-top{display:flex;align-items:center;gap:12px;}
+.ig-av{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.ig-av-o{background:linear-gradient(135deg,var(--orange),var(--orange-dark));}
+.ig-av-g{background:#e8e8e6;}
+.ig-av-w{background:#ffeee5;}
+.ig-name{font-size:15px;font-weight:800;color:var(--text);}
+.ig-role{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-top:2px;}
+.ig-role.gray{color:var(--muted);}
+.ig-desc{font-size:12px;color:var(--muted);line-height:1.6;}
+.ig-status{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.st-live{background:rgba(255,106,26,.1);color:var(--orange);border:1px solid rgba(255,106,26,.22);}
+.st-soon{background:var(--dim);color:var(--muted);border:1px solid var(--border);}
+.st-want{background:#fff8f5;color:var(--orange);border:1px dashed rgba(255,106,26,.3);}
+
+/* ── CATEGORIES QUE BUSQUEM ── */
+.cats-wrap{background:#fff;padding:64px 48px;}
+.cats-inner{max-width:1200px;margin:0 auto;}
+.cats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+.cat-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center;}
+.cat-icon{font-size:32px;margin-bottom:10px;}
+.cat-name{font-size:14px;font-weight:800;color:var(--text);margin-bottom:6px;}
+.cat-desc{font-size:12px;color:var(--muted);line-height:1.6;}
+
+/* ── PROPOSA ── */
+.propose-wrap{background:var(--black);padding:72px 48px;text-align:center;}
+.propose-inner{max-width:720px;margin:0 auto;}
+.propose-title{font-family:'Bungee',sans-serif;font-size:clamp(28px,4vw,48px);color:#fff;letter-spacing:-1px;margin-bottom:14px;}
+.propose-title span{color:var(--orange);}
+.propose-sub{font-size:16px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:32px;}
+.propose-cta{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:12px;text-decoration:none;transition:background .2s;}
+.propose-cta:hover{background:var(--orange-dark);}
+
+/* ── FOOTER ── */
+.page-footer{background:#0a0a0a;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.55);font-size:13px;}
+.page-footer-inner{max-width:1200px;margin:0 auto;padding:56px 48px 40px;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;}
+.pf-brand{display:flex;gap:18px;align-items:flex-start;}
+.pf-name{font-family:'Bungee',sans-serif;font-size:16px;color:#fff;line-height:1.15;margin-bottom:10px;}
+.pf-tag{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;max-width:280px;margin-bottom:18px;}
+.pf-socials{display:flex;gap:10px;flex-wrap:wrap;}
+.pf-socials a{color:rgba(255,255,255,.4);font-size:11px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:1px;border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:5px 14px;transition:all .2s;}
+.pf-socials a:hover{color:#FF6A1A;border-color:#FF6A1A;}
+.pf-col-title{font-family:'Bungee',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:16px;}
+.pf-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.pf-col ul li{font-size:13px;color:rgba(255,255,255,.35);line-height:1.5;}
+.pf-col ul li a{color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;}
+.pf-col ul li a:hover{color:#FF6A1A;}
+.pf-bottom{border-top:1px solid rgba(255,255,255,.08);max-width:1200px;margin:0 auto;padding:18px 48px 28px;display:flex;flex-wrap:wrap;gap:6px 28px;font-size:11px;color:rgba(255,255,255,.25);align-items:center;}
+.pf-bottom a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;margin-left:auto;}
+.pf-bottom a:hover{color:#FF6A1A;}
+
+@media(max-width:768px){
+  .nav,.cats-bar{padding-left:20px;padding-right:20px;}
+  .hero{padding:100px 24px 56px;}
+  .featured-wrap,.all-wrap,.cats-wrap,.propose-wrap{padding:48px 24px;}
+  .page-footer-inner{grid-template-columns:1fr;gap:32px;padding:40px 24px 28px;}
+  .pf-bottom{padding:16px 24px 24px;flex-direction:column;align-items:flex-start;}
+  .pf-bottom a{margin-left:0;}
+}
+.legal-modal-overlay{display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.88);align-items:center;justify-content:center;padding:24px;}
+.legal-modal-overlay.open{display:flex;}
+.legal-modal-box{background:#141414;border:1px solid rgba(255,255,255,.1);border-radius:16px;max-width:720px;width:100%;max-height:85vh;overflow-y:auto;padding:40px 44px;position:relative;}
+.legal-modal-box h2{font-family:'Bungee',sans-serif;font-size:22px;text-transform:uppercase;color:#fff;margin:0 0 6px;letter-spacing:1px;}
+.legal-modal-box .legal-sub{font-size:12px;color:#FF6A1A;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;}
+.legal-modal-box h3{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin:24px 0 8px;}
+.legal-modal-box p,.legal-modal-box li{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;margin:0 0 10px;}
+.legal-modal-box ul{padding-left:18px;margin:0 0 10px;}
+.legal-modal-box .legal-close{position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,.4);font-size:22px;cursor:pointer;line-height:1;transition:color .2s;}
+.legal-modal-box .legal-close:hover{color:#fff;}
+.pf-legal-links{display:flex;gap:16px;flex-wrap:wrap;width:100%;margin-top:4px;}
+.pf-legal-links button{background:none;border:none;color:rgba(255,255,255,.25);font-size:11px;cursor:pointer;padding:0;font-family:inherit;transition:color .2s;}
+.pf-legal-links button:hover{color:#FF6A1A;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-ball">🏀</div>
+    <span class="nav-name">JUGUEM A BÀSQUET</span>
+  </a>
+  <ul style="display:flex;gap:14px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);margin:0;padding:0;white-space:nowrap;">
+    <li><a class="nav-link" href="index.html">Inici</a></li>
+    <li><a class="nav-link" href="index.html#activitats">Projectes</a></li>
+    <li><a class="nav-link" href="index.html#crowdfunding" style="color:var(--orange);font-weight:700;">🏀 Campanya</a></li>
+    <li><a class="nav-link" style="color:var(--orange);font-weight:700;" href="entrevistes.html">Entrevistes</a></li>
+    <li><a class="nav-link" href="arxiu-historic.html">Arxiu Històric</a></li>
+    <li><a class="nav-link" href="index.html#contacte" style="background:var(--orange);color:#fff;padding:6px 14px;border-radius:8px;">Contacte</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">🎙️ Veus del bàsquet badaloní</div>
+  <h1>ENTRE<span>VISTES</span></h1>
+  <p class="hero-sub">Converses en profunditat amb les persones que han fet gran el bàsquet. Llegendes, entrenadors, jugadors de barri, pioners i referents de la comunitat.</p>
+</section>
+
+<!-- TABS -->
+<div class="cats-bar">
+  <button class="cat-btn active">Totes</button>
+  <button class="cat-btn">Entrenadors</button>
+  <button class="cat-btn">Jugadors</button>
+  <button class="cat-btn">Pioners</button>
+  <button class="cat-btn">Clubs i barris</button>
+  <button class="cat-btn">Bàsquet femení</button>
+  <button class="cat-btn">Comunitat</button>
+</div>
+
+<!-- ENTREVISTA DESTACADA: AÍTO -->
+<div style="background:var(--bg)">
+<div class="featured-wrap">
+  <div class="feat-label">⭐ Entrevista destacada</div>
+  <div class="interview-card" id="entrevista-aito">
+
+    <!-- PERFIL -->
+    <div class="int-profile">
+      <div class="profile-photo">🏀</div>
+      <div>
+        <div class="profile-nick">AÍTO</div>
+        <div class="profile-name">García Reneses</div>
+      </div>
+      <p class="profile-desc">Un dels entrenadors més llegendaris de la història del bàsquet espanyol i europeu. Ha dirigit els clubs més importants del país i la selecció nacional. Una vida dedicada al bàsquet.</p>
+      <div class="profile-facts">
+        <div class="pf-row"><span class="pf-icon">📍</span><div><span class="pf-label">Origen: </span><span class="pf-val">Madrid, 1944</span></div></div>
+        <div class="pf-row"><span class="pf-icon">🏆</span><div><span class="pf-label">Palmarès: </span><span class="pf-val">+20 títols nacionals i europeus</span></div></div>
+        <div class="pf-row"><span class="pf-icon">🧠</span><div><span class="pf-label">Filosofia: </span><span class="pf-val">Bàsquet ofensiu, llegible i elegant</span></div></div>
+        <div class="pf-row"><span class="pf-icon">🌍</span><div><span class="pf-label">Clubs: </span><span class="pf-val">Joventut, Barça, R. Madrid, Selecció ESP, Unicaja…</span></div></div>
+      </div>
+      <div class="profile-tags">
+        <span class="ptag ptag-o">Llegenda</span>
+        <span class="ptag ptag-o">Entrenador</span>
+        <span class="ptag ptag-w">ACB</span>
+        <span class="ptag ptag-w">Eurobasket</span>
+        <span class="ptag ptag-w">Selecció ESP</span>
+      </div>
+    </div>
+
+    <!-- ENTREVISTA -->
+    <div class="int-body">
+      <div class="int-meta">
+        <div class="meta-txt"><span class="meta-dot"></span>Entrevista en profunditat</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Juguem a Bàsquet · JAB</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Badalona, 2025</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Categoria: Entrenadors</div>
+      </div>
+
+      <p class="int-quote">"El bàsquet és el millor joc que s'ha inventat mai. T'ensenya a pensar ràpid, a confiar en els teus companys i a no rendir-te mai."</p>
+
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Aíto, ha entrenat a la Joventut de Badalona. Què significa per vostè veure una associació com Juguem a Bàsquet treballar als barris d'aquesta ciutat?</div></div>
+          <div class="qa-a">Espai per la resposta d'Aíto. Les seves paraules exactes, en la seva veu.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Quins valors creu que el bàsquet transmet als joves d'avui que difícilment poden trobar en un altre lloc?</div></div>
+          <div class="qa-a">Espai per la resposta. El seu punt de vista sobre <strong>la formació, la disciplina i la comunitat</strong> com a eixos del bàsquet formatiu.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Vostè ha vist moltes generacions de jugadors. Quin consell donaria a un jove que vol dedicar-se al bàsquet avui?</div></div>
+          <div class="qa-a">Espai per la resposta. La saviesa d'una vida al bàsquet condensada en un consell per a les generacions futures.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Com ha evolucionat el bàsquet formatiu a Espanya des que vostè va començar fins avui?</div></div>
+          <div class="qa-a">Espai per la resposta. Una mirada longitudinal de dècades d'evolució del bàsquet base.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+        <a href="assets/documents/Entrevista_Aito_Garcia_Reneses.pdf" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-size:13px;font-weight:800;padding:11px 20px;border-radius:10px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#cc4d0e'" onmouseout="this.style.background='var(--orange)'">📄 Obrir PDF complet</a>
+        <div style="flex:1;padding:14px 20px;border-radius:10px;background:rgba(255,106,26,.07);border:1px solid rgba(255,106,26,.2);display:flex;align-items:center;gap:10px;">
+          <span style="font-size:16px">🌐</span>
+          <span style="font-size:13px;font-weight:700;color:var(--orange)">Publicada a <strong>www.juguemabasquet.org</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ENTREVISTA: DAVID BUSQUETS -->
+<div style="background:var(--bg2)">
+<div class="featured-wrap" style="padding-top:24px;">
+  <div class="feat-label">🎙️ Entrevista · Entrenadors</div>
+  <div class="interview-card" id="entrevista-busquets">
+
+    <!-- PERFIL -->
+    <div class="int-profile">
+      <div class="profile-photo" style="padding:0;overflow:hidden;">
+        <img src="assets/fotos/entrevistes/david-busquets.png" alt="David Busquets" style="width:100%;height:100%;object-fit:cover;border-radius:18px;" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%\'>🏀</div>'">
+      </div>
+      <div>
+        <div class="profile-nick">DAVID</div>
+        <div class="profile-name">Busquets</div>
+      </div>
+      <p class="profile-desc">Entrenador de bàsquet base amb més de vint anys de trajectòria a Badalona. Ha format generacions de jugadors i jugadores als clubs de la ciutat, sempre posant la persona per davant del resultat.</p>
+      <div class="profile-facts">
+        <div class="pf-row"><span class="pf-icon">📍</span><div><span class="pf-label">Origen: </span><span class="pf-val">Badalona</span></div></div>
+        <div class="pf-row"><span class="pf-icon">🏆</span><div><span class="pf-label">Experiència: </span><span class="pf-val">+20 anys de bàsquet base</span></div></div>
+        <div class="pf-row"><span class="pf-icon">🧠</span><div><span class="pf-label">Filosofia: </span><span class="pf-val">Persones primer, resultats després</span></div></div>
+        <div class="pf-row"><span class="pf-icon">📍</span><div><span class="pf-label">Àmbit: </span><span class="pf-val">Clubs de formació de Badalona</span></div></div>
+      </div>
+      <div class="profile-tags">
+        <span class="ptag ptag-o">Entrenador</span>
+        <span class="ptag ptag-o">Formació</span>
+        <span class="ptag ptag-w">Valors</span>
+        <span class="ptag ptag-w">Bàsquet base</span>
+        <span class="ptag ptag-w">Badalona</span>
+      </div>
+    </div>
+
+    <!-- ENTREVISTA -->
+    <div class="int-body">
+      <div class="int-meta">
+        <div class="meta-txt"><span class="meta-dot"></span>Entrevista en profunditat</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Juguem a Bàsquet · JAB</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Badalona, 2025</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Categoria: Entrenadors</div>
+      </div>
+
+      <p class="int-quote">"Un marcador dura un dia; els valors duren tota la vida."</p>
+
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Després de més de vint anys entrenant, què representa per a tu el bàsquet de Badalona?</div></div>
+          <div class="qa-a">Per a mi, el bàsquet de Badalona és molt més que un esport. És una escola de vida. M'ha fet créixer com a entrenador i, sobretot, com a persona. Cada equip m'ha deixat un aprenentatge i cada jugador m'ha recordat que darrere de cada samarreta hi ha una història.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Quin és el principal repte del bàsquet de formació?</div></div>
+          <div class="qa-a">Recordar que formem persones abans que jugadors. Guanyar és bonic, però educar és el que deixa empremta.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Quin paper tenen les famílies?</div></div>
+          <div class="qa-a">Fonamental. El millor regal després d'un partit és una abraçada i un "m'ha agradat veure't gaudir". Els fills necessiten sentir-se estimats, no examinats.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Què t'agradaria que recordessin de tu?</div></div>
+          <div class="qa-a">Que hi havia un entrenador que creia en ells, que els respectava i que els va demostrar que el bàsquet és una excusa meravellosa per aprendre a viure.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:28px;padding:16px 20px;border-radius:10px;background:rgba(255,106,26,.07);border:1px solid rgba(255,106,26,.2);display:flex;align-items:center;gap:10px;">
+        <span style="font-size:16px">🌐</span>
+        <span style="font-size:13px;font-weight:700;color:var(--orange)">Publicada a <strong>www.juguemabasquet.org</strong></span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ENTREVISTA: JORDI VILLACAMPA -->
+<div style="background:var(--bg)">
+<div class="featured-wrap" style="padding-top:24px;">
+  <div class="feat-label">📼 Arxiu · Primera entrevista JAB</div>
+  <div class="interview-card" id="entrevista-villacampa">
+
+    <!-- PERFIL -->
+    <div class="int-profile">
+      <div class="profile-photo" style="padding:0;overflow:hidden;">
+        <img src="assets/fotos/entrevistes/jordi-villacampa-retrat.png" alt="Jordi Villacampa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+      </div>
+      <div>
+        <div class="profile-nick">JORDI</div>
+        <div class="profile-name">Villacampa</div>
+      </div>
+      <p class="profile-desc">Referent absolut del bàsquet badaloní i català. Jugador llegendari i president de la Joventut durant quaranta anys. Ídol d'una generació, protagonista de les carpetes escolars dels anys 80 i 90, i un dels grans símbols del Club Joventut Badalona.</p>
+      <div class="profile-facts">
+        <div class="pf-row"><span class="pf-icon">📍</span><div><span class="pf-label">Origen: </span><span class="pf-val">Badalona</span></div></div>
+        <div class="pf-row"><span class="pf-icon">🏆</span><div><span class="pf-label">Club: </span><span class="pf-val">Joventut Badalona · 40 anys</span></div></div>
+        <div class="pf-row"><span class="pf-icon">🎽</span><div><span class="pf-label">Rol: </span><span class="pf-val">Jugador i President</span></div></div>
+        <div class="pf-row"><span class="pf-icon">❤️</span><div><span class="pf-label">Llegat: </span><span class="pf-val">Ídol a les carpetes escolars</span></div></div>
+      </div>
+      <div class="profile-tags">
+        <span class="ptag ptag-o">Llegenda</span>
+        <span class="ptag ptag-o">Jugador</span>
+        <span class="ptag ptag-o">President</span>
+        <span class="ptag ptag-w">Joventut</span>
+        <span class="ptag ptag-w">Badalona</span>
+        <span class="ptag ptag-w">ACB</span>
+      </div>
+    </div>
+
+    <!-- ENTREVISTA -->
+    <div class="int-body">
+      <div class="int-meta">
+        <div class="meta-txt"><span class="meta-dot"></span>Primera entrevista JAB</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Juguem a Bàsquet · JAB</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Badalona</div>
+        <div class="meta-txt"><span class="meta-dot"></span>Categoria: Llegendes</div>
+      </div>
+
+      <p class="int-quote">"El bàsquet és un lloc d'integració i un esport social. M'agrada molt veure la gent jugar als parcs divertint-se."</p>
+
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Bon dia Jordi, volem donar-te les gràcies per poder ser el nostre primer convidat. Per començar, com estàs? Encara mires bàsquet per la televisió? Vas a l'Olímpic o algun poliesportiu en partits de la federació? T'atures als carrers veient com juga la gent?</div></div>
+          <div class="qa-a">Bon dia, sí, continuo connectat al bàsquet, ha sigut la meva vida durant quaranta anys en actiu. Aquest any he estat a la copa del Rei de Màlaga i he gaudit molt, segueixo a la Penya i tot el que l'envolta, evidentment. També m'agrada molt veure a la gent jugar als parcs divertint-se, però sobretot m'agrada que el bàsquet sigui un lloc d'integració i un esport social.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Creus que s'està perdent l'essència de ser la capital d'Europa del bàsquet?</div></div>
+          <div class="qa-a">Badalona té una tradició brutal de fa molts anys. Pensa que la Penya va néixer el 1930 i no només la Penya, sinó tot el que envolta aquest club referent. Va haver anys que hi havia tres equips badalonins a primera divisió i hem de valorar la nostra potència com a ciutat, la qual no hauríem de perdre i sí rendibilitzar més. Com viatjo sovint, veig com ens estimen, ens valoren i s'adonen més de la nostra importància que els que vivim aquí. Per la gent de fora, Badalona és un referent del bàsquet, no sé si som capital europea però sí un punt de referència molt important a seguir.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">Quan tu jugaves al club de formació, recordes anar per les pistes públiques de la ciutat? Quin record en tens?</div></div>
+          <div class="qa-a">Jo vaig començar a jugar al carrer, tinc molt bon record, les pistes de quitrà, els bàsquets de mini... m'ho passava millor jugant un contra un, dos contra dos, exercicis de llançament amb els meus amics, allà és on aprens els fonaments del bàsquet, sincerament, tinc molt bons records entranyables. Sempre em recordo de la pista d'amunt dels maristes al carrer dos de maig, a la terrassa. La pista era fantàstica, inclús quan era federat m'escapava per poder estar amb ells i jugar. <strong>És fonamental que encara existeixin aquestes pistes.</strong></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><div class="q-dot">Q</div><div class="q-txt">La Copa del Rei va ser un abans i un després en equipaments esportius. Els pavellons van rebre una dosi econòmica per part de l'àrea metropolitana... Moltes "fan zones" estaven situades a pistes del carrer. Creus que van vendre il·lusions en reparar pistes i no ha estat així?</div></div>
+          <div class="qa-a">Sincerament, crec que fins ara, els diferents governs que han passat haurien d'haver cuidat les pistes. Les famílies, els nens i nenes, els amics i amigues... volen divertir-se, ja que és un mobiliari urbà, realment és una inversió i hi ha d'haver un manteniment diari. Aquí som una ciutat de bàsquet i hem de tenir unes cistelles dignes, per reflectir una bona imatge. <strong>Crec que el govern actual es posarà les piles i estarà mentalitzat per la gent que viu a Badalona, per un tema d'integració esportiva i social.</strong></div>
+        </div>
+      </div>
+
+      <div style="margin-top:28px;padding:16px 20px;border-radius:10px;background:rgba(255,106,26,.07);border:1px solid rgba(255,106,26,.2);display:flex;align-items:center;gap:10px;">
+        <span style="font-size:16px">🌐</span>
+        <span style="font-size:13px;font-weight:700;color:var(--orange)">Publicada a <strong>www.juguemabasquet.org</strong></span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TOTES LES ENTREVISTES -->
+<div class="all-wrap">
+<div class="all-inner">
+  <div class="sec-header">
+    <span class="sec-num">Totes les entrevistes</span>
+    <h2 class="sec-title">VEUS <span>DEL BÀSQUET</span></h2>
+  </div>
+  <div class="int-grid">
+
+    <!-- Publicades -->
+    <div class="igcard live">
+      <div class="ig-top">
+        <div class="ig-av ig-av-o">🏀</div>
+        <div><div class="ig-name">Aíto García Reneses</div><div class="ig-role">Entrenador llegendari</div></div>
+      </div>
+      <p class="ig-desc">Una vida dedicada al bàsquet espanyol i europeu. Joventut, Barça, Madrid, Selecció.</p>
+      <span class="ig-status st-live">● Publicada</span>
+      <div style="display:flex;gap:8px;margin-top:14px;">
+        <a href="#entrevista-aito" style="flex:1;display:block;text-align:center;background:var(--orange);color:#fff;font-size:12px;font-weight:800;padding:9px 12px;border-radius:8px;text-decoration:none;letter-spacing:.04em;transition:background .2s;" onmouseover="this.style.background='#cc4d0e'" onmouseout="this.style.background='var(--orange)'">Llegir →</a>
+        <a href="assets/documents/Entrevista_Aito_Garcia_Reneses.pdf" target="_blank" style="flex:1;display:block;text-align:center;background:#f5f5f3;border:1px solid rgba(0,0,0,.12);color:#333;font-size:12px;font-weight:800;padding:9px 12px;border-radius:8px;text-decoration:none;letter-spacing:.04em;transition:all .2s;" onmouseover="this.style.borderColor='var(--orange)';this.style.color='var(--orange)'" onmouseout="this.style.borderColor='rgba(0,0,0,.12)';this.style.color='#333'">📄 PDF</a>
+      </div>
+    </div>
+
+    <!-- Busquets -->
+    <div class="igcard live" onclick="document.getElementById('entrevista-busquets').scrollIntoView({behavior:'smooth'})">
+      <div class="ig-top">
+        <div class="ig-av" style="padding:0;overflow:hidden;"><img src="assets/fotos/entrevistes/david-busquets.png" alt="David Busquets" style="width:100%;height:100%;object-fit:cover;border-radius:13px;" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:1.6rem\'>🏀</div>'"></div>
+        <div><div class="ig-name">David Busquets</div><div class="ig-role">Entrenador · Bàsquet base</div></div>
+      </div>
+      <p class="ig-desc">Més de vint anys formant persones a través del bàsquet a Badalona. Valors, esforç i comunitat.</p>
+      <span class="ig-status st-live">● Publicada</span>
+      <div style="margin-top:14px;">
+        <a href="#entrevista-busquets" style="display:block;text-align:center;background:var(--orange);color:#fff;font-size:12px;font-weight:800;padding:9px 12px;border-radius:8px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#cc4d0e'" onmouseout="this.style.background='var(--orange)'">Llegir →</a>
+      </div>
+    </div>
+
+    <!-- Villacampa -->
+    <div class="igcard live" onclick="document.getElementById('entrevista-villacampa').scrollIntoView({behavior:'smooth'})">
+      <div class="ig-top">
+        <div class="ig-av" style="padding:0;overflow:hidden;"><img src="assets/fotos/entrevistes/jordi-villacampa-retrat.png" alt="Jordi Villacampa" style="width:100%;height:100%;object-fit:cover;border-radius:13px;"></div>
+        <div><div class="ig-name">Jordi Villacampa</div><div class="ig-role">Llegenda · Joventut Badalona</div></div>
+      </div>
+      <p class="ig-desc">Jugador i president de la Joventut durant quaranta anys. Ídol d'una generació i referent del bàsquet badaloní.</p>
+      <span class="ig-status st-live">● Publicada</span>
+      <div style="margin-top:14px;">
+        <a href="#entrevista-villacampa" style="display:block;text-align:center;background:var(--orange);color:#fff;font-size:12px;font-weight:800;padding:9px 12px;border-radius:8px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#cc4d0e'" onmouseout="this.style.background='var(--orange)'">Llegir →</a>
+      </div>
+    </div>
+
+    <!-- Confirmades / en preparació -->
+    <div class="igcard soon">
+      <div class="ig-top">
+        <div class="ig-av ig-av-g">🎙️</div>
+        <div><div class="ig-name">Propera entrevista</div><div class="ig-role gray">En preparació</div></div>
+      </div>
+      <p class="ig-desc">La següent veu del bàsquet que s'unirà a aquesta secció.</p>
+      <span class="ig-status st-soon">Properament</span>
+    </div>
+
+    <div class="igcard soon">
+      <div class="ig-top">
+        <div class="ig-av ig-av-g">🎙️</div>
+        <div><div class="ig-name">Propera entrevista</div><div class="ig-role gray">En preparació</div></div>
+      </div>
+      <p class="ig-desc">Jugadors, entrenadors, referents socials i pioners del bàsquet badaloní.</p>
+      <span class="ig-status st-soon">Properament</span>
+    </div>
+
+    <!-- Veus buscades -->
+    <div class="igcard wanted">
+      <div class="ig-top">
+        <div class="ig-av ig-av-w">👴</div>
+        <div><div class="ig-name">Jugadors dels anys 50–70</div><div class="ig-role">Pioners · Badalona</div></div>
+      </div>
+      <p class="ig-desc">Busquem les veus dels que van jugar quan ningú els gravava. La seva memòria és la nostra història.</p>
+      <span class="ig-status st-want">✦ Busquem</span>
+    </div>
+
+    <div class="igcard wanted">
+      <div class="ig-top">
+        <div class="ig-av ig-av-w">🏫</div>
+        <div><div class="ig-name">Entrenadors de barri</div><div class="ig-role">Formació · Tots els barris</div></div>
+      </div>
+      <p class="ig-desc">Els que han dedicat la seva vida a formar joves sense focos ni premis. La base invisible del bàsquet badaloní.</p>
+      <span class="ig-status st-want">✦ Busquem</span>
+    </div>
+
+    <div class="igcard wanted">
+      <div class="ig-top">
+        <div class="ig-av ig-av-w">♀️</div>
+        <div><div class="ig-name">Jugadores pioneres</div><div class="ig-role">Bàsquet femení · Badalona</div></div>
+      </div>
+      <p class="ig-desc">Les primeres dones que van lluitar per jugar a bàsquet a Badalona quan no era fàcil. La seva veu és imprescindible.</p>
+      <span class="ig-status st-want">✦ Busquem</span>
+    </div>
+
+    <div class="igcard wanted">
+      <div class="ig-top">
+        <div class="ig-av ig-av-w">🏘️</div>
+        <div><div class="ig-name">Figures dels clubs de barri</div><div class="ig-role">Clubs locals · Badalona</div></div>
+      </div>
+      <p class="ig-desc">Presidents, entrenadors i jugadors dels clubs que han representat La Salut, Llefià, Artigas, Sant Roc i tots els barris.</p>
+      <span class="ig-status st-want">✦ Busquem</span>
+    </div>
+
+    <div class="igcard wanted">
+      <div class="ig-top">
+        <div class="ig-av ig-av-w">📸</div>
+        <div><div class="ig-name">Miquel Àngel Forníes</div><div class="ig-role">Fotoperiodista · Assessor JAB</div></div>
+      </div>
+      <p class="ig-desc">El fotoperiodista que assessora l'arxiu fotogràfic de JAB. La seva mirada sobre el bàsquet com a patrimoni visual.</p>
+      <span class="ig-status st-want">✦ Pendent</span>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- CATEGORIES QUE BUSQUEM -->
+<div class="cats-wrap">
+  <div class="cats-inner">
+    <div class="sec-header">
+      <span class="sec-num">Categories</span>
+      <h2 class="sec-title">VEUS QUE <span>BUSQUEM</span></h2>
+    </div>
+    <div class="cats-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🏆</div>
+        <div class="cat-name">Llegendes del bàsquet</div>
+        <p class="cat-desc">Jugadors i entrenadors que han deixat empremta al bàsquet espanyol i internacional.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">👴</div>
+        <div class="cat-name">Pioners dels anys 30–70</div>
+        <p class="cat-desc">Les persones que van construir el bàsquet a Badalona des dels orígens. Testimonis únics.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🏘️</div>
+        <div class="cat-name">Clubs i barris</div>
+        <p class="cat-desc">Representants dels clubs de tots els barris. La xarxa invisible que fa gran la nostra ciutat.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">♀️</div>
+        <div class="cat-name">Bàsquet femení</div>
+        <p class="cat-desc">Jugadores i entrenadores que han construït la història del bàsquet femení a Badalona.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🧑‍🏫</div>
+        <div class="cat-name">Entrenadors de base</div>
+        <p class="cat-desc">Els que han dedicat la seva vida a formar joves sense focos. La columna vertebral del bàsquet.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🤝</div>
+        <div class="cat-name">Comunitat i inclusió</div>
+        <p class="cat-desc">Persones que utilitzen el bàsquet com a eina de transformació social als barris de Badalona.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROPOSA UNA ENTREVISTA -->
+<div class="propose-wrap">
+  <div class="propose-inner">
+    <h2 class="propose-title">CONEIXES<br>UNA VEU QUE CAL <span>ESCOLTAR?</span></h2>
+    <p class="propose-sub">Si coneixes algú amb una història interessant vinculada al bàsquet de Badalona — un ex-jugador, un entrenador de barri, una pionera, un testimoni dels anys antics — posa't en contacte amb nosaltres.</p>
+    <a class="propose-cta" href="mailto:info@juguemabasquet.org?cc=info@juguemabasquet.org&subject=Proposta%20Entrevista">
+      🎙️ Proposa una entrevista
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <div class="page-footer-inner">
+    <div>
+      <div class="pf-brand">
+        <img src="assets/logos/logo-small.png" alt="Logo JAB" style="width:52px;height:52px;border-radius:50%;flex-shrink:0;margin-top:2px;">
+        <div>
+          <div class="pf-name">JUGUEM<br>A <span style="color:#FF6A1A">BÀSQUET</span></div>
+          <div class="pf-tag">Plataforma veïnal de Badalona per recuperar el bàsquet de carrer. Pistes obertes, gratuïtes i de barri.</div>
+          <div class="pf-socials">
+            <a href="https://www.instagram.com/juguemabasquet" target="_blank">Instagram ↗</a>
+            <a href="mailto:info@juguemabasquet.org">Email ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pf-col">
+      <div class="pf-col-title">Contacte</div>
+      <ul>
+        <li><a href="mailto:info@juguemabasquet.org">info@juguemabasquet.org</a></li>
+        <li><a href="https://www.instagram.com/juguemabasquet" target="_blank">@juguemabasquet</a></li>
+        <li>Carrer de Sant Josep Oriol, 2<br>Badalona · Barcelona</li>
+      </ul>
+    </div>
+    <div class="pf-col">
+      <div class="pf-col-title">Web</div>
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="index.html#qui-som">Qui som</a></li>
+        <li><a href="index.html#activitats">Activitats</a></li>
+        <li><a href="index.html#mapa">Mapa de pistes</a></li>
+        <li><a href="arxiu-historic.html">Arxiu Històric</a></li>
+        <li><a href="entrevistes.html">Entrevistes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pf-bottom">
+    <span>© 2026 Juguem a Bàsquet · Associació sense ànim de lucre · Badalona</span>
+    <span>Registre Associacions Generalitat de Catalunya · Secció 1a · NIF: G88931019</span>
+    <div class="pf-legal-links">
+      <button onclick="document.getElementById('modal-avis').classList.add('open')">Avís Legal</button>
+      <button onclick="document.getElementById('modal-privacitat').classList.add('open')">Política de Privacitat</button>
+      <button onclick="document.getElementById('modal-cookies').classList.add('open')">Política de Cookies</button>
+    </div>
+    <a href="index.html">← Tornar a juguemabasquet.org</a>
+  </div>
+</footer>
+
+<!-- MODAL: AVÍS LEGAL -->
+<div class="legal-modal-overlay" id="modal-avis" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="document.getElementById('modal-avis').classList.remove('open')">✕</button>
+    <h2>Avís Legal</h2>
+    <div class="legal-sub">Informació legal · juguemabasquet.org</div>
+    <h3>Titular del lloc web</h3>
+    <p><strong style="color:#fff">Associació Juguem a Bàsquet</strong><br>Entitat sense ànim de lucre, inscrita al Registre d'Associacions de la Generalitat de Catalunya, Secció 1a.<br>NIF: G88931019<br>Domicili social: Carrer de Sant Josep Oriol, 2 · Badalona (Barcelona)<br>Correu electrònic: <a href="mailto:info@juguemabasquet.org" style="color:#FF6A1A">info@juguemabasquet.org</a></p>
+    <h3>Objecte i àmbit d'aplicació</h3>
+    <p>Aquest avís legal regula l'ús del lloc web <strong style="color:#fff">juguemabasquet.org</strong>. L'accés i l'ús implica l'acceptació expressa de les condicions aquí establertes.</p>
+    <h3>Propietat intel·lectual</h3>
+    <p>Tots els continguts (textos, imatges, logotips, disseny i codi) són propietat de l'Associació o de tercers que n'han autoritzat l'ús. Queda prohibida la reproducció sense autorització expressa.</p>
+    <h3>Llei aplicable</h3>
+    <p>Aquest avís es regeix per la legislació espanyola (LSSI i RGPD 2016/679).</p>
+  </div>
+</div>
+
+<!-- MODAL: POLÍTICA DE PRIVACITAT -->
+<div class="legal-modal-overlay" id="modal-privacitat" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="document.getElementById('modal-privacitat').classList.remove('open')">✕</button>
+    <h2>Política de Privacitat</h2>
+    <div class="legal-sub">Protecció de dades · RGPD 2016/679</div>
+    <h3>Responsable del tractament</h3>
+    <p><strong style="color:#fff">Associació Juguem a Bàsquet</strong><br>Carrer de Sant Josep Oriol, 2 · Badalona<br><a href="mailto:info@juguemabasquet.org" style="color:#FF6A1A">info@juguemabasquet.org</a></p>
+    <h3>Finalitat</h3>
+    <p>Les dades del formulari de contacte s'utilitzen exclusivament per respondre consultes.</p>
+    <h3>Conservació</h3>
+    <p>Es conserven com a màxim 1 any des de l'últim contacte. No es cedeixen a tercers, excepte obligació legal.</p>
+    <h3>Drets</h3>
+    <p>Pots exercir els drets d'accés, rectificació i supressió escrivint a <a href="mailto:info@juguemabasquet.org" style="color:#FF6A1A">info@juguemabasquet.org</a>.</p>
+  </div>
+</div>
+
+<!-- MODAL: POLÍTICA DE COOKIES -->
+<div class="legal-modal-overlay" id="modal-cookies" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="document.getElementById('modal-cookies').classList.remove('open')">✕</button>
+    <h2>Política de Cookies</h2>
+    <div class="legal-sub">Ús de cookies i emmagatzematge local</div>
+    <h3>Cookies pròpies</h3>
+    <ul><li><strong style="color:#fff">jab-lang</strong> — Guarda la preferència d'idioma. No transmet dades a cap servidor.</li></ul>
+    <h3>No utilitzem</h3>
+    <p>Aquest lloc web <strong style="color:#fff">no utilitza cookies analítiques, publicitàries ni de seguiment</strong>.</p>
+    <h3>Com gestionar-les</h3>
+    <p>Pots eliminar o bloquejar les cookies des de la configuració del teu navegador.</p>
+  </div>
+</div>
+
+</body>
+</html>
