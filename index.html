@@ -382,9 +382,9 @@
   }
 
   /* ====== CROWDFUNDING ====== */
-  .crowd-section { background: var(--black); color: white; padding: 80px 48px 100px; }
+  .crowd-section { background: var(--black); color: white; padding: 110px 48px 100px; }
   .crowd-section .eyebrow { color: var(--orange); border-color: var(--orange); }
-  .crowd-hero { text-align: center; max-width: 800px; margin: 0 auto 40px; }
+  .crowd-hero { text-align: left; max-width: 800px; margin: 0 0 40px; }
   .crowd-hero p { font-size: 17px; color: rgba(255,255,255,.7); line-height: 1.7; margin-top: 16px; }
   .crowd-gallery { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(2, 210px); gap: 10px; margin-bottom: 48px; border-radius: 16px; overflow: hidden; }
   .crowd-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
@@ -1242,12 +1242,12 @@
 
   /* ================= COL·LABORADORS ================= */
   .colab-section {
+    padding: 110px 48px 100px;
     background: linear-gradient(180deg, white 0%, #FAFAFA 100%);
-    padding: 90px 48px 100px;
   }
   .colab-section .container { max-width: 1400px; margin: 0 auto; }
   .colab-intro {
-    text-align: center;
+    text-align: left;
     margin-bottom: 56px;
   }
   .colab-intro .eyebrow { display: inline-block; margin-bottom: 4px; }
@@ -1259,7 +1259,7 @@
     font-size: 17px;
     color: var(--gray-dark);
     max-width: 680px;
-    margin: 0 auto;
+    margin: 0;
     line-height: 1.6;
   }
   .colab-grid {
@@ -1389,13 +1389,13 @@
   /* ================= ENTITATS AMIGUES ================= */
   .entitats-section {
     background: #2A2A2A;
-    padding: 90px 48px 100px;
+    padding: 110px 48px 100px;
   }
   .entitats-section .container { max-width: 1400px; margin: 0 auto; }
-  .entitats-intro { text-align: center; margin-bottom: 56px; }
+  .entitats-intro { text-align: left; margin-bottom: 56px; }
   .entitats-intro .eyebrow { display: inline-block; margin-bottom: 4px; color: var(--orange); background: transparent; }
   .entitats-intro .section-title { margin-top: 8px; margin-bottom: 18px; color: #fff; }
-  .entitats-intro p { font-size: 17px; color: #aaa; max-width: 680px; margin: 0 auto; line-height: 1.6; }
+  .entitats-intro p { font-size: 17px; color: #aaa; max-width: 680px; margin: 0; line-height: 1.6; }
   .entitats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
   .entitat-card {
     background: #333;
@@ -1541,8 +1541,8 @@
   }
 
   /* ================= MAPA DE PISTES ================= */
-  .mapa-section { background: #0d0d0d; padding-left: 0; padding-right: 0; padding-bottom: 0; }
-  .mapa-section > .container { padding: 0 48px 28px; }
+  .mapa-section { background: #0d0d0d; padding-bottom: 0; }
+  .mapa-section > .container { padding: 0 0 28px; }
   .mapa-intro {
     display: flex; flex-wrap: wrap; gap: 14px;
     margin: 24px 0 20px; align-items: center; justify-content: space-between;
@@ -2677,7 +2677,7 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
     /* Mapa: alçada gran perquè hi càpiga el globus d'info de la pista */
     #mapa-pistes { height: 440px; }
     .pistes-llista { height: 520px; }
-    .mapa-section > .container { padding: 0 12px 16px; }
+    .mapa-section > .container { padding: 0 0 16px; }
     /* Hero: logotip més petit per alliberar espai vertical */
     .hero-visual { max-width: 180px; }
     /* Banner 3x3: compacte en mòbil estret */
@@ -3165,7 +3165,8 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
     <div class="crowd-hero">
       <span class="eyebrow" data-i18n="crowd.eyebrow">Finançament col·lectiu · Una pista per a tothom</span>
       <h2 class="section-title" style="margin-bottom:0;">
-        <span class="ball-title" style="font-size:clamp(2.2rem,5vw,3.6rem);" data-i18n="crowd.h2">Col·labora amb un projecte que <span style="color:var(--orange)">canvia vides.</span></span>
+        <span class="display-solid" data-i18n="crowd.h2a">Col·labora amb un projecte que</span>
+        <span class="ball-title ball-orange" data-i18n="crowd.h2b">canvia vides</span>
       </h2>
       <p data-i18n="crowd.intro">Volem construir una pista coberta de bàsquet a Badalona: un espai on tothom pugui jugar amb dignitat. Persones amb mobilitat reduïda, persones amb diversitat intel·lectual, famílies amb pocs recursos. Gratuïta, adaptada i oberta a tota la comunitat. I volem crear el primer equip de bàsquet adaptat de Badalona.</p>
     </div>
@@ -3787,7 +3788,7 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
       <span class="eyebrow" data-i18n="entitats.eyebrow">Entitats Amigues del Bàsquet</span>
       <h2 class="section-title">
         <span class="display-solid" data-i18n="entitats.h2a">Organitzacions que</span>
-        <span class="ball-title" data-i18n="entitats.h2b">comparteixen la nostra visió</span>
+        <span class="ball-title ball-orange" data-i18n="entitats.h2b">comparteixen la nostra visió</span>
       </h2>
       <p data-i18n="entitats.intro">Col·laborem amb entitats que, com nosaltres, creuen que el bàsquet és una eina de transformació social, inclusió i comunitat.</p>
     </div>
@@ -3828,7 +3829,7 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
       <span class="eyebrow" data-i18n="colab.eyebrow">Col·laboradors</span>
       <h2 class="section-title">
         <span class="display-solid" data-i18n="colab.h2a">Aquesta plataforma també és</span>
-        <span class="ball-title" data-i18n="colab.h2b">la seva</span>
+        <span class="ball-title ball-orange" data-i18n="colab.h2b">la seva</span>
       </h2>
       <p data-i18n="colab.intro">Gràcies a totes les empreses i entitats que donen suport a Juguem a Bàsquet i fan possible que el bàsquet de carrer torni als barris de Badalona.</p>
     </div>
@@ -3941,8 +3942,8 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
   <div class="container">
     <span class="eyebrow" data-i18n="xarxes.eyebrow">Xarxes Socials</span>
     <h2 class="section-title">
-      <span class="display-solid" data-i18n="vid.h2a">El bàsquet de carrer, en</span>
-      <span class="ball-title" data-i18n="vid.h2b">moviment</span>
+      <span class="display-solid" data-i18n="xarxes.h2a">Segueix-nos a les</span>
+      <span class="ball-title ball-orange" data-i18n="xarxes.h2b">xarxes</span>
     </h2>
     <p class="section-intro" data-i18n="xarxes.intro">
       Tot el contingut prové del nostre Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.
@@ -4785,7 +4786,7 @@ const TRANSLATIONS = {
     'act.intro': 'Renovació de pistes, exposicions, actes de reconeixement, taules rodones i acció directa per posar el bàsquet de carrer al centre de la ciutat.',
     'mapa.eyebrow': 'Mapa de pistes', 'mapa.h2a': 'Les pistes de Badalona,', 'mapa.h2b': 'a un cop de vista',
     'mapa.fAll': 'Totes', 'mapa.fBon': 'Bon estat', 'mapa.fReg': 'Regular', 'mapa.fMal': 'Malmesa',
-    'xarxes.eyebrow': 'Xarxes Socials', 'xarxes.intro': 'Tot el contingut prové del nostre Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
+    'xarxes.eyebrow': 'Xarxes Socials', 'xarxes.h2a': 'Segueix-nos a les', 'xarxes.h2b': 'xarxes', 'xarxes.intro': 'Tot el contingut prové del nostre Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
     'vid.eyebrow': 'Vídeos', 'vid.h2a': 'El bàsquet de carrer, en', 'vid.h2b': 'moviment',
     'vid.intro': 'Cròniques, denúncies i moments destacats. Tot el contingut prové del nostre Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
     'gal.eyebrow': 'Galeria i notícies', 'gal.h2a': 'El bàsquet de carrer,', 'gal.h2b': 'en imatges',
@@ -4867,7 +4868,7 @@ const TRANSLATIONS = {
     'xer.tag1': 'Bàsquet adaptat', 'xer.tag2': 'Diversitat funcional', 'xer.tag3': 'Diversitat intel·lectual', 'xer.tag4': 'Xerrada',
     'entrevistes.eyebrow': 'Entrevistes', 'entrevistes.h2a': 'Veus del', 'entrevistes.h2b': 'bàsquet',
     'crowd.eyebrow': 'Finançament col·lectiu · Una pista per a tothom',
-    'crowd.h2': 'Col·labora amb un projecte que <span style="color:var(--orange)">canvia vides.</span>',
+    'crowd.h2a': 'Col·labora amb un projecte que', 'crowd.h2b': 'canvia vides',
     'crowd.intro': 'Volem construir una pista coberta de bàsquet a Badalona: un espai on tothom pugui jugar amb dignitat. Persones amb mobilitat reduïda, persones amb diversitat intel·lectual, famílies amb pocs recursos. Gratuïta, adaptada i oberta a tota la comunitat. I volem crear el primer equip de bàsquet adaptat de Badalona.',
     'crowd.raised': 'recaptats', 'crowd.goal': 'objectiu', 'crowd.days': 'dies de campanya', 'crowd.backers': 'col·laboradors',
     'crowd.pct': '0% aconseguit · Campanya pròximament',
@@ -5105,7 +5106,7 @@ const TRANSLATIONS = {
     'act.intro': 'Court renovations, exhibitions, recognition events, round tables and direct action to put street basketball at the heart of the city.',
     'mapa.eyebrow': 'Courts map', 'mapa.h2a': 'Badalona\'s courts,', 'mapa.h2b': 'at a glance',
     'mapa.fAll': 'All', 'mapa.fBon': 'Good condition', 'mapa.fReg': 'Fair', 'mapa.fMal': 'Needs repair',
-    'xarxes.eyebrow': 'Social Media', 'xarxes.intro': 'All content comes from our Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
+    'xarxes.eyebrow': 'Social Media', 'xarxes.h2a': 'Follow us on', 'xarxes.h2b': 'social media', 'xarxes.intro': 'All content comes from our Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
     'vid.eyebrow': 'Videos', 'vid.h2a': 'Street basketball, in', 'vid.h2b': 'motion',
     'vid.intro': 'Chronicles, reports and highlights. All content comes from our Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
     'gal.eyebrow': 'Gallery & news', 'gal.h2a': 'Street basketball,', 'gal.h2b': 'in pictures',
@@ -5187,7 +5188,7 @@ const TRANSLATIONS = {
     'xer.tag1': 'Adapted basketball', 'xer.tag2': 'Physical diversity', 'xer.tag3': 'Intellectual diversity', 'xer.tag4': 'Talk',
     'entrevistes.eyebrow': 'Interviews', 'entrevistes.h2a': 'Voices of', 'entrevistes.h2b': 'basketball',
     'crowd.eyebrow': 'Crowdfunding · A court for everyone',
-    'crowd.h2': 'Collaborate with a project that <span style="color:var(--orange)">changes lives.</span>',
+    'crowd.h2a': 'Collaborate with a project that', 'crowd.h2b': 'changes lives',
     'crowd.intro': 'We want to build a covered basketball court in Badalona: a space where everyone can play with dignity. People with reduced mobility, people with intellectual diversity, families with limited resources. Free, adapted and open to the entire community. And we want to create Badalona\'s first adapted basketball team.',
     'crowd.raised': 'raised', 'crowd.goal': 'goal', 'crowd.days': 'campaign days', 'crowd.backers': 'supporters',
     'crowd.pct': '0% achieved · Campaign coming soon',
@@ -5425,7 +5426,7 @@ const TRANSLATIONS = {
     'act.intro': 'Renovación de pistas, exposiciones, actos de reconocimiento, mesas redondas y acción directa para poner el baloncesto callejero en el centro de la ciudad.',
     'mapa.eyebrow': 'Mapa de pistas', 'mapa.h2a': 'Las pistas de Badalona,', 'mapa.h2b': 'de un vistazo',
     'mapa.fAll': 'Todas', 'mapa.fBon': 'Buen estado', 'mapa.fReg': 'Regular', 'mapa.fMal': 'Deteriorada',
-    'xarxes.eyebrow': 'Redes Sociales', 'xarxes.intro': 'Todo el contenido proviene de nuestro Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
+    'xarxes.eyebrow': 'Redes Sociales', 'xarxes.h2a': 'Síguenos en las', 'xarxes.h2b': 'redes', 'xarxes.intro': 'Todo el contenido proviene de nuestro Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
     'vid.eyebrow': 'Vídeos', 'vid.h2a': 'El baloncesto callejero, en', 'vid.h2b': 'movimiento',
     'vid.intro': 'Crónicas, denuncias y momentos destacados. Todo el contenido proviene de nuestro Instagram <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="color:var(--orange);font-weight:700;text-decoration:none;">@juguemabasquet</a>.',
     'gal.eyebrow': 'Galería y noticias', 'gal.h2a': 'El baloncesto callejero,', 'gal.h2b': 'en imágenes',
@@ -5507,7 +5508,7 @@ const TRANSLATIONS = {
     'xer.tag1': 'Baloncesto adaptado', 'xer.tag2': 'Diversidad funcional', 'xer.tag3': 'Diversidad intelectual', 'xer.tag4': 'Charla',
     'entrevistes.eyebrow': 'Entrevistas', 'entrevistes.h2a': 'Voces del', 'entrevistes.h2b': 'baloncesto',
     'crowd.eyebrow': 'Financiación colectiva · Una pista para todos',
-    'crowd.h2': 'Colabora con un proyecto que <span style="color:var(--orange)">cambia vidas.</span>',
+    'crowd.h2a': 'Colabora con un proyecto que', 'crowd.h2b': 'cambia vidas',
     'crowd.intro': 'Queremos construir una pista de baloncesto cubierta en Badalona: un espacio donde todos puedan jugar con dignidad. Personas con movilidad reducida, personas con diversidad intelectual, familias con pocos recursos. Gratuita, adaptada y abierta a toda la comunidad. Y queremos crear el primer equipo de baloncesto adaptado de Badalona.',
     'crowd.raised': 'recaudados', 'crowd.goal': 'objetivo', 'crowd.days': 'días de campaña', 'crowd.backers': 'colaboradores',
     'crowd.pct': '0% conseguido · Campaña próximamente',
