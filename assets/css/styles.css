@@ -2203,6 +2203,7 @@
     width: 100%;
     height: calc(100vh - 56px);
     overflow-y: auto;
+    overflow-x: hidden;
     z-index: 200;
     background: var(--black, #0E0E0E);
   }
@@ -2564,7 +2565,10 @@
 
 /* ── MINI-FOOTER (peu de cada secció) ── */
 /* ── GLOBAL FOOTER (totes les seccions) ── */
-.gf-footer { margin-top: 64px; background: #0a0a0a; border-top: 1px solid rgba(255,255,255,.08); }
+.gf-footer { margin-top: 64px; background: #0a0a0a; border-top: 1px solid rgba(255,255,255,.08); width: 100vw; position: relative; left: 50%; transform: translateX(-50%); }
+/* Full-width footer sits flush at the bottom of every overlay section (no white gap below) */
+section.page-section { padding-bottom: 0; }
+section.page-section > .container { padding-bottom: 0; }
 .gf-inner { max-width: 1200px; margin: 0 auto; padding: 48px 48px 36px; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; }
 .gf-brand { display: flex; gap: 16px; align-items: flex-start; }
 .gf-logo { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
