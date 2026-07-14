@@ -297,6 +297,85 @@ function initMapa() {
   map.on('focus', () => map.scrollWheelZoom.enable());
   map.on('blur', () => map.scrollWheelZoom.disable());
 
+  /* ---- Double-tap to zoom on touch devices ----
+     Leaflet 1.9 removed its tap handler, so double-tap zoom is unreliable on
+     mobile. Handle it manually and disable the native double-click zoom on
+     touch to avoid zooming twice. Mouse double-click keeps working on desktop. */
+  if (L.Browser.touch) {
+    map.doubleClickZoom.disable();
+    const container = map.getContainer();
+    let lastTapTime = 0, lastTapX = 0, lastTapY = 0;
+    container.addEventListener('touchend', function (e) {
+      if (e.changedTouches.length !== 1) return;
+      const t = e.changedTouches[0];
+      const now = Date.now();
+      if (now - lastTapTime < 300 &&
+          Math.abs(t.clientX - lastTapX) < 30 &&
+          Math.abs(t.clientY - lastTapY) < 30) {
+        const rect = container.getBoundingClientRect();
+        const point = L.point(t.clientX - rect.left, t.clientY - rect.top);
+        map.setZoomAround(map.containerPointToLatLng(point), map.getZoom() + 1);
+        lastTapTime = 0;
+        e.preventDefault();
+      } else {
+        lastTapTime = now;
+        lastTapX = t.clientX;
+        lastTapY = t.clientY;
+      }
+    }, { passive: false });
+  }
+
+  /* ---- "Center on my location" control ---- */
+  const LOCATE_TXT = {
+    ca: { title: 'La meva ubicació', err: 'No s\'ha pogut obtenir la teva ubicació.' },
+    es: { title: 'Mi ubicación',      err: 'No se ha podido obtener tu ubicación.' },
+    en: { title: 'My location',       err: 'Could not get your location.' }
+  };
+  const locateTxt = () => LOCATE_TXT[currentLang] || LOCATE_TXT.ca;
+
+  let userMarker = null, userCircle = null;
+  const LocateControl = L.Control.extend({
+    options: { position: 'topleft' },
+    onAdd: function () {
+      const wrap = L.DomUtil.create('div', 'leaflet-bar leaflet-control jab-locate-control');
+      const btn = L.DomUtil.create('a', '', wrap);
+      btn.href = '#';
+      btn.setAttribute('role', 'button');
+      btn.title = locateTxt().title;
+      btn.setAttribute('aria-label', btn.title);
+      btn.innerHTML =
+        '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<circle cx="12" cy="12" r="7"></circle>' +
+        '<circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"></circle>' +
+        '<line x1="12" y1="1" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="23"></line>' +
+        '<line x1="1" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="23" y2="12"></line>' +
+        '</svg>';
+      L.DomEvent.disableClickPropagation(wrap);
+      L.DomEvent.on(btn, 'click', function (e) {
+        L.DomEvent.stop(e);
+        map.locate({ setView: true, maxZoom: 16, enableHighAccuracy: true, timeout: 10000 });
+      });
+      return wrap;
+    }
+  });
+  map.addControl(new LocateControl());
+
+  map.on('locationfound', function (e) {
+    if (userMarker) map.removeLayer(userMarker);
+    if (userCircle) map.removeLayer(userCircle);
+    userCircle = L.circle(e.latlng, {
+      radius: e.accuracy / 2, color: '#1e90ff', weight: 1,
+      fillColor: '#1e90ff', fillOpacity: 0.12
+    }).addTo(map);
+    userMarker = L.circleMarker(e.latlng, {
+      radius: 7, color: '#fff', weight: 2,
+      fillColor: '#1e90ff', fillOpacity: 1
+    }).addTo(map);
+  });
+  map.on('locationerror', function () {
+    alert(locateTxt().err);
+  });
+
   /* ---- Cluster group ---- */
   const clusterGroup = L.markerClusterGroup({
     maxClusterRadius: 60,
