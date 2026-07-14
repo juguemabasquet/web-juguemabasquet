@@ -1703,6 +1703,14 @@
     width: 54px; height: 54px; font-size: 16px;
   }
 
+  /* "Center on my location" control button */
+  .jab-locate-control a {
+    display: flex; align-items: center; justify-content: center;
+    color: #333;
+  }
+  .jab-locate-control a:hover { color: var(--orange); }
+  .jab-locate-control svg { display: block; }
+
   /* CTA "Proposa una pista" */
   .mapa-cta {
     margin-top: 28px;
