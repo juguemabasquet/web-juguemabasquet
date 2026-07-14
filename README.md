@@ -50,8 +50,6 @@ Obre automàticament http://localhost:3000 amb recàrrega en viu al guardar qual
 ```
 juguemabasquet/
 ├── index.html            # Pàgina principal
-├── arxiu-historic.html   # Arxiu històric
-├── entrevistes.html      # Entrevistes
 ├── form-3x3.html         # Formulari 3x3
 ├── jordi-fernandez.html  # Pàgina Jordi Fernández
 └── assets/
