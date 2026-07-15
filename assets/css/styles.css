@@ -2365,6 +2365,60 @@
   .c-green   { background: #0e2d1e; color: #fff; }
   .c-white   { background: #fff; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.06); }
   .c-navy    { background: #0a1628; color: #fff; }
+
+  /* ── Featured bento card (highlight one important item, e.g. a key interview) ── */
+  .bento-featured {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 0;
+    border: 1px solid rgba(255,106,26,.55);
+    box-shadow: 0 0 0 1px rgba(255,106,26,.25), 0 8px 32px rgba(0,0,0,.35), 0 0 26px rgba(255,106,26,.35);
+    animation: bentoFeaturedGlow 2.6s ease-in-out infinite;
+  }
+  @keyframes bentoFeaturedGlow {
+    0%, 100% { box-shadow: 0 0 0 1px rgba(255,106,26,.25), 0 8px 32px rgba(0,0,0,.35), 0 0 22px rgba(255,106,26,.30); }
+    50%      { box-shadow: 0 0 0 1px rgba(255,106,26,.45), 0 8px 32px rgba(0,0,0,.35), 0 0 40px rgba(255,106,26,.55); }
+  }
+  .bento-featured-photo {
+    position: absolute; inset: 0;
+    background-image: url("assets/fotos/entrevistes/jordi-fernandez.jpg");
+    background-size: cover; background-position: center 20%;
+    background-color: #17110c; /* fallback while the real photo is added */
+  }
+  .bento-featured-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.35) 45%, rgba(10,10,10,.92) 100%);
+  }
+  .bento-featured-content {
+    position: relative; z-index: 1;
+    height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+    padding: 18px 20px;
+  }
+  .bento-featured-badge {
+    display: inline-block;
+    font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+    color: #fff; background: var(--orange);
+    padding: 4px 10px; border-radius: 50px;
+    box-shadow: 0 0 16px rgba(255,106,26,.7);
+    margin-bottom: 12px;
+  }
+  .bento-featured-eye {
+    font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 8px;
+  }
+  .bento-featured-title {
+    font-family: 'Bungee', sans-serif; text-transform: uppercase; line-height: 1.02;
+    color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.6);
+    font-size: clamp(20px, 2.4vw, 34px) !important;
+  }
+  .bento-featured-sub {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    color: rgba(255,255,255,.85);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bento-featured { animation: none; }
+  }
+
   @media (max-width: 1100px) {
     .bento-section { height: auto; overflow: visible; padding: 8px; padding-top: 60px; }
     .bento-grid {
