@@ -2693,6 +2693,10 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
     .nav { padding: 0 12px; }
     /* Bento grid: 1 columna per evitar overflow de contingut */
     .bento-grid { grid-template-columns: 1fr; gap: 6px; }
+    /* Featured interview card moved up to 2nd position on narrow mobile */
+    .bento-grid > * { order: 3; }
+    .bento-grid > *:nth-child(1) { order: 1; }
+    .bento-grid > *:nth-child(4) { order: 2; }
     /* Crowdfunding stats: 1 columna */
     .crowd-stats { grid-template-columns: 1fr; }
     /* Galeria: 1 columna */
