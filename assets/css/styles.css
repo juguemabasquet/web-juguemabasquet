@@ -2277,23 +2277,19 @@
     margin: 0 auto;
   }
   /* ── Placements bento irregular ── */
-  .bento-grid > *:nth-child(5) { grid-area: 1 / 1 / 3 / 3; } /* CROWDFUNDING 2×2 */
-  .bento-grid > *:nth-child(1) { grid-area: 1 / 3 / 2 / 4; } /* QUI SOM */
-  .bento-grid > *:nth-child(4) { grid-area: 1 / 4 / 2 / 5; } /* ENTREVISTES */
-  .bento-grid > *:nth-child(2) { grid-area: 2 / 3 / 3 / 4; } /* ACTIVITATS */
-  .bento-grid > *:nth-child(3) { grid-area: 2 / 4 / 3 / 5; } /* MAPA */
+  .bento-grid > *:nth-child(4) { grid-area: 1 / 3 / 3 / 5; } /* ENTREVISTES featured 2×2 */
+  .bento-grid > *:nth-child(5) { grid-area: 1 / 1 / 2 / 2; } /* CROWDFUNDING 1×1 */
+  .bento-grid > *:nth-child(1) { grid-area: 1 / 2 / 2 / 3; } /* QUI SOM */
+  .bento-grid > *:nth-child(2) { grid-area: 2 / 1 / 3 / 2; } /* ACTIVITATS */
+  .bento-grid > *:nth-child(3) { grid-area: 2 / 2 / 3 / 3; } /* MAPA */
   .bento-grid > *:nth-child(6) { grid-area: 3 / 1 / 4 / 2; } /* ARXIU */
   .bento-grid > *:nth-child(7) { grid-area: 3 / 2 / 4 / 3; } /* ENTITATS */
   .bento-grid > *:nth-child(8) { grid-area: 3 / 3 / 4 / 4; } /* COL·LABS */
   .bento-grid > *:nth-child(9) { grid-area: 3 / 4 / 4 / 5; } /* XARXES */
-  /* Crowdfunding 2×2: títol gran */
-  .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.title"] {
-    font-size: clamp(32px, 4.5vw, 68px) !important;
+  /* Featured 2×2: títol gran */
+  html .bento-grid > .bento-featured .bento-featured-title {
+    font-size: clamp(28px, 3.4vw, 52px) !important;
     line-height: 1.0;
-  }
-  .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.eye"] {
-    font-size: clamp(13px, 1.4vw, 20px) !important;
-    margin-bottom: 16px;
   }
   .bento-card {
     border-radius: 16px;
@@ -2381,13 +2377,13 @@
   }
   .bento-featured-photo {
     position: absolute; inset: 0;
-    background-image: url("assets/fotos/entrevistes/jordi-fernandez.jpg");
-    background-size: cover; background-position: center 20%;
-    background-color: #17110c; /* fallback while the real photo is added */
+    background-image: url("../fotos/pistes/la-gabia-badalona.jpg");
+    background-size: cover; background-position: center 42%;
+    background-color: #17110c; /* fallback */
   }
   .bento-featured-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.35) 45%, rgba(10,10,10,.92) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.30) 35%, rgba(0,0,0,.28) 55%, rgba(10,10,10,.85) 100%);
   }
   .bento-featured-content {
     position: relative; z-index: 1;
@@ -2405,6 +2401,15 @@
   .bento-featured-eye {
     font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
     color: var(--orange); margin-bottom: 8px;
+  }
+  .bento-featured-name {
+    display: flex; align-items: center; gap: 14px;
+  }
+  .bento-featured-avatar {
+    width: 120px; height: 120px; flex: 0 0 auto;
+    border-radius: 50%; object-fit: cover; object-position: 55% 22%;
+    border: 3px solid var(--orange);
+    box-shadow: 0 4px 18px rgba(0,0,0,.55), 0 0 0 2px rgba(0,0,0,.35);
   }
   .bento-featured-title {
     font-family: 'Bungee', sans-serif; text-transform: uppercase; line-height: 1.02;
@@ -2428,20 +2433,18 @@
     }
     /* Reset placements — fluix 2 columnes */
     .bento-grid > *:nth-child(n) { grid-area: auto; }
-    /* Crowdfunding ocupa ample complet en tablet */
-    .bento-grid > *:nth-child(5) { grid-column: 1 / -1; min-height: 260px; }
+    /* Featured interview spans full width on tablet */
+    .bento-grid > *:nth-child(4) { grid-column: 1 / -1; min-height: 300px; }
     .bento-card { min-height: 160px; }
     html[lang="ca"] .bento-card [data-i18n$=".title"] { font-size: clamp(18px, 4vw, 30px) !important; }
     html[lang="es"] .bento-card [data-i18n$=".title"] { font-size: clamp(16px, 3.5vw, 27px) !important; }
     html[lang="en"] .bento-card [data-i18n$=".title"] { font-size: clamp(15px, 3.2vw, 25px) !important; }
-    .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.title"] { font-size: clamp(28px, 6vw, 50px) !important; }
   }
   @media (max-width: 600px) {
     .bento-section { padding: 6px; padding-top: 96px; }
     .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
     .bento-card { min-height: 140px; padding: 14px 14px; }
-    .bento-grid > *:nth-child(5) { min-height: 200px; }
-    .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.title"] { font-size: clamp(24px, 7vw, 40px) !important; }
+    .bento-grid > *:nth-child(4) { min-height: 260px; }
   }
 
 /* ── FLOATING HYMN PLAYER ── */
