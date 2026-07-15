@@ -2668,10 +2668,11 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
   .arxiu-section .ax-credit-role { font-size:12px; color:#666; margin-top:2px; }
   @media (max-width: 900px) { .arxiu-section .ax-header { padding: 80px 20px 32px; } .arxiu-section .stats-bar { padding: 40px 20px !important; } }
 
-.arxiu-section .stats-bar {background:linear-gradient(160deg,#8a8a8a 0%,#c8c8c8 20%,#9a9a9a 40%,#d8d8d8 60%,#888 80%,#bbb 100%);padding:56px 48px;}
-.arxiu-section .stats-inner {max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
-.arxiu-section .stat-box {background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);border-radius:14px;padding:24px 18px;text-align:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 2px 12px rgba(0,0,0,.12);}
-.arxiu-section .stat-num {font-family:'Bungee',sans-serif;font-size:42px;line-height:1;background:linear-gradient(160deg,#222 0%,#555 25%,#111 45%,#444 60%,#333 80%,#000 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.arxiu-section .stats-bar {padding:56px 48px;}
+.arxiu-section .stats-inner {max-width:1280px;margin:0 auto;background:linear-gradient(160deg,#8a8a8a 0%,#c8c8c8 20%,#9a9a9a 40%,#d8d8d8 60%,#888 80%,#bbb 100%);border-radius:24px;padding:40px 36px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+.arxiu-section .stat-box {background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);border-radius:14px;padding:24px 18px;text-align:left;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 2px 12px rgba(0,0,0,.12);}
+.arxiu-section .stat-num {font-family:'Bungee',sans-serif;font-size:42px;line-height:1;color:var(--black);display:flex;align-items:center;gap:10px;}
+.arxiu-section .stat-num::before {content:'';width:5px;height:.78em;background:var(--black);border-radius:2px;flex-shrink:0;}
 .arxiu-section .stat-label {font-size:11px;color:rgba(0,0,0,.55);margin-top:6px;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
 
 /* ── SECTIONS ── */
@@ -2681,7 +2682,7 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
 .arxiu-section .sec-header {display:flex;align-items:baseline;gap:16px;margin-bottom:52px;border-bottom:1px solid var(--ax-border);padding-bottom:18px;}
 .arxiu-section .sec-num {font-family:'Bungee',sans-serif;font-size:12px;color:#888;letter-spacing:3px;}
 .arxiu-section .sec-title {font-family:'Bungee',sans-serif;font-size:clamp(26px,4vw,42px);letter-spacing:-1px;color:#000;}
-.arxiu-section .sec-title span {background:linear-gradient(160deg,#555 0%,#aaa 20%,#777 40%,#bbb 60%,#666 80%,#999 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.arxiu-section .sec-title span {color:var(--orange);}
 
 /* ── AVÍS "Per documentar" ── */
 .arxiu-section .doc-notice {background:#fff8f5;border:1px solid rgba(255,106,26,.25);border-radius:12px;padding:14px 20px;margin-bottom:40px;display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--ax-muted);}
@@ -2711,7 +2712,9 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
 .arxiu-section .tl-tag.pending {background:transparent;color:var(--orange);border-color:rgba(255,106,26,.25);border-style:dashed;opacity:.7;}
 
 @media (max-width: 900px) {
-    .arxiu-section .stats-inner {grid-template-columns:repeat(2,1fr);}
+    .arxiu-section .stats-inner {grid-template-columns:repeat(2,1fr);padding:24px 18px;gap:12px;}
+    .arxiu-section .stat-num {font-size:32px;gap:8px;}
+    .arxiu-section .stat-num::before {width:4px;}
     .arxiu-section .section {padding:56px 24px;}
     .arxiu-section .timeline::before {left:54px;}
     .arxiu-section .tl-year {width:54px;font-size:14px;}
