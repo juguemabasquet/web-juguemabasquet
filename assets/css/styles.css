@@ -113,6 +113,12 @@
   /* BANNER TORNEIG 3x3 */
   .banner-3x3 { position: fixed; top: 56px; left: 0; right: 0; z-index: 999; background: var(--orange); }
   .banner-3x3.hidden { display: none; }
+  /* Desktop home: hide the section menu (cards already expose all sections).
+     The nav reappears when a section is open for proper navigation. */
+  @media (min-width: 901px) {
+    body:not(.section-open) .nav { display: none; }
+    body:not(.section-open) .banner-3x3 { top: 0; }
+  }
   .banner-3x3-inner { max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .banner-3x3-left { display: flex; align-items: center; gap: 12px; }
   .banner-3x3-badge { background: #fff; color: var(--orange); font-family: 'Bungee', sans-serif; font-size: 10px; letter-spacing: 1.5px; padding: 3px 8px; border-radius: 4px; flex-shrink: 0; }
