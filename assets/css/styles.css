@@ -394,10 +394,13 @@
   .aito-card {
     display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px;
     margin-top: 64px; align-items: start;
-    background: #111111;
-    border: 1px solid rgba(255,255,255,0.1); border-radius: 24px;
+    background: linear-gradient(145deg, #16294a, #0d1728);
+    border: 1px solid rgba(255,106,26,0.28); border-radius: 24px;
     padding: 40px; position: relative; overflow: hidden;
   }
+  /* Per-interview accent colours to give the section a livelier, varied look */
+  #entrevista-aito { background: linear-gradient(145deg, #123026, #0b1a13); }
+  #entrevista-villacampa { background: linear-gradient(145deg, #3a1030, #1a0a16); }
   .aito-card::before {
     content: 'ENTREVISTA'; position: absolute; top: 24px; right: 24px;
     background: var(--orange); color: white; padding: 6px 14px; border-radius: 999px;
@@ -412,7 +415,6 @@
   .aito-photo-wrap:hover { transform: rotate(0deg) scale(1.02); }
   .aito-photo-wrap img {
     width: 100%; display: block;
-    filter: grayscale(100%) contrast(1.1);
   }
   .aito-photo-wrap::after {
     content: ''; position: absolute; inset: 0;
