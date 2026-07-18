@@ -394,15 +394,20 @@
   .aito-card {
     display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px;
     margin-top: 64px; align-items: start;
-    background: #111111;
-    border: 1px solid rgba(255,255,255,0.1); border-radius: 24px;
+    background: linear-gradient(150deg, #12233d 0%, #0c1626 55%, #0a0f18 100%);
+    border: 1px solid rgba(255,106,26,0.35); border-radius: 24px;
     padding: 40px; position: relative; overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.5);
   }
+  /* All interview cards share the brand dark tone; colour comes from the photos + orange accents */
   .aito-card::before {
-    content: 'ENTREVISTA'; position: absolute; top: 24px; right: 24px;
+    content: 'VEU'; position: absolute; top: 24px; right: 24px;
     background: var(--orange); color: white; padding: 6px 14px; border-radius: 999px;
     font-family: 'Bungee', sans-serif; font-size: 11px; letter-spacing: 1.5px;
   }
+  #entrevista-busquets::before { content: 'VEU 01'; }
+  #entrevista-aito::before { content: 'VEU 02'; }
+  #entrevista-villacampa::before { content: 'VEU 03'; }
   .aito-photo-wrap {
     border-radius: 16px; overflow: hidden;
     box-shadow: 0 30px 80px rgba(0,0,0,0.6);
@@ -412,7 +417,6 @@
   .aito-photo-wrap:hover { transform: rotate(0deg) scale(1.02); }
   .aito-photo-wrap img {
     width: 100%; display: block;
-    filter: grayscale(100%) contrast(1.1);
   }
   .aito-photo-wrap::after {
     content: ''; position: absolute; inset: 0;
@@ -433,7 +437,16 @@
     letter-spacing: .5px;
   }
   .aito-card .lead {
-    color: rgba(255,255,255,0.75); font-size: 15px; margin-bottom: 24px; line-height: 1.65;
+    position: relative;
+    color: rgba(255,255,255,0.82); font-size: 16px; margin-bottom: 24px; line-height: 1.7;
+    padding-left: 30px; border-left: 3px solid var(--orange);
+  }
+  .aito-card .lead::before {
+    content: '\201C';
+    position: absolute; left: 14px; top: 22px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 66px; line-height: 0; color: var(--orange); opacity: .5;
+    pointer-events: none;
   }
   /* Acordió Q&A */
   .aito-qa-wrap {
