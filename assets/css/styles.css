@@ -2362,10 +2362,11 @@
   .c-black   { background: #0a0a0a; color: #fff; border: 1px solid rgba(255,255,255,0.08); }
   .c-orange  { background: #FF6A1A; color: #fff; }
   .c-dark    { background: #161616; color: #fff; border: 1px solid rgba(255,255,255,0.06); }
-  .c-offwhite{ background: #E4E4E4; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.08); }
+  .c-offwhite{ background: #DBDBDB; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.12); }
   .c-gold    { background: #1a3a8a; color: #0a0a0a; }
-  .c-green   { background: #0e2d1e; color: #fff; }
+  .c-green   { background: #2E6B4E; color: #fff; }
   .c-white   { background: #fff; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.06); }
+  .c-magenta { background: linear-gradient(135deg,#8C3A64,#BC5A88); color: #fff; }
   .c-navy    { background: #0a1628; color: #fff; }
 
   /* ── Featured bento card (highlight one important item, e.g. a key interview) ── */
