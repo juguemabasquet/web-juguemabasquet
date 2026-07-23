@@ -111,15 +111,23 @@
   .nav .cta:hover { background: #e55a0a; transform: translateY(-1px); }
 
   /* BANNER TORNEIG 3x3 */
-  .banner-3x3 { position: fixed; top: 56px; left: 0; right: 0; z-index: 999; background: var(--orange); }
+  .banner-3x3 { position: fixed; top: 56px; left: 0; right: 0; z-index: 999;
+    background: var(--orange);
+    background-image: linear-gradient(100deg, #FF6A1A, #E5551A), repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 12px, transparent 12px 26px);
+    box-shadow: 0 4px 16px rgba(229,85,26,.35); }
   .banner-3x3.hidden { display: none; }
   .banner-3x3-inner { max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .banner-3x3-left { display: flex; align-items: center; gap: 12px; }
   .banner-3x3-badge { background: #fff; color: var(--orange); font-family: 'Bungee', sans-serif; font-size: 10px; letter-spacing: 1.5px; padding: 3px 8px; border-radius: 4px; flex-shrink: 0; }
   .banner-3x3-title { font-family: 'Bungee', sans-serif; font-size: clamp(13px, 2vw, 16px); color: #fff; text-transform: uppercase; letter-spacing: .5px; }
+  .banner-3x3-title .n { display: inline-block; background: #fff; color: var(--orange); padding: 1px 8px; border-radius: 6px; font-size: 1.2em; box-shadow: 0 2px 0 rgba(0,0,0,.12); }
+  .banner-3x3-title .ball { font-size: 1.5em; line-height: 1; vertical-align: -3px; }
+  .banner-3x3-left::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #fff; flex-shrink: 0; animation: banner-pulse 1.6s infinite; }
+  @keyframes banner-pulse { 0% { background: #fff; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,.6); } 50% { background: #0A0A0E; transform: scale(1.35); } 70% { box-shadow: 0 0 0 9px rgba(255,255,255,0); } 100% { background: #fff; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
   .banner-3x3-right { display: flex; align-items: center; gap: 20px; }
   .banner-3x3-date { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.85); }
-  .banner-3x3-cta { background: #fff; color: var(--orange); font-family: 'Bungee', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 7px 18px; border-radius: 6px; white-space: nowrap; }
+  .banner-3x3-cta { background: #fff; color: var(--orange); font-family: 'Bungee', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 7px 18px; border-radius: 6px; white-space: nowrap; transition: transform .15s ease, box-shadow .15s ease; }
+  .banner-3x3:hover .banner-3x3-cta { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(0,0,0,.18); }
   @media (max-width: 600px) {
     .banner-3x3-date { display: none; }
     .banner-3x3-cta { display: none; }
