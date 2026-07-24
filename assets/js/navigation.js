@@ -55,52 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (hash && document.getElementById(hash)) {
     setTimeout(function(){ showSection(hash); }, 50);
   }
-  // Reestructura #activitats: llarga durada + puntuals ordenades
-  (function() {
-    var container = document.querySelector('#activitats .container');
-    if (!container) return;
-
-    // (El títol i l'eyebrow es gestionen via i18n / data-i18n)
-
-    // --- LLARGA DURADA ---
-    var llarga = document.createElement('div');
-    llarga.className = 'projectes-categoria';
-    llarga.innerHTML = '<h3 class="categoria-title" data-i18n="act.llarga.title">Projectes de llarga durada</h3>';
-
-    // Bàsquet per a Tothom
-    var inclusio = container.querySelector('.inclusio-event');
-    if (inclusio) llarga.appendChild(inclusio);
-
-    container.appendChild(llarga);
-
-    // --- ACTIVITATS PUNTUALS ---
-    var puntuals = document.createElement('div');
-    puntuals.className = 'projectes-categoria';
-    puntuals.innerHTML = '<h3 class="categoria-title" data-i18n="act.puntuals.title">Activitats puntuals</h3>';
-
-    // 2a: Miqui Forniés (featured)
-    var miqui = container.querySelector('.featured-event:not(.inclusio-event)');
-    if (miqui) {
-      var badge = document.createElement('div');
-      badge.className = 'past-event-label';
-      badge.setAttribute('data-i18n', 'miqui.badge');
-      badge.textContent = 'Celebrat';
-      miqui.insertBefore(badge, miqui.firstChild);
-      miqui.classList.add('past-event', 'clickable');
-      miqui.title = 'Clica per veure més detalls';
-      miqui.addEventListener('click', function() {
-        document.getElementById('miqui-modal-overlay').classList.add('active');
-      });
-      puntuals.appendChild(miqui);
-    }
-
-    // 3a: Casagemes (targeta compacta)
-    var casagemes = container.querySelector('.event-card');
-    if (casagemes) puntuals.appendChild(casagemes);
-
-    container.appendChild(puntuals);
-  })();
-
 
   var brandEl = document.querySelector('.brand');
   if (brandEl) { brandEl.addEventListener('click', function(e){ e.preventDefault(); showHome(); }); }

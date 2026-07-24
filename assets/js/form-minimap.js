@@ -126,22 +126,18 @@
 
     try {
       const formData = new FormData(form);
-      formData.append('access_key', 'e20664cf-14c1-4900-8107-dfbfcc6c19d1');
-      formData.append('to', 'info@juguemabasquet.org');
-      formData.append('botcheck', '');
-
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
         signal: controller.signal
       });
-      let json = await res.json();
 
       clearTimeout(timeoutId);
-      if (json.success) {
+      if (res.ok) {
         form.style.display = 'none';
         document.getElementById('reporta-success').style.display = 'block';
-      } else { throw new Error(json.message || 'Error desconegut'); }
+      } else { throw new Error('HTTP ' + res.status); }
     } catch(err) {
       clearTimeout(timeoutId);
       btn.textContent = (TRANSLATIONS[currentLang] || TRANSLATIONS['ca'])['rep.modal.submit'] || 'Enviar reportatge →';

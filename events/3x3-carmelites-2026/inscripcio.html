@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscripció · Torneig 3x3 · Carmelites · 19 Setembre 2026 · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-left">
+    <a href="./" class="header-back" data-i18n="f.back2">← Tornar</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO / CARTEL -->
+<div class="hero">
+  <div class="hero-eyebrow"><span data-i18n="f.badge">Inscripcions obertes</span></div>
+  <h1 class="hero-title">3<span>x</span>3</h1>
+  <p class="hero-sub" data-i18n="f.hero.sub">Inscripció · Bàsquet de carrer</p>
+  <div class="hero-tags">
+    <span class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="f.date">19 de setembre de 2026</span></span>
+    <span class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="f.time">10:00 H</span></span>
+    <a class="hero-tag" href="https://maps.google.com/maps?q=Carrer+del+Mar+47,+Badalona" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="f.location">Pista Miqui Forniés (Carmelites) · Badalona</span></a>
+    <span class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7a6 6 0 1 0 0 10"/><path d="M4 11h9M4 15h7"/></svg><span data-i18n="f.price">15€ per jugador</span></span>
+  </div>
+</div>
+
+<!-- FORM WRAPPER -->
+<div class="form-wrapper">
+
+  <!-- BIZUM CARD -->
+  <div class="bizum-card">
+    <div class="bizum-icon">€</div>
+    <div class="bizum-info">
+      <div class="bizum-label" data-i18n="f.biz.label">Pagament · Bizum</div>
+      <div class="bizum-num">655 585 695</div>
+      <div class="bizum-price" data-i18n="f.biz.price">15€ per jugador · Concepte: nom de l'equip</div>
+      <div style="margin-top:8px;font-size:12px;font-weight:700;color:#FF6A1A;display:flex;align-items:flex-start;gap:6px;"><svg class="ico" style="width:14px;height:14px;margin-top:1px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg><span data-i18n="f.biz.warning">El pagament s'ha de fer en el moment de la inscripció. Sense Bizum, l'equip no quedarà inclòs.</span></div>
+    </div>
+  </div>
+
+  <!-- FORMULARI -->
+  <form
+    name="inscripcio-3x3-carmelites-2026"
+    method="POST"
+    action="/events/3x3-carmelites-2026/inscripcio?inscrit=1"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    id="form-inscripcio"
+    novalidate
+  >
+    <input type="hidden" name="form-name" value="inscripcio-3x3-carmelites-2026">
+    <p style="display:none;"><input name="bot-field"></p>
+
+    <!-- 1. EQUIP -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-num">1</div>
+        <div class="card-header-title" data-i18n="f.c1.title">Dades de l'equip</div>
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <label><span data-i18n="f.equip.label">Nom de l'equip</span> <span class="req">*</span></label>
+          <input type="text" name="equip" data-i18n-ph="f.equip.ph" placeholder="Ex: Dimonis Badalona" required>
+          <input type="hidden" name="categoria" value="X">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. JUGADORS -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-num">2</div>
+        <div class="card-header-title" data-i18n="f.c2.title">Jugadors</div>
+      </div>
+      <div class="card-body">
+        <div class="jugadors-grup">
+          <div class="jugador-row">
+            <div class="jugador-num">1</div>
+            <div class="field" style="flex:1;">
+              <label><span data-i18n="f.j1">Jugador 1</span> <span class="req">*</span></label>
+              <input type="text" name="jugador1" data-i18n-ph="f.j.ph" placeholder="Nom i cognoms" required>
+            </div>
+          </div>
+          <div class="jugador-row">
+            <div class="jugador-num">2</div>
+            <div class="field" style="flex:1;">
+              <label><span data-i18n="f.j2">Jugador 2</span> <span class="req">*</span></label>
+              <input type="text" name="jugador2" data-i18n-ph="f.j.ph" placeholder="Nom i cognoms" required>
+            </div>
+          </div>
+          <div class="jugador-row">
+            <div class="jugador-num">3</div>
+            <div class="field" style="flex:1;">
+              <label><span data-i18n="f.j3">Jugador 3</span> <span class="req">*</span></label>
+              <input type="text" name="jugador3" data-i18n-ph="f.j.ph" placeholder="Nom i cognoms" required>
+            </div>
+          </div>
+          <div class="jugador-row">
+            <div class="jugador-num">4</div>
+            <div class="field" style="flex:1;">
+              <label><span data-i18n="f.j4">Jugador 4</span> <span class="opt" data-i18n="f.opcional">(opcional)</span></label>
+              <input type="text" name="jugador4" data-i18n-ph="f.j.ph" placeholder="Nom i cognoms">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. CAPITÀ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-num">3</div>
+        <div class="card-header-title" data-i18n="f.c3.title">Capità / Capitana de l'equip</div>
+      </div>
+      <div class="card-body" style="display:flex; flex-direction:column; gap:16px;">
+        <div class="field">
+          <label><span data-i18n="f.del.nom">Nom i cognoms</span> <span class="req">*</span></label>
+          <input type="text" name="capita" data-i18n-ph="f.capita.ph" placeholder="Nom i cognoms del/la capità/ana" required>
+        </div>
+        <div class="grid-2">
+          <div class="field">
+            <label><span data-i18n="f.mobil">Mòbil</span> <span class="req">*</span></label>
+            <input type="tel" name="mobil" placeholder="6XX XXX XXX" required>
+          </div>
+          <div class="field">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="email" data-i18n-ph="f.email.ph" placeholder="correu@exemple.com" required>
+          </div>
+        </div>
+        <div class="field">
+          <label><span data-i18n="f.notes">Notes</span> <span class="opt" data-i18n="f.opcional">(opcional)</span></label>
+          <textarea name="notes" data-i18n-ph="f.notes.ph" placeholder="Dubtes, observacions, al·lèrgies de samarreta..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. MENORS D'EDAT -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-num">4</div>
+        <div class="card-header-title" data-i18n="f.c4.title">Menors d'edat</div>
+      </div>
+      <div class="card-body" style="display:flex; flex-direction:column; gap:16px;">
+        <div style="background:#fff8f0; border:1px solid #ffe0c0; border-radius:10px; padding:12px 16px; font-size:13px; color:#7a4a00;">
+          <strong data-i18n="f.menors.note.title">Si algun membre de l'equip és menor d'edat</strong><br>
+          <span data-i18n="f.menors.note.body">Emplena aquest apartat amb les dades del tutor/a. L'organització verificarà l'autorització per telèfon abans del torneig.</span>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;" data-i18n="f.menors.primer.label">Primer menor · Tutor/a de contacte</div>
+        <div class="grid-2">
+          <div class="field">
+            <label><span data-i18n="f.menors.nom">Nom i cognoms del tutor/a</span></label>
+            <input type="text" name="tutor_nom" data-i18n-ph="f.menors.nom.ph" placeholder="Nom i cognoms complets">
+          </div>
+          <div class="field">
+            <label><span data-i18n="f.menors.dni">DNI del tutor/a</span></label>
+            <input type="text" name="tutor_dni" placeholder="12345678A" maxlength="12">
+          </div>
+        </div>
+        <div class="field" style="max-width:280px;">
+          <label><span data-i18n="f.menors.tel">Telèfon de contacte</span></label>
+          <input type="tel" name="tutor_telefon" placeholder="6XX XXX XXX">
+        </div>
+        <div class="field">
+          <label><span data-i18n="f.menors.addicionals">Menors addicionals</span> <span style="font-size:11px;color:#aaa;" data-i18n="f.menors.addicionals.fmt">(opcional · si n'hi ha més d'un)</span></label>
+          <textarea name="menors_addicionals" rows="3" data-i18n-ph="f.menors.addicionals.ph" placeholder="Ex: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX&#10;Laia Puig — tutora: Anna Puig · 6XX XXX XXX" style="resize:vertical;font-size:13px;"></textarea>
+          <div style="font-size:11px;color:#aaa;margin-top:4px;" data-i18n="f.menors.addicionals.note">Indica el nom del/la menor i el telèfon del seu tutor/a per a cada menor addicional.</div>
+        </div>
+        <div style="background:#f0f7ff;border:1px solid #b8d4f0;border-radius:10px;padding:12px 16px;font-size:13px;color:#1a4a7a;line-height:1.6;display:flex;align-items:flex-start;gap:8px;"><svg class="ico" style="margin-top:2px;color:#1a4a7a;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg><span data-i18n="f.menors.verify">
+          <strong>No cal adjuntar cap document.</strong> L'organització trucarà o enviarà un WhatsApp al telèfon de contacte indicat per verificar l'autorització del/la menor abans del torneig.
+        </span></div>
+      </div>
+    </div>
+
+    <!-- 5. REGLAMENT -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-num">5</div>
+        <div class="card-header-title" data-i18n="f.c5.title">Reglament i confirmació</div>
+      </div>
+      <div class="card-body">
+        <div class="reglament-box">
+          <strong data-i18n="f.cond.title">Condicions de participació:</strong>
+          <ul>
+            <li data-i18n="f.cond.1">Cada equip ha d'estar format per 3 o 4 jugadors/es (mínim 3).</li>
+            <li data-i18n="f.cond.2">El pagament s'ha de fer <strong>en el moment de la inscripció</strong>. Sense Bizum al <strong>655 585 695</strong>, l'equip no quedarà inclòs al torneig.</li>
+            <li data-i18n="f.cond.3">Preu: <strong>15€ per jugador</strong>. Concepte: nom de l'equip.</li>
+            <li data-i18n="f.cond.4">Les inscripcions estan subjectes a disponibilitat de places.</li>
+            <li data-i18n="f.cond.5">L'organització es reserva el dret d'admissió i de modificar l'horari si cal.</li>
+          </ul>
+          <div class="reg-btns-top" style="margin-top:12px;">
+            <button type="button" class="btn-veure" onclick="document.getElementById('reg-modal').classList.add('open')"><svg class="ico" style="width:15px;height:15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="f.veure">Veure reglament</span></button>
+            <button type="button" class="btn-veure" onclick="document.getElementById('reg-modal').classList.add('open');setTimeout(()=>window.print(),300)" style="border-color:#aaa;color:#555;"><svg class="ico" style="width:15px;height:15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg> <span data-i18n="f.download">Descarregar PDF</span></button>
+          </div>
+        </div>
+        <label class="check-row">
+          <input type="checkbox" name="reglament" value="acceptat" required>
+          <span class="check-label" data-i18n="f.check">He llegit i accepto les condicions de participació i el <a href="#" onclick="event.preventDefault();document.getElementById('reg-modal').classList.add('open')">reglament del torneig 3x3</a> de Juguem a Bàsquet. <span class="req">*</span></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-area">
+      <button type="submit" class="btn-submit" data-i18n="f.submit">Inscriure l'equip</button>
+      <div class="submit-note" data-i18n="f.submit.note">Recorda fer el Bizum de 15€ per jugador al 655 585 695 ara mateix · Sense pagament l'equip no quedarà inclòs</div>
+    </div>
+
+  </form>
+
+  <!-- SUCCESS -->
+  <div class="success-screen" id="success-screen">
+    <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></div>
+    <div class="success-title" data-i18n="f.ok.title">Equip <span>inscrit!</span></div>
+    <p class="success-text" data-i18n="f.ok.text">Hem rebut el formulari. <strong>Feu el Bizum de 15€ per jugador al 655 585 695 ara mateix</strong> amb el concepte: nom de l'equip.<br><br>Sense pagament, l'equip no quedarà inclòs al torneig. Rebreu la confirmació de plaça per email el <strong>17 de setembre</strong>.</p>
+  </div>
+
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona',
+    'f.back': '← Inici', 'f.back2': '← Tornar',
+    'f.badge': 'Inscripcions obertes',
+    'f.hero.sub': 'Inscripció · Bàsquet de carrer',
+    'f.date': '19 de setembre de 2026',
+    'f.time': '10:00 H', 'f.location': 'Pista Miqui Forniés (Carmelites) · Badalona',
+    'f.price': '15€ per jugador',
+    'f.triples.label': 'Activitat especial · A meitat de torneig',
+    'f.triples.title': 'Concurs de Triples',
+    'f.triples.desc': "Competició oberta a tots els participants. El millor tirador/a del dia s'emporta el premi especial.",
+    'f.biz.label': 'Pagament · Bizum',
+    'f.biz.warning': 'El pagament s\'ha de fer en el moment de la inscripció. Sense Bizum, l\'equip no quedarà inclòs.',
+    'f.biz.price': "15€ per jugador · Concepte: nom de l'equip",
+    'f.c1.title': "Dades de l'equip",
+    'f.equip.label': "Nom de l'equip",
+    'f.equip.ph': 'Ex: Dimonis Badalona',
+    'f.c2.title': 'Jugadors',
+    'f.j1': 'Jugador 1', 'f.j2': 'Jugador 2', 'f.j3': 'Jugador 3', 'f.j4': 'Jugador 4',
+    'f.j.ph': 'Nom i cognoms',
+    'f.opcional': '(opcional)',
+    'f.c3.title': "Capità / Capitana de l'equip",
+    'f.del.nom': 'Nom i cognoms',
+    'f.capita.ph': 'Nom i cognoms del/la capità/ana',
+    'f.mobil': 'Mòbil',
+    'f.email.ph': 'correu@exemple.com',
+    'f.notes': 'Notes',
+    'f.notes.ph': 'Dubtes, observacions, al·lèrgies de samarreta...',
+    'f.c4.title': "Menors d'edat",
+    'f.menors.note.title': "Si algun membre de l'equip és menor d'edat",
+    'f.menors.note.body': "Emplena aquest apartat amb les dades del tutor/a. L'organització verificarà l'autorització per telèfon abans del torneig.",
+    'f.menors.primer.label': 'Primer menor · Tutor/a de contacte',
+    'f.menors.nom': 'Nom i cognoms del tutor/a', 'f.menors.nom.ph': 'Nom i cognoms complets',
+    'f.menors.dni': 'DNI del tutor/a',
+    'f.menors.tel': 'Telèfon de contacte',
+    'f.menors.addicionals': 'Menors addicionals', 'f.menors.addicionals.fmt': '(opcional · si n\'hi ha més d\'un)',
+    'f.menors.addicionals.ph': 'Ex: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX\nLaia Puig — tutora: Anna Puig · 6XX XXX XXX',
+    'f.menors.addicionals.note': 'Indica el nom del/la menor i el telèfon del seu tutor/a per a cada menor addicional.',
+    'f.menors.verify': '<strong>No cal adjuntar cap document.</strong> L\'organització trucarà o enviarà un WhatsApp al telèfon de contacte indicat per verificar l\'autorització del/la menor abans del torneig.',
+    'f.c5.title': 'Reglament i confirmació',
+    'f.cond.title': 'Condicions de participació:',
+    'f.cond.1': "Cada equip ha d'estar format per 3 o 4 jugadors/es (mínim 3).",
+    'f.cond.2': 'El pagament s\'ha de fer <strong>en el moment de la inscripció</strong>. Sense Bizum al <strong>655 585 695</strong>, l\'equip no quedarà inclòs al torneig.',
+    'f.cond.3': 'Preu: <strong>15€ per jugador</strong>. Concepte: nom de l\'equip.',
+    'f.cond.4': 'Les inscripcions estan subjectes a disponibilitat de places.',
+    'f.cond.5': "L'organització es reserva el dret d'admissió i de modificar l'horari si cal.",
+    'f.veure': 'Veure reglament',
+    'f.download': 'Descarregar PDF',
+    'f.check': 'He llegit i accepto les condicions de participació i el <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">reglament del torneig 3x3</a> de Juguem a Bàsquet. <span class="req">*</span>',
+    'f.submit': "Inscriure l'equip",
+    'f.submit.note': 'Recorda fer el Bizum de 15€ per jugador al 655 585 695 ara mateix · Sense pagament l\'equip no quedarà inclòs',
+    'f.ok.title': 'Equip <span>inscrit!</span>',
+    'f.ok.text': 'Hem rebut el formulari. <strong>Feu el Bizum de 15€ per jugador al 655 585 695 ara mateix</strong> amb el concepte: nom de l\'equip.<br><br>Sense pagament, l\'equip no quedarà inclòs al torneig. Rebreu la confirmació de plaça per email el <strong>17 de setembre</strong>.',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'reg.title': 'Reglament del Torneig 3x3',
+    'reg.sub': 'Associació Juguem a Bàsquet · Pista Miqui Forniés (Pares Carmelites) · 19 setembre 2026',
+    'reg.s1.t': '1. Objectiu',
+    'reg.s1.p': 'Fomentar la convivència, l\'esport, el respecte i els valors del bàsquet de barri en un ambient lúdic i participatiu.',
+    'reg.s2.t': '2. Participants',
+    'reg.s2.p': 'Mínim 3 jugadors/es, màxim 4 per equip. A pista: 3 simultàniament. Categoria: <strong>Mixta</strong>.',
+    'reg.s3.t': '3. Format del torneig',
+    'reg.s3.p': '<strong>16 equips</strong> distribuïts en <strong>4 grups de 4 equips</strong>. Dues fases eliminatòries paral·leles (Or i Plata), cadascuna amb quarts de final, semifinals i final.',
+    'reg.s3.l': '<li><strong>Fase de grups:</strong> cada equip juga contra els altres 3 del seu grup.</li><li><strong>Fase Or:</strong> els 2 primers de cada grup — quarts → semis → final Or.</li><li><strong>Fase Plata:</strong> els 2 últims de cada grup — quarts → semis → final Plata.</li><li>Tots els equips juguen la fase de grups i almenys una fase eliminatòria completa.</li>',
+    'reg.s4.t': '4. Termini d\'inscripció',
+    'reg.s4.p': 'Fins al <strong>14 de setembre de 2026 a les 23:59 h</strong>. No s\'acceptaran inscripcions fora d\'aquest termini. La confirmació de plaça s\'enviarà per email el <strong>17 de setembre</strong>.',
+    'reg.s5.t': '5. Format de joc',
+    'reg.s5.p': 'Partits de <strong>10 minuts a temps corregut</strong>, amb els <strong>últims 2 minuts a temps parat</strong>. Guanya qui arribi a <strong>21 punts</strong> o lideri en acabar.',
+    'reg.s5.l': '<li><strong>Pilota oficial:</strong> talla 7.</li><li><strong>Reposessió:</strong> treure des de darrere l\'arc de 6,75 m.</li><li><strong>Temps mort:</strong> 1 per equip, 30 segons, amb possessió.</li><li><strong>Pròrroga:</strong> primer que anoti guanya (mort sobtada). Sorteig per decidir qui comença la possessió.</li>',
+    'reg.s6.t': '6. Puntuació',
+    'reg.s6.l': '<li>Dins la línia: <strong>1 punt</strong></li><li>Fora de la línia: <strong>2 punts</strong></li><li>Tir lliure: <strong>1 punt</strong></li>',
+    'reg.s7.t': '7. Faltes',
+    'reg.s7.p': 'A partir de la <strong>5a falta d\'equip</strong>: 2 tirs lliures.',
+    'reg.s8.t': '8. Presentació',
+    'reg.s8.p': 'Mínim <strong>15 minuts</strong> abans del primer partit. La no presentació pot suposar derrota per incompareixença.',
+    'reg.s9.t': '9. Menors d\'edat',
+    'reg.s9.p': 'Els equips amb jugadors/es menors d\'edat han d\'omplir l\'apartat 4 del formulari d\'inscripció amb les dades del tutor/a (nom, DNI i telèfon). <strong>No cal adjuntar cap document:</strong> l\'organització trucarà o enviarà un WhatsApp per verificar l\'autorització abans del torneig.',
+    'reg.s10.t': '10. Cancel·lació',
+    'reg.s10.p': 'En cas de cancel·lació per causes meteorològiques o força major, <strong>es buscarà una data alternativa</strong> per celebrar el torneig. L\'organització comunicarà la nova data als equips inscrits.',
+    'reg.s11.t': '11. Drets d\'imatge',
+    'reg.s11.p': 'Es podran fer fotografies i vídeos publicats a les xarxes socials de JAB, principalment <strong>@juguemabasquet</strong> (Instagram). La participació implica l\'acceptació d\'aquesta política.',
+    'reg.s12.t': '12. Comportament i acceptació',
+    'reg.s12.p': 'Qualsevol conducta antiesportiva pot comportar l\'expulsió. Les decisions de l\'organització són definitives. La inscripció implica l\'acceptació íntegra d\'aquest reglament.',
+    'reg.s13.t': '13. Premis',
+    'reg.s13.l': '<li><strong>Equip guanyador</strong> — 200 € en metàl·lic</li><li><strong>Equip finalista</strong> — 4 menús al Temps Mort</li><li><strong>Guanyador/a del Concurs de Triples</strong> — Pilota serigrafiada</li><li><strong>Tots els participants</strong> — Samarreta exclusiva Juguem a Bàsquet i clauer</li>',
+    'reg.s14.t': '14. Seguretat i emergències',
+    'reg.s14.p1': '<strong>Assegurança de Responsabilitat Civil:</strong> <em style="color:#999">Número pendent de confirmar.</em>',
+    'reg.s14.p2': '<strong>Contacte d\'emergències:</strong> <em style="color:#999">Pendent de confirmar.</em> En cas de malaltia o accident, truqueu al <strong>112</strong>.',
+    'reg.s15.t': '15. Àrbitres',
+    'reg.s15.p': 'L\'arbitratge de tots els partits anirà a càrrec de l\'<strong>organització</strong>. Les decisions arbitrals són definitives.',
+    'reg.quote': '"No és només un partit. És una oportunitat per compartir, competir i fer barri."',
+    'reg.pdf': 'Descarregar PDF',
+    'reg.close': 'Tancar',
+  },
+  en: {
+    'f.sub': 'Association · Badalona',
+    'f.back': '← Home', 'f.back2': '← Back',
+    'f.badge': 'Registrations open',
+    'f.hero.sub': 'Registration · Street basketball',
+    'f.date': '19 September 2026',
+    'f.time': '10:00 H', 'f.location': 'Miqui Forniés Court (Carmelites) · Badalona',
+    'f.price': '15€ per player',
+    'f.triples.label': 'Special activity · Mid-tournament',
+    'f.triples.title': 'Three-Point Contest',
+    'f.triples.desc': 'Open to all participants. The best shooter of the day wins the special prize.',
+    'f.biz.label': 'Payment · Bizum',
+    'f.biz.warning': 'Payment must be made at the time of registration. Without Bizum, the team will not be included.',
+    'f.biz.price': '15€ per player · Reference: team name',
+    'f.c1.title': 'Team details',
+    'f.equip.label': 'Team name',
+    'f.equip.ph': 'Ex: Badalona Warriors',
+    'f.c2.title': 'Players',
+    'f.j1': 'Player 1', 'f.j2': 'Player 2', 'f.j3': 'Player 3', 'f.j4': 'Player 4',
+    'f.j.ph': 'Full name',
+    'f.opcional': '(optional)',
+    'f.c3.title': 'Team captain',
+    'f.del.nom': 'Full name',
+    'f.capita.ph': 'Full name of the captain',
+    'f.mobil': 'Mobile',
+    'f.email.ph': 'email@example.com',
+    'f.notes': 'Notes',
+    'f.notes.ph': 'Questions, comments...',
+    'f.c4.title': 'Underage players',
+    'f.menors.note.title': 'If any team member is under 18',
+    'f.menors.note.body': "Fill in this section with the guardian's details. The organisation will verify the authorisation by phone before the tournament.",
+    'f.menors.primer.label': 'First minor · Main guardian contact',
+    'f.menors.nom': 'Parent/guardian full name', 'f.menors.nom.ph': 'Full name',
+    'f.menors.dni': 'Parent/guardian ID (DNI)',
+    'f.menors.tel': 'Contact phone',
+    'f.menors.addicionals': 'Additional minors', 'f.menors.addicionals.fmt': '(optional · if more than one)',
+    'f.menors.addicionals.ph': 'Ex: Pau Martínez — guardian: Joan Martínez · 6XX XXX XXX\nLaia Puig — guardian: Anna Puig · 6XX XXX XXX',
+    'f.menors.addicionals.note': 'Add the minor\'s name and their guardian\'s phone number for each additional minor.',
+    'f.menors.verify': '<strong>No document upload needed.</strong> The organisation will call or send a WhatsApp to the contact phone number provided to verify the minor\'s authorisation before the tournament.',
+    'f.c5.title': 'Rules & confirmation',
+    'f.cond.title': 'Participation conditions:',
+    'f.cond.1': 'Each team must have 3 or 4 players (minimum 3).',
+    'f.cond.2': 'Payment must be made <strong>at the time of registration</strong>. Without Bizum to <strong>655 585 695</strong>, the team will not be included in the tournament.',
+    'f.cond.3': 'Fee: <strong>15€ per player</strong>. Reference: team name.',
+    'f.cond.4': 'Registrations are subject to availability.',
+    'f.cond.5': 'The organisation reserves the right of admission and to modify the schedule if necessary.',
+    'f.veure': 'View rules',
+    'f.download': 'Download PDF',
+    'f.check': 'I have read and accept the participation conditions and the <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">3x3 tournament rules</a> of Juguem a Bàsquet. <span class="req">*</span>',
+    'f.submit': 'Register your team',
+    'f.submit.note': 'Send the 15€ per player Bizum to 655 585 695 now · Without payment the team will not be included',
+    'f.ok.title': 'Team <span>registered!</span>',
+    'f.ok.text': 'We have received your form. <strong>Send the 15€ per player Bizum to 655 585 695 now</strong> with your team name as reference.<br><br>Without payment, the team will not be included in the tournament. Place confirmation will be sent by email on <strong>17 September</strong>.',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'reg.title': '3x3 Tournament Rules',
+    'reg.sub': 'Juguem a Bàsquet Association · Miqui Forniés Court (Carmelite Fathers) · 19 September 2026',
+    'reg.s1.t': '1. Objective',
+    'reg.s1.p': 'To promote community, sport, respect and the values of neighbourhood basketball in a fun, participatory atmosphere.',
+    'reg.s2.t': '2. Participants',
+    'reg.s2.p': 'Minimum 3 players, maximum 4 per team. On court: 3 at a time. Category: <strong>Mixed</strong>.',
+    'reg.s3.t': '3. Tournament format',
+    'reg.s3.p': '<strong>16 teams</strong> split into <strong>4 groups of 4 teams</strong>. Two parallel knockout stages (Gold and Silver), each with quarter-finals, semi-finals and a final.',
+    'reg.s3.l': '<li><strong>Group stage:</strong> each team plays the other 3 in its group.</li><li><strong>Gold stage:</strong> the top 2 of each group — quarters → semis → Gold final.</li><li><strong>Silver stage:</strong> the bottom 2 of each group — quarters → semis → Silver final.</li><li>All teams play the group stage and at least one complete knockout stage.</li>',
+    'reg.s4.t': '4. Registration deadline',
+    'reg.s4.p': 'Until <strong>14 September 2026 at 23:59</strong>. No registrations will be accepted after this deadline. Place confirmation will be sent by email on <strong>17 September</strong>.',
+    'reg.s5.t': '5. Game format',
+    'reg.s5.p': '<strong>10-minute</strong> running-clock games, with the <strong>last 2 minutes stop-clock</strong>. The winner is the first to <strong>21 points</strong> or whoever leads at the end.',
+    'reg.s5.l': '<li><strong>Official ball:</strong> size 7.</li><li><strong>Check-ball:</strong> restart from behind the 6.75 m arc.</li><li><strong>Time-out:</strong> 1 per team, 30 seconds, with possession.</li><li><strong>Overtime:</strong> first to score wins (sudden death). A draw decides who starts with possession.</li>',
+    'reg.s6.t': '6. Scoring',
+    'reg.s6.l': '<li>Inside the arc: <strong>1 point</strong></li><li>Outside the arc: <strong>2 points</strong></li><li>Free throw: <strong>1 point</strong></li>',
+    'reg.s7.t': '7. Fouls',
+    'reg.s7.p': 'From the <strong>5th team foul</strong> onwards: 2 free throws.',
+    'reg.s8.t': '8. Check-in',
+    'reg.s8.p': 'At least <strong>15 minutes</strong> before the first game. Failure to show up may result in a walkover defeat.',
+    'reg.s9.t': '9. Underage players',
+    'reg.s9.p': 'Teams with underage players must fill in section 4 of the registration form with the guardian\'s details (name, ID and phone). <strong>No document upload is needed:</strong> the organisation will call or send a WhatsApp to verify the authorisation before the tournament.',
+    'reg.s10.t': '10. Cancellation',
+    'reg.s10.p': 'In the event of cancellation due to weather or force majeure, <strong>an alternative date will be sought</strong> to hold the tournament. The organisation will inform registered teams of the new date.',
+    'reg.s11.t': '11. Image rights',
+    'reg.s11.p': 'Photos and videos may be taken and published on JAB social media, mainly <strong>@juguemabasquet</strong> (Instagram). Participation implies acceptance of this policy.',
+    'reg.s12.t': '12. Conduct and acceptance',
+    'reg.s12.p': 'Any unsporting behaviour may lead to expulsion. The organisation\'s decisions are final. Registration implies full acceptance of these rules.',
+    'reg.s13.t': '13. Prizes',
+    'reg.s13.l': '<li><strong>Winning team</strong> — €200 cash</li><li><strong>Finalist team</strong> — 4 meals at Temps Mort</li><li><strong>Three-Point Contest Winner</strong> — Screen-printed ball</li><li><strong>All participants</strong> — Exclusive Juguem a Bàsquet t-shirt and keyring</li>',
+    'reg.s14.t': '14. Safety and emergencies',
+    'reg.s14.p1': '<strong>Public Liability Insurance:</strong> <em style="color:#999">Number to be confirmed.</em>',
+    'reg.s14.p2': '<strong>Emergency contact:</strong> <em style="color:#999">To be confirmed.</em> In case of illness or accident, call <strong>112</strong>.',
+    'reg.s15.t': '15. Referees',
+    'reg.s15.p': 'All games will be refereed by the <strong>organisation</strong>. Refereeing decisions are final.',
+    'reg.quote': '"It\'s not just a game. It\'s a chance to share, compete and build community."',
+    'reg.pdf': 'Download PDF',
+    'reg.close': 'Close',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona',
+    'f.back': '← Inicio', 'f.back2': '← Volver',
+    'f.badge': 'Inscripciones abiertas',
+    'f.hero.sub': 'Inscripción · Básquet de calle',
+    'f.date': '19 de septiembre de 2026',
+    'f.time': '10:00 H', 'f.location': 'Pista Miqui Forniés (Carmelites) · Badalona',
+    'f.price': '15€ por jugador',
+    'f.triples.label': 'Actividad especial · A mitad de torneo',
+    'f.triples.title': 'Concurso de Triples',
+    'f.triples.desc': 'Competición abierta a todos los participantes. El mejor tirador/a del día se lleva el premio especial.',
+    'f.biz.label': 'Pago · Bizum',
+    'f.biz.warning': 'El pago debe realizarse en el momento de la inscripción. Sin Bizum, el equipo no quedará incluido.',
+    'f.biz.price': '15€ por jugador · Concepto: nombre del equipo',
+    'f.c1.title': 'Datos del equipo',
+    'f.equip.label': 'Nombre del equipo',
+    'f.equip.ph': 'Ej: Dimonis Badalona',
+    'f.c2.title': 'Jugadores',
+    'f.j1': 'Jugador 1', 'f.j2': 'Jugador 2', 'f.j3': 'Jugador 3', 'f.j4': 'Jugador 4',
+    'f.j.ph': 'Nombre y apellidos',
+    'f.opcional': '(opcional)',
+    'f.c3.title': 'Capitán / Capitana del equipo',
+    'f.del.nom': 'Nombre y apellidos',
+    'f.capita.ph': 'Nombre y apellidos del/la capitán/a',
+    'f.mobil': 'Móvil',
+    'f.email.ph': 'correo@ejemplo.com',
+    'f.notes': 'Notas',
+    'f.notes.ph': 'Dudas, observaciones...',
+    'f.c4.title': 'Menores de edad',
+    'f.menors.note.title': 'Si algún miembro del equipo es menor de edad',
+    'f.menors.note.body': 'Rellena este apartado con los datos del tutor/a. La organización verificará la autorización por teléfono antes del torneo.',
+    'f.menors.primer.label': 'Primer menor · Tutor/a de contacto',
+    'f.menors.nom': 'Nombre y apellidos del tutor/a', 'f.menors.nom.ph': 'Nombre y apellidos completos',
+    'f.menors.dni': 'DNI del tutor/a',
+    'f.menors.tel': 'Teléfono de contacto',
+    'f.menors.addicionals': 'Menores adicionales', 'f.menors.addicionals.fmt': '(opcional · si hay más de uno)',
+    'f.menors.addicionals.ph': 'Ej: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX\nLaia Puig — tutora: Anna Puig · 6XX XXX XXX',
+    'f.menors.addicionals.note': 'Indica el nombre del/la menor y el teléfono de su tutor/a para cada menor adicional.',
+    'f.menors.verify': '<strong>No es necesario adjuntar ningún documento.</strong> La organización llamará o enviará un WhatsApp al teléfono de contacto indicado para verificar la autorización del/la menor antes del torneo.',
+    'f.c5.title': 'Reglamento y confirmación',
+    'f.cond.title': 'Condiciones de participación:',
+    'f.cond.1': 'Cada equipo debe estar formado por 3 o 4 jugadores/as (mínimo 3).',
+    'f.cond.2': 'El pago debe realizarse <strong>en el momento de la inscripción</strong>. Sin Bizum al <strong>655 585 695</strong>, el equipo no quedará incluido en el torneo.',
+    'f.cond.3': 'Precio: <strong>15€ por jugador</strong>. Concepto: nombre del equipo.',
+    'f.cond.4': 'Las inscripciones están sujetas a disponibilidad de plazas.',
+    'f.cond.5': 'La organización se reserva el derecho de admisión y de modificar el horario si es necesario.',
+    'f.veure': 'Ver reglamento',
+    'f.download': 'Descargar PDF',
+    'f.check': 'He leído y acepto las condiciones de participación y el <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">reglamento del torneo 3x3</a> de Juguem a Bàsquet. <span class="req">*</span>',
+    'f.submit': 'Inscribir el equipo',
+    'f.submit.note': 'Haz el Bizum de 15€ por jugador al 655 585 695 ahora mismo · Sin pago el equipo no quedará incluido',
+    'f.ok.title': 'Equipo <span>inscrito!</span>',
+    'f.ok.text': 'Hemos recibido el formulario. <strong>Haced el Bizum de 15€ por jugador al 655 585 695 ahora mismo</strong> con el nombre del equipo como concepto.<br><br>Sin pago, el equipo no quedará incluido en el torneo. Recibiréis la confirmación de plaza por email el <strong>17 de septiembre</strong>.',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'reg.title': 'Reglamento del Torneo 3x3',
+    'reg.sub': 'Asociación Juguem a Bàsquet · Pista Miqui Forniés (Padres Carmelitas) · 19 septiembre 2026',
+    'reg.s1.t': '1. Objetivo',
+    'reg.s1.p': 'Fomentar la convivencia, el deporte, el respeto y los valores del básquet de barrio en un ambiente lúdico y participativo.',
+    'reg.s2.t': '2. Participantes',
+    'reg.s2.p': 'Mínimo 3 jugadores/as, máximo 4 por equipo. En pista: 3 simultáneamente. Categoría: <strong>Mixta</strong>.',
+    'reg.s3.t': '3. Formato del torneo',
+    'reg.s3.p': '<strong>16 equipos</strong> distribuidos en <strong>4 grupos de 4 equipos</strong>. Dos fases eliminatorias paralelas (Oro y Plata), cada una con cuartos de final, semifinales y final.',
+    'reg.s3.l': '<li><strong>Fase de grupos:</strong> cada equipo juega contra los otros 3 de su grupo.</li><li><strong>Fase Oro:</strong> los 2 primeros de cada grupo — cuartos → semis → final Oro.</li><li><strong>Fase Plata:</strong> los 2 últimos de cada grupo — cuartos → semis → final Plata.</li><li>Todos los equipos juegan la fase de grupos y al menos una fase eliminatoria completa.</li>',
+    'reg.s4.t': '4. Plazo de inscripción',
+    'reg.s4.p': 'Hasta el <strong>14 de septiembre de 2026 a las 23:59 h</strong>. No se aceptarán inscripciones fuera de este plazo. La confirmación de plaza se enviará por email el <strong>17 de septiembre</strong>.',
+    'reg.s5.t': '5. Formato de juego',
+    'reg.s5.p': 'Partidos de <strong>10 minutos a tiempo corrido</strong>, con los <strong>últimos 2 minutos a tiempo parado</strong>. Gana quien llegue a <strong>21 puntos</strong> o lidere al finalizar.',
+    'reg.s5.l': '<li><strong>Balón oficial:</strong> talla 7.</li><li><strong>Reposición:</strong> sacar desde detrás del arco de 6,75 m.</li><li><strong>Tiempo muerto:</strong> 1 por equipo, 30 segundos, con posesión.</li><li><strong>Prórroga:</strong> el primero que anote gana (muerte súbita). Sorteo para decidir quién empieza la posesión.</li>',
+    'reg.s6.t': '6. Puntuación',
+    'reg.s6.l': '<li>Dentro de la línea: <strong>1 punto</strong></li><li>Fuera de la línea: <strong>2 puntos</strong></li><li>Tiro libre: <strong>1 punto</strong></li>',
+    'reg.s7.t': '7. Faltas',
+    'reg.s7.p': 'A partir de la <strong>5ª falta de equipo</strong>: 2 tiros libres.',
+    'reg.s8.t': '8. Presentación',
+    'reg.s8.p': 'Mínimo <strong>15 minutos</strong> antes del primer partido. La no presentación puede suponer derrota por incomparecencia.',
+    'reg.s9.t': '9. Menores de edad',
+    'reg.s9.p': 'Los equipos con jugadores/as menores de edad deben rellenar el apartado 4 del formulario de inscripción con los datos del tutor/a (nombre, DNI y teléfono). <strong>No es necesario adjuntar ningún documento:</strong> la organización llamará o enviará un WhatsApp para verificar la autorización antes del torneo.',
+    'reg.s10.t': '10. Cancelación',
+    'reg.s10.p': 'En caso de cancelación por causas meteorológicas o fuerza mayor, <strong>se buscará una fecha alternativa</strong> para celebrar el torneo. La organización comunicará la nueva fecha a los equipos inscritos.',
+    'reg.s11.t': '11. Derechos de imagen',
+    'reg.s11.p': 'Se podrán hacer fotografías y vídeos publicados en las redes sociales de JAB, principalmente <strong>@juguemabasquet</strong> (Instagram). La participación implica la aceptación de esta política.',
+    'reg.s12.t': '12. Comportamiento y aceptación',
+    'reg.s12.p': 'Cualquier conducta antideportiva puede conllevar la expulsión. Las decisiones de la organización son definitivas. La inscripción implica la aceptación íntegra de este reglamento.',
+    'reg.s13.t': '13. Premios',
+    'reg.s13.l': '<li><strong>Equipo ganador</strong> — 200 € en metálico</li><li><strong>Equipo finalista</strong> — 4 menús en Temps Mort</li><li><strong>Ganador/a del Concurso de Triples</strong> — Balón serigrafiado</li><li><strong>Todos los participantes</strong> — Camiseta exclusiva Juguem a Bàsquet y llavero</li>',
+    'reg.s14.t': '14. Seguridad y emergencias',
+    'reg.s14.p1': '<strong>Seguro de Responsabilidad Civil:</strong> <em style="color:#999">Número pendiente de confirmar.</em>',
+    'reg.s14.p2': '<strong>Contacto de emergencias:</strong> <em style="color:#999">Pendiente de confirmar.</em> En caso de enfermedad o accidente, llamad al <strong>112</strong>.',
+    'reg.s15.t': '15. Árbitros',
+    'reg.s15.p': 'El arbitraje de todos los partidos correrá a cargo de la <strong>organización</strong>. Las decisiones arbitrales son definitivas.',
+    'reg.quote': '"No es solo un partido. Es una oportunidad para compartir, competir y hacer barrio."',
+    'reg.pdf': 'Descargar PDF',
+    'reg.close': 'Cerrar',
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n-ph')];
+    if (v !== undefined) el.placeholder = v;
+  });
+}
+
+// Init with the main site language (localStorage)
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+// Show success screen if Netlify redirects with ?inscrit=1
+if (new URLSearchParams(window.location.search).get('inscrit') === '1') {
+  document.getElementById('form-inscripcio').style.display = 'none';
+  document.getElementById('success-screen').style.display = 'block';
+}
+
+// Basic client validation
+document.getElementById('form-inscripcio').addEventListener('submit', function(e) {
+  const reqs = this.querySelectorAll('[required]');
+  let valid = true;
+  let firstInvalid = null;
+  reqs.forEach(el => {
+    el.style.borderColor = '';
+    if (!el.value.trim() || (el.type === 'checkbox' && !el.checked)) {
+      el.style.borderColor = '#ef4444';
+      valid = false;
+      if (!firstInvalid) firstInvalid = el;
+    }
+  });
+  if (!valid) {
+    e.preventDefault();
+    if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+</script>
+
+<!-- MODAL REGLAMENT -->
+<div class="reg-overlay" id="reg-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="reg-box">
+    <button class="reg-close" onclick="document.getElementById('reg-modal').classList.remove('open')">✕</button>
+    <h2 data-i18n="reg.title">Reglament del Torneig 3x3</h2>
+    <span class="reg-sub" data-i18n="reg.sub">Associació Juguem a Bàsquet · Pista Miqui Forniés (Pares Carmelites) · 19 setembre 2026</span>
+
+    <h3 data-i18n="reg.s1.t">1. Objectiu</h3>
+    <p data-i18n="reg.s1.p">Fomentar la convivència, l'esport, el respecte i els valors del bàsquet de barri en un ambient lúdic i participatiu.</p>
+
+    <h3 data-i18n="reg.s2.t">2. Participants</h3>
+    <p data-i18n="reg.s2.p">Mínim 3 jugadors/es, màxim 4 per equip. A pista: 3 simultàniament. Categoria: <strong>Mixta</strong>.</p>
+
+    <h3 data-i18n="reg.s3.t">3. Format del torneig</h3>
+    <p data-i18n="reg.s3.p"><strong>16 equips</strong> distribuïts en <strong>4 grups de 4 equips</strong>. Dues fases eliminatòries paral·leles (Or i Plata), cadascuna amb quarts de final, semifinals i final.</p>
+    <ul data-i18n="reg.s3.l">
+      <li><strong>Fase de grups:</strong> cada equip juga contra els altres 3 del seu grup.</li>
+      <li><strong>Fase Or:</strong> els 2 primers de cada grup — quarts → semis → final Or.</li>
+      <li><strong>Fase Plata:</strong> els 2 últims de cada grup — quarts → semis → final Plata.</li>
+      <li>Tots els equips juguen la fase de grups i almenys una fase eliminatòria completa.</li>
+    </ul>
+
+    <h3 data-i18n="reg.s4.t">4. Termini d'inscripció</h3>
+    <p data-i18n="reg.s4.p">Fins al <strong>14 de setembre de 2026 a les 23:59 h</strong>. No s'acceptaran inscripcions fora d'aquest termini. La confirmació de plaça s'enviarà per email el <strong>17 de setembre</strong>.</p>
+
+    <h3 data-i18n="reg.s5.t">5. Format de joc</h3>
+    <p data-i18n="reg.s5.p">Partits de <strong>10 minuts a temps corregut</strong>, amb els <strong>últims 2 minuts a temps parat</strong>. Guanya qui arribi a <strong>21 punts</strong> o lideri en acabar.</p>
+    <ul data-i18n="reg.s5.l">
+      <li><strong>Pilota oficial:</strong> talla 7.</li>
+      <li><strong>Reposessió:</strong> treure des de darrere l'arc de 6,75 m.</li>
+      <li><strong>Temps mort:</strong> 1 per equip, 30 segons, amb possessió.</li>
+      <li><strong>Pròrroga:</strong> primer que anoti guanya (mort sobtada). Sorteig per decidir qui comença la possessió.</li>
+    </ul>
+
+    <h3 data-i18n="reg.s6.t">6. Puntuació</h3>
+    <ul data-i18n="reg.s6.l">
+      <li>Dins la línia: <strong>1 punt</strong></li>
+      <li>Fora de la línia: <strong>2 punts</strong></li>
+      <li>Tir lliure: <strong>1 punt</strong></li>
+    </ul>
+
+    <h3 data-i18n="reg.s7.t">7. Faltes</h3>
+    <p data-i18n="reg.s7.p">A partir de la <strong>5a falta d'equip</strong>: 2 tirs lliures.</p>
+
+    <h3 data-i18n="reg.s8.t">8. Presentació</h3>
+    <p data-i18n="reg.s8.p">Mínim <strong>15 minuts</strong> abans del primer partit. La no presentació pot suposar derrota per incompareixença.</p>
+
+    <h3 data-i18n="reg.s9.t">9. Menors d'edat</h3>
+    <p data-i18n="reg.s9.p">Els equips amb jugadors/es menors d'edat han d'omplir l'apartat 4 del formulari d'inscripció amb les dades del tutor/a (nom, DNI i telèfon). <strong>No cal adjuntar cap document:</strong> l'organització trucarà o enviarà un WhatsApp per verificar l'autorització abans del torneig.</p>
+
+    <h3 data-i18n="reg.s10.t">10. Cancel·lació</h3>
+    <p data-i18n="reg.s10.p">En cas de cancel·lació per causes meteorològiques o força major, <strong>es buscarà una data alternativa</strong> per celebrar el torneig. L'organització comunicarà la nova data als equips inscrits.</p>
+
+    <h3 data-i18n="reg.s11.t">11. Drets d'imatge</h3>
+    <p data-i18n="reg.s11.p">Es podran fer fotografies i vídeos publicats a les xarxes socials de JAB, principalment <strong>@juguemabasquet</strong> (Instagram). La participació implica l'acceptació d'aquesta política.</p>
+
+    <h3 data-i18n="reg.s12.t">12. Comportament i acceptació</h3>
+    <p data-i18n="reg.s12.p">Qualsevol conducta antiesportiva pot comportar l'expulsió. Les decisions de l'organització són definitives. La inscripció implica l'acceptació íntegra d'aquest reglament.</p>
+
+    <h3 data-i18n="reg.s13.t">13. Premis</h3>
+    <ul data-i18n="reg.s13.l">
+      <li><strong>Equip guanyador</strong> — 200 € en metàl·lic</li>
+      <li><strong>Equip finalista</strong> — 4 menús al Temps Mort</li>
+      <li><strong>Guanyador/a del Concurs de Triples</strong> — Pilota serigrafiada</li>
+      <li><strong>Tots els participants</strong> — Samarreta exclusiva Juguem a Bàsquet i clauer</li>
+    </ul>
+
+    <h3 data-i18n="reg.s14.t">14. Seguretat i emergències</h3>
+    <p data-i18n="reg.s14.p1"><strong>Assegurança de Responsabilitat Civil:</strong> <em style="color:#999">Número pendent de confirmar.</em></p>
+    <p data-i18n="reg.s14.p2"><strong>Contacte d'emergències:</strong> <em style="color:#999">Pendent de confirmar.</em> En cas de malaltia o accident, truqueu al <strong>112</strong>.</p>
+
+    <h3 data-i18n="reg.s15.t">15. Àrbitres</h3>
+    <p data-i18n="reg.s15.p">L'arbitratge de tots els partits anirà a càrrec de l'<strong>organització</strong>. Les decisions arbitrals són definitives.</p>
+
+    <div class="reg-quote" data-i18n="reg.quote">"No és només un partit. És una oportunitat per compartir, competir i fer barri."</div>
+
+    <div class="reg-actions">
+      <button class="reg-btn-pdf" onclick="window.print()" data-i18n="reg.pdf">Descarregar PDF</button>
+      <button class="reg-btn-close2" onclick="document.getElementById('reg-modal').classList.remove('open')" data-i18n="reg.close">Tancar</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
