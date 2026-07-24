@@ -90,18 +90,18 @@
   </button>
 </nav>
 
-<!-- BANNER TORNEIG 3x3 — PROPERAMENT -->
-<div class="banner-3x3">
+<!-- BANNER TORNEIG 3x3 -->
+<a class="banner-3x3" href="events/3x3-carmelites-2026/" style="text-decoration:none;">
   <div class="banner-3x3-inner">
     <div class="banner-3x3-left">
-      <span class="banner-3x3-badge" data-i18n="t3x3p.banner.badge">AVIAT</span>
-      <span class="banner-3x3-title" data-i18n="t3x3p.banner.title">🏀 Torneig 3x3 · Badalona</span>
+      <span class="banner-3x3-title" data-i18n="t3x3p.banner.title"><span class="ball">🏀</span> Torneig <span class="n">3X3</span> · Badalona</span>
     </div>
     <div class="banner-3x3-right">
-      <span class="banner-3x3-date" data-i18n="t3x3p.banner.date">Properament</span>
+      <span class="banner-3x3-date" data-i18n="t3x3p.banner.date">19 de setembre 2026</span>
+      <span class="banner-3x3-cta" data-i18n="t3x3p.banner.cta">Més info →</span>
     </div>
   </div>
-</div>
+</a>
 
 <!-- MENÚ MÒBIL -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
@@ -412,99 +412,101 @@
 
 
 
-    <!-- PROJECTE INCLUSIÓ: Bàsquet per a Tothom (1a · destacada) -->
-    <div class="featured-event inclusio-event" style="margin-top:40px;background:#0a0a0a;border-color:rgba(255,106,26,0.25);">
-      <div class="featured-poster inclusio-poster" style="padding:0;overflow:hidden;border-radius:16px;">
-        <img src="assets/events/xerrada-inclusio-dibuix.jpg" alt="Bàsquet per a Tothom — inclusió" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;"/>
-      </div>
-      <div class="featured-info">
-        <h3 data-i18n="inc.h3">Bàsquet <span class="accent">per a Tothom</span></h3>
-        <p class="lead" data-i18n="inc.lead">Perquè el bàsquet no entén de barreres. Impulsem el <strong>bàsquet adaptat</strong> com a eina d'inclusió i vida — perquè qualsevol persona, amb qualsevol capacitat física o intel·lectual, pugui jugar amb dignitat, igualtat i alegria. Sense excepcions.</p>
-        <div class="inclusio-pillars">
-          <div class="inclusio-pillar">
-            <div class="inclusio-pillar-icon">♿</div>
-            <h4 data-i18n="inc.p1.h4">Pistes accessibles</h4>
-            <p data-i18n="inc.p1.p">Promovem que totes les pistes de bàsquet de barri tinguin accés fàcil per a cadires de rodes: rampes, superfícies planes i espais adaptats perquè ningú es quedi a fora.</p>
-          </div>
-          <div class="inclusio-pillar">
-            <div class="inclusio-pillar-icon">🏀</div>
-            <h4 data-i18n="inc.p2.h4">Classes gratuïtes</h4>
-            <p data-i18n="inc.p2.p">Impulsem sessions de bàsquet gratuïtes per a persones amb diversitat intel·lectual. Un espai de joc, d'equip i de vida on cada persona brilla al seu ritme.</p>
-          </div>
-        </div>
-        <div class="featured-meta">
-          <div class="meta-item"><div class="label" data-i18n="inc.estat.lbl">Estat</div><div class="value" data-i18n="inc.estat.val">En construcció</div></div>
-          <div class="meta-item"><div class="label" data-i18n="inc.tipus.lbl">Tipus</div><div class="value" data-i18n="inc.tipus.val">Inclusió i accessibilitat</div></div>
-          <div class="meta-item"><div class="label" data-i18n="inc.ambit.lbl">Àmbit</div><div class="value" data-i18n="inc.ambit.val">Badalona i voltants</div></div>
-        </div>
-        <div class="featured-tags">
-          <span data-i18n="tag.inclusio">Inclusió</span><span data-i18n="tag.accessibilitat">Accessibilitat</span><span data-i18n="tag.diversitat">Diversitat</span>
-        </div>
-        <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
-          <span style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);" data-i18n="inc.activitats.lbl">Activitats relacionades</span>
-          <a href="#xerrada-inclusio" onclick="document.getElementById('xerrada-inclusio').scrollIntoView({behavior:'smooth'});return false;"
-             style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,106,26,.15);border:1px solid rgba(255,106,26,.5);color:#FF6B00;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;text-decoration:none;transition:all .2s;"
-             onmouseover="this.style.background='rgba(255,106,26,.3)'" onmouseout="this.style.background='rgba(255,106,26,.15)'"
-             data-i18n-href="#xerrada-inclusio">
-            ♿ <span data-i18n="inc.tag.xerrada">Xerrada · Bàsquet adaptat</span> ↗
-          </a>
-        </div>
-      </div>
-    </div>
+    <!-- ACTIVITATS · Timeline (ordenat: en curs/pròximes primer, després celebrades) -->
+    <div class="acts-timeline">
 
-    <!-- EVENT: Miqui Forniés (2a · featured) -->
-    <div class="featured-event" style="margin-top:40px;">
-      <div class="featured-poster">
-        <img src="assets/events/mfornies-800.jpg" alt="Cartell exposició samarretes històriques i acte Miqui Forniés"/>
-      </div>
-      <div class="featured-info">
-        <div style="display:inline-flex;align-items:center;gap:8px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.15);border-radius:999px;padding:6px 14px;margin-bottom:14px;">
-          <span style="font-size:14px;">⭐</span>
-          <div style="line-height:1.2;">
-            <span style="font-size:11px;font-weight:800;color:#fff;letter-spacing:0.5px;" data-i18n="miqui.badge">Ambaixador Honorífic</span>
-            <small style="display:block;font-size:10px;color:rgba(255,255,255,0.45);">Associació Juguem a Bàsquet · Badalona</small>
+      <!-- 1 · Torneig 3x3 (pròxim · enllaça a la pàgina de l'esdeveniment) -->
+      <article class="acts-item" data-status="soon">
+        <a class="acts-card" href="events/3x3-carmelites-2026/">
+          <div class="acts-thumb"><img src="assets/events/Cartell-3x3.png" alt="Torneig 3x3 de bàsquet de carrer"/></div>
+          <div class="acts-body">
+            <div class="acts-top">
+              <span class="acts-badge" data-i18n="act3x3.badge">Inscripcions obertes</span>
+              <span class="acts-date" data-i18n="act3x3.meta">19 Setembre 2026 · 10:00 h · Pista dels Carmelites</span>
+            </div>
+            <h3 class="acts-title" data-i18n="act3x3.h4">Torneig 3x3 de Bàsquet de Carrer</h3>
+            <p class="acts-lead" data-i18n="act3x3.p">Torneig obert de bàsquet 3x3 a la Pista dels Carmelites, amb concurs de triples i premis. Inscriu el teu equip!</p>
+            <div class="acts-foot">
+              <div class="acts-tags">
+                <span class="acts-tag" data-i18n="tag.3x3">3x3</span>
+                <span class="acts-tag" data-i18n="tag.basquet">Bàsquet</span>
+                <span class="acts-tag" data-i18n="tag.carrer">Carrer</span>
+              </div>
+              <span class="acts-more" data-i18n="act3x3.cta">Més info i inscripció →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2 · Bàsquet per a Tothom (en curs · projecte permanent) -->
+      <article class="acts-item" data-status="live">
+        <div class="acts-card" role="button" tabindex="0" onclick="openActModal('inclusio-modal-overlay')">
+          <div class="acts-thumb"><img src="assets/events/xerrada-inclusio-dibuix.jpg" alt="Bàsquet per a Tothom — inclusió"/></div>
+          <div class="acts-body">
+            <div class="acts-top">
+              <span class="acts-badge" data-i18n="act.badge.encurs">En curs · Projecte permanent</span>
+              <span class="acts-date" data-i18n="act.inc.meta">Inclusió</span>
+            </div>
+            <h3 class="acts-title" data-i18n="inc.h3">Bàsquet <span class="accent">per a Tothom</span></h3>
+            <p class="acts-lead" data-i18n="act.inc.lead">Impulsem el bàsquet adaptat com a eina d'inclusió: pistes accessibles i classes gratuïtes perquè ningú es quedi fora.</p>
+            <div class="acts-foot">
+              <div class="acts-tags">
+                <span class="acts-tag" data-i18n="tag.inclusio">Inclusió</span>
+                <span class="acts-tag" data-i18n="tag.accessibilitat">Accessibilitat</span>
+                <span class="acts-tag" data-i18n="tag.diversitat">Diversitat</span>
+              </div>
+              <span class="acts-more" data-i18n="act.veuremes">Veure més →</span>
+            </div>
           </div>
         </div>
-        <h3 data-i18n="miqui.h3">Exposició de samarretes <span class="accent">històriques</span></h3>
-        <p class="lead" data-i18n="miqui.lead">Acte especial de reconeixement al fotoperiodista badaloní <strong>M.A. "Miqui" Forniés</strong>, amb el descobriment de la placa de la pista de bàsquet que durà el seu nom. Exposició gentilesa de Josep Zamorano i xerrada-taula rodona amb Miqui Forniés, Artur Grau i dos convidats especials. Diumenge gran amb activitat familiar.</p>
-        <div class="featured-meta">
-          <div class="meta-item"><div class="label" data-i18n="evt.data">Data</div><div class="value">16 Maig 2026</div></div>
-          <div class="meta-item"><div class="label" data-i18n="evt.hora">Hora</div><div class="value">12:00 h</div></div>
-          <div class="meta-item"><div class="label" data-i18n="evt.lloc">Lloc</div><div class="value">Carmelites de Badalona</div></div>
-          <div class="meta-item"><div class="label" data-i18n="evt.format">Format</div><div class="value" data-i18n="miqui.format">Exposició + Xerrada</div></div>
-        </div>
-        <div class="featured-actions">
-          <a href="assets/miqui-fornies-cartell.pdf" target="_blank" class="btn btn-primary" data-i18n="evt.cartell">Veure cartell ↗</a>
-          <a href="https://www.instagram.com/juguemabasquet" target="_blank" class="btn btn-secondary" style="color:white;border-color:rgba(255,255,255,0.5);" data-i18n="evt.cronica">Crònica a Instagram</a>
-        </div>
-        <div class="featured-tags">
-          <span data-i18n="tag.basquet">Bàsquet</span><span data-i18n="tag.historia">Història</span><span data-i18n="tag.comunitat">Comunitat</span>
-        </div>
-      </div>
-    </div>
+      </article>
 
-    <!-- Casagemes (3a · targeta compacta) -->
-    <div class="event-card" style="cursor:default;margin-top:24px;">
-      <div class="featured-poster" style="flex-shrink:0;">
-        <img src="assets/events/casagemes-2026.jpg" alt="Festes Iris-Sol-Casagemes 2026"/>
-      </div>
-      <div class="event-info" style="flex:1;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-          <span style="background:#16a34a;color:#fff;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;">✓ Celebrada</span>
-          <span style="font-size:11px;color:rgba(255,255,255,.4);font-weight:600;">20 Juny 2026 · 10:00–14:00 h</span>
+      <!-- 3 · Festes Iris-Sol-Casagemes (celebrada · més recent) -->
+      <article class="acts-item" data-status="done">
+        <div class="acts-card" role="button" tabindex="0" onclick="openActModal('event-modal-overlay')">
+          <div class="acts-thumb"><img src="assets/events/casagemes-2026.jpg" alt="Festes Iris-Sol-Casagemes 2026"/></div>
+          <div class="acts-body">
+            <div class="acts-top">
+              <span class="acts-badge" data-i18n="act.badge.celebrada">Celebrada</span>
+              <span class="acts-date" data-i18n="act.casm.meta">20 Juny 2026 · 10:00–14:00 h</span>
+            </div>
+            <h3 class="acts-title" data-i18n="casm.h4">Activitats Infantils de Bàsquet · Festes Iris-Sol-Casagemes</h3>
+            <p class="acts-lead" data-i18n="casm.p">Matí de festa al barri amb activitats infantils de bàsquet al carrer, tallers, tómbola i música. Pl. Mateu Rotger, Badalona.</p>
+            <div class="acts-foot">
+              <div class="acts-tags">
+                <span class="acts-tag" data-i18n="tag.infantil">Infantil</span>
+                <span class="acts-tag" data-i18n="tag.barri">Barri</span>
+                <span class="acts-tag" data-i18n="tag.gratuit">Gratuït</span>
+              </div>
+              <span class="acts-more" data-i18n="act.veuremes">Veure més →</span>
+            </div>
+          </div>
         </div>
-        <h4 style="font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;" data-i18n="casm.h4">Activitats Infantils de Bàsquet · Festes Iris-Sol-Casagemes</h4>
-        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.5;margin-bottom:10px;" data-i18n="casm.p">Matí de festa al barri amb activitats infantils de bàsquet al carrer, tallers, tómbola i música. Pl. Mateu Rotger, Badalona.</p>
-        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-          <span class="event-tag" data-i18n="tag.infantil">Infantil</span>
-          <span class="event-tag" data-i18n="tag.barri">Barri</span>
-          <span class="event-tag" data-i18n="tag.gratuit">Gratuït</span>
-          <div class="colab-logo" title="Fruites i Verdures Lisi"><img src="assets/col·laboradors/fruites-lisi.jpg" alt="Fruites i Verdures Lisi"/></div>
-          <div class="colab-logo" title="Can Soler"><img src="assets/col·laboradors/can-soler.png" alt="Can Soler"/></div>
-          <div class="colab-logo" title="Pam i Pipa"><img src="assets/col·laboradors/pam-i-pipa.png" alt="Pam i Pipa"/></div>
-          <div class="colab-logo" title="Nando Perruquer"><img src="assets/col·laboradors/nando-perruquer.png" alt="Nando Perruquer"/></div>
+      </article>
+
+      <!-- 4 · Exposició samarretes històriques · Miqui Forniés (celebrada) -->
+      <article class="acts-item" data-status="done">
+        <div class="acts-card" role="button" tabindex="0" onclick="openActModal('miqui-modal-overlay')">
+          <div class="acts-thumb"><img src="assets/events/mfornies-800.jpg" alt="Exposició de samarretes històriques · Miqui Forniés"/></div>
+          <div class="acts-body">
+            <div class="acts-top">
+              <span class="acts-badge" data-i18n="act.badge.celebrada">Celebrada</span>
+              <span class="acts-date" data-i18n="act.miqui.meta">16 Maig 2026 · Carmelites</span>
+            </div>
+            <h3 class="acts-title" data-i18n="miqui.h3">Exposició de samarretes <span class="accent">històriques</span></h3>
+            <p class="acts-lead" data-i18n="act.miqui.lead">Reconeixement al fotoperiodista badaloní Miqui Forniés, amb el descobriment de la placa i exposició de samarretes històriques.</p>
+            <div class="acts-foot">
+              <div class="acts-tags">
+                <span class="acts-tag" data-i18n="tag.basquet">Bàsquet</span>
+                <span class="acts-tag" data-i18n="tag.historia">Història</span>
+                <span class="acts-tag" data-i18n="tag.comunitat">Comunitat</span>
+              </div>
+              <span class="acts-more" data-i18n="act.veuremes">Veure més →</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </article>
+
     </div>
 
   </div>
@@ -1660,125 +1662,6 @@
   </div>
 </section>
 
-<!-- 3x3 PROPERAMENT -->
-<section class="page-section inscripcio-section" id="inscripcio-3x3">
-  <div style="text-align:center;position:relative;overflow:hidden;padding:0 24px;">
-
-    <!-- WATERMARK DE FONS -->
-    <div aria-hidden="true" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bungee',sans-serif;font-size:clamp(160px,28vw,360px);color:rgba(255,106,26,0.05);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;letter-spacing:-10px;">3x3</div>
-
-    <!-- EYEBROW -->
-    <div class="prox-fadein" style="display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:3.5px;text-transform:uppercase;color:var(--orange);margin-bottom:28px;">
-      <span style="width:24px;height:2px;background:var(--orange);display:block;"></span>
-      <span data-i18n="t3x3p.eyebrow">Inscripcions obertes</span>
-      <span style="width:24px;height:2px;background:var(--orange);display:block;"></span>
-    </div>
-
-    <!-- PILOTA ANIMADA -->
-    <div class="prox-fadein" style="font-size:clamp(56px,10vw,88px);margin-bottom:20px;line-height:1;">
-      <span class="prox-ball">🏀</span>
-    </div>
-
-    <!-- TÍTOL GRAN -->
-    <h2 class="prox-title prox-fadein" style="font-family:'Bungee',sans-serif;font-size:clamp(72px,18vw,200px);line-height:0.88;letter-spacing:-3px;text-transform:uppercase;margin:0 0 20px;position:relative;">
-      <span style="color:#0A0A0A;">3</span><span style="color:var(--orange);">x</span><span style="color:#0A0A0A;">3</span>
-    </h2>
-
-    <!-- SUBTÍTOL -->
-    <p class="prox-fadein-2" data-i18n="t3x3p.subtitle" style="font-family:'Bungee',sans-serif;font-size:clamp(11px,2vw,17px);letter-spacing:4px;text-transform:uppercase;color:rgba(0,0,0,0.4);margin:0 0 52px;position:relative;">
-      Bàsquet de carrer &nbsp;·&nbsp; Badalona
-    </p>
-
-    <!-- TAGS INFO -->
-    <div class="prox-fadein-2" style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:56px;position:relative;">
-      <span class="prox-tag" data-i18n="t3x3p.tag.data">📅 19 de setembre de 2026</span>
-      <span class="prox-tag" data-i18n="t3x3p.tag.hora">⏰ 10:00 H</span>
-      <a class="prox-tag" href="https://maps.google.com/maps?q=Pista+Joaquim+Ruyra,+Badalona" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;" data-i18n="t3x3p.tag.pista">📍 Pista Joaquim Ruyra · Badalona</a>
-      <span class="prox-tag" data-i18n="t3x3p.tag.premis">🏆 Premis garantits</span>
-      <span class="prox-tag" data-i18n="t3x3p.tag.cat">👥 Categoria Única</span>
-    </div>
-
-    <!-- BLOC CONCURS DE TRIPLES -->
-    <div class="prox-fadein-3" style="position:relative;max-width:560px;margin:0 auto 48px;background:#0A0A0A;border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:24px;text-align:left;">
-      <div style="font-size:48px;line-height:1;flex-shrink:0;">🎯</div>
-      <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--orange);margin-bottom:6px;" data-i18n="t3x3p.triples.label">Activitat especial · A meitat de torneig</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:20px;color:#fff;margin-bottom:6px;" data-i18n="t3x3p.triples.title">Concurs de Triples</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;" data-i18n="t3x3p.triples.desc">Competició oberta a tots els participants. El millor tirador/a del dia s'emporta el premi especial.</div>
-      </div>
-    </div>
-
-    <!-- CTA INSCRIPCIÓ -->
-    <div class="prox-fadein-3" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;">
-      <a href="form-3x3.html" class="prox-cta" data-i18n="t3x3p.cta">
-        🏀 Inscriu el teu equip
-      </a>
-      <a href="https://www.instagram.com/juguemabasquet/" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:rgba(0,0,0,.4);text-decoration:none;letter-spacing:.5px;transition:color .2s;" onmouseover="this.style.color='rgba(0,0,0,.8)'" onmouseout="this.style.color='rgba(0,0,0,.4)'" data-i18n="t3x3p.ig">
-        Segueix @juguemabasquet per més info →
-      </a>
-    </div>
-
-    <!-- CARTELL + PREMIS (2 columnes) -->
-    <div class="prox-fadein-3" style="margin-top:40px;display:flex;gap:32px;align-items:flex-start;justify-content:center;flex-wrap:wrap;width:92%;max-width:1040px;margin-left:auto;margin-right:auto;">
-
-      <!-- CARTELL esquerra -->
-      <div style="flex:0 1 440px;min-width:260px;">
-        <img src="assets/events/Cartell-3x3.png"
-             alt="Cartell Torneig 3x3 Badalona 19 setembre 2026"
-             style="width:100%;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.6);display:block;" />
-      </div>
-
-      <!-- PREMIS + SEGURETAT dreta -->
-      <div style="flex:1 1 300px;min-width:260px;display:flex;flex-direction:column;gap:14px;">
-        <div style="font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:2px;" data-i18n="t3x3p.premis.label">🏆 Premis</div>
-        <div style="display:grid;gap:8px;">
-          <div style="background:#fffbe6;border:1px solid #e6c800;border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:12px;">
-            <span style="font-size:20px;">🥇</span>
-            <div><div style="font-weight:800;color:#8a6500;font-size:14px;" data-i18n="t3x3p.premis.or1">Guanyador/a Fase Or</div><div style="color:#aaa;font-size:11px;margin-top:2px;" data-i18n="t3x3p.premis.pend">Premi per confirmar</div></div>
-          </div>
-          <div style="background:#f8f8f8;border:1px solid #ddd;border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:12px;">
-            <span style="font-size:20px;">🥈</span>
-            <div><div style="font-weight:800;color:#555;font-size:14px;" data-i18n="t3x3p.premis.or2">Finalista Fase Or</div><div style="color:#aaa;font-size:11px;margin-top:2px;" data-i18n="t3x3p.premis.pend">Premi per confirmar</div></div>
-          </div>
-          <div style="background:#fff5ec;border:1px solid #e0a060;border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:12px;">
-            <span style="font-size:20px;">🥇</span>
-            <div><div style="font-weight:800;color:#7a4010;font-size:14px;" data-i18n="t3x3p.premis.plata1">Guanyador/a Fase Plata</div><div style="color:#aaa;font-size:11px;margin-top:2px;" data-i18n="t3x3p.premis.pend">Premi per confirmar</div></div>
-          </div>
-          <div style="background:#f8f8f8;border:1px solid #ddd;border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:12px;">
-            <span style="font-size:20px;">🥈</span>
-            <div><div style="font-weight:800;color:#555;font-size:14px;" data-i18n="t3x3p.premis.plata2">Finalista Fase Plata</div><div style="color:#aaa;font-size:11px;margin-top:2px;" data-i18n="t3x3p.premis.pend">Premi per confirmar</div></div>
-          </div>
-          <div style="background:#fff2ea;border:1px solid #FF6A1A;border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:12px;">
-            <span style="font-size:20px;">🎯</span>
-            <div><div style="font-weight:800;color:#c43d00;font-size:14px;" data-i18n="t3x3p.premis.triples">Guanyador/a Concurs de Triples</div><div style="color:#aaa;font-size:11px;margin-top:2px;" data-i18n="t3x3p.premis.triples.pend">Premi especial per confirmar</div></div>
-          </div>
-        </div>
-
-        <!-- SEGURETAT -->
-        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:13px;padding:16px 18px;margin-top:4px;">
-          <div style="font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:12px;" data-i18n="t3x3p.seg.label">Seguretat i emergències</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-            <div>
-              <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;" data-i18n="t3x3p.seg.asseg.label">Assegurança RC</div>
-              <div style="font-size:12px;color:rgba(255,255,255,0.5);font-style:italic;" data-i18n="t3x3p.seg.asseg.val">Pendent de confirmar</div>
-            </div>
-            <div>
-              <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;" data-i18n="t3x3p.seg.emer.label">Emergències · 112</div>
-              <div style="font-size:12px;color:rgba(255,255,255,0.5);font-style:italic;" data-i18n="t3x3p.seg.emer.val">Pendent de confirmar</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- DIVISOR INFERIOR -->
-    <div class="prox-fadein-3" style="margin-top:56px;width:1px;height:60px;background:linear-gradient(to bottom,rgba(255,106,26,0.5),transparent);display:inline-block;"></div>
-
-  </div>
-
-</section>
-
 
 <!-- FOOTER -->
 <footer id="contacte" class="page-section footer">
@@ -2474,6 +2357,48 @@
 </div>
 <script src="assets/js/miqui-modal.js"></script>
 
+<!-- ── MODAL: Bàsquet per a Tothom (inclusió) ── -->
+<div id="inclusio-modal-overlay">
+  <div id="inclusio-modal">
+    <button id="inclusio-modal-close" onclick="document.getElementById('inclusio-modal-overlay').classList.remove('active')">✕</button>
+    <img class="modal-img" src="assets/events/xerrada-inclusio-dibuix.jpg" alt="Bàsquet per a Tothom — inclusió"/>
+    <div class="modal-body">
+      <h3 data-i18n="inc.h3">Bàsquet <span class="accent">per a Tothom</span></h3>
+      <p class="modal-desc" data-i18n="inc.lead">Perquè el bàsquet no entén de barreres. Impulsem el <strong>bàsquet adaptat</strong> com a eina d'inclusió i vida — perquè qualsevol persona, amb qualsevol capacitat física o intel·lectual, pugui jugar amb dignitat, igualtat i alegria. Sense excepcions.</p>
+      <div class="inclusio-modal-pillars">
+        <div class="inclusio-modal-pillar">
+          <div class="inclusio-modal-ico">♿</div>
+          <h4 data-i18n="inc.p1.h4">Pistes accessibles</h4>
+          <p data-i18n="inc.p1.p">Promovem que totes les pistes de bàsquet de barri tinguin accés fàcil per a cadires de rodes: rampes, superfícies planes i espais adaptats perquè ningú es quedi a fora.</p>
+        </div>
+        <div class="inclusio-modal-pillar">
+          <div class="inclusio-modal-ico">🏀</div>
+          <h4 data-i18n="inc.p2.h4">Classes gratuïtes</h4>
+          <p data-i18n="inc.p2.p">Impulsem sessions de bàsquet gratuïtes per a persones amb diversitat intel·lectual. Un espai de joc, d'equip i de vida on cada persona brilla al seu ritme.</p>
+        </div>
+      </div>
+      <div class="modal-tags">
+        <span class="event-tag" data-i18n="tag.inclusio">Inclusió</span>
+        <span class="event-tag" data-i18n="tag.accessibilitat">Accessibilitat</span>
+        <span class="event-tag" data-i18n="tag.diversitat">Diversitat</span>
+        <span class="event-tag" style="background:rgba(255,255,255,0.15);" data-i18n="act.badge.encurs">En curs · Projecte permanent</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.openActModal = function (id) { var el = document.getElementById(id); if (el) el.classList.add('active'); };
+  (function () {
+    var inc = document.getElementById('inclusio-modal-overlay');
+    if (inc) inc.addEventListener('click', function (e) { if (e.target === inc) inc.classList.remove('active'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && inc) inc.classList.remove('active'); });
+    document.querySelectorAll('.acts-card[role="button"]').forEach(function (c) {
+      c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); } });
+    });
+  })();
+</script>
+
 <!-- ── EVENT PROMO POPUP ── -->
 <!-- MODAL FOTO REUNIÓ INSTITUCIONAL -->
 <div id="modal-reunio" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.88);align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeFotoReunio()">
@@ -2487,7 +2412,6 @@
 
 <!-- ── FLOATING HYMN PLAYER ── -->
 
-<script src="assets/js/form-3x3.js"></script>
 
 <script src="assets/js/scrollspy.js"></script>
 <script src="assets/js/swipe-home.js"></script>

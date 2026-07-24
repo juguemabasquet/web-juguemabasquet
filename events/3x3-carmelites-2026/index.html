@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torneig 3x3 · Carmelites · 19 Setembre 2026 · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-left">
+    <a href="../../index.html" class="header-back" data-i18n="f.back">← Inici</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO / CARTEL (compact 2-column) -->
+<main class="event-hero">
+
+  <!-- Poster (click to enlarge) -->
+  <div class="event-poster" id="poster-trigger" role="button" tabindex="0" aria-label="Amplia el cartell">
+    <img src="../../assets/events/Cartell-3x3.png" alt="Cartell Torneig 3x3 Badalona 19 setembre 2026">
+    <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg><span data-i18n="c.zoom">Amplia</span></span>
+  </div>
+
+  <!-- Info -->
+  <div class="event-details">
+    <div class="hero-eyebrow"><span data-i18n="f.badge">Inscripcions obertes</span></div>
+    <div class="event-titlerow">
+      <span class="event-ball">🏀</span>
+      <h1 class="event-title">3<span>x</span>3</h1>
+    </div>
+    <p class="event-sub" data-i18n="f.hero.sub">Inscripció · Bàsquet de carrer</p>
+
+    <div class="event-meta">
+      <span class="meta-pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="f.date">19 de setembre de 2026</span></span>
+      <span class="meta-pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="f.time">10:00 H</span></span>
+      <a class="meta-pill" href="https://maps.google.com/maps?q=Carrer+del+Mar+47,+Badalona" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="f.location">Pista dels Carmelites · Badalona</span></a>
+      <span class="meta-pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7a6 6 0 1 0 0 10"/><path d="M4 11h9M4 15h7"/></svg><span data-i18n="f.price">24€ per equip</span></span>
+    </div>
+
+    <!-- CONCURS DE TRIPLES -->
+    <div class="special-block compact">
+      <div class="special-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div>
+        <div class="special-label" data-i18n="f.triples.label">Activitat especial · A meitat de torneig</div>
+        <div class="special-title" data-i18n="f.triples.title">Concurs de Triples</div>
+        <div class="special-desc" data-i18n="f.triples.desc">Competició oberta a tots els participants. El millor tirador/a del dia s'emporta el premi especial.</div>
+      </div>
+    </div>
+
+    <!-- Premis -->
+    <div class="event-prizes">
+      <div class="prizes-label"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg><span data-i18n="c.prizes.label">Premis</span></div>
+      <div class="prize-grid">
+        <div class="prize-row gold">
+          <div class="prize-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></div>
+          <div><div class="prize-name" data-i18n="c.prizes.or1">Guanyador/a Fase Or</div><div class="prize-pend" data-i18n="c.prizes.pend">Premi per confirmar</div></div>
+        </div>
+        <div class="prize-row">
+          <div class="prize-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></div>
+          <div><div class="prize-name" data-i18n="c.prizes.or2">Finalista Fase Or</div><div class="prize-pend" data-i18n="c.prizes.pend">Premi per confirmar</div></div>
+        </div>
+        <div class="prize-row">
+          <div class="prize-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></div>
+          <div><div class="prize-name" data-i18n="c.prizes.plata1">Guanyador/a Fase Plata</div><div class="prize-pend" data-i18n="c.prizes.pend">Premi per confirmar</div></div>
+        </div>
+        <div class="prize-row">
+          <div class="prize-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></div>
+          <div><div class="prize-name" data-i18n="c.prizes.plata2">Finalista Fase Plata</div><div class="prize-pend" data-i18n="c.prizes.pend">Premi per confirmar</div></div>
+        </div>
+        <div class="prize-row triples">
+          <div class="prize-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <div><div class="prize-name" data-i18n="c.prizes.triples">Guanyador/a Concurs de Triples</div><div class="prize-pend" data-i18n="c.prizes.triplespend">Premi especial per confirmar</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="event-cta">
+      <a href="inscripcio.html" class="cta-btn" data-i18n="c.cta">Inscriu el teu equip →</a>
+      <a href="https://www.instagram.com/juguemabasquet/" target="_blank" rel="noopener" class="cta-secondary" data-i18n="c.ig">Segueix @juguemabasquet per més info →</a>
+    </div>
+  </div>
+</main>
+
+<!-- Poster lightbox -->
+<div class="poster-lightbox" id="poster-lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Tanca">×</button>
+  <img src="../../assets/events/Cartell-3x3.png" alt="Cartell Torneig 3x3 Badalona 19 setembre 2026">
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona',
+    'f.back': '← Inici',
+    'f.badge': 'Inscripcions obertes',
+    'f.hero.sub': 'Inscripció · Bàsquet de carrer',
+    'f.date': '19 de setembre de 2026',
+    'f.time': '10:00 H', 'f.location': 'Pista dels Carmelites · Badalona',
+    'f.price': '24€ per equip',
+    'f.triples.label': 'Activitat especial · A meitat de torneig',
+    'f.triples.title': 'Concurs de Triples',
+    'f.triples.desc': "Competició oberta a tots els participants. El millor tirador/a del dia s'emporta el premi especial.",
+    'f.biz.label': 'Pagament · Bizum',
+    'f.biz.warning': 'El pagament s\'ha de fer en el moment de la inscripció. Sense Bizum, l\'equip no quedarà inclòs.',
+    'f.biz.price': "24€ per equip · Concepte: nom de l'equip",
+    'f.c1.title': "Dades de l'equip",
+    'f.equip.label': "Nom de l'equip",
+    'f.equip.ph': 'Ex: Dimonis Badalona',
+    'f.c2.title': 'Jugadors',
+    'f.j1': 'Jugador 1', 'f.j2': 'Jugador 2', 'f.j3': 'Jugador 3', 'f.j4': 'Jugador 4',
+    'f.j.ph': 'Nom i cognoms',
+    'f.opcional': '(opcional)',
+    'f.c3.title': "Capità / Capitana de l'equip",
+    'f.del.nom': 'Nom i cognoms',
+    'f.capita.ph': 'Nom i cognoms del/la capità/ana',
+    'f.mobil': 'Mòbil',
+    'f.email.ph': 'correu@exemple.com',
+    'f.notes': 'Notes',
+    'f.notes.ph': 'Dubtes, observacions, al·lèrgies de samarreta...',
+    'f.c4.title': "Menors d'edat",
+    'f.menors.note.title': "Si algun membre de l'equip és menor d'edat",
+    'f.menors.note.body': "Emplena aquest apartat i adjunta l'autorització signada. Sense aquest document, el/la menor no podrà participar el dia del torneig.",
+    'f.menors.primer.label': 'Primer menor · Tutor/a de contacte',
+    'f.menors.nom': 'Nom i cognoms del tutor/a', 'f.menors.nom.ph': 'Nom i cognoms complets',
+    'f.menors.dni': 'DNI del tutor/a',
+    'f.menors.tel': 'Telèfon de contacte',
+    'f.menors.addicionals': 'Menors addicionals', 'f.menors.addicionals.fmt': '(opcional · si n\'hi ha més d\'un)',
+    'f.menors.addicionals.ph': 'Ex: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX\nLaia Puig — tutora: Anna Puig · 6XX XXX XXX',
+    'f.menors.addicionals.note': 'Indica el nom del/la menor i el telèfon del seu tutor/a per a cada menor addicional.',
+    'f.menors.verify': '<strong>No cal adjuntar cap document.</strong> L\'organització trucarà o enviarà un WhatsApp al telèfon de contacte indicat per verificar l\'autorització del/la menor abans del torneig.',
+    'f.c5.title': 'Reglament i confirmació',
+    'f.cond.title': 'Condicions de participació:',
+    'f.cond.1': "Cada equip ha d'estar format per 4 jugadors.",
+    'f.cond.2': 'El pagament s\'ha de fer <strong>en el moment de la inscripció</strong>. Sense Bizum al <strong>655 585 695</strong>, l\'equip no quedarà inclòs al torneig.',
+    'f.cond.3': 'Preu: <strong>24€ per equip</strong>. Concepte: nom de l\'equip.',
+    'f.cond.4': 'Les inscripcions estan subjectes a disponibilitat de places.',
+    'f.cond.5': "L'organització es reserva el dret d'admissió i de modificar l'horari si cal.",
+    'f.veure': 'Veure reglament',
+    'f.download': 'Descarregar PDF',
+    'f.check': 'He llegit i accepto les condicions de participació i el <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">reglament del torneig 3x3</a> de Juguem a Bàsquet. <span class="req">*</span>',
+    'f.submit': "Inscriure l'equip",
+    'f.submit.note': 'Recorda fer el Bizum de 24€ al 655 585 695 ara mateix · Sense pagament l\'equip no quedarà inclòs',
+    'f.ok.title': 'Equip <span>inscrit!</span>',
+    'f.ok.text': 'Hem rebut el formulari. <strong>Feu el Bizum de 24€ al 655 585 695 ara mateix</strong> amb el concepte: nom de l\'equip.<br><br>Sense pagament, l\'equip no quedarà inclòs al torneig. Rebreu la confirmació de plaça per email el <strong>17 de setembre</strong>.',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'c.cta': 'Inscriu el teu equip →', 'c.ig': 'Segueix @juguemabasquet per més info →',
+    'c.prizes.label': 'Premis', 'c.prizes.pend': 'Premi per confirmar', 'c.prizes.triplespend': 'Premi especial per confirmar',
+    'c.prizes.or1': 'Guanyador/a Fase Or', 'c.prizes.or2': 'Finalista Fase Or',
+    'c.prizes.plata1': 'Guanyador/a Fase Plata', 'c.prizes.plata2': 'Finalista Fase Plata',
+    'c.prizes.triples': 'Guanyador/a Concurs de Triples',
+    'c.zoom': 'Amplia',
+  },
+  en: {
+    'f.sub': 'Association · Badalona',
+    'f.back': '← Home',
+    'f.badge': 'Registrations open',
+    'f.hero.sub': 'Registration · Street basketball',
+    'f.date': '19 September 2026',
+    'f.time': '10:00 H', 'f.location': 'Carmelites Court · Badalona',
+    'f.price': '24€ per team',
+    'f.triples.label': 'Special activity · Mid-tournament',
+    'f.triples.title': 'Three-Point Contest',
+    'f.triples.desc': 'Open to all participants. The best shooter of the day wins the special prize.',
+    'f.biz.label': 'Payment · Bizum',
+    'f.biz.warning': 'Payment must be made at the time of registration. Without Bizum, the team will not be included.',
+    'f.biz.price': '24€ per team · Reference: team name',
+    'f.c1.title': 'Team details',
+    'f.equip.label': 'Team name',
+    'f.equip.ph': 'Ex: Badalona Warriors',
+    'f.c2.title': 'Players',
+    'f.j1': 'Player 1', 'f.j2': 'Player 2', 'f.j3': 'Player 3', 'f.j4': 'Player 4',
+    'f.j.ph': 'Full name',
+    'f.opcional': '(optional)',
+    'f.c3.title': 'Team captain',
+    'f.del.nom': 'Full name',
+    'f.capita.ph': 'Full name of the captain',
+    'f.mobil': 'Mobile',
+    'f.email.ph': 'email@example.com',
+    'f.notes': 'Notes',
+    'f.notes.ph': 'Questions, comments...',
+    'f.c4.title': 'Underage players',
+    'f.menors.note.title': 'If any team member is under 18',
+    'f.menors.note.body': 'Fill in this section and attach the signed authorisation. Without this document, the minor will not be able to participate on the day.',
+    'f.menors.primer.label': 'First minor · Main guardian contact',
+    'f.menors.nom': 'Parent/guardian full name', 'f.menors.nom.ph': 'Full name',
+    'f.menors.dni': 'Parent/guardian ID (DNI)',
+    'f.menors.tel': 'Contact phone',
+    'f.menors.addicionals': 'Additional minors', 'f.menors.addicionals.fmt': '(optional · if more than one)',
+    'f.menors.addicionals.ph': 'Ex: Pau Martínez — guardian: Joan Martínez · 6XX XXX XXX\nLaia Puig — guardian: Anna Puig · 6XX XXX XXX',
+    'f.menors.addicionals.note': 'Add the minor\'s name and their guardian\'s phone number for each additional minor.',
+    'f.menors.verify': '<strong>No document upload needed.</strong> The organisation will call or send a WhatsApp to the contact phone number provided to verify the minor\'s authorisation before the tournament.',
+    'f.c5.title': 'Rules & confirmation',
+    'f.cond.title': 'Participation conditions:',
+    'f.cond.1': 'Each team must have 4 players.',
+    'f.cond.2': 'Payment must be made <strong>at the time of registration</strong>. Without Bizum to <strong>655 585 695</strong>, the team will not be included in the tournament.',
+    'f.cond.3': 'Fee: <strong>24€ per team</strong>. Reference: team name.',
+    'f.cond.4': 'Registrations are subject to availability.',
+    'f.cond.5': 'The organisation reserves the right of admission and to modify the schedule if necessary.',
+    'f.veure': 'View rules',
+    'f.download': 'Download PDF',
+    'f.check': 'I have read and accept the participation conditions and the <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">3x3 tournament rules</a> of Juguem a Bàsquet. <span class="req">*</span>',
+    'f.submit': 'Register your team',
+    'f.submit.note': 'Send the 24€ Bizum to 655 585 695 now · Without payment the team will not be included',
+    'f.ok.title': 'Team <span>registered!</span>',
+    'f.ok.text': 'We have received your form. <strong>Send the 24€ Bizum to 655 585 695 now</strong> with your team name as reference.<br><br>Without payment, the team will not be included in the tournament. Place confirmation will be sent by email on <strong>17 September</strong>.',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'c.cta': 'Sign up your team →', 'c.ig': 'Follow @juguemabasquet for more info →',
+    'c.prizes.label': 'Prizes', 'c.prizes.pend': 'Prize to be confirmed', 'c.prizes.triplespend': 'Special prize to be confirmed',
+    'c.prizes.or1': 'Gold Stage Winner', 'c.prizes.or2': 'Gold Stage Finalist',
+    'c.prizes.plata1': 'Silver Stage Winner', 'c.prizes.plata2': 'Silver Stage Finalist',
+    'c.prizes.triples': 'Three-Point Contest Winner',
+    'c.zoom': 'Zoom',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona',
+    'f.back': '← Inicio',
+    'f.badge': 'Inscripciones abiertas',
+    'f.hero.sub': 'Inscripción · Básquet de calle',
+    'f.date': '19 de septiembre de 2026',
+    'f.time': '10:00 H', 'f.location': 'Pista dels Carmelites · Badalona',
+    'f.price': '24€ por equipo',
+    'f.triples.label': 'Actividad especial · A mitad de torneo',
+    'f.triples.title': 'Concurso de Triples',
+    'f.triples.desc': 'Competición abierta a todos los participantes. El mejor tirador/a del día se lleva el premio especial.',
+    'f.biz.label': 'Pago · Bizum',
+    'f.biz.warning': 'El pago debe realizarse en el momento de la inscripción. Sin Bizum, el equipo no quedará incluido.',
+    'f.biz.price': '24€ por equipo · Concepto: nombre del equipo',
+    'f.c1.title': 'Datos del equipo',
+    'f.equip.label': 'Nombre del equipo',
+    'f.equip.ph': 'Ej: Dimonis Badalona',
+    'f.c2.title': 'Jugadores',
+    'f.j1': 'Jugador 1', 'f.j2': 'Jugador 2', 'f.j3': 'Jugador 3', 'f.j4': 'Jugador 4',
+    'f.j.ph': 'Nombre y apellidos',
+    'f.opcional': '(opcional)',
+    'f.c3.title': 'Capitán / Capitana del equipo',
+    'f.del.nom': 'Nombre y apellidos',
+    'f.capita.ph': 'Nombre y apellidos del/la capitán/a',
+    'f.mobil': 'Móvil',
+    'f.email.ph': 'correo@ejemplo.com',
+    'f.notes': 'Notas',
+    'f.notes.ph': 'Dudas, observaciones...',
+    'f.c4.title': 'Menores de edad',
+    'f.menors.note.title': 'Si algún miembro del equipo es menor de edad',
+    'f.menors.note.body': 'Rellena este apartado y adjunta la autorización firmada. Sin este documento, el/la menor no podrá participar el día del torneo.',
+    'f.menors.primer.label': 'Primer menor · Tutor/a de contacto',
+    'f.menors.nom': 'Nombre y apellidos del tutor/a', 'f.menors.nom.ph': 'Nombre y apellidos completos',
+    'f.menors.dni': 'DNI del tutor/a',
+    'f.menors.tel': 'Teléfono de contacto',
+    'f.menors.addicionals': 'Menores adicionales', 'f.menors.addicionals.fmt': '(opcional · si hay más de uno)',
+    'f.menors.addicionals.ph': 'Ej: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX\nLaia Puig — tutora: Anna Puig · 6XX XXX XXX',
+    'f.menors.addicionals.note': 'Indica el nombre del/la menor y el teléfono de su tutor/a para cada menor adicional.',
+    'f.menors.verify': '<strong>No es necesario adjuntar ningún documento.</strong> La organización llamará o enviará un WhatsApp al teléfono de contacto indicado para verificar la autorización del/la menor antes del torneo.',
+    'f.c5.title': 'Reglamento y confirmación',
+    'f.cond.title': 'Condiciones de participación:',
+    'f.cond.1': 'Cada equipo debe estar formado por 4 jugadores.',
+    'f.cond.2': 'El pago debe realizarse <strong>en el momento de la inscripción</strong>. Sin Bizum al <strong>655 585 695</strong>, el equipo no quedará incluido en el torneo.',
+    'f.cond.3': 'Precio: <strong>24€ por equipo</strong>. Concepto: nombre del equipo.',
+    'f.cond.4': 'Las inscripciones están sujetas a disponibilidad de plazas.',
+    'f.cond.5': 'La organización se reserva el derecho de admisión y de modificar el horario si es necesario.',
+    'f.veure': 'Ver reglamento',
+    'f.download': 'Descargar PDF',
+    'f.check': 'He leído y acepto las condiciones de participación y el <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">reglamento del torneo 3x3</a> de Juguem a Bàsquet. <span class="req">*</span>',
+    'f.submit': 'Inscribir el equipo',
+    'f.submit.note': 'Haz el Bizum de 24€ al 655 585 695 ahora mismo · Sin pago el equipo no quedará incluido',
+    'f.ok.title': 'Equipo <span>inscrito!</span>',
+    'f.ok.text': 'Hemos recibido el formulario. <strong>Haced el Bizum de 24€ al 655 585 695 ahora mismo</strong> con el nombre del equipo como concepto.<br><br>Sin pago, el equipo no quedará incluido en el torneo. Recibiréis la confirmación de plaza por email el <strong>17 de septiembre</strong>.',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'c.cta': 'Inscribe a tu equipo →', 'c.ig': 'Sigue @juguemabasquet para más info →',
+    'c.prizes.label': 'Premios', 'c.prizes.pend': 'Premio por confirmar', 'c.prizes.triplespend': 'Premio especial por confirmar',
+    'c.prizes.or1': 'Ganador/a Fase Oro', 'c.prizes.or2': 'Finalista Fase Oro',
+    'c.prizes.plata1': 'Ganador/a Fase Plata', 'c.prizes.plata2': 'Finalista Fase Plata',
+    'c.prizes.triples': 'Ganador/a Concurso de Triples',
+    'c.zoom': 'Ampliar',
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n-ph')];
+    if (v !== undefined) el.placeholder = v;
+  });
+}
+
+// Init with the main site language (localStorage)
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+// Poster lightbox (click to enlarge)
+(function () {
+  const trigger = document.getElementById('poster-trigger');
+  const lightbox = document.getElementById('poster-lightbox');
+  const closeBtn = document.getElementById('lb-close');
+  if (!trigger || !lightbox) return;
+  const open = () => { lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false'); };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  trigger.addEventListener('click', open);
+  trigger.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  lightbox.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+</body>
+</html>

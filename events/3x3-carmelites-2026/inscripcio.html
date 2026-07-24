@@ -3,181 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inscripció Torneig 3x3 · Juguem a Bàsquet · 4 Setembre 2026</title>
+<title>Inscripció · Torneig 3x3 · Carmelites · 19 Setembre 2026 · Juguem a Bàsquet</title>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --orange: #FF6A1A;
-    --orange-dark: #e05500;
-    --black: #0A0A0A;
-    --grey-bg: #F5F5F5;
-    --grey-border: #E0E0E0;
-    --grey-text: #666;
-  }
-
-  body { font-family: 'Inter', sans-serif; background: #fff; color: var(--black); min-height: 100vh; }
-
-  /* ── HEADER ── */
-  .site-header { background: var(--black); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .header-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .header-logo-icon { width: 40px; height: 40px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-  .header-logo-text { font-family: 'Bungee', sans-serif; font-size: 16px; color: #fff; letter-spacing: .5px; line-height: 1.1; }
-  .header-logo-sub { font-size: 11px; color: rgba(255,255,255,.45); font-family: 'Inter', sans-serif; font-weight: 500; }
-  .header-right { display: flex; align-items: center; gap: 16px; }
-  .header-back { color: rgba(255,255,255,.6); text-decoration: none; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; transition: color .2s; }
-  .header-back:hover { color: var(--orange); }
-
-  /* ── LANG SWITCHER ── */
-  .lang-switcher { display: flex; gap: 4px; }
-  .lang-btn { background: rgba(255,255,255,.08); color: rgba(255,255,255,.5); border: none; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .5px; padding: 5px 9px; border-radius: 5px; cursor: pointer; transition: background .2s, color .2s; text-transform: uppercase; }
-  .lang-btn:hover { background: rgba(255,255,255,.15); color: #fff; }
-  .lang-btn.active { background: var(--orange); color: #fff; }
-
-  /* ── HERO ── */
-  .hero { background: #fff; border-bottom: 1px solid var(--grey-border); padding: 48px 24px 56px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: '3x3'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: 'Bungee', sans-serif; font-size: clamp(120px,22vw,260px); color: rgba(255,106,26,0.07); pointer-events: none; white-space: nowrap; }
-  .hero-badge { display: inline-block; background: rgba(255,106,26,.12); border: 1px solid rgba(255,106,26,.3); color: var(--orange); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; }
-  .hero-title { font-family: 'Bungee', sans-serif; font-size: clamp(36px,8vw,72px); color: var(--black); line-height: 1; margin-bottom: 16px; position: relative; }
-  .hero-title span { color: var(--orange); }
-  .hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 20px; }
-  .hero-meta-item { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: rgba(0,0,0,.55); }
-  .hero-meta-item .icon { font-size: 16px; }
-
-  /* ── WRAPPER ── */
-  .form-wrapper { max-width: 720px; margin: -28px auto 48px; padding: 0 16px; position: relative; z-index: 2; }
-
-  /* ── CARD ── */
-  .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 32px rgba(0,0,0,.1); overflow: hidden; margin-bottom: 16px; }
-  .card-header { padding: 20px 28px 16px; border-bottom: 1px solid var(--grey-border); display: flex; align-items: center; gap: 12px; }
-  .card-header-num { width: 32px; height: 32px; background: var(--orange); color: #fff; font-family: 'Bungee', sans-serif; font-size: 15px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .card-header-title { font-family: 'Bungee', sans-serif; font-size: 16px; letter-spacing: .5px; color: var(--black); }
-  .card-body { padding: 24px 28px; }
-
-  /* ── GRID ── */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 560px) { .grid-2 { grid-template-columns: 1fr; } .card-body { padding: 20px; } .card-header { padding: 16px 20px 14px; } }
-
-  /* ── FIELDS ── */
-  .field { display: flex; flex-direction: column; gap: 6px; }
-  .field label { font-size: 12px; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: .5px; }
-  .field label .req { color: var(--orange); margin-left: 2px; }
-  .field label .opt { color: #aaa; font-size: 10px; font-weight: 500; text-transform: none; letter-spacing: 0; margin-left: 4px; }
-
-  input[type="text"], input[type="email"], input[type="tel"], select, textarea {
-    font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--black);
-    background: #FAFAFA; border: 1.5px solid var(--grey-border); border-radius: 8px; padding: 11px 14px;
-    outline: none; transition: border-color .2s, background .2s; width: 100%;
-  }
-  input:focus, select:focus, textarea:focus { border-color: var(--orange); background: #fff; }
-  input::placeholder, textarea::placeholder { color: #bbb; }
-  select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
-  textarea { resize: vertical; min-height: 80px; }
-
-  /* ── JUGADORS ── */
-  .jugadors-grup { display: flex; flex-direction: column; gap: 10px; }
-  .jugador-row { display: flex; align-items: center; gap: 10px; }
-  .jugador-num { width: 28px; height: 28px; background: var(--black); color: #fff; font-size: 12px; font-weight: 800; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .jugador-num.suplent { background: #ddd; color: #888; }
-
-  /* ── REGLAMENT ── */
-  .reglament-box { background: #FFF8F4; border: 1.5px solid rgba(255,106,26,.2); border-radius: 10px; padding: 16px 20px; font-size: 13px; color: var(--grey-text); line-height: 1.6; margin-bottom: 16px; }
-  .reglament-box strong { color: var(--black); }
-  .reglament-box ul { margin: 8px 0 0 18px; }
-  .reglament-box li { margin-bottom: 4px; }
-
-  /* ── CHECKBOX ── */
-  .check-row { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
-  .check-row input[type="checkbox"] { width: 20px; height: 20px; min-width: 20px; accent-color: var(--orange); margin-top: 1px; cursor: pointer; }
-  .check-label { font-size: 13px; font-weight: 500; color: #444; line-height: 1.5; cursor: pointer; }
-  .check-label a { color: var(--orange); text-decoration: none; }
-
-  /* ── BIZUM ── */
-  .bizum-card { background: var(--black); border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 16px; }
-  .bizum-icon { font-size: 36px; }
-  .bizum-info { flex: 1; min-width: 160px; }
-  .bizum-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,.4); margin-bottom: 4px; }
-  .bizum-num { font-family: 'Bungee', sans-serif; font-size: 24px; color: var(--orange); letter-spacing: 2px; }
-  .bizum-price { font-size: 13px; color: rgba(255,255,255,.6); margin-top: 4px; }
-
-  /* ── SUBMIT ── */
-  .submit-area { text-align: center; padding-top: 8px; }
-  .btn-submit { display: inline-flex; align-items: center; gap: 10px; background: var(--orange); color: #fff; font-family: 'Bungee', sans-serif; font-size: 16px; letter-spacing: 1px; text-transform: uppercase; padding: 16px 40px; border: none; border-radius: 10px; cursor: pointer; transition: background .2s, transform .15s; width: 100%; justify-content: center; }
-  .btn-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
-  .submit-note { font-size: 12px; color: #aaa; margin-top: 12px; }
-
-  /* ── SUCCESS ── */
-  .success-screen { display: none; background: #fff; border-radius: 16px; padding: 56px 32px; text-align: center; box-shadow: 0 4px 32px rgba(0,0,0,.1); }
-  .success-icon { font-size: 64px; margin-bottom: 20px; }
-  .success-title { font-family: 'Bungee', sans-serif; font-size: 28px; color: var(--black); margin-bottom: 12px; }
-  .success-title span { color: var(--orange); }
-  .success-text { font-size: 15px; color: var(--grey-text); line-height: 1.6; max-width: 420px; margin: 0 auto; }
-
-  /* ── FOOTER ── */
-  .page-footer { text-align: center; padding: 32px 16px; font-size: 12px; color: #bbb; }
-  .page-footer a { color: var(--orange); text-decoration: none; }
-
-  /* ── MODAL REGLAMENT ── */
-  .reg-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.55); align-items:center; justify-content:center; padding:16px; }
-  .reg-overlay.open { display:flex; }
-  .reg-box { background:#fff; border-radius:16px; max-width:660px; width:100%; max-height:90vh; overflow-y:auto; padding:36px 40px; position:relative; }
-  .reg-close { position:absolute; top:14px; right:16px; background:none; border:none; font-size:22px; cursor:pointer; color:#999; line-height:1; }
-  .reg-close:hover { color:#333; }
-  .reg-box h2 { font-family:'Bungee',sans-serif; font-size:20px; color:var(--black); margin:0 0 4px; }
-  .reg-sub { font-size:11px; color:var(--grey-text); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px; display:block; }
-  .reg-box h3 { font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--orange); margin:18px 0 5px; }
-  .reg-box p { font-size:14px; color:#333; line-height:1.65; margin:0 0 4px; }
-  .reg-box ul { margin:6px 0 0 18px; padding:0; }
-  .reg-box li { font-size:13px; color:#555; margin-bottom:4px; line-height:1.6; }
-  .reg-box strong { color:var(--black); }
-  .reg-quote { border-left:3px solid var(--orange); padding:10px 14px; background:#FFF8F4; border-radius:0 6px 6px 0; font-size:13px; font-style:italic; color:#888; margin-top:16px; }
-  .reg-actions { display:flex; gap:10px; margin-top:24px; padding-top:20px; border-top:1px solid #eee; flex-wrap:wrap; }
-  .reg-btn-pdf { display:inline-flex; align-items:center; gap:6px; background:var(--black); color:#fff; font-family:'Bungee',sans-serif; font-size:12px; letter-spacing:.5px; padding:10px 18px; border-radius:8px; border:none; cursor:pointer; }
-  .reg-btn-close2 { display:inline-flex; align-items:center; gap:6px; background:transparent; color:var(--grey-text); font-size:13px; font-weight:600; padding:10px 16px; border-radius:8px; border:1.5px solid #ddd; cursor:pointer; }
-  .reg-btn-close2:hover { border-color:#aaa; color:#333; }
-  .reg-btns-top { display:flex; gap:8px; margin-top:10px; }
-  .btn-veure { display:inline-flex; align-items:center; gap:6px; background:transparent; color:var(--orange); font-size:13px; font-weight:700; border:1.5px solid var(--orange); border-radius:7px; padding:7px 14px; cursor:pointer; text-decoration:none; }
-  .btn-veure:hover { background:rgba(255,106,26,.07); }
-  .btn-download { display:inline-flex; align-items:center; gap:6px; color:var(--orange); font-size:13px; font-weight:700; text-decoration:none; }
-  @media print {
-    body > *:not(.reg-overlay) { display:none !important; }
-    .reg-overlay { display:flex !important; position:static !important; background:none !important; padding:0 !important; }
-    .reg-box { max-height:none !important; border-radius:0 !important; padding:20px !important; }
-    .reg-close, .reg-actions { display:none !important; }
-  }
-</style>
+<link rel="stylesheet" href="../../assets/css/events.css">
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="site-header">
-  <a href="index.html#inscripcio-3x3" class="header-logo">
-    <img src="assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:44px;height:44px;border-radius:10px;flex-shrink:0;">
-    <div>
-      <div class="header-logo-text">Juguem a Bàsquet</div>
-      <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
-    </div>
-  </a>
+  <div class="header-left">
+    <a href="./" class="header-back" data-i18n="f.back2">← Tornar</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
   <div class="header-right">
     <div class="lang-switcher">
       <button class="lang-btn" onclick="setLang('ca')">CA</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
       <button class="lang-btn" onclick="setLang('es')">ES</button>
     </div>
-    <a href="index.html" class="header-back" data-i18n="f.back">← Tornar a la web</a>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO / CARTEL -->
 <div class="hero">
-  <div class="hero-badge" data-i18n="f.badge">🏆 Torneig Oficial 2026</div>
-  <h1 class="hero-title"><span data-i18n="f.hero.title">Inscripció</span> <span>3x3</span></h1>
-  <div class="hero-meta">
-    <div class="hero-meta-item"><span class="icon">📅</span> <span data-i18n="f.date">19 de setembre de 2026</span></div>
-    <div class="hero-meta-item"><span class="icon">🕐</span> <span data-i18n="f.time">10:00 H</span></div>
-    <div class="hero-meta-item"><span class="icon">📍</span> <span data-i18n="f.location">Pista Joaquim Ruyra · Badalona</span></div>
-    <div class="hero-meta-item"><span class="icon">💶</span> <span data-i18n="f.price">24€ per equip</span></div>
+  <div class="hero-eyebrow"><span data-i18n="f.badge">Inscripcions obertes</span></div>
+  <h1 class="hero-title">3<span>x</span>3</h1>
+  <p class="hero-sub" data-i18n="f.hero.sub">Inscripció · Bàsquet de carrer</p>
+  <div class="hero-tags">
+    <span class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="f.date">19 de setembre de 2026</span></span>
+    <span class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="f.time">10:00 H</span></span>
+    <a class="hero-tag" href="https://maps.google.com/maps?q=Carrer+del+Mar+47,+Badalona" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="f.location">Pista dels Carmelites · Badalona</span></a>
+    <span class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7a6 6 0 1 0 0 10"/><path d="M4 11h9M4 15h7"/></svg><span data-i18n="f.price">24€ per equip</span></span>
   </div>
 </div>
 
@@ -186,26 +48,26 @@
 
   <!-- BIZUM CARD -->
   <div class="bizum-card">
-    <div class="bizum-icon">💸</div>
+    <div class="bizum-icon">€</div>
     <div class="bizum-info">
       <div class="bizum-label" data-i18n="f.biz.label">Pagament · Bizum</div>
       <div class="bizum-num">655 585 695</div>
       <div class="bizum-price" data-i18n="f.biz.price">24€ per equip · Concepte: nom de l'equip</div>
-      <div style="margin-top:8px;font-size:12px;font-weight:700;color:#FF6A1A;" data-i18n="f.biz.warning">⚠️ El pagament s'ha de fer en el moment de la inscripció. Sense Bizum, l'equip no quedarà inclòs.</div>
+      <div style="margin-top:8px;font-size:12px;font-weight:700;color:#FF6A1A;display:flex;align-items:flex-start;gap:6px;"><svg class="ico" style="width:14px;height:14px;margin-top:1px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg><span data-i18n="f.biz.warning">El pagament s'ha de fer en el moment de la inscripció. Sense Bizum, l'equip no quedarà inclòs.</span></div>
     </div>
   </div>
 
   <!-- FORMULARI -->
   <form
-    name="inscripcio-3x3"
+    name="inscripcio-3x3-carmelites-2026"
     method="POST"
-    action="/form-3x3.html?inscrit=1"
+    action="/events/3x3-carmelites-2026/inscripcio?inscrit=1"
     data-netlify="true"
     netlify-honeypot="bot-field"
     id="form-inscripcio"
     novalidate
   >
-    <input type="hidden" name="form-name" value="inscripcio-3x3">
+    <input type="hidden" name="form-name" value="inscripcio-3x3-carmelites-2026">
     <p style="display:none;"><input name="bot-field"></p>
 
     <!-- 1. EQUIP -->
@@ -322,9 +184,9 @@
           <textarea name="menors_addicionals" rows="3" data-i18n-ph="f.menors.addicionals.ph" placeholder="Ex: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX&#10;Laia Puig — tutora: Anna Puig · 6XX XXX XXX" style="resize:vertical;font-size:13px;"></textarea>
           <div style="font-size:11px;color:#aaa;margin-top:4px;" data-i18n="f.menors.addicionals.note">Indica el nom del/la menor i el telèfon del seu tutor/a per a cada menor addicional.</div>
         </div>
-        <div style="background:#f0f7ff;border:1px solid #b8d4f0;border-radius:10px;padding:12px 16px;font-size:13px;color:#1a4a7a;line-height:1.6;" data-i18n="f.menors.verify">
-          📞 <strong>No cal adjuntar cap document.</strong> L'organització trucarà o enviarà un WhatsApp al telèfon de contacte indicat per verificar l'autorització del/la menor abans del torneig.
-        </div>
+        <div style="background:#f0f7ff;border:1px solid #b8d4f0;border-radius:10px;padding:12px 16px;font-size:13px;color:#1a4a7a;line-height:1.6;display:flex;align-items:flex-start;gap:8px;"><svg class="ico" style="margin-top:2px;color:#1a4a7a;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg><span data-i18n="f.menors.verify">
+          <strong>No cal adjuntar cap document.</strong> L'organització trucarà o enviarà un WhatsApp al telèfon de contacte indicat per verificar l'autorització del/la menor abans del torneig.
+        </span></div>
       </div>
     </div>
 
@@ -339,14 +201,14 @@
           <strong data-i18n="f.cond.title">Condicions de participació:</strong>
           <ul>
             <li data-i18n="f.cond.1">Cada equip ha d'estar format per 4 jugadors.</li>
-            <li data-i18n="f.cond.2">⚠️ El pagament s'ha de fer <strong>en el moment de la inscripció</strong>. Sense Bizum al <strong>655 585 695</strong>, l'equip no quedarà inclòs al torneig.</li>
+            <li data-i18n="f.cond.2">El pagament s'ha de fer <strong>en el moment de la inscripció</strong>. Sense Bizum al <strong>655 585 695</strong>, l'equip no quedarà inclòs al torneig.</li>
             <li data-i18n="f.cond.3">Preu: <strong>24€ per equip</strong>. Concepte: nom de l'equip.</li>
             <li data-i18n="f.cond.4">Les inscripcions estan subjectes a disponibilitat de places.</li>
             <li data-i18n="f.cond.5">L'organització es reserva el dret d'admissió i de modificar l'horari si cal.</li>
           </ul>
           <div class="reg-btns-top" style="margin-top:12px;">
-            <button class="btn-veure" onclick="document.getElementById('reg-modal').classList.add('open')">👁 <span data-i18n="f.veure">Veure reglament</span></button>
-            <button class="btn-veure" onclick="document.getElementById('reg-modal').classList.add('open');setTimeout(()=>window.print(),300)" style="border-color:#aaa;color:#555;">📄 <span data-i18n="f.download">Descarregar PDF</span></button>
+            <button type="button" class="btn-veure" onclick="document.getElementById('reg-modal').classList.add('open')"><svg class="ico" style="width:15px;height:15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="f.veure">Veure reglament</span></button>
+            <button type="button" class="btn-veure" onclick="document.getElementById('reg-modal').classList.add('open');setTimeout(()=>window.print(),300)" style="border-color:#aaa;color:#555;"><svg class="ico" style="width:15px;height:15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg> <span data-i18n="f.download">Descarregar PDF</span></button>
           </div>
         </div>
         <label class="check-row">
@@ -358,50 +220,43 @@
 
     <!-- SUBMIT -->
     <div class="submit-area">
-      <button type="submit" class="btn-submit" data-i18n="f.submit">🏀 Inscriure l'equip</button>
-      <div class="submit-note" data-i18n="f.submit.note">⚠️ Recorda fer el Bizum de 24€ al 655 585 695 ara mateix · Sense pagament l'equip no quedarà inclòs</div>
+      <button type="submit" class="btn-submit" data-i18n="f.submit">Inscriure l'equip</button>
+      <div class="submit-note" data-i18n="f.submit.note">Recorda fer el Bizum de 24€ al 655 585 695 ara mateix · Sense pagament l'equip no quedarà inclòs</div>
     </div>
 
   </form>
 
   <!-- SUCCESS -->
   <div class="success-screen" id="success-screen">
-    <div class="success-icon">🎉</div>
+    <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></div>
     <div class="success-title" data-i18n="f.ok.title">Equip <span>inscrit!</span></div>
-    <p class="success-text" data-i18n="f.ok.text">Hem rebut el formulari. <strong>⚠️ Feu el Bizum de 24€ al 655 585 695 ara mateix</strong> amb el concepte: nom de l'equip.<br><br>Sense pagament, l'equip no quedarà inclòs al torneig. Rebreu la confirmació de plaça per email el <strong>17 de setembre</strong>.</p>
+    <p class="success-text" data-i18n="f.ok.text">Hem rebut el formulari. <strong>Feu el Bizum de 24€ al 655 585 695 ara mateix</strong> amb el concepte: nom de l'equip.<br><br>Sense pagament, l'equip no quedarà inclòs al torneig. Rebreu la confirmació de plaça per email el <strong>17 de setembre</strong>.</p>
   </div>
 
 </div>
-
-<!-- FOOTER -->
-<footer class="page-footer">
-  <a href="index.html" data-i18n="f.footer">← Juguem a Bàsquet · Badalona</a> &nbsp;|&nbsp; info@juguemabasquet.org
-</footer>
 
 <script>
 const TRAD = {
   ca: {
     'f.sub': 'Associació · Badalona',
-    'f.back': '← Tornar a la web',
-    'f.badge': '🏆 Torneig Oficial 2026',
-    'f.hero.title': 'Inscripció',
+    'f.back': '← Inici', 'f.back2': '← Tornar',
+    'f.badge': 'Inscripcions obertes',
+    'f.hero.sub': 'Inscripció · Bàsquet de carrer',
     'f.date': '19 de setembre de 2026',
-    'f.time': '10:00 H', 'f.location': 'Pista Joaquim Ruyra · Badalona',
+    'f.time': '10:00 H', 'f.location': 'Pista dels Carmelites · Badalona',
     'f.price': '24€ per equip',
+    'f.triples.label': 'Activitat especial · A meitat de torneig',
+    'f.triples.title': 'Concurs de Triples',
+    'f.triples.desc': "Competició oberta a tots els participants. El millor tirador/a del dia s'emporta el premi especial.",
     'f.biz.label': 'Pagament · Bizum',
-    'f.biz.warning': '⚠️ El pagament s\'ha de fer en el moment de la inscripció. Sense Bizum, l\'equip no quedarà inclòs.',
+    'f.biz.warning': 'El pagament s\'ha de fer en el moment de la inscripció. Sense Bizum, l\'equip no quedarà inclòs.',
     'f.biz.price': "24€ per equip · Concepte: nom de l'equip",
     'f.c1.title': "Dades de l'equip",
     'f.equip.label': "Nom de l'equip",
     'f.equip.ph': 'Ex: Dimonis Badalona',
-    'f.cat.label': 'Categoria',
-    'f.cat.sel': 'Tria',
-    'f.cat.m': 'Masculí', 'f.cat.f': 'Femení', 'f.cat.x': 'Mixt',
     'f.c2.title': 'Jugadors',
     'f.j1': 'Jugador 1', 'f.j2': 'Jugador 2', 'f.j3': 'Jugador 3', 'f.j4': 'Jugador 4',
     'f.j.ph': 'Nom i cognoms',
-    'f.capita.label': "Capità / Capitana de l'equip",
-    'f.capita.ph': 'Nom i cognoms del/la capità/ana',
     'f.opcional': '(opcional)',
     'f.c3.title': "Capità / Capitana de l'equip",
     'f.del.nom': 'Nom i cognoms',
@@ -420,45 +275,43 @@ const TRAD = {
     'f.menors.addicionals': 'Menors addicionals', 'f.menors.addicionals.fmt': '(opcional · si n\'hi ha més d\'un)',
     'f.menors.addicionals.ph': 'Ex: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX\nLaia Puig — tutora: Anna Puig · 6XX XXX XXX',
     'f.menors.addicionals.note': 'Indica el nom del/la menor i el telèfon del seu tutor/a per a cada menor addicional.',
-    'f.menors.verify': '📞 <strong>No cal adjuntar cap document.</strong> L\'organització trucarà o enviarà un WhatsApp al telèfon de contacte indicat per verificar l\'autorització del/la menor abans del torneig.',
+    'f.menors.verify': '<strong>No cal adjuntar cap document.</strong> L\'organització trucarà o enviarà un WhatsApp al telèfon de contacte indicat per verificar l\'autorització del/la menor abans del torneig.',
     'f.c5.title': 'Reglament i confirmació',
     'f.cond.title': 'Condicions de participació:',
     'f.cond.1': "Cada equip ha d'estar format per 4 jugadors.",
-    'f.cond.2': '⚠️ El pagament s\'ha de fer <strong>en el moment de la inscripció</strong>. Sense Bizum al <strong>655 585 695</strong>, l\'equip no quedarà inclòs al torneig.',
+    'f.cond.2': 'El pagament s\'ha de fer <strong>en el moment de la inscripció</strong>. Sense Bizum al <strong>655 585 695</strong>, l\'equip no quedarà inclòs al torneig.',
     'f.cond.3': 'Preu: <strong>24€ per equip</strong>. Concepte: nom de l\'equip.',
     'f.cond.4': 'Les inscripcions estan subjectes a disponibilitat de places.',
     'f.cond.5': "L'organització es reserva el dret d'admissió i de modificar l'horari si cal.",
     'f.veure': 'Veure reglament',
     'f.download': 'Descarregar PDF',
     'f.check': 'He llegit i accepto les condicions de participació i el <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">reglament del torneig 3x3</a> de Juguem a Bàsquet. <span class="req">*</span>',
-    'f.check.menors': 'Si algun jugador/a de l\'equip és <strong>menor d\'edat</strong>, confirmo que disposo de l\'autorització escrita i signada del pare, mare o tutor/a legal, i la presentaré el dia del torneig.',
-    'f.submit': "🏀 Inscriure l'equip",
-    'f.submit.note': '⚠️ Recorda fer el Bizum de 24€ al 655 585 695 ara mateix · Sense pagament l\'equip no quedarà inclòs',
+    'f.submit': "Inscriure l'equip",
+    'f.submit.note': 'Recorda fer el Bizum de 24€ al 655 585 695 ara mateix · Sense pagament l\'equip no quedarà inclòs',
     'f.ok.title': 'Equip <span>inscrit!</span>',
-    'f.ok.text': 'Hem rebut el formulari. <strong>⚠️ Feu el Bizum de 24€ al 655 585 695 ara mateix</strong> amb el concepte: nom de l\'equip.<br><br>Sense pagament, l\'equip no quedarà inclòs al torneig. Rebreu la confirmació de plaça per email el <strong>17 de setembre</strong>.',
+    'f.ok.text': 'Hem rebut el formulari. <strong>Feu el Bizum de 24€ al 655 585 695 ara mateix</strong> amb el concepte: nom de l\'equip.<br><br>Sense pagament, l\'equip no quedarà inclòs al torneig. Rebreu la confirmació de plaça per email el <strong>17 de setembre</strong>.',
     'f.footer': '← Juguem a Bàsquet · Badalona',
   },
   en: {
     'f.sub': 'Association · Badalona',
-    'f.back': '← Back to website',
-    'f.badge': '🏆 Official Tournament 2026',
-    'f.hero.title': 'Registration',
+    'f.back': '← Home', 'f.back2': '← Back',
+    'f.badge': 'Registrations open',
+    'f.hero.sub': 'Registration · Street basketball',
     'f.date': '19 September 2026',
-    'f.time': '10:00 H', 'f.location': 'Joaquim Ruyra Court · Badalona',
+    'f.time': '10:00 H', 'f.location': 'Carmelites Court · Badalona',
     'f.price': '24€ per team',
+    'f.triples.label': 'Special activity · Mid-tournament',
+    'f.triples.title': 'Three-Point Contest',
+    'f.triples.desc': 'Open to all participants. The best shooter of the day wins the special prize.',
     'f.biz.label': 'Payment · Bizum',
+    'f.biz.warning': 'Payment must be made at the time of registration. Without Bizum, the team will not be included.',
     'f.biz.price': '24€ per team · Reference: team name',
     'f.c1.title': 'Team details',
     'f.equip.label': 'Team name',
     'f.equip.ph': 'Ex: Badalona Warriors',
-    'f.cat.label': 'Category',
-    'f.cat.sel': 'Select',
-    'f.cat.m': 'Men', 'f.cat.f': 'Women', 'f.cat.x': 'Mixed',
     'f.c2.title': 'Players',
     'f.j1': 'Player 1', 'f.j2': 'Player 2', 'f.j3': 'Player 3', 'f.j4': 'Player 4',
     'f.j.ph': 'Full name',
-    'f.capita.label': 'Team captain',
-    'f.capita.ph': 'Full name of the captain',
     'f.opcional': '(optional)',
     'f.c3.title': 'Team captain',
     'f.del.nom': 'Full name',
@@ -477,46 +330,43 @@ const TRAD = {
     'f.menors.addicionals': 'Additional minors', 'f.menors.addicionals.fmt': '(optional · if more than one)',
     'f.menors.addicionals.ph': 'Ex: Pau Martínez — guardian: Joan Martínez · 6XX XXX XXX\nLaia Puig — guardian: Anna Puig · 6XX XXX XXX',
     'f.menors.addicionals.note': 'Add the minor\'s name and their guardian\'s phone number for each additional minor.',
-    'f.menors.verify': '📞 <strong>No document upload needed.</strong> The organisation will call or send a WhatsApp to the contact phone number provided to verify the minor\'s authorisation before the tournament.',
+    'f.menors.verify': '<strong>No document upload needed.</strong> The organisation will call or send a WhatsApp to the contact phone number provided to verify the minor\'s authorisation before the tournament.',
     'f.c5.title': 'Rules & confirmation',
     'f.cond.title': 'Participation conditions:',
     'f.cond.1': 'Each team must have 4 players.',
-    'f.biz.warning': '⚠️ Payment must be made at the time of registration. Without Bizum, the team will not be included.',
-    'f.cond.2': '⚠️ Payment must be made <strong>at the time of registration</strong>. Without Bizum to <strong>655 585 695</strong>, the team will not be included in the tournament.',
+    'f.cond.2': 'Payment must be made <strong>at the time of registration</strong>. Without Bizum to <strong>655 585 695</strong>, the team will not be included in the tournament.',
     'f.cond.3': 'Fee: <strong>24€ per team</strong>. Reference: team name.',
     'f.cond.4': 'Registrations are subject to availability.',
     'f.cond.5': 'The organisation reserves the right of admission and to modify the schedule if necessary.',
     'f.veure': 'View rules',
     'f.download': 'Download PDF',
     'f.check': 'I have read and accept the participation conditions and the <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">3x3 tournament rules</a> of Juguem a Bàsquet. <span class="req">*</span>',
-    'f.check.menors': 'If any player on the team is <strong>under 18</strong>, I confirm that I have a written and signed authorisation from their parent or legal guardian, and will present it on the day of the tournament.',
-    'f.submit': '🏀 Register your team',
-    'f.submit.note': '⚠️ Send the 24€ Bizum to 655 585 695 now · Without payment the team will not be included',
+    'f.submit': 'Register your team',
+    'f.submit.note': 'Send the 24€ Bizum to 655 585 695 now · Without payment the team will not be included',
     'f.ok.title': 'Team <span>registered!</span>',
-    'f.ok.text': 'We have received your form. <strong>⚠️ Send the 24€ Bizum to 655 585 695 now</strong> with your team name as reference.<br><br>Without payment, the team will not be included in the tournament. Place confirmation will be sent by email on <strong>17 September</strong>.',
+    'f.ok.text': 'We have received your form. <strong>Send the 24€ Bizum to 655 585 695 now</strong> with your team name as reference.<br><br>Without payment, the team will not be included in the tournament. Place confirmation will be sent by email on <strong>17 September</strong>.',
     'f.footer': '← Juguem a Bàsquet · Badalona',
   },
   es: {
     'f.sub': 'Asociación · Badalona',
-    'f.back': '← Volver a la web',
-    'f.badge': '🏆 Torneo Oficial 2026',
-    'f.hero.title': 'Inscripción',
+    'f.back': '← Inicio', 'f.back2': '← Volver',
+    'f.badge': 'Inscripciones abiertas',
+    'f.hero.sub': 'Inscripción · Básquet de calle',
     'f.date': '19 de septiembre de 2026',
-    'f.time': '10:00 H', 'f.location': 'Pista Joaquim Ruyra · Badalona',
+    'f.time': '10:00 H', 'f.location': 'Pista dels Carmelites · Badalona',
     'f.price': '24€ por equipo',
+    'f.triples.label': 'Actividad especial · A mitad de torneo',
+    'f.triples.title': 'Concurso de Triples',
+    'f.triples.desc': 'Competición abierta a todos los participantes. El mejor tirador/a del día se lleva el premio especial.',
     'f.biz.label': 'Pago · Bizum',
+    'f.biz.warning': 'El pago debe realizarse en el momento de la inscripción. Sin Bizum, el equipo no quedará incluido.',
     'f.biz.price': '24€ por equipo · Concepto: nombre del equipo',
     'f.c1.title': 'Datos del equipo',
     'f.equip.label': 'Nombre del equipo',
     'f.equip.ph': 'Ej: Dimonis Badalona',
-    'f.cat.label': 'Categoría',
-    'f.cat.sel': 'Elige',
-    'f.cat.m': 'Masculino', 'f.cat.f': 'Femenino', 'f.cat.x': 'Mixto',
     'f.c2.title': 'Jugadores',
     'f.j1': 'Jugador 1', 'f.j2': 'Jugador 2', 'f.j3': 'Jugador 3', 'f.j4': 'Jugador 4',
     'f.j.ph': 'Nombre y apellidos',
-    'f.capita.label': 'Capitán / Capitana del equipo',
-    'f.capita.ph': 'Nombre y apellidos del/la capitán/a',
     'f.opcional': '(opcional)',
     'f.c3.title': 'Capitán / Capitana del equipo',
     'f.del.nom': 'Nombre y apellidos',
@@ -535,23 +385,21 @@ const TRAD = {
     'f.menors.addicionals': 'Menores adicionales', 'f.menors.addicionals.fmt': '(opcional · si hay más de uno)',
     'f.menors.addicionals.ph': 'Ej: Pau Martínez — tutor: Joan Martínez · 6XX XXX XXX\nLaia Puig — tutora: Anna Puig · 6XX XXX XXX',
     'f.menors.addicionals.note': 'Indica el nombre del/la menor y el teléfono de su tutor/a para cada menor adicional.',
-    'f.menors.verify': '📞 <strong>No es necesario adjuntar ningún documento.</strong> La organización llamará o enviará un WhatsApp al teléfono de contacto indicado para verificar la autorización del/la menor antes del torneo.',
+    'f.menors.verify': '<strong>No es necesario adjuntar ningún documento.</strong> La organización llamará o enviará un WhatsApp al teléfono de contacto indicado para verificar la autorización del/la menor antes del torneo.',
     'f.c5.title': 'Reglamento y confirmación',
     'f.cond.title': 'Condiciones de participación:',
     'f.cond.1': 'Cada equipo debe estar formado por 4 jugadores.',
-    'f.biz.warning': '⚠️ El pago debe realizarse en el momento de la inscripción. Sin Bizum, el equipo no quedará incluido.',
-    'f.cond.2': '⚠️ El pago debe realizarse <strong>en el momento de la inscripción</strong>. Sin Bizum al <strong>655 585 695</strong>, el equipo no quedará incluido en el torneo.',
+    'f.cond.2': 'El pago debe realizarse <strong>en el momento de la inscripción</strong>. Sin Bizum al <strong>655 585 695</strong>, el equipo no quedará incluido en el torneo.',
     'f.cond.3': 'Precio: <strong>24€ por equipo</strong>. Concepto: nombre del equipo.',
     'f.cond.4': 'Las inscripciones están sujetas a disponibilidad de plazas.',
     'f.cond.5': 'La organización se reserva el derecho de admisión y de modificar el horario si es necesario.',
     'f.veure': 'Ver reglamento',
     'f.download': 'Descargar PDF',
     'f.check': 'He leído y acepto las condiciones de participación y el <a href="#" onclick="event.preventDefault();document.getElementById(\'reg-modal\').classList.add(\'open\')">reglamento del torneo 3x3</a> de Juguem a Bàsquet. <span class="req">*</span>',
-    'f.check.menors': 'Si algún jugador/a del equipo es <strong>menor de edad</strong>, confirmo que dispongo de la autorización escrita y firmada del padre, madre o tutor/a legal, y la presentaré el día del torneo.',
-    'f.submit': '🏀 Inscribir el equipo',
-    'f.submit.note': '⚠️ Haz el Bizum de 24€ al 655 585 695 ahora mismo · Sin pago el equipo no quedará incluido',
+    'f.submit': 'Inscribir el equipo',
+    'f.submit.note': 'Haz el Bizum de 24€ al 655 585 695 ahora mismo · Sin pago el equipo no quedará incluido',
     'f.ok.title': 'Equipo <span>inscrito!</span>',
-    'f.ok.text': 'Hemos recibido el formulario. <strong>⚠️ Haced el Bizum de 24€ al 655 585 695 ahora mismo</strong> con el nombre del equipo como concepto.<br><br>Sin pago, el equipo no quedará incluido en el torneo. Recibiréis la confirmación de plaza por email el <strong>17 de septiembre</strong>.',
+    'f.ok.text': 'Hemos recibido el formulario. <strong>Haced el Bizum de 24€ al 655 585 695 ahora mismo</strong> con el nombre del equipo como concepto.<br><br>Sin pago, el equipo no quedará incluido en el torneo. Recibiréis la confirmación de plaza por email el <strong>17 de septiembre</strong>.',
     'f.footer': '← Juguem a Bàsquet · Badalona',
   }
 };
@@ -571,24 +419,19 @@ function setLang(lang) {
     const v = t[el.getAttribute('data-i18n-ph')];
     if (v !== undefined) el.placeholder = v;
   });
-  // select options
-  document.querySelectorAll('select option[data-i18n]').forEach(el => {
-    const v = t[el.getAttribute('data-i18n')];
-    if (v !== undefined) el.textContent = v;
-  });
 }
 
-// Inicialitzar amb l'idioma de la web principal (localStorage)
+// Init with the main site language (localStorage)
 const savedLang = localStorage.getItem('jab-lang') || 'ca';
 setLang(savedLang);
 
-// Mostrar pantalla d'èxit si Netlify redirigeix amb ?inscrit=1
+// Show success screen if Netlify redirects with ?inscrit=1
 if (new URLSearchParams(window.location.search).get('inscrit') === '1') {
   document.getElementById('form-inscripcio').style.display = 'none';
   document.getElementById('success-screen').style.display = 'block';
 }
 
-// Validació bàsica del client
+// Basic client validation
 document.getElementById('form-inscripcio').addEventListener('submit', function(e) {
   const reqs = this.querySelectorAll('[required]');
   let valid = true;
@@ -612,7 +455,7 @@ document.getElementById('form-inscripcio').addEventListener('submit', function(e
   <div class="reg-box">
     <button class="reg-close" onclick="document.getElementById('reg-modal').classList.remove('open')">✕</button>
     <h2>Reglament del Torneig 3x3</h2>
-    <span class="reg-sub">Associació Juguem a Bàsquet · Pista Miqui Forniés · 19 setembre 2026</span>
+    <span class="reg-sub">Associació Juguem a Bàsquet · Pista dels Carmelites · 19 setembre 2026</span>
 
     <h3>1. Objectiu</h3>
     <p>Fomentar la convivència, l'esport, el respecte i els valors del bàsquet de barri en un ambient lúdic i participatiu.</p>
@@ -668,11 +511,11 @@ document.getElementById('form-inscripcio').addEventListener('submit', function(e
 
     <h3>13. Premis</h3>
     <ul>
-      <li>🥇 <strong>Guanyador/a Fase Or</strong> — <em style="color:#999">Per confirmar</em></li>
-      <li>🥈 <strong>Finalista Fase Or</strong> — <em style="color:#999">Per confirmar</em></li>
-      <li>🥇 <strong>Guanyador/a Fase Plata</strong> — <em style="color:#999">Per confirmar</em></li>
-      <li>🥈 <strong>Finalista Fase Plata</strong> — <em style="color:#999">Per confirmar</em></li>
-      <li>🎯 <strong>Guanyador/a Concurs de Triples</strong> — <em style="color:#999">Premi especial per confirmar</em></li>
+      <li><strong>Guanyador/a Fase Or</strong> — <em style="color:#999">Per confirmar</em></li>
+      <li><strong>Finalista Fase Or</strong> — <em style="color:#999">Per confirmar</em></li>
+      <li><strong>Guanyador/a Fase Plata</strong> — <em style="color:#999">Per confirmar</em></li>
+      <li><strong>Finalista Fase Plata</strong> — <em style="color:#999">Per confirmar</em></li>
+      <li><strong>Guanyador/a Concurs de Triples</strong> — <em style="color:#999">Premi especial per confirmar</em></li>
     </ul>
 
     <h3>14. Seguretat i emergències</h3>
@@ -687,7 +530,7 @@ document.getElementById('form-inscripcio').addEventListener('submit', function(e
     <div class="reg-quote">"No és només un partit. És una oportunitat per compartir, competir i fer barri."</div>
 
     <div class="reg-actions">
-      <button class="reg-btn-pdf" onclick="window.print()">📄 Descarregar PDF</button>
+      <button class="reg-btn-pdf" onclick="window.print()">Descarregar PDF</button>
       <button class="reg-btn-close2" onclick="document.getElementById('reg-modal').classList.remove('open')">Tancar</button>
     </div>
   </div>
