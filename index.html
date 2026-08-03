@@ -1722,12 +1722,9 @@
       <div class="footer-form-title">Escriu-nos</div>
       <p class="footer-form-sub">Tens una proposta, vols col·laborar o simplement vols saber més? Ens posem en contacte aviat.</p>
       <div id="footer-form-wrap">
-        <form id="footer-contact-form" novalidate>
-          <input type="hidden" name="access_key" value="e20664cf-14c1-4900-8107-dfbfcc6c19d1"/>
-          <input type="hidden" name="to" value="info@juguemabasquet.org"/>
-          <input type="hidden" name="cc" value="info@juguemabasquet.org"/>
-          <input type="hidden" name="subject" value="Missatge web — Juguem a Bàsquet"/>
-          <input type="hidden" name="from_name" value="Web JAB"/>
+        <form id="footer-contact-form" name="contacte" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contacte"/>
+          <p style="display:none;"><label>No omplis això: <input name="bot-field"/></label></p>
           <div class="footer-form-row">
             <input class="footer-input" type="text" name="nom" placeholder="El teu nom" required/>
             <input class="footer-input" type="email" name="email" placeholder="El teu email" required/>

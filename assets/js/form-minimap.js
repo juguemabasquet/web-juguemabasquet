@@ -160,24 +160,16 @@
     if (!nom || !email || !missatge) { alert('Omple tots els camps.'); return; }
     btn.textContent = 'Enviant...'; btn.disabled = true;
     try {
-      const data = {
-        access_key: 'e20664cf-14c1-4900-8107-dfbfcc6c19d1',
-        name: nom, email: email, message: missatge,
-        subject: 'Missatge web — Juguem a Bàsquet',
-        from_name: 'Web JAB',
-        cc: 'info@juguemabasquet.org',
-        to: 'info@juguemabasquet.org'
-      };
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const formData = new FormData(form);
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
       });
-      const json = await res.json();
-      if (json.success) {
+      if (res.ok) {
         form.style.display = 'none';
         document.getElementById('footer-form-ok').style.display = 'block';
-      } else { throw new Error(json.message || 'Error'); }
+      } else { throw new Error('HTTP ' + res.status); }
     } catch(err) {
       btn.textContent = 'Enviar missatge →'; btn.disabled = false;
       alert('Hi ha hagut un problema. Escriu-nos directament a info@juguemabasquet.org');
