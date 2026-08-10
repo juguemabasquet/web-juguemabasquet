@@ -1049,12 +1049,12 @@
   .lightbox.active { display: flex; animation: lbFadeIn .25s ease; }
   @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
   .lightbox-inner {
-    position: relative; max-width: 520px; max-height: 70vh;
+    position: relative; max-width: min(520px, 92vw); max-height: 70vh;
     display: flex; flex-direction: column; align-items: center; gap: 14px;
     cursor: default;
   }
   .lightbox-inner img {
-    max-width: 520px; max-height: 60vh; width: 100%;
+    max-width: min(520px, 92vw); max-height: 60vh; width: 100%;
     object-fit: contain; border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     animation: lbZoomIn .3s ease;

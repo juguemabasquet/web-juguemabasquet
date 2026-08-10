@@ -5,7 +5,7 @@
   display: inline-flex; align-items: center; gap: 8px;
   margin-left: auto; flex-shrink: 0;
   background: var(--orange); color: #fff;
-  font-family: 'Bungee', sans-serif; letter-spacing: .5px; text-transform: uppercase;
+  font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: .4px; text-transform: uppercase;
   padding: 8px 16px; border-radius: 10px;
   text-decoration: none; white-space: nowrap;
   transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
@@ -24,7 +24,7 @@ html[lang] .nav a.nav-botiga-btn { font-size: 12px; }      /* stable size across
 .mobile-menu .mobile-botiga {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--orange); color: #fff !important;
-  font-family: 'Bungee', sans-serif; text-transform: uppercase;
+  font-family: 'Inter', sans-serif; font-weight: 600; text-transform: uppercase;
   padding: 12px 22px; border-radius: 12px; margin-top: 8px;
 }
 .mobile-menu .mobile-botiga svg { width: 20px; height: 20px; }

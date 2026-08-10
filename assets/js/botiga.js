@@ -145,6 +145,28 @@
     }).join('');
     rows += '<div class="cs-line cs-total"><span>' + t('botiga.checkout.total') + '</span><span class="cs-amount">' + cartTotal() + '€</span></div>';
     wrap.innerHTML = rows;
+    updateDeliveryVisibility();
+  }
+
+  /* ---- Delivery block only matters when there's something to ship/pick up now.
+     A cart with only pre-reservation deposits ships nothing yet, so hide it. ---- */
+  function cartHasBuy() {
+    return loadCart().some(function (l) { return l.type !== 'prereserva'; });
+  }
+  function updateDeliveryVisibility() {
+    var group = document.getElementById('delivery-group');
+    var addr = document.getElementById('shipping-address-group');
+    var addrInput = document.getElementById('shipping-address');
+    var hasBuy = cartHasBuy();
+    if (group) group.style.display = hasBuy ? '' : 'none';
+    if (hasBuy) {
+      onDeliveryChange();
+    } else {
+      var rec = document.querySelector('input[name="entrega"][value="recollida"]');
+      if (rec) rec.checked = true;
+      if (addr) addr.style.display = 'none';
+      if (addrInput) addrInput.required = false;
+    }
   }
 
   /* ---- Order number ---- */
