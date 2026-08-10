@@ -37,6 +37,7 @@
 </svg>
 
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/botiga.css">
 </head>
 <body>
 
@@ -83,6 +84,7 @@
     <li><a class="nav-link" href="#arxiu-historic" data-i18n="nav.arxiu">Arxiu Històric</a></li>
     <li><a class="nav-link" href="#entitats-amigues" data-i18n="nav.entitats">Entitats Amigues</a></li>
     <li><a class="nav-link" href="#colaboradors" data-i18n="nav.colabs">Col·laboradors</a></li>
+    <li><a class="nav-link" href="#merch" data-i18n="nav.botiga">Botiga</a></li>
     <li><a class="nav-link" href="#xarxes" data-i18n="nav.xarxes">Xarxes Socials</a></li>
   </ul>
   <button class="burger" id="burger" aria-label="Menú" aria-expanded="false">
@@ -115,6 +117,7 @@
     <li><a class="mobile-link" href="#arxiu-historic" data-i18n="nav.arxiu">Arxiu Històric</a></li>
     <li><a class="mobile-link" href="#entitats-amigues" data-i18n="nav.entitats">Entitats Amigues</a></li>
     <li><a class="mobile-link" href="#colaboradors" data-i18n="nav.colabs">Col·laboradors</a></li>
+    <li><a class="mobile-link" href="#merch" data-i18n="nav.botiga">Botiga</a></li>
     <li><a class="mobile-link" href="#xarxes" data-i18n="nav.xarxes">Xarxes Socials</a></li>
   </ul>
   <a href="#contacte" class="mobile-cta" onclick="event.preventDefault();showSection('contacte')" data-i18n="nav.contacte">Contacte</a>
@@ -1620,43 +1623,207 @@
 
 </section>
 
-<section class="merch-section page-section" id="merch">
-  <div class="container" style="max-width:680px;text-align:center;padding-top:80px;">
+<!-- CART (floating button + drawer · body-level so it persists across sections) -->
+<button type="button" class="cart-fab" id="cart-fab" onclick="JABotiga.open()">
+  🛒 <span data-i18n="botiga.cart.fab">Carret</span> <span class="cart-count">0</span>
+</button>
+<div class="cart-overlay" id="cart-overlay" onclick="JABotiga.close()"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Carret de la compra">
+  <div class="cart-head">
+    <h3 data-i18n="botiga.cart.title">El teu carret</h3>
+    <button type="button" class="cart-close" onclick="JABotiga.close()" aria-label="Tancar">✕</button>
+  </div>
+  <div class="cart-body" id="cart-lines"></div>
+  <div class="cart-foot">
+    <div class="cart-total">
+      <span class="cart-total-label" data-i18n="botiga.cart.total">Total</span>
+      <span class="cart-total-val" id="cart-total-val">0€</span>
+    </div>
+    <button type="button" class="btn-checkout" id="cart-checkout-btn" onclick="JABotiga.checkout()" data-i18n="botiga.cart.checkout">Fer la comanda →</button>
+  </div>
+</aside>
+
+<section class="botiga-section page-section" id="merch">
+  <div class="container botiga-intro">
 
     <span class="eyebrow" data-i18n="merch.eyebrow">Botiga Oficial · JAB Merch</span>
     <h2 class="section-title">
       <span class="display-solid" data-i18n="merch.h2a">Porta el bàsquet</span>
-      <span class="ball-title" data-i18n="merch.h2b">amb tu</span>
+      <span class="ball-title ball-orange" data-i18n="merch.h2b">amb tu</span>
     </h2>
+    <p class="botiga-lead" data-i18n="botiga.lead">Cada compra finança activitats, pistes obertes i programes inclusius a Badalona. Pagament per Bizum.</p>
 
-    <!-- EN CONSTRUCCIÓ -->
-    <div style="margin-top:48px;background:#0A0A0A;border-radius:20px;padding:56px 40px;">
-      <div style="font-size:56px;margin-bottom:20px;">🏗️</div>
-      <div style="font-family:'Bungee',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;" data-i18n="merch.wip.badge">En construcció</div>
-      <h3 style="font-family:'Bungee',sans-serif;font-size:clamp(22px,4vw,32px);color:#fff;text-transform:uppercase;line-height:1.15;margin-bottom:16px;" data-i18n="merch.wip.title">La botiga obre<br>molt aviat</h3>
-      <p style="color:rgba(255,255,255,.55);font-size:15px;line-height:1.7;max-width:440px;margin:0 auto 36px;" data-i18n="merch.wip.desc">Samarretes, gorres i accessoris oficials de JAB. Cada compra finança activitats, pistes i programes inclusius a Badalona.</p>
-
-      <!-- PREVIEW PRODUCTES (imatges sense compra) -->
-      <div style="display:flex;justify-content:center;gap:16px;margin-bottom:36px;flex-wrap:wrap;">
-        <div style="background:#1a1a1a;border-radius:12px;padding:16px;width:110px;">
-          <div style="width:100%;height:80px;display:flex;align-items:center;justify-content:center;font-size:40px;">👕</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;font-weight:700;" data-i18n="merch.wip.p1">Samarreta</div>
-        </div>
-        <div style="background:#1a1a1a;border-radius:12px;padding:16px;width:110px;">
-          <div style="width:100%;height:80px;display:flex;align-items:center;justify-content:center;font-size:40px;">🧢</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;font-weight:700;" data-i18n="merch.wip.p2">Gorra</div>
-        </div>
-        <div style="background:#1a1a1a;border-radius:12px;padding:16px;width:110px;">
-          <div style="width:100%;height:80px;display:flex;align-items:center;justify-content:center;font-size:40px;">🏀</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;font-weight:700;" data-i18n="merch.wip.p3">Clauer</div>
-        </div>
+    <!-- PRE-RESERVA BANNER (temporal · toggleable) -->
+    <div class="prereserva-banner js-prereserva" id="prereserva-banner">
+      <div class="pr-emoji">👕</div>
+      <div class="pr-text">
+        <div class="pr-badge" data-i18n="botiga.prereserva.badge">Campanya · Pre-reserva</div>
+        <div class="pr-title" data-i18n="botiga.prereserva.title">Reserva la teva samarreta per 5€</div>
+        <div class="pr-desc" data-i18n="botiga.prereserva.desc">Deixa 5€ de senyal ara i fixa la teva talla. Quan la recullis, pagaràs només 20€ (els 5€ es descompten). Import no reemborsable.</div>
       </div>
+    </div>
 
-      <a href="https://www.instagram.com/juguemabasquet" target="_blank" rel="noopener"
-        style="display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;font-family:'Bungee',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border-radius:8px;text-decoration:none;" data-i18n="merch.wip.btn">
-        Segueix-nos per saber-ho primer →
-      </a>
-      <div style="margin-top:14px;font-size:12px;color:rgba(255,255,255,.25);">@juguemabasquet</div>
+    <!-- CATALEG -->
+    <div id="botiga-catalog">
+      <div class="botiga-grid">
+
+        <!-- SAMARRETA -->
+        <div class="product-card" data-product="camiseta" data-qty="1">
+          <div class="product-media">
+            <img src="assets/products/camiseta.svg" alt="Samarreta JAB" width="600" height="600" loading="lazy">
+          </div>
+          <div class="product-name" data-i18n="botiga.prod.camiseta.name">Samarreta JAB</div>
+          <p class="product-desc" data-i18n="botiga.prod.camiseta.desc">Samarreta oficial de l'associació. Teixit transpirable, disseny únic.</p>
+          <div class="product-price">25€</div>
+
+          <div class="size-row">
+            <div class="size-label" data-i18n="botiga.size.label">Talla</div>
+            <div class="size-options">
+              <button type="button" class="size-btn" data-size="S" onclick="JABotiga.selectSize(this)">S</button>
+              <button type="button" class="size-btn" data-size="M" onclick="JABotiga.selectSize(this)">M</button>
+              <button type="button" class="size-btn" data-size="L" onclick="JABotiga.selectSize(this)">L</button>
+              <button type="button" class="size-btn" data-size="XL" onclick="JABotiga.selectSize(this)">XL</button>
+              <button type="button" class="size-btn" data-size="XXL" onclick="JABotiga.selectSize(this)">XXL</button>
+            </div>
+            <div class="size-error" style="display:none;color:#ef4444;font-size:12px;margin-top:8px;" data-i18n="botiga.size.error">Selecciona una talla</div>
+          </div>
+
+          <div class="product-actions">
+            <div class="qty-stepper">
+              <button type="button" onclick="JABotiga.stepQty(this,-1)">−</button>
+              <span class="qty-val">1</span>
+              <button type="button" onclick="JABotiga.stepQty(this,1)">+</button>
+            </div>
+            <button type="button" class="btn-add" onclick="JABotiga.add(this,'buy')" data-i18n="botiga.addcart">Afegir al carret</button>
+          </div>
+          <button type="button" class="btn-add btn-pre js-prereserva" onclick="JABotiga.add(this,'prereserva')" data-i18n="botiga.prereserva.btn">Pre-reservar per 5€</button>
+        </div>
+
+        <!-- CLAUER -->
+        <div class="product-card" data-product="clauer" data-qty="1">
+          <div class="product-media">
+            <img src="assets/products/clauer.svg" alt="Clauer JAB" width="600" height="600" loading="lazy">
+          </div>
+          <div class="product-name" data-i18n="botiga.prod.clauer.name">Clauer JAB</div>
+          <p class="product-desc" data-i18n="botiga.prod.clauer.desc">Clauer oficial de l'associació. Petit detall, gran suport a la causa.</p>
+          <div class="product-price">5€</div>
+
+          <div class="product-actions">
+            <div class="qty-stepper">
+              <button type="button" onclick="JABotiga.stepQty(this,-1)">−</button>
+              <span class="qty-val">1</span>
+              <button type="button" onclick="JABotiga.stepQty(this,1)">+</button>
+            </div>
+            <button type="button" class="btn-add" onclick="JABotiga.add(this,'buy')" data-i18n="botiga.addcart">Afegir al carret</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CHECKOUT -->
+    <div class="checkout-wrap" id="checkout">
+      <div class="checkout-card">
+        <h3 data-i18n="botiga.checkout.title">Finalitza la comanda</h3>
+        <p class="checkout-sub" data-i18n="botiga.checkout.sub">Revisa la teva comanda i deixa'ns les teves dades. Et confirmarem per correu.</p>
+
+        <div class="checkout-summary" id="checkout-summary"></div>
+
+        <form
+          name="comanda-botiga"
+          method="POST"
+          action="/?comanda=1#merch"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
+          id="form-botiga"
+          class="botiga-form"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="comanda-botiga">
+          <input type="hidden" name="comanda" value="">
+          <input type="hidden" name="total" value="">
+          <input type="hidden" name="order-number" value="">
+          <p style="display:none;"><input name="bot-field"></p>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label><span data-i18n="botiga.f.nom">Nom i cognoms</span> <span class="req">*</span></label>
+              <input type="text" name="nom" required data-i18n-ph="botiga.f.nom.ph" placeholder="Ex: Marta García">
+            </div>
+            <div class="form-group">
+              <label><span data-i18n="botiga.f.email">Correu electrònic</span> <span class="req">*</span></label>
+              <input type="email" name="email" required placeholder="tu@correu.com">
+            </div>
+            <div class="form-group">
+              <label><span data-i18n="botiga.f.telefon">Telèfon</span> <span class="req">*</span></label>
+              <input type="tel" name="telefon" required placeholder="600 000 000">
+            </div>
+          </div>
+
+          <div class="form-group full" style="margin-top:16px;">
+            <label><span data-i18n="botiga.f.entrega">Entrega</span> <span class="req">*</span></label>
+            <div class="delivery-options">
+              <label class="delivery-opt">
+                <input type="radio" name="entrega" value="recollida" checked>
+                <span>
+                  <span class="do-title" data-i18n="botiga.f.entrega.recollida">Recollida a Badalona</span>
+                  <span class="do-desc" data-i18n="botiga.f.entrega.recollida.desc">Gratis · quedem per lliurar-t'ho en mà</span>
+                </span>
+              </label>
+              <label class="delivery-opt">
+                <input type="radio" name="entrega" value="enviament">
+                <span>
+                  <span class="do-title" data-i18n="botiga.f.entrega.enviament">Enviament</span>
+                  <span class="do-desc" data-i18n="botiga.f.entrega.enviament.desc">El cost de l'enviament el paga el client · el coordinem per correu</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group full" id="shipping-address-group" style="display:none;margin-top:16px;">
+            <label><span data-i18n="botiga.f.adreca">Adreça d'enviament</span></label>
+            <input type="text" id="shipping-address" name="adreca" data-i18n-ph="botiga.f.adreca.ph" placeholder="Carrer, número, codi postal, població">
+          </div>
+
+          <div class="form-group full js-prereserva" style="margin-top:16px;">
+            <label data-i18n="botiga.f.prereserva">Ja has fet la pre-reserva? (opcional)</label>
+            <input type="text" name="prereserva-ref" data-i18n-ph="botiga.f.prereserva.ph" placeholder="Indica el correu o nº de la teva pre-reserva">
+            <span class="hint" data-i18n="botiga.f.prereserva.hint">Et descomptarem els 5€ del senyal.</span>
+          </div>
+
+          <div class="form-group full" style="margin-top:16px;">
+            <label data-i18n="botiga.f.notes">Comentaris (opcional)</label>
+            <textarea name="notes" data-i18n-ph="botiga.f.notes.ph" placeholder="Qualsevol cosa que vulguis dir-nos"></textarea>
+          </div>
+
+          <!-- BIZUM -->
+          <div class="bizum-block">
+            <div class="biz-icon">€</div>
+            <div>
+              <div class="biz-label" data-i18n="botiga.biz.label">Pagament · Bizum</div>
+              <div class="biz-num">614 936 429</div>
+              <div class="biz-concept" data-i18n="botiga.biz.concept">Fes el Bizum per l'import total. <strong>Concepte: el nº de comanda</strong> que et mostrarem en confirmar. Sense Bizum, la comanda no es tramita.</div>
+            </div>
+          </div>
+
+          <div data-netlify-recaptcha="true"></div>
+
+          <div class="checkout-actions">
+            <button type="submit" class="btn-submit" data-i18n="botiga.checkout.submit">Confirmar comanda →</button>
+            <span class="checkout-note" data-i18n="botiga.checkout.note">En confirmar rebràs el nº de comanda per fer el Bizum.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="botiga-success" id="botiga-success">
+      <div class="bs-ico">🏀</div>
+      <h3 data-i18n="botiga.ok.title">Comanda rebuda!</h3>
+      <p data-i18n="botiga.ok.desc">Ara fes el Bizum al <strong>614 936 429</strong> per l'import total, indicant aquest número com a concepte:</p>
+      <div class="bs-num"><span class="order-num-pill">JAB-...</span></div>
+      <p data-i18n="botiga.ok.desc2">Un cop rebem el pagament, et confirmarem la comanda per correu. Gràcies per donar suport al bàsquet de barri!</p>
     </div>
 
   </div>
@@ -1704,6 +1871,7 @@
         <li><a href="#" onclick="event.preventDefault();showSection('galeria')">Galeria</a></li>
         <li><a href="#" onclick="event.preventDefault();showSection('carmelites')">Carmelites</a></li>
         <li><a href="#" onclick="event.preventDefault();showSection('colaboradors')">Col·laboradors</a></li>
+        <li><a href="#" onclick="event.preventDefault();showSection('merch')" data-i18n="nav.botiga">Botiga</a></li>
         <li><a href="#" onclick="event.preventDefault();showSection('xarxes')">Xarxes Socials</a></li>
       </ul>
     </div>
@@ -2504,6 +2672,7 @@
 
 <script src="assets/js/scrollspy.js"></script>
 <script src="assets/js/swipe-home.js"></script>
+<script src="assets/js/botiga.js"></script>
 
 </body>
 </html>
