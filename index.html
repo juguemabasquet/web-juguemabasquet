@@ -84,9 +84,12 @@
     <li><a class="nav-link" href="#arxiu-historic" data-i18n="nav.arxiu">Arxiu Històric</a></li>
     <li><a class="nav-link" href="#entitats-amigues" data-i18n="nav.entitats">Entitats Amigues</a></li>
     <li><a class="nav-link" href="#colaboradors" data-i18n="nav.colabs">Col·laboradors</a></li>
-    <li><a class="nav-link" href="#merch" data-i18n="nav.botiga">Botiga</a></li>
     <li><a class="nav-link" href="#xarxes" data-i18n="nav.xarxes">Xarxes Socials</a></li>
   </ul>
+  <a class="nav-link nav-botiga-btn" href="#merch">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    <span data-i18n="nav.botiga">Botiga</span>
+  </a>
   <button class="burger" id="burger" aria-label="Menú" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -117,8 +120,11 @@
     <li><a class="mobile-link" href="#arxiu-historic" data-i18n="nav.arxiu">Arxiu Històric</a></li>
     <li><a class="mobile-link" href="#entitats-amigues" data-i18n="nav.entitats">Entitats Amigues</a></li>
     <li><a class="mobile-link" href="#colaboradors" data-i18n="nav.colabs">Col·laboradors</a></li>
-    <li><a class="mobile-link" href="#merch" data-i18n="nav.botiga">Botiga</a></li>
     <li><a class="mobile-link" href="#xarxes" data-i18n="nav.xarxes">Xarxes Socials</a></li>
+    <li><a class="mobile-link mobile-botiga" href="#merch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span data-i18n="nav.botiga">Botiga</span>
+    </a></li>
   </ul>
   <a href="#contacte" class="mobile-cta" onclick="event.preventDefault();showSection('contacte')" data-i18n="nav.contacte">Contacte</a>
 </div>
@@ -1669,8 +1675,16 @@
 
         <!-- SAMARRETA -->
         <div class="product-card" data-product="camiseta" data-qty="1">
-          <div class="product-media">
+          <div class="product-media" onclick="JABotiga.zoom(this)" title="Ampliar imatge">
             <img src="assets/products/camiseta.svg" alt="Samarreta JAB" width="600" height="600" loading="lazy">
+          </div>
+          <div class="product-thumbs">
+            <button type="button" class="product-thumb active" onclick="JABotiga.swapImage(this)" aria-label="Davant">
+              <img src="assets/products/camiseta.svg" alt="Samarreta JAB · davant" loading="lazy">
+            </button>
+            <button type="button" class="product-thumb" onclick="JABotiga.swapImage(this)" aria-label="Esquena">
+              <img src="assets/products/camiseta-back.svg" alt="Samarreta JAB · esquena" loading="lazy">
+            </button>
           </div>
           <div class="product-name" data-i18n="botiga.prod.camiseta.name">Samarreta JAB</div>
           <p class="product-desc" data-i18n="botiga.prod.camiseta.desc">Samarreta oficial de l'associació. Teixit transpirable, disseny únic.</p>
@@ -1694,14 +1708,14 @@
               <span class="qty-val">1</span>
               <button type="button" onclick="JABotiga.stepQty(this,1)">+</button>
             </div>
-            <button type="button" class="btn-add" onclick="JABotiga.add(this,'buy')" data-i18n="botiga.addcart">Afegir al carret</button>
+            <button type="button" class="btn-add js-buy" onclick="JABotiga.add(this,'buy')" data-i18n="botiga.addcart">Afegir al carret</button>
           </div>
           <button type="button" class="btn-add btn-pre js-prereserva" onclick="JABotiga.add(this,'prereserva')" data-i18n="botiga.prereserva.btn">Pre-reservar per 5€</button>
         </div>
 
         <!-- CLAUER -->
         <div class="product-card" data-product="clauer" data-qty="1">
-          <div class="product-media">
+          <div class="product-media" onclick="JABotiga.zoom(this)" title="Ampliar imatge">
             <img src="assets/products/clauer.svg" alt="Clauer JAB" width="600" height="600" loading="lazy">
           </div>
           <div class="product-name" data-i18n="botiga.prod.clauer.name">Clauer JAB</div>

@@ -182,6 +182,31 @@
   }
 
   /* ---- Product card interactions ---- */
+  function swapImage(btn) {
+    var card = btn.closest('.product-card');
+    var main = card.querySelector('.product-media img');
+    var thumbImg = btn.querySelector('img');
+    if (main && thumbImg) main.src = thumbImg.src;
+    card.querySelectorAll('.product-thumb').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+  function zoom(mediaEl) {
+    var card = mediaEl.closest('.product-card');
+    var photos = [];
+    var startIdx = 0;
+    var thumbs = card.querySelectorAll('.product-thumb');
+    if (thumbs.length) {
+      thumbs.forEach(function (b, i) {
+        var im = b.querySelector('img');
+        if (im) photos.push({ src: im.src, alt: im.alt });
+        if (b.classList.contains('active')) startIdx = i;
+      });
+    } else {
+      var main = mediaEl.querySelector('img');
+      if (main) photos.push({ src: main.src, alt: main.alt });
+    }
+    if (window.JABLightbox && photos.length) window.JABLightbox.open(photos, startIdx);
+  }
   function selectSize(btn) {
     var card = btn.closest('.product-card');
     card.querySelectorAll('.size-btn').forEach(function (b) { b.classList.remove('selected'); });
@@ -291,8 +316,13 @@
   function init() {
     renderCart();
     handleSuccessRedirect();
-    // Toggle the pre-reservation campaign UI
-    if (!PRERESERVA_ACTIVE) {
+    // Toggle the pre-reservation campaign UI.
+    // While the campaign is active we ONLY allow pre-reserving the shirt:
+    // hide the normal "buy / add to cart" action (`.js-buy`). When it ends,
+    // hide the campaign elements (`.js-prereserva`) and restore normal sale.
+    if (PRERESERVA_ACTIVE) {
+      document.querySelectorAll('.js-buy').forEach(function (el) { el.style.display = 'none'; });
+    } else {
       document.querySelectorAll('.js-prereserva').forEach(function (el) { el.style.display = 'none'; });
     }
     var form = document.getElementById('form-botiga');
@@ -316,6 +346,8 @@
 
   /* ---- Public API (for inline onclick) ---- */
   window.JABotiga = {
+    swapImage: swapImage,
+    zoom: zoom,
     selectSize: selectSize,
     stepQty: stepQty,
     add: addFromCard,

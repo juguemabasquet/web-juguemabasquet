@@ -1,4 +1,35 @@
 /* ============================================================
+   NAV · Botiga CTA button (far right, rounded square + cart icon)
+   ============================================================ */
+.nav a.nav-botiga-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-left: auto; flex-shrink: 0;
+  background: var(--orange); color: #fff;
+  font-family: 'Bungee', sans-serif; letter-spacing: .5px; text-transform: uppercase;
+  padding: 8px 16px; border-radius: 10px;
+  text-decoration: none; white-space: nowrap;
+  transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+.nav a.nav-botiga-btn:hover {
+  background: var(--orange-dark); color: #fff; transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(255,106,26,.35);
+}
+.nav a.nav-botiga-btn svg { width: 17px; height: 17px; }
+.nav a.nav-botiga-btn::after { content: none; }           /* remove nav-link underline */
+html[lang] .nav a.nav-botiga-btn { font-size: 12px; }      /* stable size across languages */
+@media (max-width: 900px) {
+  .nav a.nav-botiga-btn { display: none; }                 /* burger handles mobile */
+}
+/* Mobile menu · Botiga highlighted button */
+.mobile-menu .mobile-botiga {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--orange); color: #fff !important;
+  font-family: 'Bungee', sans-serif; text-transform: uppercase;
+  padding: 12px 22px; border-radius: 12px; margin-top: 8px;
+}
+.mobile-menu .mobile-botiga svg { width: 20px; height: 20px; }
+
+/* ============================================================
    BOTIGA · Online shop (catalog + cart + order form)
    Light theme, aligned with the rest of the site:
    - Section on --gray-bg like .qui-som / original .merch-section
@@ -8,7 +39,7 @@
    index.html only loads styles.css + this file.
    ============================================================ */
 
-.botiga-section { background: var(--gray-bg); color: var(--black); }
+.botiga-section { background: var(--white); color: var(--black); }
 .botiga-section .container { max-width: 1080px; }
 
 /* Intro */
@@ -54,8 +85,19 @@
 .product-media {
   background: var(--orange-soft); border-radius: 16px; overflow: hidden;
   aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center;
+  cursor: zoom-in;
 }
 .product-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Thumbnail gallery (front / back / detail…) — only shown when a product has >1 image */
+.product-thumbs { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.product-thumb {
+  width: 62px; height: 62px; padding: 0; border: 2px solid var(--gray-light);
+  border-radius: 10px; overflow: hidden; background: var(--white); cursor: pointer;
+  transition: border-color .15s ease;
+}
+.product-thumb:hover { border-color: var(--orange); }
+.product-thumb.active { border-color: var(--orange); }
+.product-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .product-name {
   font-family: 'Bungee', sans-serif; font-size: 20px; text-transform: uppercase;
   color: var(--black); margin: 20px 0 8px;
@@ -130,10 +172,11 @@
 .cart-overlay.open { opacity: 1; pointer-events: auto; }
 .cart-drawer {
   position: fixed; top: 0; right: 0; height: 100%; width: 400px; max-width: 90vw;
-  background: var(--white); z-index: 1600; transform: translateX(100%); transition: transform .3s ease;
-  display: flex; flex-direction: column; box-shadow: -20px 0 60px rgba(0,0,0,.2);
+  background: var(--white); z-index: 1600; transform: translateX(100%);
+  transition: transform .3s ease, visibility .3s;
+  display: flex; flex-direction: column; visibility: hidden;
 }
-.cart-drawer.open { transform: translateX(0); }
+.cart-drawer.open { transform: translateX(0); visibility: visible; box-shadow: -20px 0 60px rgba(0,0,0,.2); }
 .cart-head {
   display: flex; align-items: center; justify-content: space-between;
   padding: 22px 24px; border-bottom: 1px solid var(--gray-light);
