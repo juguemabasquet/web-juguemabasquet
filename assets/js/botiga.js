@@ -337,9 +337,7 @@
     // No backend: this lives only in this browser. Saved at submit because after the
     // Netlify redirect the cart is already cleared and only the number is in the URL.
     try {
-      localStorage.setItem(LAST_ORDER_KEY, JSON.stringify({
-        num: orderNum, items: serializeCart(), total: cartTotal() + '€', date: new Date().toISOString()
-      }));
+      addLastOrder({ num: orderNum, items: serializeCart(), total: cartTotal() + '€', date: new Date().toISOString() });
     } catch (err) { /* ignore quota/private-mode errors */ }
 
     // Pass order number in the redirect URL so we can show it after reload
@@ -367,14 +365,9 @@
       renderCart();                           // refresh cart UI (FAB badge, drawer, checkout summary)
       closeCart();                            // close the drawer if it was left open
       var num = params.get('num') || '';
-      // Reconcile the persisted last order with the number Netlify redirected back with.
-      // If they differ (e.g. localStorage was unavailable at submit), store a minimal one.
-      try {
-        var stored = JSON.parse(localStorage.getItem(LAST_ORDER_KEY) || 'null');
-        if (num && (!stored || stored.num !== num)) {
-          localStorage.setItem(LAST_ORDER_KEY, JSON.stringify({ num: num, items: '', total: '', date: new Date().toISOString() }));
-        }
-      } catch (e) { /* ignore */ }
+      // Make sure the number Netlify redirected back with is in the pending list
+      // (covers the case where localStorage was unavailable at submit time).
+      if (num) addLastOrder({ num: num, items: '', total: '', date: new Date().toISOString() });
       var checkout = document.getElementById('checkout');
       var success = document.getElementById('botiga-success');
       var catalog = document.getElementById('botiga-catalog');
@@ -398,24 +391,63 @@
     renderLastOrder();
   }
 
-  /* ---- Persistent "last order pending payment" reminder (localStorage) ---- */
+  /* ---- Persistent "orders pending payment" reminder (localStorage) ----
+     Stored as an array so several unpaid orders can be shown at once. Old builds
+     stored a single object; loadLastOrders() migrates it transparently. */
+  function loadLastOrders() {
+    var raw = null;
+    try { raw = JSON.parse(localStorage.getItem(LAST_ORDER_KEY) || 'null'); } catch (e) { raw = null; }
+    if (!raw) return [];
+    if (Array.isArray(raw)) return raw.filter(function (o) { return o && o.num; });
+    if (raw.num) return [raw];   // migrate legacy single-object format
+    return [];
+  }
+
+  function saveLastOrders(list) {
+    try { localStorage.setItem(LAST_ORDER_KEY, JSON.stringify(list)); } catch (e) { /* ignore */ }
+  }
+
+  function addLastOrder(order) {
+    if (!order || !order.num) return;
+    var list = loadLastOrders();
+    var exists = list.some(function (o) { return o.num === order.num; });
+    if (!exists) { list.push(order); saveLastOrders(list); }
+  }
+
   function renderLastOrder() {
     var box = document.getElementById('botiga-last-order');
     if (!box) return;
-    var data = null;
-    try { data = JSON.parse(localStorage.getItem(LAST_ORDER_KEY) || 'null'); } catch (e) { data = null; }
-    if (!data || !data.num) { box.style.display = 'none'; return; }
-    var numEl = box.querySelector('.lon-num');
-    var totalEl = box.querySelector('.lon-total');
-    if (numEl) numEl.textContent = data.num;
-    if (totalEl) totalEl.textContent = data.total || '';
-    var totalWrap = box.querySelector('.lon-total-wrap');
-    if (totalWrap) totalWrap.style.display = data.total ? '' : 'none';
+    var listEl = document.getElementById('botiga-last-order-list');
+    var list = loadLastOrders();
+    if (!list.length) {
+      box.style.display = 'none';
+      if (listEl) listEl.innerHTML = '';
+      return;
+    }
+    if (listEl) {
+      listEl.innerHTML = list.map(function (o) {
+        var total = o.total ? ' · <b class="lon-total">' + o.total + '</b>' : '';
+        return '' +
+          '<div class="lon-item">' +
+            '<div class="lon-item-info">' +
+              '<span class="lon-numlabel">' + t('botiga.lastorder.num') + '</span> ' +
+              '<b class="lon-num">' + o.num + '</b>' + total +
+            '</div>' +
+            '<button type="button" class="lon-dismiss" onclick="JABotiga.clearLastOrder(\'' + o.num + '\')">' +
+              t('botiga.lastorder.paid') +
+            '</button>' +
+          '</div>';
+      }).join('');
+    }
     box.style.display = '';
   }
 
-  function clearLastOrder() {
-    try { localStorage.removeItem(LAST_ORDER_KEY); } catch (e) { /* ignore */ }
+  // Remove one pending order by number, or all when called with no argument.
+  function clearLastOrder(num) {
+    var list = loadLastOrders();
+    if (num) list = list.filter(function (o) { return o.num !== num; });
+    else list = [];
+    saveLastOrders(list);
     renderLastOrder();
   }
 
@@ -475,7 +507,7 @@
     // Re-render dynamic cart text when language changes
     if (typeof window.setLang === 'function') {
       var orig = window.setLang;
-      window.setLang = function (l) { orig(l); renderCart(); };
+      window.setLang = function (l) { orig(l); renderCart(); renderLastOrder(); };
     }
     // Reset the success screen back to the catalog when the user LEAVES the shop after
     // an order (the success screen persists in the DOM for the rest of the SPA session).

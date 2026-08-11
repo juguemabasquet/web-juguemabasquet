@@ -1677,15 +1677,11 @@
 
       <!-- RECORDATORI: última comanda pendent de pagament (localStorage) -->
       <div class="last-order-note" id="botiga-last-order" style="display:none;">
-        <div class="lon-body">
-          <div class="lon-title" data-i18n="botiga.lastorder.title">Tens una comanda pendent de pagament</div>
-          <div class="lon-line">
-            <span data-i18n="botiga.lastorder.num">Nº de comanda:</span>
-            <b class="lon-num"></b><span class="lon-total-wrap"> · <b class="lon-total"></b></span>
-          </div>
-          <div class="lon-bizum" data-i18n="botiga.lastorder.bizum">Fes el Bizum al 614 936 429 indicant aquest número com a concepte.</div>
+        <div class="lon-header">
+          <div class="lon-title" data-i18n="botiga.lastorder.title">Comandes pendents de pagament</div>
+          <div class="lon-bizum" data-i18n="botiga.lastorder.bizum">Fes el Bizum al 614 936 429 indicant el número de comanda com a concepte.</div>
         </div>
-        <button type="button" class="lon-dismiss" onclick="JABotiga.clearLastOrder()" data-i18n="botiga.lastorder.paid">Ja he pagat</button>
+        <div class="lon-list" id="botiga-last-order-list"><!-- rows injected by JS --></div>
       </div>
 
       <div class="botiga-grid">
