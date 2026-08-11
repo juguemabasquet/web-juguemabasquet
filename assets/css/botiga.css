@@ -20,14 +20,15 @@ html[lang] .nav a.nav-botiga-btn { font-size: 12px; }      /* stable size across
 @media (max-width: 900px) {
   .nav a.nav-botiga-btn { display: none; }                 /* burger handles mobile */
 }
-/* Mobile menu · Botiga highlighted button */
+/* Mobile menu · Botiga highlighted button (full width, matches Contacte CTA) */
 .mobile-menu .mobile-botiga {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; box-sizing: border-box;
   background: var(--orange); color: #fff !important;
-  font-family: 'Inter', sans-serif; font-weight: 600; text-transform: uppercase;
-  padding: 12px 22px; border-radius: 12px; margin-top: 8px;
+  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; text-transform: uppercase;
+  padding: 13px 22px; border-radius: 999px; margin-top: 12px;
 }
-.mobile-menu .mobile-botiga svg { width: 20px; height: 20px; }
+.mobile-menu .mobile-botiga svg { width: 18px; height: 18px; }
 
 /* ============================================================
    BOTIGA · Online shop (catalog + cart + order form)
@@ -158,6 +159,11 @@ html[lang] .nav a.nav-botiga-btn { font-size: 12px; }      /* stable size across
 }
 .cart-fab:hover { background: var(--orange-dark); transform: translateY(-2px); }
 .cart-fab.show { display: inline-flex; }
+/* Hide floating controls while the mobile menu is open: both the cart FAB (z1400)
+   and the language switcher (z1300) sit above the menu panel (z1200) and would
+   otherwise overlap the bottom menu items / Contacte button. */
+body:has(.mobile-menu.open) .cart-fab.show,
+body:has(.mobile-menu.open) .lang-switcher { display: none; }
 .cart-fab .cart-count {
   background: #fff; color: var(--orange); border-radius: 50%;
   min-width: 22px; height: 22px; display: inline-flex; align-items: center;

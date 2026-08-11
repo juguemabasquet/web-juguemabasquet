@@ -115,7 +115,7 @@ const TRANSLATIONS = {
     'botiga.prod.camiseta.name': 'Samarreta JAB', 'botiga.prod.camiseta.desc': 'Samarreta oficial de l\'associació. Teixit transpirable, disseny únic.',
     'botiga.prod.clauer.name': 'Clauer JAB', 'botiga.prod.clauer.desc': 'Clauer oficial de l\'associació. Petit detall, gran suport a la causa.',
     'botiga.size.label': 'Talla', 'botiga.size.error': 'Selecciona una talla', 'botiga.addcart': 'Afegir al carret',
-    'botiga.prereserva.badge': 'Campanya · Pre-reserva', 'botiga.prereserva.title': 'Reserva la teva samarreta per 5€', 'botiga.prereserva.desc': 'Deixa 5€ de senyal ara i fixa la teva talla. Quan la recullis, pagaràs només 20€ (els 5€ es descompten). Import no reemborsable.', 'botiga.prereserva.btn': 'Pre-reservar per 5€', 'botiga.prereserva.name': 'Pre-reserva samarreta', 'botiga.prereserva.tag': 'Pre-reserva',
+    'botiga.prereserva.badge': 'Campanya · Pre-reserva', 'botiga.prereserva.title': 'Reserva la teva samarreta per 5€', 'botiga.prereserva.desc': 'Deixa 5€ de senyal ara i fixa la teva talla. Quan la recullis, només pagaràs 15€ més: preu final 20€ en lloc de 25€. Import no reemborsable.', 'botiga.prereserva.btn': 'Pre-reservar per 5€', 'botiga.prereserva.name': 'Pre-reserva samarreta', 'botiga.prereserva.tag': 'Pre-reserva',
     'botiga.cart.fab': 'Carret', 'botiga.cart.title': 'El teu carret', 'botiga.cart.total': 'Total', 'botiga.cart.checkout': 'Fer la comanda →', 'botiga.cart.empty': 'El carret és buit', 'botiga.cart.remove': 'Treure', 'botiga.cart.size': 'Talla',
     'botiga.checkout.title': 'Finalitza la comanda', 'botiga.checkout.sub': 'Revisa la teva comanda i deixa\'ns les teves dades. Et confirmarem per correu.', 'botiga.checkout.total': 'Total', 'botiga.checkout.submit': 'Confirmar comanda →', 'botiga.checkout.note': 'En confirmar rebràs el nº de comanda per fer el Bizum.',
     'botiga.f.nom': 'Nom i cognoms', 'botiga.f.nom.ph': 'Ex: Marta García', 'botiga.f.email': 'Correu electrònic', 'botiga.f.telefon': 'Telèfon',
@@ -556,7 +556,7 @@ const TRANSLATIONS = {
     'botiga.prod.camiseta.name': 'JAB T-shirt', 'botiga.prod.camiseta.desc': 'Official association t-shirt. Breathable fabric, unique design.',
     'botiga.prod.clauer.name': 'JAB Keyring', 'botiga.prod.clauer.desc': 'Official association keyring. A small detail, big support for the cause.',
     'botiga.size.label': 'Size', 'botiga.size.error': 'Please select a size', 'botiga.addcart': 'Add to cart',
-    'botiga.prereserva.badge': 'Campaign · Pre-order', 'botiga.prereserva.title': 'Reserve your t-shirt for €5', 'botiga.prereserva.desc': 'Leave a €5 deposit now and lock in your size. When you pick it up, you\'ll pay only €20 (the €5 is discounted). Non-refundable deposit.', 'botiga.prereserva.btn': 'Pre-order for €5', 'botiga.prereserva.name': 'T-shirt pre-order', 'botiga.prereserva.tag': 'Pre-order',
+    'botiga.prereserva.badge': 'Campaign · Pre-order', 'botiga.prereserva.title': 'Reserve your t-shirt for €5', 'botiga.prereserva.desc': 'Leave a €5 deposit now and lock in your size. When you pick it up, you\'ll pay just €15 more: final price €20 instead of €25. Non-refundable deposit.', 'botiga.prereserva.btn': 'Pre-order for €5', 'botiga.prereserva.name': 'T-shirt pre-order', 'botiga.prereserva.tag': 'Pre-order',
     'botiga.cart.fab': 'Cart', 'botiga.cart.title': 'Your cart', 'botiga.cart.total': 'Total', 'botiga.cart.checkout': 'Place order →', 'botiga.cart.empty': 'Your cart is empty', 'botiga.cart.remove': 'Remove', 'botiga.cart.size': 'Size',
     'botiga.checkout.title': 'Complete your order', 'botiga.checkout.sub': 'Review your order and leave your details. We\'ll confirm by email.', 'botiga.checkout.total': 'Total', 'botiga.checkout.submit': 'Confirm order →', 'botiga.checkout.note': 'Once confirmed you\'ll get the order number to make the Bizum.',
     'botiga.f.nom': 'Full name', 'botiga.f.nom.ph': 'e.g. Marta García', 'botiga.f.email': 'Email', 'botiga.f.telefon': 'Phone',
@@ -997,7 +997,7 @@ const TRANSLATIONS = {
     'botiga.prod.camiseta.name': 'Camiseta JAB', 'botiga.prod.camiseta.desc': 'Camiseta oficial de la asociación. Tejido transpirable, diseño único.',
     'botiga.prod.clauer.name': 'Llavero JAB', 'botiga.prod.clauer.desc': 'Llavero oficial de la asociación. Un pequeño detalle, un gran apoyo a la causa.',
     'botiga.size.label': 'Talla', 'botiga.size.error': 'Selecciona una talla', 'botiga.addcart': 'Añadir al carrito',
-    'botiga.prereserva.badge': 'Campaña · Pre-reserva', 'botiga.prereserva.title': 'Reserva tu camiseta por 5€', 'botiga.prereserva.desc': 'Deja 5€ de señal ahora y fija tu talla. Cuando la recojas, pagarás solo 20€ (los 5€ se descuentan). Importe no reembolsable.', 'botiga.prereserva.btn': 'Pre-reservar por 5€', 'botiga.prereserva.name': 'Pre-reserva camiseta', 'botiga.prereserva.tag': 'Pre-reserva',
+    'botiga.prereserva.badge': 'Campaña · Pre-reserva', 'botiga.prereserva.title': 'Reserva tu camiseta por 5€', 'botiga.prereserva.desc': 'Deja 5€ de señal ahora y fija tu talla. Cuando la recojas, solo pagarás 15€ más: precio final 20€ en lugar de 25€. Importe no reembolsable.', 'botiga.prereserva.btn': 'Pre-reservar por 5€', 'botiga.prereserva.name': 'Pre-reserva camiseta', 'botiga.prereserva.tag': 'Pre-reserva',
     'botiga.cart.fab': 'Carrito', 'botiga.cart.title': 'Tu carrito', 'botiga.cart.total': 'Total', 'botiga.cart.checkout': 'Hacer el pedido →', 'botiga.cart.empty': 'El carrito está vacío', 'botiga.cart.remove': 'Quitar', 'botiga.cart.size': 'Talla',
     'botiga.checkout.title': 'Finaliza el pedido', 'botiga.checkout.sub': 'Revisa tu pedido y déjanos tus datos. Te confirmaremos por correo.', 'botiga.checkout.total': 'Total', 'botiga.checkout.submit': 'Confirmar pedido →', 'botiga.checkout.note': 'Al confirmar recibirás el nº de pedido para hacer el Bizum.',
     'botiga.f.nom': 'Nombre y apellidos', 'botiga.f.nom.ph': 'Ej: Marta García', 'botiga.f.email': 'Correo electrónico', 'botiga.f.telefon': 'Teléfono',
@@ -1435,7 +1435,6 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>`;
 
   document.querySelectorAll('.page-section').forEach(sec => {
-    if (sec.id === 'contacte') return;
     const wrap = sec.querySelector('.container') || sec;
     wrap.insertAdjacentHTML('beforeend', globalFooterHTML);
   });
