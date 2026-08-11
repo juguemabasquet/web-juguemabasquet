@@ -260,8 +260,14 @@
   function goToCheckout() {
     if (!cartCount()) return;
     closeCart();
-    var el = document.getElementById('checkout');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // The checkout form lives inside the #merch page-section, which is hidden
+    // (display:none) when the user is on any other section (e.g. the home page).
+    // Make sure the shop section is active before scrolling to the form.
+    if (typeof showSection === 'function') showSection('merch');
+    requestAnimationFrame(function () {
+      var el = document.getElementById('checkout');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 
   /* ---- Delivery mode toggle ---- */
@@ -303,6 +309,22 @@
       return;
     }
 
+    // reCAPTCHA gate. Netlify validates the captcha server-side, but we also block
+    // here to avoid a native submit (and Netlify's generic error page) when it isn't
+    // solved. Only enforced when the widget is actually loaded (i.e. on the deployed
+    // Netlify site); locally grecaptcha is absent so this is skipped.
+    if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
+      var resp = '';
+      try { resp = window.grecaptcha.getResponse(); } catch (err) { resp = ''; }
+      if (!resp) {
+        e.preventDefault();
+        alert(t('botiga.captcha.required'));
+        var cap = document.querySelector('.g-recaptcha') || document.getElementById('checkout');
+        if (cap) cap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+    }
+
     // Fill hidden fields
     var orderNum = genOrderNumber();
     form.querySelector('[name="order-number"]').value = orderNum;
@@ -334,6 +356,38 @@
     }
   }
 
+  /* ---- reCAPTCHA gate: keep the submit button disabled until the captcha is solved ----
+     The reCAPTCHA widget is only injected/loaded on the deployed Netlify site, not in
+     local dev. We wait for `grecaptcha` to become available; if it never loads (local),
+     we leave the button enabled so local testing isn't blocked. Once loaded, we poll the
+     response so the button reflects solve/expiry (Netlify manages the widget, so we can't
+     attach data-callback directly). */
+  function setupCaptchaGate() {
+    var form = document.getElementById('form-botiga');
+    if (!form) return;
+    var btn = form.querySelector('.btn-submit');
+    if (!btn) return;
+
+    function captchaSolved() {
+      try { return !!(window.grecaptcha && window.grecaptcha.getResponse()); }
+      catch (e) { return false; }
+    }
+    function sync() { btn.disabled = !captchaSolved(); }
+
+    var tries = 0;
+    var waitId = setInterval(function () {
+      tries++;
+      if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
+        clearInterval(waitId);
+        btn.disabled = true;      // lock until solved
+        sync();
+        setInterval(sync, 500);   // reflect solve / expiry
+      } else if (tries > 30) {    // ~15s: no captcha (local/dev) → leave enabled
+        clearInterval(waitId);
+      }
+    }, 500);
+  }
+
   /* ---- Init ---- */
   function init() {
     renderCart();
@@ -352,6 +406,7 @@
       form.addEventListener('submit', onSubmit);
       form.querySelectorAll('input[name="entrega"]').forEach(function (r) { r.addEventListener('change', onDeliveryChange); });
       onDeliveryChange();
+      setupCaptchaGate();
     }
     // Re-render dynamic cart text when language changes
     if (typeof window.setLang === 'function') {

@@ -2201,6 +2201,13 @@
     transition: background .2s, transform .15s;
   }
   .btn-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .btn-submit:disabled,
+  .btn-submit[disabled] {
+    background: var(--gray-light); color: var(--gray);
+    cursor: not-allowed; transform: none; opacity: .8;
+  }
+  .btn-submit:disabled:hover,
+  .btn-submit[disabled]:hover { background: var(--gray-light); transform: none; }
   .form-note { font-size: .8rem; color: var(--gray); }
   .form-success {
     display: none; text-align: center; padding: 32px 20px;
