@@ -1674,6 +1674,20 @@
 
     <!-- CATALEG -->
     <div id="botiga-catalog">
+
+      <!-- RECORDATORI: última comanda pendent de pagament (localStorage) -->
+      <div class="last-order-note" id="botiga-last-order" style="display:none;">
+        <div class="lon-body">
+          <div class="lon-title" data-i18n="botiga.lastorder.title">Tens una comanda pendent de pagament</div>
+          <div class="lon-line">
+            <span data-i18n="botiga.lastorder.num">Nº de comanda:</span>
+            <b class="lon-num"></b><span class="lon-total-wrap"> · <b class="lon-total"></b></span>
+          </div>
+          <div class="lon-bizum" data-i18n="botiga.lastorder.bizum">Fes el Bizum al 614 936 429 indicant aquest número com a concepte.</div>
+        </div>
+        <button type="button" class="lon-dismiss" onclick="JABotiga.clearLastOrder()" data-i18n="botiga.lastorder.paid">Ja he pagat</button>
+      </div>
+
       <div class="botiga-grid">
 
         <!-- SAMARRETA -->
@@ -1749,7 +1763,7 @@
         <form
           name="comanda-botiga"
           method="POST"
-          action="/?comanda=1#merch"
+          action="/?ok=1#merch"
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
@@ -1841,6 +1855,7 @@
       <p data-i18n="botiga.ok.desc">Ara fes el Bizum al <strong>614 936 429</strong> per l'import total, indicant aquest número com a concepte:</p>
       <div class="bs-num"><span class="order-num-pill">JAB-...</span></div>
       <p data-i18n="botiga.ok.desc2">Un cop rebem el pagament, et confirmarem la comanda per correu. Gràcies per donar suport al bàsquet de barri!</p>
+      <button type="button" class="btn-checkout bs-back" onclick="JABotiga.backToShop()" data-i18n="botiga.ok.back">Tornar a la botiga</button>
     </div>
 
   </div>

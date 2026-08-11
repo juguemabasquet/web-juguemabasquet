@@ -13,6 +13,7 @@
   var PRERESERVA_DEPOSIT = 5;                 // deposit (€) for the shirt
   var BIZUM_NUMBER = '614 936 429';
   var STORAGE_KEY = 'jab-cart';
+  var LAST_ORDER_KEY = 'jab-last-order';
 
   var PRODUCTS = {
     camiseta: { id: 'camiseta', price: 25, sizes: ['S', 'M', 'L', 'XL', 'XXL'], nameKey: 'botiga.prod.camiseta.name' },
@@ -331,17 +332,47 @@
     form.querySelector('[name="comanda"]').value = serializeCart();
     form.querySelector('[name="total"]').value = cartTotal() + '€';
 
+    // Persist the order locally so the customer keeps the reference (order number +
+    // amount) for the Bizum even after leaving the shop / closing the success screen.
+    // No backend: this lives only in this browser. Saved at submit because after the
+    // Netlify redirect the cart is already cleared and only the number is in the URL.
+    try {
+      localStorage.setItem(LAST_ORDER_KEY, JSON.stringify({
+        num: orderNum, items: serializeCart(), total: cartTotal() + '€', date: new Date().toISOString()
+      }));
+    } catch (err) { /* ignore quota/private-mode errors */ }
+
     // Pass order number in the redirect URL so we can show it after reload
-    form.setAttribute('action', '/?comanda=1&num=' + encodeURIComponent(orderNum) + '#merch');
+    form.setAttribute('action', '/?ok=1&num=' + encodeURIComponent(orderNum) + '#merch');
     // Native submit proceeds → Netlify handles reCAPTCHA + email
   }
 
   /* ---- On load: show success after Netlify redirect ---- */
+  var orderJustShown = false;
+
+  function resetBotigaView() {
+    var checkout = document.getElementById('checkout');
+    var success = document.getElementById('botiga-success');
+    var catalog = document.getElementById('botiga-catalog');
+    if (success) success.style.display = 'none';
+    if (catalog) catalog.style.display = '';
+    if (checkout) checkout.style.display = '';
+    orderJustShown = false;
+  }
+
   function handleSuccessRedirect() {
     var params = new URLSearchParams(window.location.search);
-    if (params.get('comanda') === '1') {
+    if (params.get('ok') === '1') {
       localStorage.removeItem(STORAGE_KEY);   // clear cart
       var num = params.get('num') || '';
+      // Reconcile the persisted last order with the number Netlify redirected back with.
+      // If they differ (e.g. localStorage was unavailable at submit), store a minimal one.
+      try {
+        var stored = JSON.parse(localStorage.getItem(LAST_ORDER_KEY) || 'null');
+        if (num && (!stored || stored.num !== num)) {
+          localStorage.setItem(LAST_ORDER_KEY, JSON.stringify({ num: num, items: '', total: '', date: new Date().toISOString() }));
+        }
+      } catch (e) { /* ignore */ }
       var checkout = document.getElementById('checkout');
       var success = document.getElementById('botiga-success');
       var catalog = document.getElementById('botiga-catalog');
@@ -352,9 +383,40 @@
         if (pill) pill.textContent = num;
         success.style.display = 'block';
       }
+      orderJustShown = true;
       if (typeof showSection === 'function') showSection('merch');
+      // Clean the URL: drop the ?ok/num query so it isn't kept forever, a refresh
+      // doesn't re-show the success screen, and the browser doesn't warn about resending
+      // the form (client-side Post/Redirect/Get — after replaceState a reload is a GET).
+      if (window.history && window.history.replaceState) {
+        try { window.history.replaceState(null, '', window.location.pathname + '#merch'); }
+        catch (e) { /* ignore */ }
+      }
     }
+    renderLastOrder();
   }
+
+  /* ---- Persistent "last order pending payment" reminder (localStorage) ---- */
+  function renderLastOrder() {
+    var box = document.getElementById('botiga-last-order');
+    if (!box) return;
+    var data = null;
+    try { data = JSON.parse(localStorage.getItem(LAST_ORDER_KEY) || 'null'); } catch (e) { data = null; }
+    if (!data || !data.num) { box.style.display = 'none'; return; }
+    var numEl = box.querySelector('.lon-num');
+    var totalEl = box.querySelector('.lon-total');
+    if (numEl) numEl.textContent = data.num;
+    if (totalEl) totalEl.textContent = data.total || '';
+    var totalWrap = box.querySelector('.lon-total-wrap');
+    if (totalWrap) totalWrap.style.display = data.total ? '' : 'none';
+    box.style.display = '';
+  }
+
+  function clearLastOrder() {
+    try { localStorage.removeItem(LAST_ORDER_KEY); } catch (e) { /* ignore */ }
+    renderLastOrder();
+  }
+
 
   /* ---- reCAPTCHA gate: keep the submit button disabled until the captcha is solved ----
      The reCAPTCHA widget is only injected/loaded on the deployed Netlify site, not in
@@ -413,6 +475,24 @@
       var orig = window.setLang;
       window.setLang = function (l) { orig(l); renderCart(); };
     }
+    // Reset the success screen back to the catalog when the user LEAVES the shop after
+    // an order (the success screen persists in the DOM for the rest of the SPA session).
+    // We reset on leaving — not on entering — so the initial post-order render (and the
+    // hash-based showSection('merch') navigation.js fires on load) keeps showing success.
+    if (typeof window.showSection === 'function') {
+      var origShow = window.showSection;
+      window.showSection = function (id) {
+        if (id !== 'merch' && orderJustShown) resetBotigaView();
+        return origShow.apply(this, arguments);
+      };
+    }
+    if (typeof window.showHome === 'function') {
+      var origHome = window.showHome;
+      window.showHome = function () {
+        if (orderJustShown) resetBotigaView();
+        return origHome.apply(this, arguments);
+      };
+    }
   }
 
   if (document.readyState === 'loading') {
@@ -433,6 +513,8 @@
     remove: removeLine,
     open: openCart,
     close: closeCart,
-    checkout: goToCheckout
+    checkout: goToCheckout,
+    backToShop: resetBotigaView,
+    clearLastOrder: clearLastOrder
   };
 })();
