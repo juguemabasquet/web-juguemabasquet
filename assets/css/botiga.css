@@ -72,25 +72,25 @@ html[lang] .nav a.nav-botiga-btn { font-size: 12px; }      /* stable size across
 /* ---------- Last-order pending-payment reminder ---------- */
 .last-order-note {
   margin: 24px 0 0; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-  background: #17171a; border: 1px solid #2c2c31; border-left: 5px solid var(--orange);
+  background: var(--orange-soft); border: 1px solid #ffd9be; border-left: 5px solid var(--orange);
   border-radius: 14px; padding: 16px 20px;
 }
 .last-order-note .lon-body { flex: 1; min-width: 220px; }
 .last-order-note .lon-title {
-  font-family: 'Bungee', sans-serif; font-size: 14px; color: #fff;
+  font-family: 'Bungee', sans-serif; font-size: 14px; color: var(--black);
   text-transform: uppercase; letter-spacing: .5px;
 }
-.last-order-note .lon-line { margin-top: 6px; font-size: 14px; color: #e5e5e5; }
+.last-order-note .lon-line { margin-top: 6px; font-size: 14px; color: #3a3a3a; }
 .last-order-note .lon-num { font-family: 'Bungee', sans-serif; letter-spacing: .5px; color: var(--orange); }
-.last-order-note .lon-total { font-weight: 800; color: #fff; }
-.last-order-note .lon-bizum { margin-top: 4px; font-size: 13px; color: #b5b5b5; line-height: 1.5; }
-.last-order-note .lon-bizum strong { color: #fff; }
+.last-order-note .lon-total { font-weight: 800; color: var(--black); }
+.last-order-note .lon-bizum { margin-top: 4px; font-size: 13px; color: #6b6b6b; line-height: 1.5; }
+.last-order-note .lon-bizum strong { color: var(--black); }
 .last-order-note .lon-dismiss {
-  flex-shrink: 0; background: #fff; color: #17171a; border: 1px solid #fff;
+  flex-shrink: 0; background: var(--black); color: #fff; border: 1px solid var(--black);
   border-radius: 999px; padding: 9px 16px; font-family: 'Inter', sans-serif;
-  font-weight: 700; font-size: 13px; cursor: pointer; transition: background .2s, color .2s;
+  font-weight: 700; font-size: 13px; cursor: pointer; transition: background .2s, border-color .2s;
 }
-.last-order-note .lon-dismiss:hover { background: var(--orange); color: #fff; border-color: var(--orange); }
+.last-order-note .lon-dismiss:hover { background: var(--orange); border-color: var(--orange); }
 
 /* ---------- Catalog grid ---------- */
 .botiga-grid {
