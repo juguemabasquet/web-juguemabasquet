@@ -363,7 +363,9 @@
   function handleSuccessRedirect() {
     var params = new URLSearchParams(window.location.search);
     if (params.get('ok') === '1') {
-      localStorage.removeItem(STORAGE_KEY);   // clear cart
+      localStorage.removeItem(STORAGE_KEY);   // clear cart (storage)
+      renderCart();                           // refresh cart UI (FAB badge, drawer, checkout summary)
+      closeCart();                            // close the drawer if it was left open
       var num = params.get('num') || '';
       // Reconcile the persisted last order with the number Netlify redirected back with.
       // If they differ (e.g. localStorage was unavailable at submit), store a minimal one.
