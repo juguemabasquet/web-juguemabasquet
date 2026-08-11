@@ -1106,6 +1106,8 @@
   .burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .burger:hover { border-color: var(--orange); background: var(--orange-soft); }
+  /* Mobile brand (logo + name) shown in the nav only on <=900px; hidden on desktop. */
+  .nav-brand-mobile { display: none; }
 
   .mobile-menu {
     position: fixed; top: 0; right: -100%; width: min(320px, 85vw);
@@ -1150,6 +1152,17 @@
 
   @media (max-width: 900px) {
     .burger { display: flex; margin-left: auto; }
+    .nav-brand-mobile {
+      display: flex; align-items: center; gap: 9px;
+      margin-right: auto; text-decoration: none; flex-shrink: 1; min-width: 0;
+    }
+    .nav-brand-mobile-logo { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; }
+    .nav-brand-mobile-text {
+      font-family: 'Bungee', sans-serif; font-size: 12px; letter-spacing: .5px;
+      color: #0E0E0E; line-height: 1.05; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    .nav.shrunk .nav-brand-mobile-logo { width: 28px; height: 28px; }
   }
 
   /* ===== TABLET (600–900px) MILLORES ===== */
