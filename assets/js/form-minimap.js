@@ -149,33 +149,6 @@
     }
   });
 
-  /* ===== FORMULARI CONTACTE FOOTER ===== */
-  document.getElementById('footer-contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = this;
-    const btn = document.getElementById('footer-form-btn');
-    const nom = form.nom.value.trim();
-    const email = form.email.value.trim();
-    const missatge = form.missatge.value.trim();
-    if (!nom || !email || !missatge) { alert('Omple tots els camps.'); return; }
-    btn.textContent = 'Enviant...'; btn.disabled = true;
-    try {
-      const formData = new FormData(form);
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      });
-      if (res.ok) {
-        form.style.display = 'none';
-        document.getElementById('footer-form-ok').style.display = 'block';
-      } else { throw new Error('HTTP ' + res.status); }
-    } catch(err) {
-      btn.textContent = 'Enviar missatge →'; btn.disabled = false;
-      alert('Hi ha hagut un problema. Escriu-nos directament a info@juguemabasquet.org');
-    }
-  });
-
   /* ===== MODAL: obrir / tancar ===== */
   function openReportaModal() {
     const modal = document.getElementById('reporta-modal');
