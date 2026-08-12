@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ============================================================
+  EVENT PAGE TEMPLATE — clone this folder for every new event.
+  ============================================================
+  HOW TO CLONE:
+  1. Copy this folder to  events/<event-slug>/  (e.g. events/arranjament-pista-2026/)
+     and rename this file to  index.html  so the URL stays clean (/events/<slug>/).
+  2. Search & replace every  {{PLACEHOLDER}}  below with the real value.
+  3. Put images in  assets/events/  and update the src paths.
+  4. Choose the event TYPE and delete the block you don't need:
+       - Type A · UPCOMING (registration): keep the CTA button, remove the STORY and GALLERY sections.
+       - Type B · PAST (crònica + photos): keep the STORY and GALLERY sections, remove the CTA button.
+  5. Add a card in index.html  #activitats  linking to  events/<slug>/  (copy an existing .acts-item).
+  6. Translate the strings in the TRAD object (ca / en / es) at the bottom.
+  ============================================================
+-->
+<title>{{EVENT_TITLE}} · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+</head>
+<body>
+
+<!-- HEADER (standard · do not change) -->
+<header class="site-header">
+  <div class="header-left">
+    <a href="../../index.html" class="header-back" data-i18n="f.back">← Inici</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO (poster/cover image + event details) -->
+<main class="event-hero">
+
+  <!-- Cover image / poster (click to enlarge). Replace src + width/height. -->
+  <div class="event-poster js-zoom" role="button" tabindex="0" aria-label="Amplia la imatge">
+    <picture>
+      <source srcset="../../assets/events/{{COVER_IMAGE}}.webp" type="image/webp">
+      <img src="../../assets/events/{{COVER_IMAGE}}.jpg" alt="{{COVER_ALT}}" width="1414" height="2000" fetchpriority="high" decoding="async">
+    </picture>
+    <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg><span data-i18n="c.zoom">Amplia</span></span>
+  </div>
+
+  <!-- Details -->
+  <div class="event-details">
+    <div class="hero-eyebrow"><span data-i18n="f.badge">{{BADGE}}</span></div>
+    <div class="event-titlerow">
+      <span class="event-ball">🏀</span>
+      <h1 class="event-title" data-i18n="f.title">{{TITLE_SHORT}}</h1>
+    </div>
+    <p class="event-sub" data-i18n="f.hero.sub">{{SUBTITLE}}</p>
+
+    <!-- Meta pills: date / time / location / price-or-status. Remove any you don't need. -->
+    <div class="event-meta">
+      <span class="meta-pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="f.date">{{DATE}}</span></span>
+      <a class="meta-pill" href="https://maps.google.com/maps?q={{MAPS_QUERY}}" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="f.location">{{LOCATION}}</span></a>
+    </div>
+
+    <!-- Type A · UPCOMING event: registration CTA. Remove this block for past events. -->
+    <div class="event-cta" style="margin-top:24px;">
+      <a href="inscripcio.html" class="cta-btn" data-i18n="c.cta">Inscriu-te →</a>
+      <a href="https://www.instagram.com/juguemabasquet/" target="_blank" rel="noopener" class="cta-secondary" data-i18n="c.ig">Segueix @juguemabasquet per més info →</a>
+    </div>
+  </div>
+</main>
+
+<!-- Type B · PAST event: STORY / CRÒNICA. Remove for upcoming events. -->
+<section class="event-story">
+  <div class="story-eyebrow" data-i18n="s.eyebrow">La crònica</div>
+  <h2 data-i18n="s.title">{{STORY_TITLE}}</h2>
+  <p data-i18n="s.p1">{{STORY_PARAGRAPH_1}}</p>
+  <p data-i18n="s.p2">{{STORY_PARAGRAPH_2}}</p>
+</section>
+
+<!-- Type B · PAST event: PHOTO GALLERY. Add one .gallery-item per photo.
+     Add class "wide" to make an item span two columns. Remove for upcoming events. -->
+<section class="event-gallery">
+  <div class="gallery-head" data-i18n="g.head">Galeria</div>
+  <div class="gallery-grid">
+    <div class="gallery-item js-zoom"><img src="../../assets/events/{{GALLERY_1}}.webp" alt="{{GALLERY_1_ALT}}" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/{{GALLERY_2}}.webp" alt="{{GALLERY_2_ALT}}" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/{{GALLERY_3}}.webp" alt="{{GALLERY_3_ALT}}" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/{{GALLERY_4}}.webp" alt="{{GALLERY_4_ALT}}" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <a href="../../index.html" data-i18n="f.footer">← Juguem a Bàsquet · Badalona</a>
+</footer>
+
+<!-- Shared lightbox (used by the poster and every gallery photo) -->
+<div class="poster-lightbox" id="poster-lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Tanca">×</button>
+  <img id="lb-img" src="" alt="" decoding="async">
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona',
+    'f.back': '← Inici',
+    'f.badge': '{{BADGE}}',
+    'f.title': '{{TITLE_SHORT}}',
+    'f.hero.sub': '{{SUBTITLE}}',
+    'f.date': '{{DATE}}',
+    'f.location': '{{LOCATION}}',
+    'c.cta': 'Inscriu-te →',
+    'c.ig': 'Segueix @juguemabasquet per més info →',
+    'c.zoom': 'Amplia',
+    's.eyebrow': 'La crònica',
+    's.title': '{{STORY_TITLE}}',
+    's.p1': '{{STORY_PARAGRAPH_1}}',
+    's.p2': '{{STORY_PARAGRAPH_2}}',
+    'g.head': 'Galeria',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+  },
+  en: {
+    'f.sub': 'Association · Badalona',
+    'f.back': '← Home',
+    'f.badge': '{{BADGE_EN}}',
+    'f.title': '{{TITLE_SHORT}}',
+    'f.hero.sub': '{{SUBTITLE_EN}}',
+    'f.date': '{{DATE_EN}}',
+    'f.location': '{{LOCATION_EN}}',
+    'c.cta': 'Sign up →',
+    'c.ig': 'Follow @juguemabasquet for more info →',
+    'c.zoom': 'Zoom',
+    's.eyebrow': 'The story',
+    's.title': '{{STORY_TITLE_EN}}',
+    's.p1': '{{STORY_PARAGRAPH_1_EN}}',
+    's.p2': '{{STORY_PARAGRAPH_2_EN}}',
+    'g.head': 'Gallery',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona',
+    'f.back': '← Inicio',
+    'f.badge': '{{BADGE_ES}}',
+    'f.title': '{{TITLE_SHORT}}',
+    'f.hero.sub': '{{SUBTITLE_ES}}',
+    'f.date': '{{DATE_ES}}',
+    'f.location': '{{LOCATION_ES}}',
+    'c.cta': 'Inscríbete →',
+    'c.ig': 'Sigue a @juguemabasquet para más info →',
+    'c.zoom': 'Ampliar',
+    's.eyebrow': 'La crónica',
+    's.title': '{{STORY_TITLE_ES}}',
+    's.p1': '{{STORY_PARAGRAPH_1_ES}}',
+    's.p2': '{{STORY_PARAGRAPH_2_ES}}',
+    'g.head': 'Galería',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+  },
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+}
+
+// Init with the main site language (localStorage)
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+// Shared lightbox: any element with class .js-zoom opens its <img> enlarged
+(function () {
+  const lightbox = document.getElementById('poster-lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const closeBtn = document.getElementById('lb-close');
+  if (!lightbox) return;
+  const open = (src, alt) => {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false');
+  };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  document.querySelectorAll('.js-zoom').forEach(el => {
+    const img = el.querySelector('img');
+    if (!img) return;
+    const trigger = () => open(img.currentSrc || img.src, img.alt);
+    el.addEventListener('click', trigger);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); } });
+  });
+  lightbox.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+</body>
+</html>
