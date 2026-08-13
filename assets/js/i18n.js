@@ -343,7 +343,8 @@ const TRANSLATIONS = {
     'banner.text': 'Juguem a Bàsquet ja és una associació oficial reconeguda per la Generalitat de Catalunya · 19 de maig de 2026 · <strong>Núm. 79684</strong>',
     'assoc.label': 'Associació Oficial Registrada',
     'assoc.title': 'Reconeguda per la Generalitat de Catalunya · 19 de maig de 2026',
-    'assoc.desc': 'Inscrita a la Secció 1a del Registre d\'Associacions · Núm. <strong style="color:#F97316;">79684</strong>. Entitat sense ànim de lucre amb seu a <strong style="color:rgba(255,255,255,0.85);">Carrer de Sant Josep Oriol, 2 · Badalona</strong>.<br>NIF: <strong style="color:#F97316;">pendent d\'assignació</strong><br>Fundada el <strong style="color:rgba(255,255,255,0.85);">16 d\'agost de 2022</strong>',
+    'assoc.desc': 'Inscrita a la Secció 1a del Registre d\'Associacions · Núm. <strong style="color:#F97316;">79684</strong>. Entitat sense ànim de lucre amb seu a <strong style="color:rgba(255,255,255,0.85);">Carrer de Sant Josep Oriol, 2 · Badalona</strong>.<br>NIF: <strong style="color:#F97316;">G88931019</strong><br>Fundada el <strong style="color:rgba(255,255,255,0.85);">16 d\'agost de 2022</strong>',
+    'assoc.transp': 'Transparència i dades de l\'associació →',
     'inc.poster.title': 'Bàsquet<br/><span class="accent">per a Tothom</span>',
     'inc.poster.label': 'Fotos properament',
     'vid.tag.destacat': 'Destacat · Crònica', 'vid.tag.accio': 'Acció', 'vid.tag.inst': 'Institucional', 'vid.tag.denuncia': 'Denúncia',
@@ -444,6 +445,7 @@ const TRANSLATIONS = {
     'footer.link.avis': 'Avís Legal', 'footer.link.privacitat': 'Política de Privacitat', 'footer.link.cookies': 'Política de Cookies',
     'footer.nav.inici': 'Inici', 'footer.nav.quisom': 'Qui som', 'footer.nav.activitats': 'Activitats',
     'footer.nav.mapa': 'Mapa de Pistes', 'footer.nav.arxiu': 'Arxiu Històric', 'footer.nav.entrevistes': 'Entrevistes',
+    'footer.nav.transp': 'Transparència',
   },
   en: {
     /* ===== ARXIU HISTÒRIC ===== */
@@ -789,7 +791,8 @@ const TRANSLATIONS = {
     'banner.text': 'Juguem a Bàsquet is now an official association recognised by the Generalitat de Catalunya · 19 May 2026 · <strong>No. 79684</strong>',
     'assoc.label': 'Officially Registered Association',
     'assoc.title': 'Recognised by the Generalitat de Catalunya · 19 May 2026',
-    'assoc.desc': 'Registered in Section 1a of the Associations Register · No. <strong style="color:#F97316;">79684</strong>. Non-profit organisation based at <strong style="color:rgba(255,255,255,0.85);">Carrer de Sant Josep Oriol, 2 · Badalona</strong>.<br>Tax ID: <strong style="color:#F97316;">pending assignment</strong><br>Founded on <strong style="color:rgba(255,255,255,0.85);">16 August 2022</strong>',
+    'assoc.desc': 'Registered in Section 1a of the Associations Register · No. <strong style="color:#F97316;">79684</strong>. Non-profit organisation based at <strong style="color:rgba(255,255,255,0.85);">Carrer de Sant Josep Oriol, 2 · Badalona</strong>.<br>Tax ID: <strong style="color:#F97316;">G88931019</strong><br>Founded on <strong style="color:rgba(255,255,255,0.85);">16 August 2022</strong>',
+    'assoc.transp': 'Association transparency & details →',
     'inc.poster.title': 'Basketball<br/><span class="accent">for Everyone</span>',
     'inc.poster.label': 'Photos coming soon',
     'vid.tag.destacat': 'Featured · Chronicle', 'vid.tag.accio': 'Action', 'vid.tag.inst': 'Institutional', 'vid.tag.denuncia': 'Report',
@@ -890,6 +893,7 @@ const TRANSLATIONS = {
     'footer.link.avis': 'Legal Notice', 'footer.link.privacitat': 'Privacy Policy', 'footer.link.cookies': 'Cookie Policy',
     'footer.nav.inici': 'Home', 'footer.nav.quisom': 'Who we are', 'footer.nav.activitats': 'Activities',
     'footer.nav.mapa': 'Court Map', 'footer.nav.arxiu': 'Historic Archive', 'footer.nav.entrevistes': 'Interviews',
+    'footer.nav.transp': 'Transparency',
   },
   es: {
     /* ===== ARXIU HISTÒRIC ===== */
@@ -1235,7 +1239,8 @@ const TRANSLATIONS = {
     'banner.text': 'Juguem a Bàsquet ya es una asociación oficial reconocida por la Generalitat de Catalunya · 19 de mayo de 2026 · <strong>Núm. 79684</strong>',
     'assoc.label': 'Asociación Oficial Registrada',
     'assoc.title': 'Reconocida por la Generalitat de Catalunya · 19 de mayo de 2026',
-    'assoc.desc': 'Inscrita en la Sección 1a del Registro de Asociaciones · Núm. <strong style="color:#F97316;">79684</strong>. Entidad sin ánimo de lucro con sede en <strong style="color:rgba(255,255,255,0.85);">Carrer de Sant Josep Oriol, 2 · Badalona</strong>.<br>NIF: <strong style="color:#F97316;">pendiente de asignación</strong><br>Fundada el <strong style="color:rgba(255,255,255,0.85);">16 de agosto de 2022</strong>',
+    'assoc.desc': 'Inscrita en la Sección 1a del Registro de Asociaciones · Núm. <strong style="color:#F97316;">79684</strong>. Entidad sin ánimo de lucro con sede en <strong style="color:rgba(255,255,255,0.85);">Carrer de Sant Josep Oriol, 2 · Badalona</strong>.<br>NIF: <strong style="color:#F97316;">G88931019</strong><br>Fundada el <strong style="color:rgba(255,255,255,0.85);">16 de agosto de 2022</strong>',
+    'assoc.transp': 'Transparencia y datos de la asociación →',
     'inc.poster.title': 'Baloncesto<br/><span class="accent">para Todos</span>',
     'inc.poster.label': 'Fotos próximamente',
     'vid.tag.destacat': 'Destacado · Crónica', 'vid.tag.accio': 'Acción', 'vid.tag.inst': 'Institucional', 'vid.tag.denuncia': 'Denuncia',
@@ -1336,6 +1341,7 @@ const TRANSLATIONS = {
     'footer.link.avis': 'Aviso Legal', 'footer.link.privacitat': 'Política de Privacidad', 'footer.link.cookies': 'Política de Cookies',
     'footer.nav.inici': 'Inicio', 'footer.nav.quisom': 'Quiénes somos', 'footer.nav.activitats': 'Actividades',
     'footer.nav.mapa': 'Mapa de Pistas', 'footer.nav.arxiu': 'Archivo Histórico', 'footer.nav.entrevistes': 'Entrevistas',
+    'footer.nav.transp': 'Transparencia',
   }
 };
 
@@ -1435,6 +1441,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <li><a href="#" onclick="event.preventDefault();showSection('mapa')" data-i18n="footer.nav.mapa">Mapa de Pistes</a></li>
           <li><a href="#" onclick="event.preventDefault();showSection('arxiu-historic')" data-i18n="footer.nav.arxiu">Arxiu Històric</a></li>
           <li><a href="#" onclick="event.preventDefault();showSection('entrevistes')" data-i18n="footer.nav.entrevistes">Entrevistes</a></li>
+          <li><a href="transparencia/" data-i18n="footer.nav.transp">Transparència</a></li>
         </ul>
       </div>
     </div>
