@@ -4,6 +4,7 @@ function showSection(id) {
   document.querySelectorAll('.page-section').forEach(function(s){ s.classList.remove('active'); });
   target.classList.add('active');
   target.scrollTop = 0;
+  document.body.classList.add('section-open');
   document.getElementById('back-home-btn').classList.add('visible');
   var b = document.querySelector('.banner-3x3'); if (b) b.classList.add('hidden');
   updateLangSwitcherVisibility();
@@ -31,6 +32,7 @@ function showSection(id) {
 }
 function showHome() {
   document.querySelectorAll('.page-section').forEach(function(s){ s.classList.remove('active'); });
+  document.body.classList.remove('section-open');
   document.getElementById('back-home-btn').classList.remove('visible');
   var b = document.querySelector('.banner-3x3'); if (b) b.classList.remove('hidden');
   updateLangSwitcherVisibility();
