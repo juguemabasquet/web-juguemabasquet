@@ -16,4 +16,4 @@ npm-debug.log*
 *.swp
 *.swo
 
-.preview-tmp
+.preview-tmp.preview-tmp/
