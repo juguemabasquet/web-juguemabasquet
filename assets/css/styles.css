@@ -2309,24 +2309,17 @@
     margin: 0 auto;
   }
   /* ── Placements bento irregular ── */
-  .bento-grid > *:nth-child(5) { grid-area: 1 / 1 / 3 / 3; } /* CROWDFUNDING 2×2 */
+  .bento-grid > *:nth-child(2) { grid-area: 1 / 1 / 3 / 3; } /* ACTIVITATS 2×2 (cartell 3x3) */
   .bento-grid > *:nth-child(1) { grid-area: 1 / 3 / 2 / 4; } /* QUI SOM */
   .bento-grid > *:nth-child(4) { grid-area: 1 / 4 / 2 / 5; } /* ENTREVISTES */
-  .bento-grid > *:nth-child(2) { grid-area: 2 / 3 / 3 / 4; } /* ACTIVITATS */
-  .bento-grid > *:nth-child(3) { grid-area: 2 / 4 / 3 / 5; } /* MAPA */
+  .bento-grid > *:nth-child(3) { grid-area: 2 / 3 / 3 / 4; } /* MAPA (under QUI SOM) */
+  .bento-grid > *:nth-child(5) { grid-area: 2 / 4 / 3 / 5; } /* CROWDFUNDING 1×1 (under ENTREVISTES) */
   .bento-grid > *:nth-child(6) { grid-area: 3 / 1 / 4 / 2; } /* ARXIU */
   .bento-grid > *:nth-child(7) { grid-area: 3 / 2 / 4 / 3; } /* ENTITATS */
   .bento-grid > *:nth-child(8) { grid-area: 3 / 3 / 4 / 4; } /* COL·LABS */
   .bento-grid > *:nth-child(9) { grid-area: 3 / 4 / 4 / 5; } /* XARXES */
   /* Crowdfunding 2×2: títol gran */
-  .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.title"] {
-    font-size: clamp(32px, 4.5vw, 68px) !important;
-    line-height: 1.0;
-  }
-  .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.eye"] {
-    font-size: clamp(13px, 1.4vw, 20px) !important;
-    margin-bottom: 16px;
-  }
+  /* Crowdfunding is now 1×1 — title uses standard card sizing */
   .bento-card {
     border-radius: 16px;
     overflow: hidden;
@@ -2392,11 +2385,12 @@
   .c-black   { background: #0a0a0a; color: #fff; border: 1px solid rgba(255,255,255,0.08); }
   .c-orange  { background: #FF6A1A; color: #fff; }
   .c-dark    { background: #161616; color: #fff; border: 1px solid rgba(255,255,255,0.06); }
-  .c-offwhite{ background: #E4E4E4; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.08); }
-  .c-gold    { background: #1a3a8a; color: #0a0a0a; }
-  .c-green   { background: #0e2d1e; color: #fff; }
+  .c-offwhite{ background: #DBDBDB; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.12); }
+  .c-gold    { background: #3560C0; color: #fff; }
+  .c-green   { background: #2E6B4E; color: #fff; }
   .c-white   { background: #fff; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.06); }
   .c-navy    { background: #0a1628; color: #fff; }
+  .c-magenta { background: linear-gradient(135deg,#8C3A64,#BC5A88); color: #fff; }
   @media (max-width: 1100px) {
     .bento-section { height: auto; overflow: visible; padding: 8px; padding-top: 60px; }
     .bento-grid {
@@ -2406,20 +2400,28 @@
     }
     /* Reset placements — fluix 2 columnes */
     .bento-grid > *:nth-child(n) { grid-area: auto; }
-    /* Crowdfunding ocupa ample complet en tablet */
-    .bento-grid > *:nth-child(5) { grid-column: 1 / -1; min-height: 260px; }
+    /* Alterna colors també en mòbil: Mapa entre Qui Som i Activitats */
+    .bento-grid > *:nth-child(1) { order: 1; } /* QUI SOM */
+    .bento-grid > *:nth-child(3) { order: 2; } /* MAPA */
+    .bento-grid > *:nth-child(2) { order: 3; } /* ACTIVITATS */
+    .bento-grid > *:nth-child(4) { order: 4; } /* ENTREVISTES */
+    .bento-grid > *:nth-child(5) { order: 5; } /* CROWDFUNDING */
+    .bento-grid > *:nth-child(6) { order: 6; } /* ARXIU */
+    .bento-grid > *:nth-child(7) { order: 7; } /* ENTITATS */
+    .bento-grid > *:nth-child(8) { order: 8; } /* COL·LABS */
+    .bento-grid > *:nth-child(9) { order: 9; } /* XARXES */
+    /* Activitats (cartell 3x3) ocupa ample complet en tablet */
+    .bento-grid > *:nth-child(2) { grid-column: 1 / -1; min-height: 320px; }
     .bento-card { min-height: 160px; }
     html[lang="ca"] .bento-card [data-i18n$=".title"] { font-size: clamp(18px, 4vw, 30px) !important; }
     html[lang="es"] .bento-card [data-i18n$=".title"] { font-size: clamp(16px, 3.5vw, 27px) !important; }
     html[lang="en"] .bento-card [data-i18n$=".title"] { font-size: clamp(15px, 3.2vw, 25px) !important; }
-    .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.title"] { font-size: clamp(28px, 6vw, 50px) !important; }
   }
   @media (max-width: 600px) {
     .bento-section { padding: 6px; padding-top: 96px; }
     .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
     .bento-card { min-height: 140px; padding: 14px 14px; }
-    .bento-grid > *:nth-child(5) { min-height: 200px; }
-    .bento-grid > *:nth-child(5) [data-i18n="bento.campanya.title"] { font-size: clamp(24px, 7vw, 40px) !important; }
+    .bento-grid > *:nth-child(2) { min-height: 300px; }
   }
 
 /* ── FLOATING HYMN PLAYER ── */
