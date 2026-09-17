@@ -411,7 +411,7 @@
     padding: 40px; position: relative; overflow: hidden;
   }
   .aito-card::before {
-    content: 'ENTREVISTA'; position: absolute; top: 24px; right: 24px;
+    content: 'ENTREVISTA'; grid-column: 1 / -1; justify-self: start;
     background: var(--orange); color: white; padding: 6px 14px; border-radius: 999px;
     font-family: 'Bungee', sans-serif; font-size: 11px; letter-spacing: 1.5px;
   }
