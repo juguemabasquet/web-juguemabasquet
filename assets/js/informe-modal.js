@@ -124,12 +124,6 @@ function renderInforme(filtre) {
     btn.textContent = txt;
     if (isOpen) wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
-  function toggleBusquetsQA(btn) {
-    const wrap = document.getElementById('busquets-qa');
-    const isOpen = wrap.classList.toggle('open');
-    btn.textContent = isOpen ? 'Tanca l\'entrevista ↑' : 'Llegeix l\'entrevista ↓';
-    if (isOpen) wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
   function toggleVillacampaQA(btn) {
     const wrap = document.getElementById('villacampa-qa');
     const isOpen = wrap.classList.toggle('open');
