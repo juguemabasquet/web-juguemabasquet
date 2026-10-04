@@ -110,36 +110,9 @@
   }
   .nav .cta:hover { background: #e55a0a; transform: translateY(-1px); }
 
-  /* BANNER TORNEIG 3x3 */
-  .banner-3x3 { position: fixed; top: 56px; left: 0; right: 0; z-index: 999; display: block;
-    background: var(--orange);
-    background-image: linear-gradient(100deg, #FF6A1A, #E5551A), repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 12px, transparent 12px 26px);
-    box-shadow: 0 4px 16px rgba(229,85,26,.35); }
-  .banner-3x3.hidden { display: none; }
-  .banner-3x3-inner { max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  .banner-3x3-left { display: flex; align-items: center; gap: 12px; }
-  .banner-3x3-badge { background: #fff; color: var(--orange); font-family: 'Bungee', sans-serif; font-size: 10px; letter-spacing: 1.5px; padding: 3px 8px; border-radius: 4px; flex-shrink: 0; }
-  .banner-3x3-title { font-family: 'Bungee', sans-serif; font-size: clamp(13px, 2vw, 16px); color: #fff; text-transform: uppercase; letter-spacing: .5px; }
-  .banner-3x3-title .n { display: inline-block; background: #fff; color: var(--orange); padding: 1px 8px; border-radius: 6px; font-size: 1.2em; box-shadow: 0 2px 0 rgba(0,0,0,.12); }
-  .banner-3x3-title .ball { display: inline-block; font-size: 1.5em; line-height: 1; vertical-align: -3px; transform-origin: 50% 55%; animation: ball-spin 5s ease-in-out infinite; }
-  @keyframes ball-spin { 0% { transform: rotate(0deg); } 12% { transform: rotate(360deg); } 100% { transform: rotate(360deg); } }
-  .banner-3x3-left::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #fff; flex-shrink: 0; animation: banner-pulse 1.6s infinite; }
-  @keyframes banner-pulse { 0% { background: #fff; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,.6); } 50% { background: #0A0A0E; transform: scale(1.35); } 70% { box-shadow: 0 0 0 9px rgba(255,255,255,0); } 100% { background: #fff; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
-  .banner-3x3-right { display: flex; align-items: center; gap: 20px; }
-  .banner-3x3-date { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.85); }
-  .banner-3x3-cta { background: #fff; color: var(--orange); font-family: 'Bungee', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 7px 18px; border-radius: 6px; white-space: nowrap; transition: transform .15s ease, box-shadow .15s ease; }
-  .banner-3x3:hover .banner-3x3-cta { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(0,0,0,.18); }
-  @media (max-width: 600px) {
-    .banner-3x3-date { display: none; }
-    .banner-3x3-cta { display: none; }
-    .banner-3x3-inner { flex-wrap: nowrap; justify-content: center; padding: 8px 16px; }
-    .banner-3x3-title { font-size: 13px; white-space: nowrap; }
-    .banner-3x3-title::after { content: ' →'; font-weight: 700; }
-  }
-
   /* LANGUAGE SWITCHER FLOTANT (cantonada inferior dreta) */
   .lang-switcher {
-    position: fixed; top: 108px; right: 20px; z-index: 1300;
+    position: fixed; top: 68px; right: 20px; z-index: 1300;
     display: flex; gap: 2px;
     background: rgba(255,255,255,0.97); border-radius: 999px; padding: 4px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.08);
@@ -2373,13 +2346,8 @@
   .bento-section {
     background: #ffffff;
     padding: 10px;
-    padding-top: 54px; /* push content below fixed banner-3x3 (~52px) */
     box-sizing: border-box;
     overflow: hidden;
-  }
-  @media (max-width: 600px) {
-    /* On mobile the banner wraps to 2 rows (~88px tall) */
-    .bento-section { padding-top: 96px; }
   }
   .hero-tagline {
     text-align: center;
@@ -2475,7 +2443,6 @@
   .past-event-label { display:inline-block; background:rgba(255,255,255,.1); color:rgba(255,255,255,.6); font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border-radius:50px; margin-bottom:10px; }
 
   .c-black   { background: #0a0a0a; color: #fff; border: 1px solid rgba(255,255,255,0.08); }
-  .c-orange  { background: #FF6A1A; color: #fff; }
   .c-dark    { background: #161616; color: #fff; border: 1px solid rgba(255,255,255,0.06); }
   .c-offwhite{ background: #DBDBDB; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.12); }
   .c-gold    { background: #3560C0; color: #fff; }
@@ -2483,8 +2450,34 @@
   .c-white   { background: #fff; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.06); }
   .c-navy    { background: #0a1628; color: #fff; }
   .c-magenta { background: linear-gradient(135deg,#8C3A64,#BC5A88); color: #fff; }
+  /* ── Bento "Mapa de Pistes" — mapa de fons + mirilla animada ── */
+  .bento-mapa-bg { padding: 0; color: #fff; }
+  .bento-mapa-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .bento-mapa-scrim { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255,106,26,.88), rgba(10,10,10,.55)); }
+  .bento-mapa-body { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 20px 22px; }
+  .bento-mirilla {
+    position: absolute; left: 6%; top: 22%;
+    width: 34px; height: 34px;
+    transform: translate(-50%, -50%);
+    z-index: 1; pointer-events: none;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,.5));
+    animation: mirilla-scan 13s ease-in-out infinite;
+  }
+  @keyframes mirilla-scan {
+    0%   { left: 6%;  top: 22%; }
+    12%  { left: 68%; top: 12%; }
+    27%  { left: 42%; top: 72%; }
+    41%  { left: 90%; top: 50%; }
+    56%  { left: 18%; top: 80%; }
+    70%  { left: 62%; top: 32%; }
+    85%  { left: 10%; top: 48%; }
+    100% { left: 6%;  top: 22%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bento-mirilla { animation: none; left: 50%; top: 50%; }
+  }
   @media (max-width: 1100px) {
-    .bento-section { height: auto; overflow: visible; padding: 8px; padding-top: 60px; }
+    .bento-section { height: auto; overflow: visible; padding: 8px; }
     .bento-grid {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: none;
@@ -2509,7 +2502,7 @@
     html[lang="en"] .bento-card [data-i18n$=".title"] { font-size: clamp(15px, 3.2vw, 25px) !important; }
   }
   @media (max-width: 600px) {
-    .bento-section { padding: 6px; padding-top: 96px; }
+    .bento-section { padding: 6px; }
     .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
     .bento-card { min-height: 140px; padding: 14px 14px; }
     .bento-grid > *:nth-child(2) { min-height: 300px; }
@@ -2773,9 +2766,6 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
     .mapa-section > .container { padding: 0 0 16px; }
     /* Hero: logotip més petit per alliberar espai vertical */
     .hero-visual { max-width: 180px; }
-    /* Banner 3x3: compacte en mòbil estret */
-    .banner-3x3-inner { padding: 7px 12px; gap: 10px; }
-    .banner-3x3-cta { padding: 5px 12px; font-size: 11px; }
   }
 
   /* ===== ARXIU HISTÒRIC (integrated section) ===== */

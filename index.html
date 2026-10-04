@@ -98,18 +98,6 @@
   </button>
 </nav>
 
-<!-- BANNER TORNEIG 3x3 -->
-<a class="banner-3x3" href="events/3x3-carmelites-2026/" style="text-decoration:none;">
-  <div class="banner-3x3-inner">
-    <div class="banner-3x3-left">
-      <span class="banner-3x3-title" data-i18n="t3x3p.banner.title"><span class="ball">🏀</span> Torneig <span class="n">3X3</span> · Badalona</span>
-    </div>
-    <div class="banner-3x3-right">
-      <span class="banner-3x3-date" data-i18n="t3x3p.banner.date">19 de setembre 2026</span>
-      <span class="banner-3x3-cta" data-i18n="t3x3p.banner.cta">Més info →</span>
-    </div>
-  </div>
-</a>
 
 <!-- MENÚ MÒBIL -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
@@ -165,14 +153,26 @@
     </div>
 
     <!-- 3: MAPA DE PISTES -->
-    <div class="bento-card c-orange" onclick="showSection('mapa')">
-      <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2px;opacity:.85;text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.mapa.eye">Mapa de Pistes</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;" data-i18n="bento.mapa.title">Troba la<br>teva pista</div>
-      </div>
-      <div style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;">
-        <span style="width:7px;height:7px;border-radius:50%;background:#fff;flex-shrink:0;"></span>
-        <span data-i18n="bento.mapa.sub">8 barris coberts</span>
+    <div class="bento-card bento-mapa-bg" onclick="showSection('mapa')">
+      <img class="bento-mapa-img" src="assets/mapa/badalona-mapa.webp" alt="Mapa de Badalona"/>
+      <div class="bento-mapa-scrim"></div>
+      <svg class="bento-mirilla" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="16" fill="none" stroke="#fff" stroke-width="2.5" opacity="0.9"/>
+        <circle cx="20" cy="20" r="3" fill="#fff"/>
+        <line x1="20" y1="0" x2="20" y2="10" stroke="#fff" stroke-width="2.5"/>
+        <line x1="20" y1="30" x2="20" y2="40" stroke="#fff" stroke-width="2.5"/>
+        <line x1="0" y1="20" x2="10" y2="20" stroke="#fff" stroke-width="2.5"/>
+        <line x1="30" y1="20" x2="40" y2="20" stroke="#fff" stroke-width="2.5"/>
+      </svg>
+      <div class="bento-mapa-body">
+        <div>
+          <div style="font-size:10px;font-weight:800;letter-spacing:2px;opacity:.85;text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.mapa.eye">Mapa de Pistes</div>
+          <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;" data-i18n="bento.mapa.title">Troba la<br>teva pista</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#fff;flex-shrink:0;"></span>
+          <span data-i18n="bento.mapa.sub">8 barris coberts</span>
+        </div>
       </div>
     </div>
 
@@ -413,50 +413,27 @@
     <!-- ACTIVITATS · Timeline (ordenat: en curs/pròximes primer, després celebrades) -->
     <div class="acts-timeline">
 
-      <!-- 1 · Torneig 3x3 (pròxim · enllaça a la pàgina de l'esdeveniment) -->
-      <article class="acts-item" data-status="soon">
+      <!-- 1 · Torneig 3x3 (celebrat · enllaça a la galeria de fotos) -->
+      <article class="acts-item" data-status="done">
         <a class="acts-card" href="events/3x3-carmelites-2026/">
           <div class="acts-thumb"><img src="assets/events/cartell-3x3-carmelites-setembre.png" alt="Torneig 3x3 de bàsquet de carrer"/></div>
           <div class="acts-body">
             <div class="acts-top">
-              <span class="acts-badge" data-i18n="act3x3.badge">Inscripcions obertes</span>
+              <span class="acts-badge" data-i18n="act.badge.celebrada">Celebrada</span>
               <span class="acts-date" data-i18n="act3x3.meta">19 Setembre 2026 · 10:00 h · Pista dels Carmelites</span>
             </div>
             <h3 class="acts-title" data-i18n="act3x3.h4">Torneig 3x3 de Bàsquet de Carrer</h3>
-            <p class="acts-lead" data-i18n="act3x3.p">Torneig obert de bàsquet 3x3 a la Pista dels Carmelites, amb concurs de triples i premis. Inscriu el teu equip!</p>
+            <p class="acts-lead" data-i18n="act3x3.p">Reviu el Torneig 3x3 de Bàsquet de Carrer a la Pista dels Carmelites: fotos i resum de la jornada.</p>
             <div class="acts-foot">
               <div class="acts-tags">
                 <span class="acts-tag" data-i18n="tag.3x3">3x3</span>
                 <span class="acts-tag" data-i18n="tag.basquet">Bàsquet</span>
                 <span class="acts-tag" data-i18n="tag.carrer">Carrer</span>
               </div>
-              <span class="acts-more" data-i18n="act3x3.cta">Més info i inscripció →</span>
+              <span class="acts-more" data-i18n="act.veuregaleria">Veure la galeria →</span>
             </div>
           </div>
         </a>
-      </article>
-
-      <!-- 2 · Bàsquet per a Tothom (en curs · projecte permanent) -->
-      <article class="acts-item" data-status="live">
-        <div class="acts-card" role="button" tabindex="0" onclick="openActModal('inclusio-modal-overlay')">
-          <div class="acts-thumb"><img src="assets/events/xerrada-inclusio-dibuix.jpg" alt="Bàsquet per a Tothom — inclusió"/></div>
-          <div class="acts-body">
-            <div class="acts-top">
-              <span class="acts-badge" data-i18n="act.badge.encurs">En curs · Projecte permanent</span>
-              <span class="acts-date" data-i18n="act.inc.meta">Inclusió</span>
-            </div>
-            <h3 class="acts-title" data-i18n="inc.h3">Bàsquet <span class="accent">per a Tothom</span></h3>
-            <p class="acts-lead" data-i18n="act.inc.lead">Impulsem el bàsquet adaptat com a eina d'inclusió: pistes accessibles i classes gratuïtes perquè ningú es quedi fora.</p>
-            <div class="acts-foot">
-              <div class="acts-tags">
-                <span class="acts-tag" data-i18n="tag.inclusio">Inclusió</span>
-                <span class="acts-tag" data-i18n="tag.accessibilitat">Accessibilitat</span>
-                <span class="acts-tag" data-i18n="tag.diversitat">Diversitat</span>
-              </div>
-              <span class="acts-more" data-i18n="act.veuremes">Veure més →</span>
-            </div>
-          </div>
-        </div>
       </article>
 
       <!-- 3 · Arranjament de la pista dels Carmelites (celebrada · més recent · enllaça a la pàgina) -->
@@ -2334,42 +2311,9 @@
 </div>
 <script src="assets/js/miqui-modal.js"></script>
 
-<!-- ── MODAL: Bàsquet per a Tothom (inclusió) ── -->
-<div id="inclusio-modal-overlay">
-  <div id="inclusio-modal">
-    <button id="inclusio-modal-close" onclick="document.getElementById('inclusio-modal-overlay').classList.remove('active')">✕</button>
-    <img class="modal-img" src="assets/events/xerrada-inclusio-dibuix.jpg" alt="Bàsquet per a Tothom — inclusió"/>
-    <div class="modal-body">
-      <h3 data-i18n="inc.h3">Bàsquet <span class="accent">per a Tothom</span></h3>
-      <p class="modal-desc" data-i18n="inc.lead">Perquè el bàsquet no entén de barreres. Impulsem el <strong>bàsquet adaptat</strong> com a eina d'inclusió i vida — perquè qualsevol persona, amb qualsevol capacitat física o intel·lectual, pugui jugar amb dignitat, igualtat i alegria. Sense excepcions.</p>
-      <div class="inclusio-modal-pillars">
-        <div class="inclusio-modal-pillar">
-          <div class="inclusio-modal-ico">♿</div>
-          <h4 data-i18n="inc.p1.h4">Pistes accessibles</h4>
-          <p data-i18n="inc.p1.p">Promovem que totes les pistes de bàsquet de barri tinguin accés fàcil per a cadires de rodes: rampes, superfícies planes i espais adaptats perquè ningú es quedi a fora.</p>
-        </div>
-        <div class="inclusio-modal-pillar">
-          <div class="inclusio-modal-ico">🏀</div>
-          <h4 data-i18n="inc.p2.h4">Classes gratuïtes</h4>
-          <p data-i18n="inc.p2.p">Impulsem sessions de bàsquet gratuïtes per a persones amb diversitat intel·lectual. Un espai de joc, d'equip i de vida on cada persona brilla al seu ritme.</p>
-        </div>
-      </div>
-      <div class="modal-tags">
-        <span class="event-tag" data-i18n="tag.inclusio">Inclusió</span>
-        <span class="event-tag" data-i18n="tag.accessibilitat">Accessibilitat</span>
-        <span class="event-tag" data-i18n="tag.diversitat">Diversitat</span>
-        <span class="event-tag" style="background:rgba(255,255,255,0.15);" data-i18n="act.badge.encurs">En curs · Projecte permanent</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
   window.openActModal = function (id) { var el = document.getElementById(id); if (el) el.classList.add('active'); };
   (function () {
-    var inc = document.getElementById('inclusio-modal-overlay');
-    if (inc) inc.addEventListener('click', function (e) { if (e.target === inc) inc.classList.remove('active'); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && inc) inc.classList.remove('active'); });
     document.querySelectorAll('.acts-card[role="button"]').forEach(function (c) {
       c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); } });
     });

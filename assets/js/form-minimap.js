@@ -7,8 +7,9 @@
       center: [20, 0], zoom: 2,
       zoomControl: true, scrollWheelZoom: true
     });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '© OpenStreetMap © CARTO', subdomains: 'abcd', maxZoom: 19
+    // Esri Street Map (capa normal, no satèl·lit) — CartoDB Voyager ara exigeix API key
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, HERE, Garmin, FAO, NOAA, USGS', maxZoom: 19
     }).addTo(miniMap);
 
     // Patró "pin central fix": la ubicació és el CENTRE del mapa.
