@@ -107,31 +107,3 @@ function renderInforme(filtre) {
     link.addEventListener('click', closeMenu);
   });
 
-  // ── Auto-obre entrevista Aíto si ve de #entrevista-aito ──
-  window.addEventListener('load', () => {
-    if (window.location.hash === '#entrevista-aito') {
-      const btn = document.getElementById('aito-toggle-btn');
-      if (btn) setTimeout(() => { toggleAitoQA(btn); }, 400);
-    }
-  });
-
-  // ── Acordió entrevista Aíto ──────────────────────────────
-  function toggleAitoQA(btn) {
-    const wrap = document.getElementById('aito-qa');
-    const isOpen = wrap.classList.toggle('open');
-    const key = isOpen ? 'aito.btn.tancar' : 'aito.btn.llegir';
-    const txt = (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) || (isOpen ? 'Tanca l\'entrevista ↑' : 'Llegeix l\'entrevista ↓');
-    btn.textContent = txt;
-    if (isOpen) wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-  function toggleVillacampaQA(btn) {
-    const wrap = document.getElementById('villacampa-qa');
-    const isOpen = wrap.classList.toggle('open');
-    btn.textContent = isOpen ? 'Tanca l\'entrevista ↑' : 'Llegeix l\'entrevista ↓';
-    if (isOpen) wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-  function toggleQ(btn) {
-    const item = btn.closest('.aito-qa-item');
-    item.classList.toggle('open');
-  }
-

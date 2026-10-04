@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miquel Àngel Forniés · Entrevista · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+<link rel="stylesheet" href="../../assets/css/entrevistes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <a href="../../index.html#entrevistes" class="header-back" data-i18n="f.back">← Entrevistes</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<main class="event-hero">
+  <div class="event-poster js-zoom" role="button" tabindex="0" aria-label="Amplia la imatge">
+    <img src="../../assets/fotos/entrevistes/miquel-fornies.webp" alt="Miquel Àngel Forniés en un partit d'Eurolliga" fetchpriority="high" decoding="async">
+    <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg><span data-i18n="c.zoom">Amplia</span></span>
+  </div>
+
+  <div class="event-details">
+    <div class="hero-eyebrow"><span data-i18n="f.badge">Entrevista · Fotoperiodista i llegenda del bàsquet</span></div>
+    <h1 class="event-title person-name">Miquel Àngel <span>Forniés</span></h1>
+    <p class="event-sub person-cred" data-i18n="f.cred">Fotoperiodista · Primer enviat especial espanyol a l'NBA · Cap de premsa de la Penya durant 19 temporades</p>
+    <p class="person-lead" data-i18n="f.lead">Miguel Ángel Forniés és un dels fotoperiodistes més reconeguts arreu del món. Als anys 80 es va fer càrrec del Bàsquet Cantaires femení, sent a més a més el primer enviat especial de la premsa espanyola a l'NBA. Anys més tard, va proclamar-se cap de premsa de la Penya durant 19 temporades. Haver entrevistat a Miguel Ángel Forniés és un dels èxits més grans que pot viure la plataforma!</p>
+  </div>
+</main>
+
+<section class="event-gallery compact">
+  <div class="gallery-head" data-i18n="g.head">Més fotos</div>
+  <div class="gallery-grid">
+    <div class="gallery-item js-zoom"><img src="../../assets/fotos/entrevistes/miquel-fornies-nikon.webp" alt="Miquel Àngel Forniés amb la seva càmera, acompanyat d'un membre de Juguem a Bàsquet" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="qa-section">
+  <div class="qa-head" data-i18n="qa.head">L'entrevista</div>
+  <div class="qa-grid">
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">01</span><span class="qa-q" data-i18n="q01">Que penses del bàsquet al carrer i quines diferències hi trobes respecte temps enrere?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a01">El bàsquet al carrer sempre ha existit. Durant dos anys vaig treballar per una empresa, CDC Promocions i Consulting, organitzant en els mesos d'estiu uns 3x3 per tota Espanya. El primer any, l'estiu del 1994, van ser quatre mesos sortint cada divendres des de Barcelona i tornant els diumenges a la nit. L'any 1995 es va fer un muntatge més gran, amb pista de competició i graderies. Vaig poder conèixer molts amics i vaig veure la gran afició que hi havia al bàsquet de carrer. Més tard, vaig treballar a la Penya com a cap de premsa i l'empresa va continuar fent els 3x3 amb Reebok com a patrocinador. En canvi, ara, penso que tot s'ha «professionalitzat» amb molts tornejos que organitza tant la FCBQ com la FEB per tot el territori. Per cert, fa poc vaig poder estar al que vosaltres vau organitzar a la pista de Carmelites.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">02</span><span class="qa-q" data-i18n="q02">Com creus que hauria d'actuar el govern local per potenciar el bàsquet als carrers i atreure el turisme com a capital europea que som?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a02">Si presumim que Badalona és el bressol del bàsquet, les autoritats esportives han de donar-li valor a les pistes que tenim per la gran afició existent a la nostra ciutat. Em treu de polleguera quan passejant veig pistes que o els hi falta la xarxa, o inclús la cistella. Per tant, si volem que Badalona sigui realment el BRESSOL DEL BÀSQUET, cal que tots plegats posem una mica de la nostra part. Unes grans pistes atraurien més turisme.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">03</span><span class="qa-q" data-i18n="q03">On creus que es podrien construir unes pistes públiques per atraure els amants del bàsquet?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a03">Cada barri hauria de tenir pistes per jugar al carrer. Jo visc a Lloreda i en tenim una que durant l'estiu no paren de venir joves, i no tan joves, a jugar a bàsquet. Un any enrere les pistes del Barri de La Salut van ser un lloc de trobada pels que volien jugar a bàsquet al carrer. Cal afegir que hi ha col·legis amb un manteniment pèssim. Penso que és imprescindible un bon manteniment i, a més a més, estaria bé poder fer un llistat de les pistes que tenim i potenciar-les. Davant de l'Olímpic mateix, a la Plaça Joan Miró, hi ha tres o quatre cistelles que la Penya hauria d'aprofitar ja que estan prop de l'Olímpic i així donar més vida, com per exemple pintant l'escut o les zones del voltant. Aprofito per dir que aquesta idea me la vau mencionar vosaltres.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">04</span><span class="qa-q" data-i18n="q04">Creus que la Penya hauria de seure amb nosaltres per intercanviar opinions o treballar junts amb sinergies i simbiosi en futurs projectes?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a04">Tenim un BBB que és la unió de 12 equips de la nostra ciutat; part de la responsabilitat que les pistes estiguin en condicions lamentables és també seva, no només de la Penya, que forma part de la Badalona Bàsquet Base. Per això penso que una bona idea seria que cada equip organitzés un 3x3, com fan alguns des de fa temps.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">05</span><span class="qa-q" data-i18n="q05">Amb els teus infinits viatges, on has vist les millors pistes?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a05">Òbviament, les millors pistes al carrer les he trobat als Estats Units, pistes com cal amb molta activitat; sempre que m'acostava a alguna em quedava mirant aquell grup de joves que amb la seva ràdio cassette passaven hores i hores jugant a bàsquet, menjant entremig una burger i una coca-cola. França i Alemanya també tenen bones pistes al carrer. L'any 1995 dins del 3x3 de Buckler Challenge vam anar a Agde i Cap d'Agde a França. Va ser un cap de setmana acollonant amb molt bon ambient i molts jugadors. Jo, amb la meva càmera, gaudia del show i espectacle dels jugadors, alguns molt espectaculars.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">06</span><span class="qa-q" data-i18n="q06">T'agradaria explicar una anècdota que mai hagis mencionat?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a06">Mira, el primer any que vaig anar als Estats Units, l'estiu de 1977, vaig anar a Virgínia convidat per Dave Stowers, un jugador blanc nord-americà de 2 metres, que havia jugat a Màlaga amb el Miraflores de Los Àngeles. Vaig estar una setmana a casa seva a Chester, Virgínia. Cada tarda anàvem a unes pistes plenes de jugadors de color; Dave era molt respectat, ja que havia fet molt bones temporades a Stetson University, a Florida. Els guanyava sempre, i em va proposar jugar amb ell, jo no m'ho creia, va ser una experiència collonuda. Passant amb el cotxe camí a casa seva hi havia una casa gran amb un jugador enorme assegut a la terrassa; li vaig preguntar al Dave qui era, i em va dir: «un crac de l'NBA, Moses Malone». Després el vaig poder fotografiar jugant amb els Sixers i els Washington Bullets.</div></div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <a href="../../index.html" data-i18n="f.footer">← Juguem a Bàsquet · Badalona</a>
+  <span style="margin:0 8px;color:#ddd;">·</span>
+  <a href="../../transparencia/" data-i18n="f.transp">Transparència</a>
+</footer>
+
+<div class="poster-lightbox" id="poster-lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Tanca">×</button>
+  <img id="lb-img" src="" alt="" decoding="async">
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona', 'f.back': '← Entrevistes',
+    'f.badge': 'Entrevista · Fotoperiodista i llegenda del bàsquet',
+    'f.cred': 'Fotoperiodista · Primer enviat especial espanyol a l\'NBA · Cap de premsa de la Penya durant 19 temporades',
+    'f.lead': 'Miguel Ángel Forniés és un dels fotoperiodistes més reconeguts arreu del món. Als anys 80 es va fer càrrec del Bàsquet Cantaires femení, sent a més a més el primer enviat especial de la premsa espanyola a l\'NBA. Anys més tard, va proclamar-se cap de premsa de la Penya durant 19 temporades. Haver entrevistat a Miguel Ángel Forniés és un dels èxits més grans que pot viure la plataforma!',
+    'c.zoom': 'Amplia', 'g.head': 'Més fotos', 'qa.head': 'L\'entrevista',
+    'q01': 'Que penses del bàsquet al carrer i quines diferències hi trobes respecte temps enrere?',
+    'a01': 'El bàsquet al carrer sempre ha existit. Durant dos anys vaig treballar per una empresa, CDC Promocions i Consulting, organitzant en els mesos d\'estiu uns 3x3 per tota Espanya. El primer any, l\'estiu del 1994, van ser quatre mesos sortint cada divendres des de Barcelona i tornant els diumenges a la nit. L\'any 1995 es va fer un muntatge més gran, amb pista de competició i graderies. Vaig poder conèixer molts amics i vaig veure la gran afició que hi havia al bàsquet de carrer. Més tard, vaig treballar a la Penya com a cap de premsa i l\'empresa va continuar fent els 3x3 amb Reebok com a patrocinador. En canvi, ara, penso que tot s\'ha «professionalitzat» amb molts tornejos que organitza tant la FCBQ com la FEB per tot el territori. Per cert, fa poc vaig poder estar al que vosaltres vau organitzar a la pista de Carmelites.',
+    'q02': 'Com creus que hauria d\'actuar el govern local per potenciar el bàsquet als carrers i atreure el turisme com a capital europea que som?',
+    'a02': 'Si presumim que Badalona és el bressol del bàsquet, les autoritats esportives han de donar-li valor a les pistes que tenim per la gran afició existent a la nostra ciutat. Em treu de polleguera quan passejant veig pistes que o els hi falta la xarxa, o inclús la cistella. Per tant, si volem que Badalona sigui realment el BRESSOL DEL BÀSQUET, cal que tots plegats posem una mica de la nostra part. Unes grans pistes atraurien més turisme.',
+    'q03': 'On creus que es podrien construir unes pistes públiques per atraure els amants del bàsquet?',
+    'a03': 'Cada barri hauria de tenir pistes per jugar al carrer. Jo visc a Lloreda i en tenim una que durant l\'estiu no paren de venir joves, i no tan joves, a jugar a bàsquet. Un any enrere les pistes del Barri de La Salut van ser un lloc de trobada pels que volien jugar a bàsquet al carrer. Cal afegir que hi ha col·legis amb un manteniment pèssim. Penso que és imprescindible un bon manteniment i, a més a més, estaria bé poder fer un llistat de les pistes que tenim i potenciar-les. Davant de l\'Olímpic mateix, a la Plaça Joan Miró, hi ha tres o quatre cistelles que la Penya hauria d\'aprofitar ja que estan prop de l\'Olímpic i així donar més vida, com per exemple pintant l\'escut o les zones del voltant. Aprofito per dir que aquesta idea me la vau mencionar vosaltres.',
+    'q04': 'Creus que la Penya hauria de seure amb nosaltres per intercanviar opinions o treballar junts amb sinergies i simbiosi en futurs projectes?',
+    'a04': 'Tenim un BBB que és la unió de 12 equips de la nostra ciutat; part de la responsabilitat que les pistes estiguin en condicions lamentables és també seva, no només de la Penya, que forma part de la Badalona Bàsquet Base. Per això penso que una bona idea seria que cada equip organitzés un 3x3, com fan alguns des de fa temps.',
+    'q05': 'Amb els teus infinits viatges, on has vist les millors pistes?',
+    'a05': 'Òbviament, les millors pistes al carrer les he trobat als Estats Units, pistes com cal amb molta activitat; sempre que m\'acostava a alguna em quedava mirant aquell grup de joves que amb la seva ràdio cassette passaven hores i hores jugant a bàsquet, menjant entremig una burger i una coca-cola. França i Alemanya també tenen bones pistes al carrer. L\'any 1995 dins del 3x3 de Buckler Challenge vam anar a Agde i Cap d\'Agde a França. Va ser un cap de setmana acollonant amb molt bon ambient i molts jugadors. Jo, amb la meva càmera, gaudia del show i espectacle dels jugadors, alguns molt espectaculars.',
+    'q06': 'T\'agradaria explicar una anècdota que mai hagis mencionat?',
+    'a06': 'Mira, el primer any que vaig anar als Estats Units, l\'estiu de 1977, vaig anar a Virgínia convidat per Dave Stowers, un jugador blanc nord-americà de 2 metres, que havia jugat a Màlaga amb el Miraflores de Los Àngeles. Vaig estar una setmana a casa seva a Chester, Virgínia. Cada tarda anàvem a unes pistes plenes de jugadors de color; Dave era molt respectat, ja que havia fet molt bones temporades a Stetson University, a Florida. Els guanyava sempre, i em va proposar jugar amb ell, jo no m\'ho creia, va ser una experiència collonuda. Passant amb el cotxe camí a casa seva hi havia una casa gran amb un jugador enorme assegut a la terrassa; li vaig preguntar al Dave qui era, i em va dir: «un crac de l\'NBA, Moses Malone». Després el vaig poder fotografiar jugant amb els Sixers i els Washington Bullets.',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparència',
+  },
+  en: {
+    'f.sub': 'Association · Badalona', 'f.back': '← Interviews',
+    'f.badge': 'Interview · Photojournalist and basketball legend',
+    'f.cred': 'Photojournalist · First Spanish special correspondent to the NBA · Penya press officer for 19 seasons',
+    'f.lead': 'Miguel Ángel Forniés is one of the most recognised photojournalists in the world. In the 1980s he took charge of the women\'s Bàsquet Cantaires team, and was also the first special correspondent from the Spanish press to the NBA. Years later, he became the Penya\'s press officer for 19 seasons. Getting to interview Miguel Ángel Forniés is one of the biggest achievements this platform could ever have!',
+    'c.zoom': 'Zoom', 'g.head': 'More photos', 'qa.head': 'The interview',
+    'q01': 'What do you think about street basketball and what differences do you see compared to the past?',
+    'a01': 'Street basketball has always existed. For two years I worked for a company, CDC Promocions i Consulting, organising 3x3 tournaments all over Spain during the summer months. The first year, summer 1994, was four months, leaving every Friday from Barcelona and coming back Sunday nights. In 1995 we put together a bigger setup, with a competition court and stands. I got to meet a lot of friends and saw just how much passion there was for street basketball. Later I worked at the Penya as press officer, and the company kept running the 3x3 with Reebok as a sponsor. These days, though, I think it\'s all become "professionalised", with many tournaments organised by both the FCBQ and the FEB across the whole territory. By the way, I recently got to be at the one you organised at the Carmelites court.',
+    'q02': 'How do you think the local government should act to boost street basketball and attract tourism as the European capital that we are?',
+    'a02': 'If we claim Badalona is the cradle of basketball, the sports authorities need to give value to the courts we have, given the huge following that exists in our city. It drives me up the wall when I\'m out walking and see courts that are missing a net, or even a hoop. So if we really want Badalona to be the CRADLE OF BASKETBALL, we all need to do our bit. Great courts would attract more tourism.',
+    'q03': 'Where do you think public courts could be built to attract basketball lovers?',
+    'a03': 'Every neighbourhood should have courts to play on the street. I live in Lloreda, and we have one where, during the summer, young people — and not-so-young people — keep coming to play basketball non-stop. A year ago the courts in Barri de La Salut were a meeting point for people who wanted to play street basketball. I should add that some schools have terrible upkeep. I think good maintenance is essential, and it would also be good to make a list of the courts we have and promote them. Right in front of the Olímpic, at Plaça Joan Miró, there are three or four hoops that the Penya should make use of, since they\'re close to the Olímpic, giving the area more life — for example by painting the crest or the surrounding areas. I\'ll take the chance to say that this idea was actually suggested to me by you.',
+    'q04': 'Do you think the Penya should sit down with us to exchange views or work together with synergies and symbiosis on future projects?',
+    'a04': 'We have a BBB, which is the union of 12 teams from our city — part of the responsibility for the courts being in such a sorry state also lies with them, not just with the Penya, which is part of the Badalona Bàsquet Base. That\'s why I think a good idea would be for each team to organise a 3x3, as some have been doing for a while already.',
+    'q05': 'With your endless travels, where have you seen the best courts?',
+    'a05': 'Obviously, the best street courts I\'ve found have been in the United States — proper courts with a lot of activity. Whenever I went up to one, I\'d just stand there watching that group of young people who, with their boombox, spent hours and hours playing basketball, grabbing a burger and a coke in between. France and Germany also have good street courts. In 1995, as part of the Buckler Challenge 3x3, we went to Agde and Cap d\'Agde in France. It was an insane weekend with a great atmosphere and a lot of players. With my camera, I enjoyed the show and spectacle the players put on — some of them were really spectacular.',
+    'q06': 'Would you like to share an anecdote you\'ve never mentioned before?',
+    'a06': 'Well, the first year I went to the United States, in the summer of 1977, I went to Virginia, invited by Dave Stowers, a 2-metre-tall white American player who had played in Málaga with Miraflores de Los Ángeles. I spent a week at his home in Chester, Virginia. Every afternoon we\'d go to some courts full of black players — Dave was very respected there, as he\'d had great seasons at Stetson University in Florida. He always beat them, and he suggested I play with him — I couldn\'t believe it, it was an incredible experience. Driving to his house, there was a big house with a huge player sitting on the terrace; I asked Dave who it was, and he told me: "an NBA star, Moses Malone." Later I got to photograph him playing with the Sixers and the Washington Bullets.',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparency',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona', 'f.back': '← Entrevistas',
+    'f.badge': 'Entrevista · Fotoperiodista y leyenda del baloncesto',
+    'f.cred': 'Fotoperiodista · Primer enviado especial español a la NBA · Jefe de prensa de la Penya durante 19 temporadas',
+    'f.lead': 'Miguel Ángel Forniés es uno de los fotoperiodistas más reconocidos de todo el mundo. En los años 80 se hizo cargo del Bàsquet Cantaires femenino, siendo además el primer enviado especial de la prensa española a la NBA. Años más tarde, se proclamó jefe de prensa de la Penya durante 19 temporadas. ¡Haber entrevistado a Miguel Ángel Forniés es uno de los mayores éxitos que puede vivir la plataforma!',
+    'c.zoom': 'Ampliar', 'g.head': 'Más fotos', 'qa.head': 'La entrevista',
+    'q01': '¿Qué piensas del baloncesto en la calle y qué diferencias encuentras respecto a tiempos pasados?',
+    'a01': 'El baloncesto en la calle siempre ha existido. Durante dos años trabajé para una empresa, CDC Promocions i Consulting, organizando en los meses de verano unos 3x3 por toda España. El primer año, el verano de 1994, fueron cuatro meses saliendo cada viernes desde Barcelona y volviendo los domingos por la noche. En 1995 se hizo un montaje más grande, con pista de competición y gradas. Pude conocer a muchos amigos y vi la gran afición que había al baloncesto de calle. Más tarde trabajé en la Penya como jefe de prensa y la empresa siguió haciendo los 3x3 con Reebok como patrocinador. En cambio, ahora, pienso que todo se ha «profesionalizado» con muchos torneos que organizan tanto la FCBQ como la FEB por todo el territorio. Por cierto, hace poco pude estar en el que organizasteis vosotros en la pista de Carmelites.',
+    'q02': '¿Cómo crees que debería actuar el gobierno local para potenciar el baloncesto en las calles y atraer el turismo como capital europea que somos?',
+    'a02': 'Si presumimos de que Badalona es la cuna del baloncesto, las autoridades deportivas tienen que dar valor a las pistas que tenemos por la gran afición existente en nuestra ciudad. Me saca de quicio cuando paseando veo pistas a las que les falta la red, o incluso la canasta. Por lo tanto, si queremos que Badalona sea realmente la CUNA DEL BALONCESTO, hace falta que todos pongamos un poco de nuestra parte. Unas grandes pistas atraerían más turismo.',
+    'q03': '¿Dónde crees que se podrían construir unas pistas públicas para atraer a los amantes del baloncesto?',
+    'a03': 'Cada barrio debería tener pistas para jugar en la calle. Yo vivo en Lloreda y tenemos una a la que durante el verano no paran de venir jóvenes, y no tan jóvenes, a jugar a baloncesto. Hace un año las pistas del Barrio de La Salut fueron un lugar de encuentro para quienes querían jugar a baloncesto en la calle. Hay que añadir que hay colegios con un mantenimiento pésimo. Pienso que es imprescindible un buen mantenimiento y, además, estaría bien poder hacer un listado de las pistas que tenemos y potenciarlas. Delante mismo del Olímpic, en la Plaza Joan Miró, hay tres o cuatro canastas que la Penya debería aprovechar, ya que están cerca del Olímpic, y así dar más vida, como por ejemplo pintando el escudo o las zonas de alrededor. Aprovecho para decir que esta idea me la mencionasteis vosotros.',
+    'q04': '¿Crees que la Penya debería sentarse con nosotros para intercambiar opiniones o trabajar juntos con sinergias y simbiosis en futuros proyectos?',
+    'a04': 'Tenemos un BBB que es la unión de 12 equipos de nuestra ciudad; parte de la responsabilidad de que las pistas estén en condiciones lamentables es también suya, no solo de la Penya, que forma parte de la Badalona Bàsquet Base. Por eso pienso que una buena idea sería que cada equipo organizara un 3x3, como hacen algunos desde hace tiempo.',
+    'q05': 'Con tus infinitos viajes, ¿dónde has visto las mejores pistas?',
+    'a05': 'Obviamente, las mejores pistas de calle las he encontrado en Estados Unidos, pistas como Dios manda con mucha actividad; siempre que me acercaba a alguna me quedaba mirando a aquel grupo de jóvenes que, con su radiocasete, se pasaban horas y horas jugando a baloncesto, comiendo entremedias una hamburguesa y una coca-cola. Francia y Alemania también tienen buenas pistas de calle. En 1995, dentro del 3x3 de Buckler Challenge, fuimos a Agde y Cap d\'Agde en Francia. Fue un fin de semana acojonante con muy buen ambiente y muchos jugadores. Yo, con mi cámara, disfrutaba del show y espectáculo de los jugadores, algunos muy espectaculares.',
+    'q06': '¿Te gustaría contar una anécdota que nunca hayas mencionado?',
+    'a06': 'Mira, el primer año que fui a Estados Unidos, el verano de 1977, fui a Virginia invitado por Dave Stowers, un jugador blanco norteamericano de 2 metros, que había jugado en Málaga con el Miraflores de Los Ángeles. Estuve una semana en su casa en Chester, Virginia. Cada tarde íbamos a unas pistas llenas de jugadores de color; Dave era muy respetado, ya que había hecho muy buenas temporadas en Stetson University, en Florida. Les ganaba siempre, y me propuso jugar con él, yo no me lo creía, fue una experiencia cojonuda. Pasando en coche camino a su casa había una casa grande con un jugador enorme sentado en la terraza; le pregunté a Dave quién era, y me dijo: «una estrella de la NBA, Moses Malone». Después pude fotografiarlo jugando con los Sixers y los Washington Bullets.',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparencia',
+  },
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+}
+
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+function toggleQ(btn) { btn.closest('.qa-item').classList.toggle('open'); }
+
+(function () {
+  const lightbox = document.getElementById('poster-lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const closeBtn = document.getElementById('lb-close');
+  if (!lightbox) return;
+  const open = (src, alt) => {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false');
+  };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  document.querySelectorAll('.js-zoom').forEach(el => {
+    const img = el.querySelector('img');
+    if (!img) return;
+    const trigger = () => open(img.currentSrc || img.src, img.alt);
+    el.addEventListener('click', trigger);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); } });
+  });
+  lightbox.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+<script src="../../assets/js/swipe-back.js"></script>
+</body>
+</html>

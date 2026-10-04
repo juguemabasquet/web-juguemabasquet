@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ============================================================
+  INTERVIEW PAGE TEMPLATE — clone this folder for every new interview.
+  ============================================================
+  HOW TO CLONE:
+  1. Copy this folder to  entrevistes/<slug>/  (e.g. entrevistes/nom-cognom/)
+     and rename this file to  index.html  so the URL stays clean (/entrevistes/<slug>/).
+  2. Search & replace every  {{PLACEHOLDER}}  below with the real value.
+  3. Put the photo(s) in  assets/fotos/entrevistes/  and update the src paths.
+  4. One photo only: keep the hero as-is, delete the GALLERY section.
+     Two+ photos: keep the GALLERY section with the extra photo(s) (the first
+     photo stays as the hero above).
+  5. Add a compact teaser card in index.html  #entrevistes-content  linking to
+     entrevistes/<slug>/  (copy an existing .entrev-card).
+  6. Fill in the Q&A section — one .qa-item per question. Translate everything
+     in the TRAD object (ca / en / es) at the bottom, questions AND answers.
+  ============================================================
+-->
+<title>{{NAME}} · Entrevista · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+<link rel="stylesheet" href="../../assets/css/entrevistes.css">
+</head>
+<body>
+
+<!-- HEADER (standard · do not change) -->
+<header class="site-header">
+  <div class="header-left">
+    <a href="../../index.html#entrevistes" class="header-back" data-i18n="f.back">← Entrevistes</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO (photo + name + credentials + lead) -->
+<main class="event-hero">
+  <div class="event-poster js-zoom" role="button" tabindex="0" aria-label="Amplia la imatge">
+    <img src="../../assets/fotos/entrevistes/{{PHOTO}}.webp" alt="{{PHOTO_ALT}}" fetchpriority="high" decoding="async">
+    <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg><span data-i18n="c.zoom">Amplia</span></span>
+  </div>
+
+  <div class="event-details">
+    <div class="hero-eyebrow"><span data-i18n="f.badge">{{BADGE}}</span></div>
+    <h1 class="event-title person-name" data-i18n="f.title">{{NAME}}</h1>
+    <p class="event-sub person-cred" data-i18n="f.cred">{{CRED}}</p>
+    <p class="person-lead" data-i18n="f.lead">{{LEAD}}</p>
+
+    <!-- Optional: extra action (e.g. PDF download). Delete if not needed. -->
+    <!--
+    <div class="event-cta" style="align-items:flex-start;">
+      <a href="{{PDF_PATH}}" target="_blank" class="cta-secondary" data-i18n="f.pdf">Descarrega PDF ↗</a>
+    </div>
+    -->
+  </div>
+</main>
+
+<!-- Extra photo(s), only when there's more than one. Delete this whole section for single-photo interviews. -->
+<section class="event-gallery compact">
+  <div class="gallery-head" data-i18n="g.head">Més fotos</div>
+  <div class="gallery-grid">
+    <div class="gallery-item js-zoom"><img src="../../assets/fotos/entrevistes/{{GALLERY_1}}.webp" alt="{{GALLERY_1_ALT}}" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- Q&A -->
+<section class="qa-section">
+  <div class="qa-head" data-i18n="qa.head">L'entrevista</div>
+  <div class="qa-grid">
+    <div class="qa-item">
+      <button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">01</span><span class="qa-q" data-i18n="q01">{{QUESTION_1}}</span><span class="qa-arrow">↓</span></button>
+      <div class="qa-answer" data-i18n="a01">{{ANSWER_1}}</div>
+    </div>
+    <!-- ...repeat .qa-item per question, numbered 02, 03... -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <a href="../../index.html" data-i18n="f.footer">← Juguem a Bàsquet · Badalona</a>
+  <span style="margin:0 8px;color:#ddd;">·</span>
+  <a href="../../transparencia/" data-i18n="f.transp">Transparència</a>
+</footer>
+
+<!-- Shared lightbox (used by the hero photo and any gallery photo) -->
+<div class="poster-lightbox" id="poster-lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Tanca">×</button>
+  <img id="lb-img" src="" alt="" decoding="async">
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona',
+    'f.back': '← Entrevistes',
+    'f.badge': '{{BADGE}}',
+    'f.title': '{{NAME}}',
+    'f.cred': '{{CRED}}',
+    'f.lead': '{{LEAD}}',
+    'c.zoom': 'Amplia',
+    'g.head': 'Més fotos',
+    'qa.head': 'L\'entrevista',
+    'q01': '{{QUESTION_1}}', 'a01': '{{ANSWER_1}}',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'f.transp': 'Transparència',
+  },
+  en: {
+    'f.sub': 'Association · Badalona',
+    'f.back': '← Interviews',
+    'f.badge': '{{BADGE_EN}}',
+    'f.title': '{{NAME}}',
+    'f.cred': '{{CRED_EN}}',
+    'f.lead': '{{LEAD_EN}}',
+    'c.zoom': 'Zoom',
+    'g.head': 'More photos',
+    'qa.head': 'The interview',
+    'q01': '{{QUESTION_1_EN}}', 'a01': '{{ANSWER_1_EN}}',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'f.transp': 'Transparency',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona',
+    'f.back': '← Entrevistas',
+    'f.badge': '{{BADGE_ES}}',
+    'f.title': '{{NAME}}',
+    'f.cred': '{{CRED_ES}}',
+    'f.lead': '{{LEAD_ES}}',
+    'c.zoom': 'Ampliar',
+    'g.head': 'Más fotos',
+    'qa.head': 'La entrevista',
+    'q01': '{{QUESTION_1_ES}}', 'a01': '{{ANSWER_1_ES}}',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'f.transp': 'Transparencia',
+  },
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+}
+
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+// Per-question accordion
+function toggleQ(btn) {
+  btn.closest('.qa-item').classList.toggle('open');
+}
+
+// Shared lightbox: any element with class .js-zoom opens its <img> enlarged
+(function () {
+  const lightbox = document.getElementById('poster-lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const closeBtn = document.getElementById('lb-close');
+  if (!lightbox) return;
+  const open = (src, alt) => {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false');
+  };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  document.querySelectorAll('.js-zoom').forEach(el => {
+    const img = el.querySelector('img');
+    if (!img) return;
+    const trigger = () => open(img.currentSrc || img.src, img.alt);
+    el.addEventListener('click', trigger);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); } });
+  });
+  lightbox.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+<script src="../../assets/js/swipe-back.js"></script>
+</body>
+</html>

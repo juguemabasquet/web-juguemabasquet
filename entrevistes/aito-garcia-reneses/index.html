@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aíto García Reneses · Entrevista · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+<link rel="stylesheet" href="../../assets/css/entrevistes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <a href="../../index.html#entrevistes" class="header-back" data-i18n="f.back">← Entrevistes</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<main class="event-hero">
+  <div class="event-poster js-zoom" role="button" tabindex="0" aria-label="Amplia la imatge">
+    <img src="../../assets/fotos/entrevistes/aito-garcia-reneses.webp" alt="Aíto García Reneses" fetchpriority="high" decoding="async">
+    <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg><span data-i18n="c.zoom">Amplia</span></span>
+  </div>
+
+  <div class="event-details">
+    <div class="hero-eyebrow"><span data-i18n="f.badge">Entrevista exclusiva</span></div>
+    <h1 class="event-title person-name">Aíto García <span>Reneses</span></h1>
+    <p class="event-sub person-cred" data-i18n="f.cred">Entrenador de baloncesto · Més de 50 anys d'experiència · JJOO Pekín 2008</p>
+    <p class="person-lead" data-i18n="f.lead">Parlem amb un dels entrenadors més influents de la història del bàsquet espanyol. Aíto ens parla de talent, error, formació i per què el bàsquet és molt més que un marcador. Entrevista realitzada per <strong>Ramon Gargallo</strong>.</p>
+    <div class="event-cta" style="align-items:flex-start;">
+      <a href="../../assets/documents/Entrevista_Aito_Garcia_Reneses.pdf" target="_blank" class="cta-secondary" data-i18n="f.pdf">Descarrega PDF ↗</a>
+    </div>
+  </div>
+</main>
+
+<section class="qa-section">
+  <div class="qa-head" data-i18n="qa.head">L'entrevista</div>
+  <div class="qa-grid">
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">01</span><span class="qa-q" data-i18n="q01">Si tanqués els ulls i pensés en el bàsquet de fa 40 anys, quines sensacions li vénen al cap?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Bueno, se presionaba menos, se corría menos. Actualmente jugar tantos partidos al año es complicado, además hoy en día hay muchas interrupciones, más partidos con la selección.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">02</span><span class="qa-q" data-i18n="q02">Què creu que ha guanyat i perdut el bàsquet amb l'evolució del temps?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">A parte de lo comentado antes, ha ganado en intensidad, aunque se han perdido otras cosas. En Euroliga se ve claramente, ya que todo es más automatizado.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">03</span><span class="qa-q" data-i18n="q03">Sent que avui s'entrena massa «per guanyar» i poc «per aprendre»?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Se entrena poco. Cuando entrenaba al Alba de Berlín, y al saber que no ganaríamos el torneo, utilizamos los avances de la semana para aprovechar y aplicar lo entrenado.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">04</span><span class="qa-q" data-i18n="q04">Què aportava el bàsquet de carrer que de vegades falta a les canteres actuals?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">El basket en la calle hace que los jugadores sean más «pillos». Entrenaban igual un 3x3 que un 2x2, siendo totalmente alegres.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">05</span><span class="qa-q" data-i18n="q05">Recorda algun moment en què un jugador jove el sorprengués amb alguna cosa fora del guió?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Sí, claro que ha habido. Sobre todo en las improvisaciones. Ricky por ejemplo me sorprendió muchísimo. Superaba con creces cada acción que le mandaba, una visión increíble. Hoy es diferente, ya que la táctica manda.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">06</span><span class="qa-q" data-i18n="q06">Quina és la diferència entre un bon jugador i un de veritablement especial?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Un buen jugador es aquel que a base de entrenos y entendimiento va creciendo. Un jugador especial, con talento, sabe improvisar en cada jugada que ve del equipo, al compañero.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">07</span><span class="qa-q" data-i18n="q07">Què sent quan veu tants exjugadors seus convertits avui en entrenadors?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Yo era de ésos. Empecé en el Ramiro de Maeztu con los minis, haciendo cursillos, aprendiendo mucho. Del Estudiantes fui al Barça con Ignacio, como ayudante, el cual me dio mucha libertad. Fue fantástico para mí.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">08</span><span class="qa-q" data-i18n="q08">Què li diria avui a un jove que tem equivocar-se a la pista?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Hay que divertirse, y dejar de pensar en el error.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">09</span><span class="qa-q" data-i18n="q09">Ha canviat la seva manera d'entendre el lideratge amb els anys?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">No. El liderazgo se demuestra enseñando a los demás, que aprendan y ayudar a que los jugadores sean mejores día a día.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">10</span><span class="qa-q" data-i18n="q10">Quan entrena o observa un partit, què és el primer que mira?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Hoy lo miro más por TV. Más o menos todos los equipos plantean lo mismo: bloqueos en ataque, bloqueos medios en la zona; ya no se juega con un interior puro. Me gustaría añadir que los jugadores son más físicos y estaría bien ensanchar el campo, alejar la línea de 3.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">11</span><span class="qa-q" data-i18n="q11">En una època de tants dades i vídeo, li preocupa que el joc perdi espontaneïtat?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">El que tiene talento lo hace. El entrenador lo sabe y debe ayudar a eso. Igual que el jugador, también debe ayudar.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">12</span><span class="qa-q" data-i18n="q12">Quin partit o etapa recorda amb més estima, més enllà del resultat?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Sin duda los JJOO de Pekín, donde pusimos en serios aprietos a toda una selección USA.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">13</span><span class="qa-q" data-i18n="q13">Quan un jugador confia plenament en vostè, com canvia això la seva manera d'entrenar-lo?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Es fantástico. Mucho mejor que confíe. Pero la confianza se ha de ganar y demostrar.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">14</span><span class="qa-q" data-i18n="q14">Com veu avui la relació entre clubs i cantera? Els joves tenen prou espai per créixer?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Actualmente hay muy pocos que confíen. Ni los jugadores en los clubs, movidos por los dólares de las universidades americanas, donde van a ganar dinero aunque a estudiar poco. Hoy es muy difícil competir solo por dinero.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">15</span><span class="qa-q" data-i18n="q15">Què el va empènyer a innovar, sabent que rebria crítiques?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Mi pasado en el Estudiantes me enseñó mucho, además en la Selección aprendiendo con Antonio Díaz Miguel y aportando poco a poco mi granito de arena.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">16</span><span class="qa-q" data-i18n="q16">Què significa per a vostè formar jugadors, més enllà d'ensenyar-los bàsquet?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Sobre todo, formarlos técnicamente y personalmente en varios aspectos, tanto en el equipo como más allá del equipo.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">17</span><span class="qa-q" data-i18n="q17">Algun consell que hagi mantingut intacte des dels seus primers anys com a entrenador?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Simplemente, enseñar a jugar.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">18</span><span class="qa-q" data-i18n="q18">Què l'inspira avui a seguir vinculat al bàsquet, després de tants èxits?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Es imprescindible seguir vinculado, pero también hacia otras cosas. Estudié físicas y telecos, y en mi tiempo gestioné baloncesto y estudios al mismo tiempo.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">19</span><span class="qa-q" data-i18n="q19">Quan veu la generació actual d'entrenadors, nota la seva influència?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Creo que se nutre de muchas influencias.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">20</span><span class="qa-q" data-i18n="q20">Si hagués de donar un missatge final als nanos que comencen, quin seria?</span><span class="qa-arrow">↓</span></button><div class="qa-answer">Que se diviertan, que mejoren la técnica, el físico, y sobre todo, el intelecto.</div></div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <a href="../../index.html" data-i18n="f.footer">← Juguem a Bàsquet · Badalona</a>
+  <span style="margin:0 8px;color:#ddd;">·</span>
+  <a href="../../transparencia/" data-i18n="f.transp">Transparència</a>
+</footer>
+
+<div class="poster-lightbox" id="poster-lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Tanca">×</button>
+  <img id="lb-img" src="" alt="" decoding="async">
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona', 'f.back': '← Entrevistes',
+    'f.badge': 'Entrevista exclusiva',
+    'f.cred': 'Entrenador de baloncesto · Més de 50 anys d\'experiència · JJOO Pekín 2008',
+    'f.lead': 'Parlem amb un dels entrenadors més influents de la història del bàsquet espanyol. Aíto ens parla de talent, error, formació i per què el bàsquet és molt més que un marcador. Entrevista realitzada per <strong>Ramon Gargallo</strong>.',
+    'f.pdf': 'Descarrega PDF ↗',
+    'c.zoom': 'Amplia', 'qa.head': 'L\'entrevista',
+    'q01': 'Si tanqués els ulls i pensés en el bàsquet de fa 40 anys, quines sensacions li vénen al cap?',
+    'q02': 'Què creu que ha guanyat i perdut el bàsquet amb l\'evolució del temps?',
+    'q03': 'Sent que avui s\'entrena massa «per guanyar» i poc «per aprendre»?',
+    'q04': 'Què aportava el bàsquet de carrer que de vegades falta a les canteres actuals?',
+    'q05': 'Recorda algun moment en què un jugador jove el sorprengués amb alguna cosa fora del guió?',
+    'q06': 'Quina és la diferència entre un bon jugador i un de veritablement especial?',
+    'q07': 'Què sent quan veu tants exjugadors seus convertits avui en entrenadors?',
+    'q08': 'Què li diria avui a un jove que tem equivocar-se a la pista?',
+    'q09': 'Ha canviat la seva manera d\'entendre el lideratge amb els anys?',
+    'q10': 'Quan entrena o observa un partit, què és el primer que mira?',
+    'q11': 'En una època de tants dades i vídeo, li preocupa que el joc perdi espontaneïtat?',
+    'q12': 'Quin partit o etapa recorda amb més estima, més enllà del resultat?',
+    'q13': 'Quan un jugador confia plenament en vostè, com canvia això la seva manera d\'entrenar-lo?',
+    'q14': 'Com veu avui la relació entre clubs i cantera? Els joves tenen prou espai per créixer?',
+    'q15': 'Què el va empènyer a innovar, sabent que rebria crítiques?',
+    'q16': 'Què significa per a vostè formar jugadors, més enllà d\'ensenyar-los bàsquet?',
+    'q17': 'Algun consell que hagi mantingut intacte des dels seus primers anys com a entrenador?',
+    'q18': 'Què l\'inspira avui a seguir vinculat al bàsquet, després de tants èxits?',
+    'q19': 'Quan veu la generació actual d\'entrenadors, nota la seva influència?',
+    'q20': 'Si hagués de donar un missatge final als nanos que comencen, quin seria?',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparència',
+  },
+  en: {
+    'f.sub': 'Association · Badalona', 'f.back': '← Interviews',
+    'f.badge': 'Exclusive interview',
+    'f.cred': 'Basketball coach · Over 50 years of experience · Beijing 2008 Olympics',
+    'f.lead': 'We talk to one of the most influential coaches in the history of Spanish basketball. Aíto shares his thoughts on talent, mistakes, coaching and why basketball is much more than a scoreboard. Interview by <strong>Ramon Gargallo</strong>.',
+    'f.pdf': 'Download PDF ↗',
+    'c.zoom': 'Zoom', 'qa.head': 'The interview',
+    'q01': 'If you closed your eyes and thought about basketball 40 years ago, what feelings come to mind?',
+    'q02': 'What do you think basketball has gained and lost over the years?',
+    'q03': 'Do you feel today\'s training is too focused on winning and not enough on learning?',
+    'q04': 'What did street basketball give young players that academies sometimes lack today?',
+    'q05': 'Do you remember a moment when a young player surprised you with something off the script?',
+    'q06': 'What is the difference between a good player and a truly special one?',
+    'q07': 'How do you feel when you see so many of your former players now working as coaches?',
+    'q08': 'What would you say to a young player today who is afraid of making mistakes on the court?',
+    'q09': 'Has your understanding of leadership changed over the years?',
+    'q10': 'When you coach or watch a game, what is the first thing you look at?',
+    'q11': 'In an era of data analysis and video, does it worry you that the game might lose spontaneity?',
+    'q12': 'Which game or period do you remember most fondly, beyond just the result?',
+    'q13': 'When a player fully trusts you, how does that change the way you coach them?',
+    'q14': 'How do you see the relationship between clubs and youth academies today?',
+    'q15': 'What drove you to innovate, even knowing you would face criticism?',
+    'q16': 'What does it mean to you to develop players, beyond teaching them basketball?',
+    'q17': 'Is there a piece of advice you have kept unchanged since your early years as a coach?',
+    'q18': 'What inspires you to stay connected to basketball after so many achievements?',
+    'q19': 'When you look at today\'s generation of coaches, do you notice your influence?',
+    'q20': 'If you had to give a final message to kids just starting out, what would it be?',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparency',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona', 'f.back': '← Entrevistas',
+    'f.badge': 'Entrevista exclusiva',
+    'f.cred': 'Entrenador de baloncesto · Más de 50 años de experiencia · JJOO Pekín 2008',
+    'f.lead': 'Hablamos con uno de los entrenadores más influyentes de la historia del baloncesto español. Aíto nos habla de talento, error, formación y por qué el baloncesto es mucho más que un marcador. Entrevista realizada por <strong>Ramon Gargallo</strong>.',
+    'f.pdf': 'Descargar PDF ↗',
+    'c.zoom': 'Ampliar', 'qa.head': 'La entrevista',
+    'q01': '¿Si cerrara los ojos y pensara en el baloncesto de hace 40 años, qué sensaciones le vienen a la cabeza?',
+    'q02': '¿Qué cree que ha ganado y perdido el baloncesto con la evolución del tiempo?',
+    'q03': '¿Siente que hoy se entrena demasiado «para ganar» y poco «para aprender»?',
+    'q04': '¿Qué cree que aportaba el baloncesto callejero que a veces falta en las canteras actuales?',
+    'q05': '¿Recuerda algún momento en el que un jugador joven lo sorprendiera con algo fuera del guión?',
+    'q06': '¿Cuál es la diferencia entre un buen jugador y uno verdaderamente especial?',
+    'q07': '¿Qué siente cuando ve a tantos exjugadores suyos convertidos hoy en entrenadores?',
+    'q08': '¿Qué le diría hoy a un joven que teme equivocarse en la pista?',
+    'q09': '¿Ha cambiado su manera de entender el liderazgo con los años?',
+    'q10': 'Cuando entrena u observa un partido, ¿qué es lo primero que mira?',
+    'q11': 'En una época de tanto análisis de datos y vídeo, ¿le preocupa que el juego pierda espontaneidad?',
+    'q12': '¿Qué partido o etapa recuerda con más cariño, más allá del resultado?',
+    'q13': 'Cuando un jugador confía plenamente en usted, ¿cómo cambia eso su manera de entrenarlo?',
+    'q14': '¿Cómo ve hoy la relación entre clubes y cantera? ¿Los jóvenes tienen suficiente espacio para crecer?',
+    'q15': '¿Qué le empujaba a innovar, incluso sabiendo que recibiría críticas?',
+    'q16': '¿Qué significa para usted formar jugadores, más allá de enseñarles baloncesto?',
+    'q17': '¿Algún consejo que haya mantenido intacto desde sus primeros años como entrenador?',
+    'q18': '¿Qué le inspira hoy seguir vinculado al baloncesto, después de tantos logros?',
+    'q19': 'Cuando ve a la generación actual de entrenadores, ¿nota su influencia?',
+    'q20': 'Si tuviera que dar un mensaje final a los chavales que empiezan, ¿cuál sería?',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparencia',
+  },
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+}
+
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+function toggleQ(btn) { btn.closest('.qa-item').classList.toggle('open'); }
+
+(function () {
+  const lightbox = document.getElementById('poster-lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const closeBtn = document.getElementById('lb-close');
+  if (!lightbox) return;
+  const open = (src, alt) => {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false');
+  };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  document.querySelectorAll('.js-zoom').forEach(el => {
+    const img = el.querySelector('img');
+    if (!img) return;
+    const trigger = () => open(img.currentSrc || img.src, img.alt);
+    el.addEventListener('click', trigger);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); } });
+  });
+  lightbox.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+<script src="../../assets/js/swipe-back.js"></script>
+</body>
+</html>
