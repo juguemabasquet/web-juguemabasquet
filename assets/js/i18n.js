@@ -1212,23 +1212,6 @@ document.addEventListener('DOMContentLoaded', () => {
   else setLang('ca');
 });
 
-// Botiga — selector de color i talla
-function switchColor(imgId, src, dot) {
-  document.getElementById(imgId).src = src;
-  dot.closest('.merch-colors').querySelectorAll('.color-dot').forEach(d => {
-    d.classList.remove('active');
-    d.style.borderColor = 'transparent';
-  });
-  dot.classList.add('active');
-  dot.style.borderColor = 'var(--orange)';
-}
-document.addEventListener('click', function(e) {
-  if (e.target.classList.contains('size-btn')) {
-    e.target.closest('.merch-sizes').querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-  }
-});
-
 // Injectar footer complet al peu de cada page-section
 document.addEventListener('DOMContentLoaded', () => {
   const globalFooterHTML = `
