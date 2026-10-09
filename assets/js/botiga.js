@@ -9,7 +9,7 @@
   'use strict';
 
   /* ---- Config ---- */
-  var PRERESERVA_ACTIVE = true;               // toggle the pre-reservation campaign
+  var PRERESERVA_ACTIVE = false;              // toggle the pre-reservation campaign
   var PRERESERVA_DEPOSIT = 5;                 // deposit (€) for the shirt
   var BIZUM_NUMBER = '614 936 429';
   var STORAGE_KEY = 'jab-cart';

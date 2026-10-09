@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordi Villacampa · Entrevista · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+<link rel="stylesheet" href="../../assets/css/entrevistes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <a href="../../index.html#entrevistes" class="header-back" data-i18n="f.back">← Entrevistes</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<main class="event-hero">
+  <div class="event-poster js-zoom" role="button" tabindex="0" aria-label="Amplia la imatge">
+    <img src="../../assets/fotos/entrevistes/jordi-villacampa-retrat.jpg" alt="Jordi Villacampa" style="object-position:18% center;" fetchpriority="high" decoding="async">
+    <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg><span data-i18n="c.zoom">Amplia</span></span>
+  </div>
+
+  <div class="event-details">
+    <div class="hero-eyebrow"><span data-i18n="f.badge">Entrevista · Primera JAB · Arxiu</span></div>
+    <h1 class="event-title person-name">Jordi <span>Villacampa</span></h1>
+    <p class="event-sub person-cred" data-i18n="f.cred">Jugador i President del Club Joventut Badalona · 40 anys vinculat al club · Llegenda del bàsquet català</p>
+    <p class="person-lead" data-i18n="f.lead">Jordi Villacampa és un referent a Badalona, tant com a jugador i com a president en les seves respectives èpoques, del club que porta el nom de Badalona. Durant quaranta anys ha estat vinculat a la Joventut. Va ser admirat per molts i moltes, protagonista a les carpetes escolars i sobretot ha enamorat la seva forma de ser.</p>
+  </div>
+</main>
+
+<section class="qa-section">
+  <div class="qa-head" data-i18n="qa.head">L'entrevista</div>
+  <div class="qa-grid">
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">01</span><span class="qa-q" data-i18n="q01">Bon dia Jordi, com estàs? Encara mires bàsquet per la televisió? Vas a l'Olímpic o a algun poliesportiu en partits de la federació? T'atures als carrers veient com juga la gent?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a01">Bon dia, sí, continuo connectat al bàsquet, ha sigut la meva vida durant quaranta anys en actiu. Aquest any he estat a la copa del Rei de Màlaga i he gaudit molt, segueixo a la Penya i tot el que l'envolta, evidentment. També m'agrada molt veure a la gent jugar als parcs divertint-se, però sobretot m'agrada que el bàsquet sigui un lloc d'integració i un esport social.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">02</span><span class="qa-q" data-i18n="q02">Creus que s'està perdent l'essència de ser la capital d'Europa del bàsquet?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a02">Badalona té una tradició brutal de fa molts anys. Pensa que la Penya va néixer el 1930 i no només la Penya, sinó tot el que envolta aquest club referent. Va haver anys que hi havia tres equips badalonins a primera divisió i hem de valorar la nostra potència com a ciutat, la qual no hauríem de perdre i sí rendibilitzar més. Com viatjo sovint, veig com ens estimen, ens valoren i s'adonen més de la nostra importància que els que vivim aquí. Per la gent de fora, Badalona és un referent del bàsquet, no sé si som capital europea però sí un punt de referència molt important a seguir.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">03</span><span class="qa-q" data-i18n="q03">Quan jugaves al club de formació, recordes anar per les pistes públiques de la ciutat? Quin record en tens?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a03">Jo vaig començar a jugar al carrer, tinc molt bon record, les pistes de quitrà, els bàsquets de mini... m'ho passava millor jugant un contra un, dos contra dos, exercicis de llançament amb els meus amics, allà és on aprens els fonaments del bàsquet, sincerament, tinc molt bons records entranyables. Sempre em recordo de la pista d'amunt dels maristes al carrer dos de maig, a la terrassa. La pista era fantàstica, inclús quan era federat m'escapava per poder estar amb ells i jugar. És fonamental que encara existeixin aquestes pistes.</div></div>
+    <div class="qa-item"><button class="qa-toggle" onclick="toggleQ(this)"><span class="qa-num">04</span><span class="qa-q" data-i18n="q04">La Copa del Rei va ser un abans i un després en equipaments esportius. Moltes "fan zones" estaven situades a pistes del carrer. Creus que van vendre il·lusions en reparar pistes i no ha estat així?</span><span class="qa-arrow">↓</span></button><div class="qa-answer" data-i18n="a04">Sincerament, crec que fins ara, els diferents governs que han passat haurien d'haver cuidat les pistes. Les famílies, els nens i nenes, els amics i amigues... volen divertir-se, ja que és un mobiliari urbà, realment és una inversió i hi ha d'haver un manteniment diari. Aquí som una ciutat de bàsquet i hem de tenir unes cistelles dignes, per reflectir una bona imatge. Crec que el govern actual es posarà les piles i estarà mentalitzat per la gent que viu a Badalona, per un tema d'integració esportiva i social.</div></div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <a href="../../index.html" data-i18n="f.footer">← Juguem a Bàsquet · Badalona</a>
+  <span style="margin:0 8px;color:#ddd;">·</span>
+  <a href="../../transparencia/" data-i18n="f.transp">Transparència</a>
+</footer>
+
+<div class="poster-lightbox" id="poster-lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Tanca">×</button>
+  <img id="lb-img" src="" alt="" decoding="async">
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona', 'f.back': '← Entrevistes',
+    'f.badge': 'Entrevista · Primera JAB · Arxiu',
+    'f.cred': 'Jugador i President del Club Joventut Badalona · 40 anys vinculat al club · Llegenda del bàsquet català',
+    'f.lead': 'Jordi Villacampa és un referent a Badalona, tant com a jugador i com a president en les seves respectives èpoques, del club que porta el nom de Badalona. Durant quaranta anys ha estat vinculat a la Joventut. Va ser admirat per molts i moltes, protagonista a les carpetes escolars i sobretot ha enamorat la seva forma de ser.',
+    'c.zoom': 'Amplia', 'qa.head': 'L\'entrevista',
+    'q01': 'Bon dia Jordi, com estàs? Encara mires bàsquet per la televisió? Vas a l\'Olímpic o a algun poliesportiu en partits de la federació? T\'atures als carrers veient com juga la gent?',
+    'a01': 'Bon dia, sí, continuo connectat al bàsquet, ha sigut la meva vida durant quaranta anys en actiu. Aquest any he estat a la copa del Rei de Màlaga i he gaudit molt, segueixo a la Penya i tot el que l\'envolta, evidentment. També m\'agrada molt veure a la gent jugar als parcs divertint-se, però sobretot m\'agrada que el bàsquet sigui un lloc d\'integració i un esport social.',
+    'q02': 'Creus que s\'està perdent l\'essència de ser la capital d\'Europa del bàsquet?',
+    'a02': 'Badalona té una tradició brutal de fa molts anys. Pensa que la Penya va néixer el 1930 i no només la Penya, sinó tot el que envolta aquest club referent. Va haver anys que hi havia tres equips badalonins a primera divisió i hem de valorar la nostra potència com a ciutat, la qual no hauríem de perdre i sí rendibilitzar més. Com viatjo sovint, veig com ens estimen, ens valoren i s\'adonen més de la nostra importància que els que vivim aquí. Per la gent de fora, Badalona és un referent del bàsquet, no sé si som capital europea però sí un punt de referència molt important a seguir.',
+    'q03': 'Quan jugaves al club de formació, recordes anar per les pistes públiques de la ciutat? Quin record en tens?',
+    'a03': 'Jo vaig començar a jugar al carrer, tinc molt bon record, les pistes de quitrà, els bàsquets de mini... m\'ho passava millor jugant un contra un, dos contra dos, exercicis de llançament amb els meus amics, allà és on aprens els fonaments del bàsquet, sincerament, tinc molt bons records entranyables. Sempre em recordo de la pista d\'amunt dels maristes al carrer dos de maig, a la terrassa. La pista era fantàstica, inclús quan era federat m\'escapava per poder estar amb ells i jugar. És fonamental que encara existeixin aquestes pistes.',
+    'q04': 'La Copa del Rei va ser un abans i un després en equipaments esportius. Moltes "fan zones" estaven situades a pistes del carrer. Creus que van vendre il·lusions en reparar pistes i no ha estat així?',
+    'a04': 'Sincerament, crec que fins ara, els diferents governs que han passat haurien d\'haver cuidat les pistes. Les famílies, els nens i nenes, els amics i amigues... volen divertir-se, ja que és un mobiliari urbà, realment és una inversió i hi ha d\'haver un manteniment diari. Aquí som una ciutat de bàsquet i hem de tenir unes cistelles dignes, per reflectir una bona imatge. Crec que el govern actual es posarà les piles i estarà mentalitzat per la gent que viu a Badalona, per un tema d\'integració esportiva i social.',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparència',
+  },
+  en: {
+    'f.sub': 'Association · Badalona', 'f.back': '← Interviews',
+    'f.badge': 'Interview · First JAB · Archive',
+    'f.cred': 'Player and President of Club Joventut Badalona · 40 years linked to the club · Legend of Catalan basketball',
+    'f.lead': 'Jordi Villacampa is a landmark figure in Badalona, both as a player and as president of the club that bears the city\'s name. For forty years he was connected to Joventut. He was admired by many, a fixture on school folders, and above all has won hearts with the way he carries himself.',
+    'c.zoom': 'Zoom', 'qa.head': 'The interview',
+    'q01': 'Good morning Jordi, how are you? Do you still watch basketball on TV? Do you go to the Olímpic or to any sports centre for federation games? Do you stop on the street to watch people play?',
+    'a01': 'Good morning, yes, I\'m still connected to basketball — it was my life for forty years as an active player. This year I was at the Copa del Rey in Málaga and enjoyed it a lot, and of course I follow the Penya and everything around it. I also really like watching people play in the parks and have fun, but above all I like basketball to be a place of integration and a social sport.',
+    'q02': 'Do you think Badalona is losing its essence as the \'European capital of basketball\'?',
+    'a02': 'Badalona has had an incredible tradition for many years. Keep in mind the Penya was born in 1930, and it\'s not just the Penya, but everything around this landmark club. There were years when three Badalona teams were in the top division, and we have to value our strength as a city, which we shouldn\'t lose but rather capitalise on more. Since I travel a lot, I see how much people love us, value us, and notice our importance more than those of us who live here do. For people from outside, Badalona is a basketball landmark — I don\'t know if we\'re the European capital, but we\'re certainly a very important reference point to follow.',
+    'q03': 'When you played in the youth academy, do you remember going to the city\'s public courts? What memories do you have?',
+    'a03': 'I started playing on the street, I have very fond memories — the tarmac courts, the mini hoops... I had more fun playing one-on-one, two-on-two, shooting drills with my friends; that\'s where you learn the fundamentals of basketball, honestly, I have very dear memories. I always remember the court up at the Maristes school, on Carrer Dos de Maig, on the terrace. The court was fantastic — even once I was playing federated basketball I used to sneak off to be with them and play. It\'s essential that these courts still exist.',
+    'q04': 'The Copa del Rey was a turning point for sports facilities. Many \'fan zones\' were set up on street courts. Do you think it sold an illusion about fixing up courts that never really happened?',
+    'a04': 'Honestly, I think that up until now, the different governments that have been in charge should have taken better care of the courts. Families, children, friends... they want to have fun, and since it\'s urban furniture, it really is an investment and needs daily maintenance. We\'re a basketball city here and we should have dignified hoops, to reflect a good image. I believe the current government will get on top of it and will be mindful of the people who live in Badalona, for the sake of sporting and social integration.',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparency',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona', 'f.back': '← Entrevistas',
+    'f.badge': 'Entrevista · Primera JAB · Archivo',
+    'f.cred': 'Jugador y Presidente del Club Joventut Badalona · 40 años vinculado al club · Leyenda del baloncesto catalán',
+    'f.lead': 'Jordi Villacampa es un referente en Badalona, tanto como jugador y como presidente en sus respectivas épocas, del club que lleva el nombre de Badalona. Durante cuarenta años ha estado vinculado a la Joventut. Fue admirado por muchos, protagonista en las carpetas escolares y sobre todo ha enamorado con su forma de ser.',
+    'c.zoom': 'Ampliar', 'qa.head': 'La entrevista',
+    'q01': 'Buenos días Jordi, ¿cómo estás? ¿Todavía ves baloncesto por televisión? ¿Vas al Olímpic o a algún polideportivo en partidos de la federación? ¿Te paras por las calles viendo cómo juega la gente?',
+    'a01': 'Buenos días, sí, sigo conectado al baloncesto, ha sido mi vida durante cuarenta años en activo. Este año he estado en la Copa del Rey de Málaga y lo he disfrutado mucho, sigo a la Penya y todo lo que la rodea, evidentemente. También me gusta mucho ver a la gente jugar en los parques divirtiéndose, pero sobre todo me gusta que el baloncesto sea un lugar de integración y un deporte social.',
+    'q02': '¿Crees que se está perdiendo la esencia de ser la capital europea del baloncesto?',
+    'a02': 'Badalona tiene una tradición brutal desde hace muchos años. Piensa que la Penya nació en 1930, y no solo la Penya, sino todo lo que rodea a este club referente. Hubo años en que había tres equipos badaloneses en primera división, y debemos valorar nuestra potencia como ciudad, que no deberíamos perder sino rentabilizar más. Como viajo a menudo, veo cómo nos quieren, nos valoran y se dan cuenta más de nuestra importancia que quienes vivimos aquí. Para la gente de fuera, Badalona es un referente del baloncesto; no sé si somos capital europea, pero sí un punto de referencia muy importante a seguir.',
+    'q03': 'Cuando jugabas en el club de formación, ¿recuerdas ir por las pistas públicas de la ciudad? ¿Qué recuerdo tienes?',
+    'a03': 'Yo empecé a jugar en la calle, tengo muy buen recuerdo, las pistas de alquitrán, las canastas de mini... me lo pasaba mejor jugando uno contra uno, dos contra dos, ejercicios de lanzamiento con mis amigos; ahí es donde aprendes los fundamentos del baloncesto, sinceramente tengo muy buenos recuerdos entrañables. Siempre me acuerdo de la pista de arriba de los Maristas, en la calle Dos de Mayo, en la terraza. La pista era fantástica, incluso cuando ya era federado me escapaba para poder estar con ellos y jugar. Es fundamental que todavía existan estas pistas.',
+    'q04': 'La Copa del Rey fue un antes y un después en equipamientos deportivos. Muchas \'fan zones\' estaban situadas en pistas de la calle. ¿Crees que se vendieron ilusiones al reparar pistas y luego no fue así?',
+    'a04': 'Sinceramente, creo que hasta ahora, los diferentes gobiernos que han pasado deberían haber cuidado las pistas. Las familias, los niños y niñas, los amigos y amigas... quieren divertirse, y como es mobiliario urbano, realmente es una inversión y debe haber un mantenimiento diario. Aquí somos una ciudad de baloncesto y debemos tener unas canastas dignas, para reflejar una buena imagen. Creo que el gobierno actual se pondrá las pilas y estará mentalizado por la gente que vive en Badalona, por un tema de integración deportiva y social.',
+    'f.footer': '← Juguem a Bàsquet · Badalona', 'f.transp': 'Transparencia',
+  },
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+}
+
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+function toggleQ(btn) { btn.closest('.qa-item').classList.toggle('open'); }
+
+(function () {
+  const lightbox = document.getElementById('poster-lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const closeBtn = document.getElementById('lb-close');
+  if (!lightbox) return;
+  const open = (src, alt) => {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false');
+  };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  document.querySelectorAll('.js-zoom').forEach(el => {
+    const img = el.querySelector('img');
+    if (!img) return;
+    const trigger = () => open(img.currentSrc || img.src, img.alt);
+    el.addEventListener('click', trigger);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); } });
+  });
+  lightbox.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+<script src="../../assets/js/swipe-back.js"></script>
+</body>
+</html>

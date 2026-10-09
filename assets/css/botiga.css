@@ -153,6 +153,8 @@ html[lang] .nav a.nav-botiga-btn { font-size: 12px; }      /* stable size across
 }
 .size-btn:hover { border-color: var(--orange); }
 .size-btn.selected { background: var(--orange); border-color: var(--orange); color: #fff; }
+.size-btn:disabled { color: var(--gray); border-color: var(--gray-light); background: var(--gray-bg); cursor: not-allowed; text-decoration: line-through; opacity: .6; }
+.size-btn:disabled:hover { border-color: var(--gray-light); }
 
 /* Qty + add */
 .product-actions { margin-top: 20px; display: flex; gap: 10px; align-items: stretch; }
