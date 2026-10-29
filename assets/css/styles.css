@@ -453,57 +453,58 @@
 
 
   /* ---------- EVENT MODAL ---------- */
-  #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast1-modal-overlay, #podcast2-modal-overlay {
+  #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast1-modal-overlay, #podcast2-modal-overlay, #halloween-modal-overlay {
     display: none; position: fixed; inset: 0; z-index: 9000;
     background: rgba(0,0,0,0.75); backdrop-filter: blur(6px);
     align-items: center; justify-content: center; padding: 20px;
   }
-  #event-modal-overlay.active, #miqui-modal-overlay.active, #llefia-modal-overlay.active, #podcast1-modal-overlay.active, #podcast2-modal-overlay.active { display: flex; animation: lbFadeIn .2s ease; }
-  #event-modal, #miqui-modal, #llefia-modal, #podcast1-modal, #podcast2-modal {
+  #event-modal-overlay.active, #miqui-modal-overlay.active, #llefia-modal-overlay.active, #podcast1-modal-overlay.active, #podcast2-modal-overlay.active, #halloween-modal-overlay.active { display: flex; animation: lbFadeIn .2s ease; }
+  #event-modal, #miqui-modal, #llefia-modal, #podcast1-modal, #podcast2-modal, #halloween-modal {
     background: #1a1a1a; border: 1px solid rgba(255,255,255,0.12);
     border-radius: 24px; max-width: 680px; width: 100%;
     max-height: 90vh; overflow-y: auto; position: relative;
     animation: lbZoomIn .25s ease;
   }
-  #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast1-modal img.modal-img, #podcast2-modal img.modal-img {
+  #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast1-modal img.modal-img, #podcast2-modal img.modal-img, #halloween-modal img.modal-img {
     width: 100%; height: 280px; object-fit: cover;
     border-radius: 24px 24px 0 0; display: block;
   }
   /* Cartells del pòdcast: la cara del convidat queda més amunt que el centre de la imatge */
   #podcast1-modal img.modal-img { object-position: center 38%; }
   #podcast2-modal img.modal-img { object-position: center 40%; }
-  #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast1-modal .modal-body, #podcast2-modal .modal-body { padding: 28px 32px 36px; }
-  #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast1-modal .modal-body h3, #podcast2-modal .modal-body h3 {
+  #halloween-modal img.modal-img { object-position: center 38%; }
+  #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast1-modal .modal-body, #podcast2-modal .modal-body, #halloween-modal .modal-body { padding: 28px 32px 36px; }
+  #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast1-modal .modal-body h3, #podcast2-modal .modal-body h3, #halloween-modal .modal-body h3 {
     font-family: 'Bungee', sans-serif; font-size: 22px;
     text-transform: uppercase; line-height: 1.2; margin-bottom: 14px;
     color: #fff; letter-spacing: .5px;
   }
-  #event-modal .modal-meta, #miqui-modal .modal-meta, #llefia-modal .modal-meta, #podcast1-modal .modal-meta, #podcast2-modal .modal-meta {
+  #event-modal .modal-meta, #miqui-modal .modal-meta, #llefia-modal .modal-meta, #podcast1-modal .modal-meta, #podcast2-modal .modal-meta, #halloween-modal .modal-meta {
     display: flex; flex-direction: column; gap: 8px;
     color: rgba(255,255,255,.85); font-size: 15px; font-weight: 500; margin-bottom: 18px;
   }
-  #event-modal .modal-desc, #miqui-modal .modal-desc, #llefia-modal .modal-desc, #podcast1-modal .modal-desc, #podcast2-modal .modal-desc { color: rgba(255,255,255,.88); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
-  #event-modal .modal-tags, #miqui-modal .modal-tags, #llefia-modal .modal-tags, #podcast1-modal .modal-tags, #podcast2-modal .modal-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-  #event-modal .modal-colabs-title, #miqui-modal .modal-colabs-title, #llefia-modal .modal-colabs-title, #podcast1-modal .modal-colabs-title, #podcast2-modal .modal-colabs-title {
+  #event-modal .modal-desc, #miqui-modal .modal-desc, #llefia-modal .modal-desc, #podcast1-modal .modal-desc, #podcast2-modal .modal-desc, #halloween-modal .modal-desc { color: rgba(255,255,255,.88); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+  #event-modal .modal-tags, #miqui-modal .modal-tags, #llefia-modal .modal-tags, #podcast1-modal .modal-tags, #podcast2-modal .modal-tags, #halloween-modal .modal-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  #event-modal .modal-colabs-title, #miqui-modal .modal-colabs-title, #llefia-modal .modal-colabs-title, #podcast1-modal .modal-colabs-title, #podcast2-modal .modal-colabs-title, #halloween-modal .modal-colabs-title {
     font-size: 11px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 12px;
   }
-  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-  #event-modal .modal-colab-logo, #miqui-modal .modal-colab-logo, #llefia-modal .modal-colab-logo, #podcast1-modal .modal-colab-logo, #podcast2-modal .modal-colab-logo {
+  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs, #halloween-modal .modal-colabs { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  #event-modal .modal-colab-logo, #miqui-modal .modal-colab-logo, #llefia-modal .modal-colab-logo, #podcast1-modal .modal-colab-logo, #podcast2-modal .modal-colab-logo, #halloween-modal .modal-colab-logo {
     background: #fff; border-radius: 10px; padding: 6px 10px;
     display: flex; align-items: center; justify-content: center;
     height: 58px; min-width: 58px;
     transition: transform .22s ease, box-shadow .22s ease;
     cursor: default; position: relative;
   }
-  #event-modal .modal-colab-logo:hover, #miqui-modal .modal-colab-logo:hover, #llefia-modal .modal-colab-logo:hover, #podcast1-modal .modal-colab-logo:hover, #podcast2-modal .modal-colab-logo:hover {
+  #event-modal .modal-colab-logo:hover, #miqui-modal .modal-colab-logo:hover, #llefia-modal .modal-colab-logo:hover, #podcast1-modal .modal-colab-logo:hover, #podcast2-modal .modal-colab-logo:hover, #halloween-modal .modal-colab-logo:hover {
     transform: scale(1.55);
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     z-index: 10;
   }
-  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs { overflow: visible !important; }
-  #event-modal .modal-colab-logo img, #miqui-modal .modal-colab-logo img, #llefia-modal .modal-colab-logo img, #podcast1-modal .modal-colab-logo img, #podcast2-modal .modal-colab-logo img { height: 46px; width: auto; object-fit: contain; display: block; }
-  #event-modal-close, #miqui-modal-close, #llefia-modal-close, #podcast1-modal-close, #podcast2-modal-close {
+  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs, #halloween-modal .modal-colabs { overflow: visible !important; }
+  #event-modal .modal-colab-logo img, #miqui-modal .modal-colab-logo img, #llefia-modal .modal-colab-logo img, #podcast1-modal .modal-colab-logo img, #podcast2-modal .modal-colab-logo img, #halloween-modal .modal-colab-logo img { height: 46px; width: auto; object-fit: contain; display: block; }
+  #event-modal-close, #miqui-modal-close, #llefia-modal-close, #podcast1-modal-close, #podcast2-modal-close, #halloween-modal-close {
     position: absolute; top: 16px; right: 16px;
     background: rgba(0,0,0,0.5); border: none; color: #fff;
     width: 36px; height: 36px; border-radius: 50%; font-size: 20px;
