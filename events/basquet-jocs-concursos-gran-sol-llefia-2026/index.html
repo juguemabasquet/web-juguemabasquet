@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bàsquet, jocs i concursos al Gran Sol de Llefià · Juguem a Bàsquet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/events.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-left">
+    <a href="../../index.html" class="header-back" data-i18n="f.back">← Inici</a>
+    <a href="../../index.html" class="header-logo">
+      <img src="../../assets/logos/logo-small.png" alt="Juguem a Bàsquet" style="width:38px;height:38px;border-radius:9px;flex-shrink:0;">
+      <div>
+        <div class="header-logo-text">Juguem a Bàsquet</div>
+        <div class="header-logo-sub" data-i18n="f.sub">Associació · Badalona</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO (cover photo + event details) -->
+<main class="event-hero">
+
+  <div class="event-poster js-zoom" role="button" tabindex="0" aria-label="Amplia la imatge">
+    <img src="../../assets/events/gran-sol-llefia-nen-tirant.webp" alt="Un nen tirant a cistella a l'Amfiteatre del Gran Sol" width="1068" height="1600" fetchpriority="high" decoding="async">
+    <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg><span data-i18n="c.zoom">Amplia</span></span>
+  </div>
+
+  <div class="event-details">
+    <div class="hero-eyebrow"><span data-i18n="f.badge">Celebrada</span></div>
+    <div class="event-titlerow">
+      <img class="event-hoop" src="../../assets/events/icona-cistella.webp" alt="Cistella de bàsquet" width="318" height="342" style="height:150px;width:auto;flex-shrink:0;">
+      <h1 class="event-title" data-i18n="f.title">La Pista</h1>
+    </div>
+    <p class="event-sub" data-i18n="f.hero.sub">Bàsquet, jocs i concursos · Llefià</p>
+
+    <div class="event-meta">
+      <span class="meta-pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="f.date">25 d'octubre de 2026</span></span>
+      <a class="meta-pill" href="https://maps.google.com/maps?q=Amfiteatre+del+Gran+Sol,+Llefi%C3%A0,+Badalona" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="f.location">Amfiteatre del Gran Sol (Llefià) · Badalona</span></a>
+    </div>
+  </div>
+</main>
+
+<!-- STORY / CRÒNICA -->
+<section class="event-story">
+  <div class="story-eyebrow" data-i18n="s.eyebrow">La crònica</div>
+  <h2 data-i18n="s.title">El bàsquet de carrer va tornar a l'Amfiteatre del Gran Sol</h2>
+  <p data-i18n="s.p1">El 25 d'octubre vam omplir l'Amfiteatre del Gran Sol de Llefià de pilotes, rialles i mainada. Va ser un matí pensat per als més petits, amb jocs i activitats per descobrir el bàsquet al carrer, en un espai del barri i obert a tothom.</p>
+  <p data-i18n="s.p2">El moment estrella va ser el <strong>concurs KO</strong>: nens i nenes es van anar enfrontant, tir a tir, esperant el seu torn amb una barreja de nervis i il·lusió. Al final vam repartir <strong>premis</strong> —pilotes, gorres, samarretes i fins i tot unes sabatilles— i tothom va marxar content. Perquè <strong>reivindicar el bàsquet al carrer</strong> també és això: posar una cistella a l'abast de les criatures i deixar-les jugar.</p>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="event-gallery">
+  <div class="gallery-head" data-i18n="g.head">Galeria</div>
+  <div class="gallery-grid">
+    <div class="gallery-item wide js-zoom"><img src="../../assets/events/gran-sol-llefia-equip-banner.webp" alt="L'equip de Juguem a Bàsquet davant la pancarta a l'Amfiteatre del Gran Sol" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-amfiteatre-cistella.webp" alt="Nens i nenes jugant a l'Amfiteatre del Gran Sol" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-nens-tirant.webp" alt="Nens i nenes tirant a cistella durant la jornada" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-nens-pista.webp" alt="Joc de bàsquet al carrer amb la mainada" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-joc-conduccio.webp" alt="Un nen botant la pilota mentre juguen els altres" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-voluntari-tir.webp" alt="Un voluntari tirant a cistella" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-voluntari-pilota.webp" alt="Un voluntari llançant la pilota cap a la cistella" loading="lazy"></div>
+    <div class="gallery-item wide js-zoom"><img src="../../assets/events/gran-sol-llefia-nen-conduint.webp" alt="Un nen conduint la pilota enmig de la pista" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-equip-taula.webp" alt="Voluntaris i col·laboradors conversant a la vora de la taula" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-tir-salt.webp" alt="Nens saltant per tirar a cistella" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-voluntaris-conversa.webp" alt="Voluntaris xerrant durant l'activitat" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-nen-tir-cistella.webp" alt="Un nen tirant a una cistella portàtil" loading="lazy"></div>
+    <div class="gallery-item wide js-zoom"><img src="../../assets/events/gran-sol-llefia-concurs-ko-cua.webp" alt="Nens i nenes esperant el seu torn al concurs KO" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-concurs-ko-torn.webp" alt="Un voluntari acompanyant els nens al concurs KO" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-premi-pilota-gorra.webp" alt="Pilota i gorra de Juguem a Bàsquet com a premis" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-entrega-gorra.webp" alt="Entrega d'una gorra de Juguem a Bàsquet a un participant" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-voluntari-samarreta.webp" alt="Un voluntari amb la samarreta de l'activitat" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-premi-pilota.webp" alt="Una voluntària amb una pilota de premi" loading="lazy"></div>
+    <div class="gallery-item wide js-zoom"><img src="../../assets/events/gran-sol-llefia-taula-premis.webp" alt="Taula de premis amb samarretes, gorres i pilotes" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-voluntaria-samarreta.webp" alt="Una voluntària de l'organització" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-nenes-taula-premis.webp" alt="Nenes triant el premi a la taula" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-nena-premi.webp" alt="Una nena amb el seu premi" loading="lazy"></div>
+    <div class="gallery-item js-zoom"><img src="../../assets/events/gran-sol-llefia-nena-sabatilles.webp" alt="Una nena mostrant les sabatilles que ha guanyat" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <a href="../../index.html" data-i18n="f.footer">← Juguem a Bàsquet · Badalona</a>
+  <span style="margin:0 8px;color:#ddd;">·</span>
+  <a href="../../transparencia/" data-i18n="f.transp">Transparència</a>
+</footer>
+
+<!-- Shared lightbox (poster + gallery photos) -->
+<div class="poster-lightbox" id="poster-lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Tanca">×</button>
+  <img id="lb-img" src="" alt="" decoding="async">
+</div>
+
+<script>
+const TRAD = {
+  ca: {
+    'f.sub': 'Associació · Badalona',
+    'f.back': '← Inici',
+    'f.badge': 'Celebrada',
+    'f.title': 'Gran Sol',
+    'f.hero.sub': 'Bàsquet, jocs i concursos · Llefià',
+    'f.date': "25 d'octubre de 2026",
+    'f.location': 'Amfiteatre del Gran Sol (Llefià) · Badalona',
+    'c.zoom': 'Amplia',
+    's.eyebrow': 'La crònica',
+    's.title': "El bàsquet de carrer va tornar a l'Amfiteatre del Gran Sol",
+    's.p1': "El 25 d'octubre vam omplir l'Amfiteatre del Gran Sol de Llefià de pilotes, rialles i mainada. Va ser un matí pensat per als més petits, amb jocs i activitats per descobrir el bàsquet al carrer, en un espai del barri i obert a tothom.",
+    's.p2': 'El moment estrella va ser el <strong>concurs KO</strong>: nens i nenes es van anar enfrontant, tir a tir, esperant el seu torn amb una barreja de nervis i il·lusió. Al final vam repartir <strong>premis</strong> —pilotes, gorres, samarretes i fins i tot unes sabatilles— i tothom va marxar content. Perquè <strong>reivindicar el bàsquet al carrer</strong> també és això: posar una cistella a l\'abast de les criatures i deixar-les jugar.',
+    'g.head': 'Galeria',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'f.transp': 'Transparència',
+  },
+  en: {
+    'f.sub': 'Association · Badalona',
+    'f.back': '← Home',
+    'f.badge': 'Past event',
+    'f.title': 'Gran Sol',
+    'f.hero.sub': 'Basketball, games and contests · Llefià',
+    'f.date': '25 October 2026',
+    'f.location': 'Gran Sol Amphitheatre (Llefià) · Badalona',
+    'c.zoom': 'Zoom',
+    's.eyebrow': 'The story',
+    's.title': 'Street basketball came back to the Gran Sol Amphitheatre',
+    's.p1': "On 25 October we filled the Gran Sol Amphitheatre in Llefià with balls, laughter and kids. It was a morning designed for the youngest, with games and activities to discover street basketball in a neighbourhood space open to everyone.",
+    's.p2': 'The highlight was the <strong>KO contest</strong>: kids took turns, shot after shot, waiting for their go with a mix of nerves and excitement. At the end we handed out <strong>prizes</strong> —balls, caps, shirts and even a pair of sneakers— and everyone went home happy. Because <strong>standing up for street basketball</strong> is also this: putting a hoop within kids\' reach and letting them play.',
+    'g.head': 'Gallery',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'f.transp': 'Transparency',
+  },
+  es: {
+    'f.sub': 'Asociación · Badalona',
+    'f.back': '← Inicio',
+    'f.badge': 'Celebrada',
+    'f.title': 'Gran Sol',
+    'f.hero.sub': 'Baloncesto, juegos y concursos · Llefià',
+    'f.date': '25 de octubre de 2026',
+    'f.location': 'Amfiteatro del Gran Sol (Llefià) · Badalona',
+    'c.zoom': 'Ampliar',
+    's.eyebrow': 'La crónica',
+    's.title': 'El baloncesto de calle volvió al Amfiteatro del Gran Sol',
+    's.p1': "El 25 de octubre llenamos el Amfiteatro del Gran Sol de Llefià de balones, risas y chavales. Fue una mañana pensada para los más pequeños, con juegos y actividades para descubrir el baloncesto en la calle, en un espacio del barrio y abierto a todos.",
+    's.p2': 'El momento estrella fue el <strong>concurso KO</strong>: niños y niñas se fueron enfrentando, tiro a tiro, esperando su turno entre nervios e ilusión. Al final repartimos <strong>premios</strong> —balones, gorras, camisetas e incluso unas zapatillas— y todos se fueron contentos. Porque <strong>reivindicar el baloncesto en la calle</strong> también es esto: poner una canasta al alcance de los peques y dejarlos jugar.',
+    'g.head': 'Galería',
+    'f.footer': '← Juguem a Bàsquet · Badalona',
+    'f.transp': 'Transparencia',
+  },
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('jab-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  const t = TRAD[lang] || TRAD.ca;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
+  });
+}
+
+const savedLang = localStorage.getItem('jab-lang') || 'ca';
+setLang(savedLang);
+
+// Shared lightbox: any .js-zoom element opens its <img> enlarged
+(function () {
+  const lightbox = document.getElementById('poster-lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const closeBtn = document.getElementById('lb-close');
+  if (!lightbox) return;
+  const open = (src, alt) => {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false');
+  };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  document.querySelectorAll('.js-zoom').forEach(el => {
+    const img = el.querySelector('img');
+    if (!img) return;
+    const trigger = () => open(img.currentSrc || img.src, img.alt);
+    el.addEventListener('click', trigger);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); } });
+  });
+  lightbox.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+<script src="../../assets/js/swipe-back.js"></script>
+</body>
+</html>
