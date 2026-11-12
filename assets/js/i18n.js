@@ -1186,7 +1186,7 @@ function setLang(lang) {
     es: 'Juguem a Bàsquet — El baloncesto que nos une'
   };
   document.title = titles[lang];
-  setupProposaBtn();
+  if (typeof setupProposaBtn === 'function') setupProposaBtn();
   if (window.jabMap) window.jabMap.closePopup();
   if (window.jabRenderLlista) window.jabRenderLlista();
 }
