@@ -30,8 +30,8 @@ Objetivo: que la portada muestre lo que está pasando, sin huecos, con mejor jer
 
 | Tarjeta | Ahora | Propuesta |
 |---|---|---|
-| Qui som | gris vacío | foto de `assets/fotos/institucional/` con fondo oscuro + un dato de las fites ("+40 pistes analitzades", ya en `fites.f3.sub`) |
-| Entrevistes | azul plano | retrato de la última entrevista (`assets/fotos/entrevistes/*.webp`) con fondo oscuro |
+| Qui som | gris vacío | se mantiene gris (sin foto: la del equipo no era de la asociación) + dato de las fites ("+40 pistes analitzades", ya en `fites.f3.sub`) |
+| Entrevistes | azul plano | foto que rota por turnos cada 3 días entre las entrevistas de la sección (`assets/js/bento-entrevista.js`, `DIES_ROTACIO`) + nombre del entrevistado; el clic sigue abriendo la sección |
 | Entitats amigues | gris vacío | los 2 logos (`assets/entitats/*.png`) en la tarjeta |
 | Col·laboradors | "Properament" | tira de 4-6 logos de `assets/patrocinadors/` + "15 col·laboradors →" (se corrige el texto obsoleto en las 3 lenguas) |
 | Mapa, Arxiu, Xarxes | — | sin cambios de contenido |

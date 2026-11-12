@@ -135,15 +135,12 @@
   <div class="bento-grid">
 
     <!-- 1: QUI SOM -->
-    <div class="bento-card bento-foto bento-foto-dark" onclick="showSection('qui-som')">
-      <img class="bento-foto-img" src="assets/fotos/bento/qui-som-penya.webp" alt=""/>
-      <div class="bento-foto-body">
-        <div>
-          <div class="bento-eye" data-i18n="bento.quisom.eye">Associació</div>
-          <div class="bento-title" data-i18n="bento.quisom.title">Qui Som</div>
-        </div>
-        <div class="bento-sub" data-i18n="bento.quisom.sub">+40 pistes analitzades · Coneix-nos →</div>
+    <div class="bento-card c-offwhite" onclick="showSection('qui-som')">
+      <div>
+        <div class="bento-eye" data-i18n="bento.quisom.eye">Associació</div>
+        <div class="bento-title" data-i18n="bento.quisom.title">Qui Som</div>
       </div>
+      <div class="bento-sub" data-i18n="bento.quisom.sub">+40 pistes analitzades · Coneix-nos →</div>
     </div>
 
     <!-- 2: DESTACAT — el contingut el tria assets/js/bento-destacat.js a partir del timeline d'Activitats
@@ -185,15 +182,15 @@
       </div>
     </div>
 
-    <!-- 4: ENTREVISTES -->
-    <div class="bento-card bento-foto bento-foto-blue" onclick="showSection('entrevistes')">
-      <img class="bento-foto-img" src="assets/fotos/bento/entrevista-andres-jimenez.webp" alt="" style="object-position:center 18%;"/>
+    <!-- 4: ENTREVISTES — la foto rota cada 3 dies entre les entrevistes (assets/js/bento-entrevista.js) -->
+    <div class="bento-card bento-foto bento-foto-blue" id="bento-entrevista" onclick="showSection('entrevistes')">
+      <img class="bento-foto-img" src="assets/fotos/entrevistes/andres-jimenez.webp" alt="" style="object-position:center 20%;"/>
       <div class="bento-foto-body">
         <div>
           <div class="bento-eye" data-i18n="bento.entrevistes.eye">Entrevistes</div>
           <div class="bento-title" data-i18n="bento.entrevistes.title">Entrevistes</div>
         </div>
-        <div class="bento-sub" data-i18n="bento.entrevistes.sub">Veus del bàsquet →</div>
+        <div class="bento-sub"><span class="bento-entrev-nom">Andrés Jiménez</span> · <span data-i18n="bento.entrevistes.sub">Veus del bàsquet →</span></div>
       </div>
     </div>
 
@@ -2079,6 +2076,7 @@
 
 <!-- Targeta destacada del bento (abans d'i18n.js perquè setLang tradueixi el que hi copia) -->
 <script src="assets/js/bento-destacat.js"></script>
+<script src="assets/js/bento-entrevista.js"></script>
 
 <!-- ========== SISTEMA D'IDIOMES ========== -->
 <script src="assets/js/i18n.js"></script>
