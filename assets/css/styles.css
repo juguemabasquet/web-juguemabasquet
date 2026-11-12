@@ -503,14 +503,33 @@
   }
   #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs { overflow: visible !important; }
   #event-modal .modal-colab-logo img, #miqui-modal .modal-colab-logo img, #llefia-modal .modal-colab-logo img, #podcast1-modal .modal-colab-logo img, #podcast2-modal .modal-colab-logo img { height: 46px; width: auto; object-fit: contain; display: block; }
+  /* ✕ enganxada (sticky) dalt a la dreta: segueix visible encara que es desplaci el contingut del modal.
+     El marge inferior negatiu la fa flotar sobre la imatge sense empènyer-la avall. */
   #event-modal-close, #miqui-modal-close, #llefia-modal-close, #podcast1-modal-close, #podcast2-modal-close {
-    position: absolute; top: 16px; right: 16px;
-    background: rgba(0,0,0,0.5); border: none; color: #fff;
-    width: 36px; height: 36px; border-radius: 50%; font-size: 20px;
+    position: sticky; top: 12px; z-index: 3;
+    margin: 12px 12px -56px auto;
+    background: rgba(0,0,0,0.72); border: 1px solid rgba(255,255,255,0.25); color: #fff;
+    width: 44px; height: 44px; border-radius: 50%; font-size: 20px;
     cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
     backdrop-filter: blur(4px); transition: background .2s;
   }
-  #event-modal-close:hover, #miqui-modal-close:hover, #llefia-modal-close:hover, #podcast1-modal-close:hover { background: rgba(255,255,255,0.2); }
+  #event-modal-close:hover, #miqui-modal-close:hover, #llefia-modal-close:hover, #podcast1-modal-close:hover, #podcast2-modal-close:hover { background: rgba(60,60,60,0.9); }
+  #event-modal-close:focus-visible, #miqui-modal-close:focus-visible, #llefia-modal-close:focus-visible, #podcast1-modal-close:focus-visible, #podcast2-modal-close:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+  .modal-close-bottom {
+    display: inline-flex; align-items: center; margin: 4px 0 0 6px; padding: 11px 22px;
+    background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 999px;
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; cursor: pointer;
+    transition: background .2s;
+  }
+  .modal-close-bottom:hover { background: rgba(255,255,255,0.1); }
+  @media (max-width: 600px) {
+    #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast1-modal-overlay, #podcast2-modal-overlay { padding: 28px 16px; }
+    #event-modal, #miqui-modal, #llefia-modal, #podcast1-modal, #podcast2-modal { max-height: 85vh; max-height: 85dvh; border-radius: 20px; }
+    #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast1-modal img.modal-img, #podcast2-modal img.modal-img { height: 200px; border-radius: 20px 20px 0 0; }
+    #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast1-modal .modal-body, #podcast2-modal .modal-body { padding: 22px 20px 26px; }
+    #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast1-modal .modal-body h3, #podcast2-modal .modal-body h3 { font-size: 19px; }
+  }
   .event-card.clickable { cursor: pointer; }
   .event-card.clickable:active { transform: scale(0.98); }
   .featured-event.clickable { cursor: pointer; }
