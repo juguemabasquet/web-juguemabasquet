@@ -137,18 +137,27 @@
     <!-- 1: QUI SOM -->
     <div class="bento-card c-offwhite" onclick="showSection('qui-som')">
       <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:#FF6A1A;text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.quisom.eye">Qui Som</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);color:#0a0a0a;text-transform:uppercase;line-height:1.05;" data-i18n="bento.quisom.title">Qui Som</div>
+        <div class="bento-eye" data-i18n="bento.quisom.eye">Associació</div>
+        <div class="bento-title" data-i18n="bento.quisom.title">Qui Som</div>
       </div>
-      <div style="font-size:10px;color:#888;font-weight:700;" data-i18n="bento.quisom.sub">Coneix-nos →</div>
+      <div class="bento-sub" data-i18n="bento.quisom.sub">+40 pistes analitzades · Coneix-nos →</div>
     </div>
 
-    <!-- 2: PROJECTES -->
-    <div class="bento-card bento-poster" onclick="showSection('activitats')" style="padding:0;">
-      <img src="assets/events/cartell-3x3-carmelites-setembre.webp" alt="3x3 Badalona · Cartell del torneig" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;opacity:0.7;"/>
-      <div style="position:relative;margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;background:linear-gradient(to top,rgba(0,0,0,.75),rgba(0,0,0,0));">
-        <span style="font-family:'Bungee',sans-serif;font-size:clamp(13px,1.3vw,18px)!important;color:#fff;text-transform:uppercase;letter-spacing:1px;line-height:1;" data-i18n="bento.activitats.title">Activitats</span>
-        <span style="font-size:11px;color:#FF6A1A;font-weight:800;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;" data-i18n="bento.activitats.sub">Carmelites →</span>
+    <!-- 2: DESTACAT — el contingut el tria assets/js/bento-destacat.js a partir del timeline d'Activitats
+         (pròxima activitat per data-date, o l'última celebrada). Aquest marcatge estàtic és el fallback sense JS. -->
+    <div class="bento-card bento-destacat" id="bento-destacat" role="button" tabindex="0" onclick="openActModal('podcast1-modal-overlay')">
+      <img class="bento-destacat-bg" src="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" alt="" aria-hidden="true"/>
+      <div class="bento-destacat-poster"><img src="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" alt="Pòdcast Temps de Bàsquet · Juguem al Temps · Episodi 1 amb Jose Hita"/></div>
+      <div class="bento-destacat-body">
+        <div>
+          <span class="bento-destacat-badge" data-status="soon" data-i18n="act.badge.propera">Pròxima</span>
+          <div class="bento-destacat-meta" data-i18n="act.podcast1.meta">12 Novembre 2026 · 20:30–21:30 h · Temps Mort</div>
+          <h2 class="bento-destacat-title" data-i18n="act.podcast1.h4">Pòdcast «Juguem al Temps» · Episodi 1 amb Jose Hita</h2>
+        </div>
+        <div class="bento-destacat-foot">
+          <span class="bento-destacat-cta" data-i18n="act.veuremes">Veure més →</span>
+          <a class="bento-destacat-all" href="#activitats" onclick="event.preventDefault();event.stopPropagation();showSection('activitats')" data-i18n="bento.destacat.totes">Totes les activitats →</a>
+        </div>
       </div>
     </div>
 
@@ -166,59 +175,71 @@
       </svg>
       <div class="bento-mapa-body">
         <div>
-          <div style="font-size:10px;font-weight:800;letter-spacing:2px;opacity:.85;text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.mapa.eye">Mapa de Pistes</div>
-          <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;" data-i18n="bento.mapa.title">Troba la<br>teva pista</div>
+          <div class="bento-eye" data-i18n="bento.mapa.eye">Mapa de Pistes</div>
+          <div class="bento-title" data-i18n="bento.mapa.title">Troba la<br>teva pista</div>
         </div>
-        <div style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;">
-          <span style="width:7px;height:7px;border-radius:50%;background:#fff;flex-shrink:0;"></span>
-          <span data-i18n="bento.mapa.sub">8 barris coberts</span>
-        </div>
+        <div class="bento-sub bento-sub-dot" data-i18n="bento.mapa.sub">8 barris coberts</div>
       </div>
     </div>
 
-    <!-- 4: ENTREVISTES -->
-    <div class="bento-card c-gold" onclick="showSection('entrevistes')">
-      <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2px;opacity:.7;text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.entrevistes.eye">Entrevistes</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;" data-i18n="bento.entrevistes.title">Entrevistes</div>
+    <!-- 4: ENTREVISTES — la foto rota cada 3 dies entre les entrevistes (assets/js/bento-entrevista.js) -->
+    <div class="bento-card bento-foto bento-foto-blue" id="bento-entrevista" onclick="showSection('entrevistes')">
+      <img class="bento-foto-img" src="assets/fotos/entrevistes/andres-jimenez.webp" alt="" style="object-position:center 20%;"/>
+      <div class="bento-foto-body">
+        <div>
+          <div class="bento-eye" data-i18n="bento.entrevistes.eye">Entrevistes</div>
+          <div class="bento-title" data-i18n="bento.entrevistes.title">Entrevistes</div>
+        </div>
+        <div class="bento-sub"><span class="bento-entrev-nom">Andrés Jiménez</span> · <span data-i18n="bento.entrevistes.sub">Veus del bàsquet →</span></div>
       </div>
-      <div style="font-size:10px;font-weight:700;opacity:.8;" data-i18n="bento.entrevistes.sub">Veus del bàsquet →</div>
     </div>
 
-    <!-- 6: ARXIU HISTÒRIC (pàgina externa) -->
+    <!-- 5: ARXIU HISTÒRIC -->
     <a class="bento-card c-green" href="#arxiu-historic" onclick="event.preventDefault();showSection('arxiu-historic')">
       <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.arxiu.eye">Arxiu Històric</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;" data-i18n="bento.arxiu.title">Memòria<br>del Bàsquet<br>a Badalona</div>
+        <div class="bento-eye" data-i18n="bento.arxiu.eye">Arxiu Històric</div>
+        <div class="bento-title" data-i18n="bento.arxiu.title">Memòria<br>del Bàsquet<br>a Badalona</div>
       </div>
-      <div style="font-size:10px;color:rgba(255,255,255,.5);" data-i18n="bento.arxiu.sub">Fotos · Actes · Documents →</div>
+      <div class="bento-sub" data-i18n="bento.arxiu.sub">Fotos · Actes · Documents →</div>
     </a>
 
     <!-- 6: ENTITATS AMIGUES -->
     <div class="bento-card c-offwhite" onclick="showSection('entitats-amigues')">
       <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:#FF6A1A;text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.entitats.eye">Entitats Amigues</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;color:#0a0a0a;" data-i18n="bento.entitats.title">Del<br>Bàsquet</div>
+        <div class="bento-eye" data-i18n="bento.entitats.eye">Entitats Amigues</div>
+        <div class="bento-title" data-i18n="bento.entitats.title">Del<br>Bàsquet</div>
       </div>
-      <div style="font-size:10px;color:#666;font-weight:700;letter-spacing:1px;text-transform:uppercase;" data-i18n="bento.entitats.sub">Fed. Catalana · Estudiantes →</div>
+      <div class="bento-logos">
+        <span class="bento-logo-chip"><img src="assets/fotos/bento/entitat-fbc.webp" alt="Fundació del Bàsquet Català"/></span>
+        <span class="bento-logo-chip"><img src="assets/fotos/bento/entitat-estudiantes.webp" alt="Fundación Estudiantes"/></span>
+      </div>
     </div>
 
     <!-- 7: COL·LABORADORS -->
     <div class="bento-card c-black" onclick="showSection('colaboradors')">
       <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.colabs.eye">Col·laboradors</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;" data-i18n="bento.colabs.title">Qui ens<br>dóna suport</div>
+        <div class="bento-eye" data-i18n="bento.colabs.eye">Col·laboradors</div>
+        <div class="bento-title" data-i18n="bento.colabs.title">Qui ens<br>dóna suport</div>
       </div>
-      <div style="font-size:10px;color:rgba(255,255,255,.35);" data-i18n="bento.colabs.sub">Properament</div>
+      <div class="bento-colabs-foot">
+        <div class="bento-avatars">
+          <img src="assets/fotos/bento/colab-temps-mort.webp" alt="Temps Mort"/>
+          <img src="assets/fotos/bento/colab-can-soler.webp" alt="Can Soler"/>
+          <img src="assets/fotos/bento/colab-bbb-bad-girls.webp" alt="BBB Bad Girls"/>
+          <img src="assets/fotos/bento/colab-pam-i-pipa.webp" alt="Pam i Pipa"/>
+          <img src="assets/fotos/bento/colab-bearded-bad-boys.webp" alt="Bearded Bad Boys"/>
+        </div>
+        <div class="bento-sub" data-i18n="bento.colabs.sub">Veure'ls tots →</div>
+      </div>
     </div>
 
     <!-- 8: XARXES SOCIALS -->
-    <div class="bento-card c-magenta" onclick="showSection('xarxes')" style="justify-content:space-between;">
+    <div class="bento-card c-magenta" onclick="showSection('xarxes')">
       <div>
-        <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:#F2C9DB;text-transform:uppercase;margin-bottom:10px;" data-i18n="bento.xarxes.eye">Xarxes Socials</div>
-        <div style="font-family:'Bungee',sans-serif;font-size:clamp(24px,2.8vw,40px);text-transform:uppercase;line-height:1.05;color:#fff;" data-i18n="bento.xarxes.title">Instagram<br>+ Google</div>
+        <div class="bento-eye" data-i18n="bento.xarxes.eye">Xarxes Socials</div>
+        <div class="bento-title" data-i18n="bento.xarxes.title">Instagram<br>+ Google</div>
       </div>
-      <div style="font-size:10px;color:rgba(255,255,255,.65);" data-i18n="bento.xarxes.sub">Fotos · Reels · Segueix-nos →</div>
+      <div class="bento-sub" data-i18n="bento.xarxes.sub">Fotos · Reels · Segueix-nos →</div>
     </div>
 
   </div>
@@ -414,7 +435,7 @@
     <div class="acts-timeline">
 
       <!-- Pròxima · Pòdcast «Juguem al Temps» · Episodi 1 -->
-      <article class="acts-item" data-status="soon">
+      <article class="acts-item" data-status="soon" data-date="2026-11-12">
         <div class="acts-card" role="button" tabindex="0" onclick="openActModal('podcast1-modal-overlay')">
           <div class="acts-thumb"><img src="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" alt="Pòdcast Temps de Bàsquet · Juguem al Temps · Episodi 1 amb Jose Hita"/></div>
           <div class="acts-body">
@@ -436,7 +457,7 @@
       </article>
 
       <!-- Pròxima · Pòdcast «Juguem al Temps» · Episodi 2 -->
-      <article class="acts-item" data-status="soon">
+      <article class="acts-item" data-status="soon" data-date="2026-12-17">
         <div class="acts-card" role="button" tabindex="0" onclick="openActModal('podcast2-modal-overlay')">
           <div class="acts-thumb"><img src="assets/events/cartell-podcast-juguem-al-temps-ep2-miquel-fornies.jpg" alt="Pòdcast Temps de Bàsquet · Juguem al Temps · Episodi 2 amb Miquel Àngel Forniés"/></div>
           <div class="acts-body">
@@ -458,7 +479,7 @@
       </article>
 
       <!-- Celebrada · Halloween & Castanyada · Plaça de Mateu Rotger (més recent · enllaça a la pàgina) -->
-      <article class="acts-item" data-status="done">
+      <article class="acts-item" data-status="done" data-date="2026-10-31">
         <a class="acts-card" href="events/halloween-castanyada-2026/">
           <div class="acts-thumb"><img src="assets/events/cartell-halloween-castanyada-2026.jpg" alt="Cartell Halloween &amp; Castanyada · 31 d'octubre a la plaça Mateu Rotger"/></div>
           <div class="acts-body">
@@ -480,7 +501,7 @@
       </article>
 
       <!-- Celebrada · Bàsquet, jocs i concursos · Gran Sol de Llefià (més recent · enllaça a la pàgina) -->
-      <article class="acts-item" data-status="done">
+      <article class="acts-item" data-status="done" data-date="2026-10-25">
         <a class="acts-card" href="events/basquet-jocs-concursos-gran-sol-llefia-2026/">
           <div class="acts-thumb"><img src="assets/events/gran-sol-llefia-nen-tirant.webp" alt="Un nen tirant a cistella a l'Amfiteatre del Gran Sol de Llefià"/></div>
           <div class="acts-body">
@@ -503,7 +524,7 @@
       </article>
 
       <!-- 1 · Torneig 3x3 (celebrat · enllaça a la galeria de fotos) -->
-      <article class="acts-item" data-status="done">
+      <article class="acts-item" data-status="done" data-date="2026-09-19">
         <a class="acts-card" href="events/3x3-carmelites-2026/">
           <div class="acts-thumb"><img src="assets/events/cartell-3x3-carmelites-setembre.png" alt="Torneig 3x3 de bàsquet de carrer"/></div>
           <div class="acts-body">
@@ -526,7 +547,7 @@
       </article>
 
       <!-- 3 · Arranjament de la pista dels Carmelites (celebrada · més recent · enllaça a la pàgina) -->
-      <article class="acts-item" data-status="done">
+      <article class="acts-item" data-status="done" data-date="2026-08-10">
         <a class="acts-card" href="events/arranjament-pista-carmelites-2026/">
           <div class="acts-thumb"><img src="assets/events/pista-carmelites-pintant-linia.webp" alt="Arranjament i pintura de la pista dels Carmelites"/></div>
           <div class="acts-body">
@@ -549,7 +570,7 @@
       </article>
 
       <!-- 4 · Festes Iris-Sol-Casagemes (celebrada · més recent) -->
-      <article class="acts-item" data-status="done">
+      <article class="acts-item" data-status="done" data-date="2026-06-20">
         <div class="acts-card" role="button" tabindex="0" onclick="openActModal('event-modal-overlay')">
           <div class="acts-thumb"><img src="assets/events/casagemes-2026.jpg" alt="Festes Iris-Sol-Casagemes 2026"/></div>
           <div class="acts-body">
@@ -572,7 +593,7 @@
       </article>
 
       <!-- 4 · Exposició samarretes històriques · Miqui Forniés (celebrada) -->
-      <article class="acts-item" data-status="done">
+      <article class="acts-item" data-status="done" data-date="2026-05-16">
         <div class="acts-card" role="button" tabindex="0" onclick="openActModal('miqui-modal-overlay')">
           <div class="acts-thumb"><img src="assets/events/mfornies-800.jpg" alt="Exposició de samarretes històriques · Miqui Forniés"/></div>
           <div class="acts-body">
@@ -2053,6 +2074,10 @@
 <!-- ========== SPA NAVEGACIÓ ========== -->
 <script src="assets/js/navigation.js"></script>
 
+<!-- Targeta destacada del bento (abans d'i18n.js perquè setLang tradueixi el que hi copia) -->
+<script src="assets/js/bento-destacat.js"></script>
+<script src="assets/js/bento-entrevista.js"></script>
+
 <!-- ========== SISTEMA D'IDIOMES ========== -->
 <script src="assets/js/i18n.js"></script>
 
@@ -2297,6 +2322,7 @@
           <img src="assets/col·laboradors/nando-perruquer.png" alt="Nando Perruquer"/>
         </div>
       </div>
+      <button class="modal-close-bottom" onclick="document.getElementById('event-modal-overlay').classList.remove('active')" data-i18n="rep.modal.ok.close">Tancar</button>
     </div>
   </div>
 </div>
@@ -2325,6 +2351,7 @@
       </div>
       <a href="assets/events/mfornies-800.jpg" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF6A1A;color:white;padding:11px 22px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;margin-top:4px;">Veure cartell ↗</a>
       <a href="https://www.instagram.com/juguemabasquet" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:white;padding:11px 22px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;margin-top:4px;">Crònica a Instagram ↗</a>
+      <button class="modal-close-bottom" onclick="document.getElementById('miqui-modal-overlay').classList.remove('active')" data-i18n="rep.modal.ok.close">Tancar</button>
     </div>
   </div>
 </div>
@@ -2350,6 +2377,7 @@
         <span class="event-tag" style="background:rgba(255,106,26,.25);">● Pròxima</span>
       </div>
       <a href="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF6A1A;color:white;padding:11px 22px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;margin-top:4px;">Veure cartell ↗</a>
+      <button class="modal-close-bottom" onclick="document.getElementById('podcast1-modal-overlay').classList.remove('active')" data-i18n="rep.modal.ok.close">Tancar</button>
     </div>
   </div>
 </div>
@@ -2375,6 +2403,7 @@
         <span class="event-tag" style="background:rgba(255,106,26,.25);">● Pròxima</span>
       </div>
       <a href="assets/events/cartell-podcast-juguem-al-temps-ep2-miquel-fornies.jpg" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF6A1A;color:white;padding:11px 22px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;margin-top:4px;">Veure cartell ↗</a>
+      <button class="modal-close-bottom" onclick="document.getElementById('podcast2-modal-overlay').classList.remove('active')" data-i18n="rep.modal.ok.close">Tancar</button>
     </div>
   </div>
 </div>

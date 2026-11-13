@@ -503,14 +503,33 @@
   }
   #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs { overflow: visible !important; }
   #event-modal .modal-colab-logo img, #miqui-modal .modal-colab-logo img, #llefia-modal .modal-colab-logo img, #podcast1-modal .modal-colab-logo img, #podcast2-modal .modal-colab-logo img { height: 46px; width: auto; object-fit: contain; display: block; }
+  /* ✕ enganxada (sticky) dalt a la dreta: segueix visible encara que es desplaci el contingut del modal.
+     El marge inferior negatiu la fa flotar sobre la imatge sense empènyer-la avall. */
   #event-modal-close, #miqui-modal-close, #llefia-modal-close, #podcast1-modal-close, #podcast2-modal-close {
-    position: absolute; top: 16px; right: 16px;
-    background: rgba(0,0,0,0.5); border: none; color: #fff;
-    width: 36px; height: 36px; border-radius: 50%; font-size: 20px;
+    position: sticky; top: 12px; z-index: 3;
+    margin: 12px 12px -56px auto;
+    background: rgba(0,0,0,0.72); border: 1px solid rgba(255,255,255,0.25); color: #fff;
+    width: 44px; height: 44px; border-radius: 50%; font-size: 20px;
     cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
     backdrop-filter: blur(4px); transition: background .2s;
   }
-  #event-modal-close:hover, #miqui-modal-close:hover, #llefia-modal-close:hover, #podcast1-modal-close:hover { background: rgba(255,255,255,0.2); }
+  #event-modal-close:hover, #miqui-modal-close:hover, #llefia-modal-close:hover, #podcast1-modal-close:hover, #podcast2-modal-close:hover { background: rgba(60,60,60,0.9); }
+  #event-modal-close:focus-visible, #miqui-modal-close:focus-visible, #llefia-modal-close:focus-visible, #podcast1-modal-close:focus-visible, #podcast2-modal-close:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+  .modal-close-bottom {
+    display: inline-flex; align-items: center; margin: 4px 0 0 6px; padding: 11px 22px;
+    background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 999px;
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; cursor: pointer;
+    transition: background .2s;
+  }
+  .modal-close-bottom:hover { background: rgba(255,255,255,0.1); }
+  @media (max-width: 600px) {
+    #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast1-modal-overlay, #podcast2-modal-overlay { padding: 28px 16px; }
+    #event-modal, #miqui-modal, #llefia-modal, #podcast1-modal, #podcast2-modal { max-height: 85vh; max-height: 85dvh; border-radius: 20px; }
+    #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast1-modal img.modal-img, #podcast2-modal img.modal-img { height: 200px; border-radius: 20px 20px 0 0; }
+    #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast1-modal .modal-body, #podcast2-modal .modal-body { padding: 22px 20px 26px; }
+    #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast1-modal .modal-body h3, #podcast2-modal .modal-body h3 { font-size: 19px; }
+  }
   .event-card.clickable { cursor: pointer; }
   .event-card.clickable:active { transform: scale(0.98); }
   .featured-event.clickable { cursor: pointer; }
@@ -2308,7 +2327,7 @@
     margin: 0 auto;
   }
   /* ── Placements bento irregular ── */
-  .bento-grid > *:nth-child(2) { grid-area: 1 / 1 / 3 / 3; } /* ACTIVITATS 2×2 (cartell 3x3) */
+  .bento-grid > *:nth-child(2) { grid-area: 1 / 1 / 3 / 3; } /* DESTACAT 2×2 (pròxima / última activitat) */
   .bento-grid > *:nth-child(1) { grid-area: 1 / 3 / 2 / 4; } /* QUI SOM */
   .bento-grid > *:nth-child(4) { grid-area: 1 / 4 / 2 / 5; } /* ENTREVISTES */
   .bento-grid > *:nth-child(3) { grid-area: 2 / 3 / 3 / 5; } /* MAPA — 2×1, ocupa també l'espai de l'antic Crowdfunding */
@@ -2327,9 +2346,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 14px;
     padding: 20px 22px;
   }
   .bento-card:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,0.5); }
+  .bento-card:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
   /* Títols bento per idioma — cards 1×1 (4 columnes = més estrets) */
   html[lang="ca"] .bento-card [data-i18n$=".title"] {
     font-size: clamp(16px, 1.8vw, 28px) !important;
@@ -2340,6 +2361,87 @@
   html[lang="en"] .bento-card [data-i18n$=".title"] {
     font-size: clamp(14px, 1.5vw, 23px) !important;
   }
+  /* ── Tipografia comuna de les targetes bento ── */
+  .bento-eye { font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 10px; opacity: .85; }
+  .bento-title { font-family: 'Bungee', sans-serif; text-transform: uppercase; line-height: 1.05; }
+  .bento-sub { font-size: 12px; font-weight: 700; opacity: .9; }
+  .bento-sub-dot { display: flex; align-items: center; gap: 6px; }
+  .bento-sub-dot::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+  .c-offwhite .bento-eye { color: #A63E0C; opacity: 1; }
+  .c-offwhite .bento-sub { color: #3a3a3a; opacity: 1; }
+
+  /* ── Bento "Destacat": cartell sencer sobre el mateix cartell desenfocat ── */
+  .bento-destacat { padding: 0; color: #fff; background: #0a0a0a; flex-direction: row; align-items: stretch; }
+  .bento-destacat-bg {
+    position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px);
+    object-fit: cover; filter: blur(28px) saturate(1.15) brightness(.5);
+  }
+  .bento-destacat-poster {
+    position: relative; z-index: 1; flex: 0 1 52%; min-width: 0;
+    display: flex; align-items: center; justify-content: center; padding: 24px;
+  }
+  .bento-destacat-poster img {
+    max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 10px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.5), 0 4px 10px rgba(0,0,0,.3);
+    transition: transform .5s cubic-bezier(.16,1,.3,1);
+  }
+  .bento-destacat:hover .bento-destacat-poster img { transform: scale(1.025) rotate(-.6deg); }
+  .bento-destacat-body {
+    position: relative; z-index: 1; flex: 1 1 48%; min-width: 0;
+    display: flex; flex-direction: column; justify-content: space-between; gap: 20px;
+    padding: 32px 30px 28px 6px;
+  }
+  .bento-destacat-badge {
+    display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px;
+    font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    background: var(--orange); color: #0a0a0a;
+  }
+  .bento-destacat-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .bento-destacat-badge[data-status="done"] { background: rgba(255,255,255,.16); color: #fff; }
+  .bento-destacat-meta {
+    margin: 18px 0 12px; font-size: 12px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: rgba(255,255,255,.82); line-height: 1.5;
+  }
+  .bento-destacat-title {
+    font-family: 'Bungee', sans-serif; font-size: clamp(22px, 2.1vw, 34px); font-weight: 400;
+    text-transform: uppercase; line-height: 1.08; text-wrap: balance; margin: 0;
+  }
+  .bento-destacat-foot { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .bento-destacat-cta { color: var(--orange); font-size: 15px; font-weight: 800; }
+  .bento-destacat-all {
+    color: rgba(255,255,255,.85); font-size: 13px; font-weight: 600;
+    text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,.35);
+  }
+  .bento-destacat-all:hover { color: #fff; text-decoration-color: currentColor; }
+
+  /* ── Bento amb foto de fons (Entrevistes) ── */
+  .bento-foto { padding: 0; color: #fff; background: #0a0a0a; }
+  .bento-foto-img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    transition: transform .6s cubic-bezier(.16,1,.3,1);
+  }
+  .bento-foto:hover .bento-foto-img { transform: scale(1.04); }
+  .bento-foto-body {
+    position: relative; z-index: 1; flex: 1;
+    display: flex; flex-direction: column; justify-content: space-between; gap: 14px; padding: 20px 22px;
+  }
+  .bento-foto-blue .bento-foto-body { background: linear-gradient(180deg, rgba(30,56,128,.94) 0%, rgba(53,96,192,.35) 50%, rgba(24,44,104,.94) 100%); }
+
+  /* ── Logos (Entitats) i avatars (Col·laboradors) ── */
+  .bento-logos { display: flex; flex-wrap: wrap; gap: 8px; }
+  .bento-logo-chip {
+    display: flex; align-items: center; height: 48px; padding: 6px 12px;
+    background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  }
+  .bento-logo-chip img { height: 100%; width: auto; display: block; }
+  .bento-colabs-foot { display: flex; flex-direction: column; gap: 10px; }
+  .bento-avatars { display: flex; }
+  .bento-avatars img {
+    width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background: #fff;
+    border: 2px solid #0a0a0a; margin-left: -10px;
+  }
+  .bento-avatars img:first-child { margin-left: 0; }
+
   /* ====== PROJECTES CATEGORIES ====== */
   .projectes-categoria { margin-top: 48px; }
   .categoria-title { font-family:'Bungee',sans-serif; font-size:clamp(15px,1.6vw,22px); text-transform:uppercase; color:#fff; margin-bottom:24px; padding-bottom:12px; border-bottom:1px solid rgba(255,106,26,.25); letter-spacing:1px; display:flex; align-items:center; gap:10px; }
@@ -2385,7 +2487,7 @@
   .c-green   { background: #2E6B4E; color: #fff; }
   .c-white   { background: #fff; color: #0a0a0a; border: 1px solid rgba(0,0,0,0.06); }
   .c-navy    { background: #0a1628; color: #fff; }
-  .c-magenta { background: linear-gradient(135deg,#8C3A64,#BC5A88); color: #fff; }
+  .c-magenta { background: linear-gradient(135deg,#8C3A64,#A44676); color: #fff; }
   /* ── Bento "Mapa de Pistes" — mapa de fons + mirilla animada ── */
   .bento-mapa-bg { padding: 0; color: #fff; }
   .bento-mapa-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -2411,9 +2513,10 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .bento-mirilla { animation: none; left: 50%; top: 50%; }
+    .bento-foto-img, .bento-destacat-poster img { transition: none; }
   }
   @media (max-width: 1100px) {
-    .bento-section { height: auto; overflow: visible; padding: 8px; }
+    .bento-section { height: auto; overflow: visible; padding: 8px 8px 72px; }
     .bento-grid {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: none;
@@ -2421,27 +2524,40 @@
     }
     /* Reset placements — fluix 2 columnes */
     .bento-grid > *:nth-child(n) { grid-area: auto; }
-    /* Alterna colors també en mòbil: Mapa entre Qui Som i Activitats */
-    .bento-grid > *:nth-child(1) { order: 1; } /* QUI SOM */
+    /* El destacat va primer: és el que canvia i el que convida a tornar */
+    .bento-grid > *:nth-child(2) { order: 1; } /* DESTACAT */
     .bento-grid > *:nth-child(3) { order: 2; } /* MAPA */
-    .bento-grid > *:nth-child(2) { order: 3; } /* ACTIVITATS */
+    .bento-grid > *:nth-child(1) { order: 3; } /* QUI SOM */
     .bento-grid > *:nth-child(4) { order: 4; } /* ENTREVISTES */
     .bento-grid > *:nth-child(5) { order: 5; } /* ARXIU */
     .bento-grid > *:nth-child(6) { order: 6; } /* ENTITATS */
     .bento-grid > *:nth-child(7) { order: 7; } /* COL·LABS */
     .bento-grid > *:nth-child(8) { order: 8; } /* XARXES */
-    /* Activitats (cartell 3x3) ocupa ample complet en tablet */
-    .bento-grid > *:nth-child(2) { grid-column: 1 / -1; min-height: 320px; }
-    .bento-card { min-height: 160px; }
+    /* Destacat i mapa ocupen ample complet */
+    .bento-grid > *:nth-child(2),
+    .bento-grid > *:nth-child(3) { grid-column: 1 / -1; }
+    .bento-destacat { min-height: 340px; }
+    .bento-destacat-poster img { max-height: 420px; }
+    .bento-card { min-height: 150px; }
+    .bento-foto { min-height: 190px; }
     html[lang="ca"] .bento-card [data-i18n$=".title"] { font-size: clamp(18px, 4vw, 30px) !important; }
     html[lang="es"] .bento-card [data-i18n$=".title"] { font-size: clamp(16px, 3.5vw, 27px) !important; }
     html[lang="en"] .bento-card [data-i18n$=".title"] { font-size: clamp(15px, 3.2vw, 25px) !important; }
+    .bento-destacat-title { font-size: clamp(20px, 3.6vw, 30px); }
   }
   @media (max-width: 600px) {
-    .bento-section { padding: 6px; }
+    .bento-section { padding: 6px 6px 72px; }
     .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
-    .bento-card { min-height: 140px; padding: 14px 14px; }
-    .bento-grid > *:nth-child(2) { min-height: 300px; }
+    .bento-card { min-height: 130px; padding: 16px; }
+    .bento-foto, .bento-destacat, .bento-mapa-bg { padding: 0; }
+    .bento-foto-body, .bento-mapa-body { padding: 16px; }
+    /* Destacat apilat: cartell a dalt, text a sota */
+    .bento-destacat { flex-direction: column; min-height: 0; }
+    .bento-destacat-poster { flex: none; height: 300px; padding: 20px 20px 4px; }
+    .bento-destacat-poster img { max-height: 100%; }
+    .bento-destacat-body { padding: 16px 20px 22px; gap: 16px; }
+    .bento-destacat-meta { margin: 14px 0 8px; }
+    .bento-destacat-title { font-size: clamp(20px, 6.2vw, 26px); }
   }
 
 /* ── FLOATING HYMN PLAYER ── */
@@ -2791,7 +2907,7 @@ footer.page-section, footer.footer { background: #fff !important; color: #0a0a0a
 .acts-item[data-status="soon"] .acts-badge { color: #d9540a; background: #fff1e8; border: 1px solid #ffcfa8; }
 .acts-item[data-status="live"] .acts-badge { color: #2b4fb8; background: #eaf0ff; border: 1px solid #c7d5ff; }
 .acts-item[data-status="done"] .acts-badge { color: #2e6b3a; background: #eef5ef; border: 1px solid #cfe6d3; }
-.acts-date { font-family: 'Bungee', sans-serif; font-size: 12px; color: #8a8a8a; text-transform: uppercase; letter-spacing: .5px; }
+.acts-date { font-size: 12px; font-weight: 700; color: #6b6b6b; text-transform: uppercase; letter-spacing: .08em; }
 .acts-title { font-family: 'Bungee', sans-serif; font-size: clamp(16px,1.9vw,22px); color: #0a0a0a; line-height: 1.15; margin: 0 0 8px; }
 .acts-title .accent { color: #FF6A1A; }
 .acts-lead { font-size: 14px; color: #555; line-height: 1.55; margin: 0; }
