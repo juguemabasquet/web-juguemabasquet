@@ -182,16 +182,13 @@
       </div>
     </div>
 
-    <!-- 4: ENTREVISTES — la foto rota cada 3 dies entre les entrevistes (assets/js/bento-entrevista.js) -->
-    <div class="bento-card bento-foto bento-foto-blue" id="bento-entrevista" onclick="showSection('entrevistes')">
-      <img class="bento-foto-img" src="assets/fotos/entrevistes/andres-jimenez.webp" alt="" style="object-position:center 20%;"/>
-      <div class="bento-foto-body">
-        <div>
-          <div class="bento-eye" data-i18n="bento.entrevistes.eye">Entrevistes</div>
-          <div class="bento-title" data-i18n="bento.entrevistes.title">Entrevistes</div>
-        </div>
-        <div class="bento-sub"><span class="bento-entrev-nom">Andrés Jiménez</span> · <span data-i18n="bento.entrevistes.sub">Veus del bàsquet →</span></div>
+    <!-- 4: ENTREVISTES -->
+    <div class="bento-card c-gold" onclick="showSection('entrevistes')">
+      <div>
+        <div class="bento-eye" data-i18n="bento.entrevistes.eye">Entrevistes</div>
+        <div class="bento-title" data-i18n="bento.entrevistes.title">Entrevistes</div>
       </div>
+      <div class="bento-sub" data-i18n="bento.entrevistes.sub">Veus del bàsquet →</div>
     </div>
 
     <!-- 5: ARXIU HISTÒRIC -->
@@ -209,10 +206,7 @@
         <div class="bento-eye" data-i18n="bento.entitats.eye">Entitats Amigues</div>
         <div class="bento-title" data-i18n="bento.entitats.title">Del<br>Bàsquet</div>
       </div>
-      <div class="bento-logos">
-        <span class="bento-logo-chip"><img src="assets/fotos/bento/entitat-fbc.webp" alt="Fundació del Bàsquet Català"/></span>
-        <span class="bento-logo-chip"><img src="assets/fotos/bento/entitat-estudiantes.webp" alt="Fundación Estudiantes"/></span>
-      </div>
+      <div class="bento-sub" data-i18n="bento.entitats.sub">Fed. Catalana · Estudiantes →</div>
     </div>
 
     <!-- 7: COL·LABORADORS -->
@@ -221,16 +215,7 @@
         <div class="bento-eye" data-i18n="bento.colabs.eye">Col·laboradors</div>
         <div class="bento-title" data-i18n="bento.colabs.title">Qui ens<br>dóna suport</div>
       </div>
-      <div class="bento-colabs-foot">
-        <div class="bento-avatars">
-          <img src="assets/fotos/bento/colab-temps-mort.webp" alt="Temps Mort"/>
-          <img src="assets/fotos/bento/colab-can-soler.webp" alt="Can Soler"/>
-          <img src="assets/fotos/bento/colab-bbb-bad-girls.webp" alt="BBB Bad Girls"/>
-          <img src="assets/fotos/bento/colab-pam-i-pipa.webp" alt="Pam i Pipa"/>
-          <img src="assets/fotos/bento/colab-bearded-bad-boys.webp" alt="Bearded Bad Boys"/>
-        </div>
-        <div class="bento-sub" data-i18n="bento.colabs.sub">Veure'ls tots →</div>
-      </div>
+      <div class="bento-sub"><span class="bento-colabs-num">19</span> <span data-i18n="bento.colabs.sub">col·laboradors →</span></div>
     </div>
 
     <!-- 8: XARXES SOCIALS -->
@@ -2076,7 +2061,7 @@
 
 <!-- Targeta destacada del bento (abans d'i18n.js perquè setLang tradueixi el que hi copia) -->
 <script src="assets/js/bento-destacat.js"></script>
-<script src="assets/js/bento-entrevista.js"></script>
+<script src="assets/js/bento-colabs.js"></script>
 
 <!-- ========== SISTEMA D'IDIOMES ========== -->
 <script src="assets/js/i18n.js"></script>

@@ -31,9 +31,9 @@ Objetivo: que la portada muestre lo que está pasando, sin huecos, con mejor jer
 | Tarjeta | Ahora | Propuesta |
 |---|---|---|
 | Qui som | gris vacío | se mantiene gris (sin foto: la del equipo no era de la asociación) + dato de las fites ("+40 pistes analitzades", ya en `fites.f3.sub`) |
-| Entrevistes | azul plano | foto que rota por turnos cada 3 días entre las entrevistas de la sección (`assets/js/bento-entrevista.js`, `DIES_ROTACIO`) + nombre del entrevistado; el clic sigue abriendo la sección |
-| Entitats amigues | gris vacío | los 2 logos (`assets/entitats/*.png`) en la tarjeta |
-| Col·laboradors | "Properament" | tira de 4-6 logos de `assets/patrocinadors/` + "15 col·laboradors →" (se corrige el texto obsoleto en las 3 lenguas) |
+| Entrevistes | azul plano | ~~foto rotando cada 3 días~~ → descartado (15/11): vuelve a la tarjeta de color sin foto |
+| Entitats amigues | gris vacío | ~~2 logos~~ → descartado (15/11): vuelve al texto "Fed. Catalana · Estudiantes →" |
+| Col·laboradors | "Properament" | ~~tira de logos~~ → descartado (15/11): solo "19 col·laboradors →", con el número contado de la sección (`assets/js/bento-colabs.js`) |
 | Mapa, Arxiu, Xarxes | — | sin cambios de contenido |
 
 Nuevas claves y claves modificadas en `assets/js/i18n.js` (bloques ca/en/es, líneas ~243, ~628, ~1013).
