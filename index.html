@@ -145,14 +145,14 @@
 
     <!-- 2: DESTACAT — el contingut el tria assets/js/bento-destacat.js a partir del timeline d'Activitats
          (pròxima activitat per data-date, o l'última celebrada). Aquest marcatge estàtic és el fallback sense JS. -->
-    <div class="bento-card bento-destacat" id="bento-destacat" role="button" tabindex="0" onclick="openActModal('podcast1-modal-overlay')">
-      <img class="bento-destacat-bg" src="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" alt="" aria-hidden="true"/>
-      <div class="bento-destacat-poster"><img src="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" alt="Pòdcast Temps de Bàsquet · Juguem al Temps · Episodi 1 amb Jose Hita"/></div>
+    <div class="bento-card bento-destacat" id="bento-destacat" role="button" tabindex="0" onclick="openActModal('podcast2-modal-overlay')">
+      <img class="bento-destacat-bg" src="assets/events/cartell-podcast-juguem-al-temps-ep2-rebeca-cotano.jpg" alt="" aria-hidden="true"/>
+      <div class="bento-destacat-poster"><img src="assets/events/cartell-podcast-juguem-al-temps-ep2-rebeca-cotano.jpg" alt="Pòdcast Temps de Bàsquet · Juguem al Temps · Episodi 2 amb Rebeca Cotano"/></div>
       <div class="bento-destacat-body">
         <div>
           <span class="bento-destacat-badge" data-status="soon" data-i18n="act.badge.propera">Pròxima</span>
-          <div class="bento-destacat-meta" data-i18n="act.podcast1.meta">12 Novembre 2026 · 20:30–21:30 h · Temps Mort</div>
-          <h2 class="bento-destacat-title" data-i18n="act.podcast1.h4">Pòdcast «Juguem al Temps» · Episodi 1 amb Jose Hita</h2>
+          <div class="bento-destacat-meta" data-i18n="act.podcast2.meta">26 Novembre 2026 · 20:30–21:30 h · Temps Mort</div>
+          <h2 class="bento-destacat-title" data-i18n="act.podcast2.h4">Pòdcast «Juguem al Temps» · Episodi 2 amb Rebeca Cotano</h2>
         </div>
         <div class="bento-destacat-foot">
           <span class="bento-destacat-cta" data-i18n="act.veuremes">Veure més →</span>
@@ -463,9 +463,9 @@
         </div>
       </article>
 
-      <!-- Celebrada · Pòdcast «Juguem al Temps» · Episodi 1 -->
+      <!-- Celebrada · Pòdcast «Juguem al Temps» · Episodi 1 (enllaça a la pàgina) -->
       <article class="acts-item" data-status="done" data-date="2026-11-12">
-        <div class="acts-card" role="button" tabindex="0" onclick="openActModal('podcast1-modal-overlay')">
+        <a class="acts-card" href="events/podcast-juguem-al-temps-ep1-2026/">
           <div class="acts-thumb acts-thumb-top"><img src="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" alt="Pòdcast Temps de Bàsquet · Juguem al Temps · Episodi 1 amb Jose Hita"/></div>
           <div class="acts-body">
             <div class="acts-top">
@@ -479,10 +479,10 @@
                 <span class="acts-tag" data-i18n="tag.podcast">Pòdcast</span>
                 <span class="acts-tag" data-i18n="tag.comunitat">Comunitat</span>
               </div>
-              <span class="acts-more" data-i18n="act.veuremes">Veure més →</span>
+              <span class="acts-more" data-i18n="act.veuregaleria">Veure la galeria →</span>
             </div>
           </div>
-        </div>
+        </a>
       </article>
 
       <!-- Celebrada · Halloween & Castanyada · Plaça de Mateu Rotger (més recent · enllaça a la pàgina) -->
@@ -2363,32 +2363,6 @@
   </div>
 </div>
 <script src="assets/js/miqui-modal.js"></script>
-
-<!-- ── MODAL: Pòdcast «Juguem al Temps» · Episodi 1 ── -->
-<div id="podcast1-modal-overlay">
-  <div id="podcast1-modal">
-    <button id="podcast1-modal-close" onclick="document.getElementById('podcast1-modal-overlay').classList.remove('active')">✕</button>
-    <img class="modal-img" src="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" alt="Pòdcast Temps de Bàsquet · Juguem al Temps · Episodi 1 amb Jose Hita"/>
-    <div class="modal-body">
-      <h3>Pòdcast «Juguem al Temps» · <span style="color:#FF6A1A">Episodi 1</span></h3>
-      <div class="modal-meta">
-        <span>🗓️ Dijous 12 de novembre de 2026</span>
-        <span>🕙 20:30 – 21:30 h</span>
-        <span>📍 Bar Esportiu Temps Mort, Badalona</span>
-        <span>🎙️ Convidat: Jose Hita, president de Juguem a Bàsquet</span>
-      </div>
-      <p class="modal-desc">Primer episodi del pòdcast «Temps de Bàsquet · Juguem al Temps», enregistrat en directe al Bar Esportiu Temps Mort.<br><br>En aquest episodi inaugural, Jose Hita, president de Juguem a Bàsquet, és el primer convidat. Podreu escoltar-lo a Spotify i YouTube.</p>
-      <div class="modal-tags">
-        <span class="event-tag">Pòdcast</span>
-        <span class="event-tag">Comunitat</span>
-        <span class="event-tag">● Celebrada</span>
-      </div>
-      <a href="assets/events/cartell-podcast-juguem-al-temps-ep1-jose-hita.jpg" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF6A1A;color:white;padding:11px 22px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;margin-top:4px;">Veure cartell ↗</a>
-      <button class="modal-close-bottom" onclick="document.getElementById('podcast1-modal-overlay').classList.remove('active')" data-i18n="rep.modal.ok.close">Tancar</button>
-    </div>
-  </div>
-</div>
-<script src="assets/js/podcast1-modal.js"></script>
 
 <!-- ── MODAL: Pòdcast «Juguem al Temps» · Episodi 2 ── -->
 <div id="podcast2-modal-overlay">

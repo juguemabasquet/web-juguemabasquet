@@ -453,60 +453,59 @@
 
 
   /* ---------- EVENT MODAL ---------- */
-  #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast1-modal-overlay, #podcast2-modal-overlay, #podcast3-modal-overlay {
+  #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast2-modal-overlay, #podcast3-modal-overlay {
     display: none; position: fixed; inset: 0; z-index: 9000;
     background: rgba(0,0,0,0.75); backdrop-filter: blur(6px);
     align-items: center; justify-content: center; padding: 20px;
   }
-  #event-modal-overlay.active, #miqui-modal-overlay.active, #llefia-modal-overlay.active, #podcast1-modal-overlay.active, #podcast2-modal-overlay.active, #podcast3-modal-overlay.active { display: flex; animation: lbFadeIn .2s ease; }
-  #event-modal, #miqui-modal, #llefia-modal, #podcast1-modal, #podcast2-modal, #podcast3-modal {
+  #event-modal-overlay.active, #miqui-modal-overlay.active, #llefia-modal-overlay.active, #podcast2-modal-overlay.active, #podcast3-modal-overlay.active { display: flex; animation: lbFadeIn .2s ease; }
+  #event-modal, #miqui-modal, #llefia-modal, #podcast2-modal, #podcast3-modal {
     background: #1a1a1a; border: 1px solid rgba(255,255,255,0.12);
     border-radius: 24px; max-width: 680px; width: 100%;
     max-height: 90vh; overflow-y: auto; position: relative;
     animation: lbZoomIn .25s ease;
   }
-  #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast1-modal img.modal-img, #podcast2-modal img.modal-img, #podcast3-modal img.modal-img {
+  #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast2-modal img.modal-img, #podcast3-modal img.modal-img {
     width: 100%; height: 280px; object-fit: cover;
     border-radius: 24px 24px 0 0; display: block;
   }
   /* Cartells del pòdcast: la cara del convidat queda més amunt que el centre de la imatge */
-  #podcast1-modal img.modal-img { object-position: center 38%; }
   #podcast2-modal img.modal-img { object-position: center 30%; }
   #podcast3-modal img.modal-img { object-position: center 40%; }
-  #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast1-modal .modal-body, #podcast2-modal .modal-body, #podcast3-modal .modal-body { padding: 28px 32px 36px; }
-  #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast1-modal .modal-body h3, #podcast2-modal .modal-body h3, #podcast3-modal .modal-body h3 {
+  #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast2-modal .modal-body, #podcast3-modal .modal-body { padding: 28px 32px 36px; }
+  #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast2-modal .modal-body h3, #podcast3-modal .modal-body h3 {
     font-family: 'Bungee', sans-serif; font-size: 22px;
     text-transform: uppercase; line-height: 1.2; margin-bottom: 14px;
     color: #fff; letter-spacing: .5px;
   }
-  #event-modal .modal-meta, #miqui-modal .modal-meta, #llefia-modal .modal-meta, #podcast1-modal .modal-meta, #podcast2-modal .modal-meta, #podcast3-modal .modal-meta {
+  #event-modal .modal-meta, #miqui-modal .modal-meta, #llefia-modal .modal-meta, #podcast2-modal .modal-meta, #podcast3-modal .modal-meta {
     display: flex; flex-direction: column; gap: 8px;
     color: rgba(255,255,255,.85); font-size: 15px; font-weight: 500; margin-bottom: 18px;
   }
-  #event-modal .modal-desc, #miqui-modal .modal-desc, #llefia-modal .modal-desc, #podcast1-modal .modal-desc, #podcast2-modal .modal-desc, #podcast3-modal .modal-desc { color: rgba(255,255,255,.88); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
-  #event-modal .modal-tags, #miqui-modal .modal-tags, #llefia-modal .modal-tags, #podcast1-modal .modal-tags, #podcast2-modal .modal-tags, #podcast3-modal .modal-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-  #event-modal .modal-colabs-title, #miqui-modal .modal-colabs-title, #llefia-modal .modal-colabs-title, #podcast1-modal .modal-colabs-title, #podcast2-modal .modal-colabs-title, #podcast3-modal .modal-colabs-title {
+  #event-modal .modal-desc, #miqui-modal .modal-desc, #llefia-modal .modal-desc, #podcast2-modal .modal-desc, #podcast3-modal .modal-desc { color: rgba(255,255,255,.88); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+  #event-modal .modal-tags, #miqui-modal .modal-tags, #llefia-modal .modal-tags, #podcast2-modal .modal-tags, #podcast3-modal .modal-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  #event-modal .modal-colabs-title, #miqui-modal .modal-colabs-title, #llefia-modal .modal-colabs-title, #podcast2-modal .modal-colabs-title, #podcast3-modal .modal-colabs-title {
     font-size: 11px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 12px;
   }
-  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs, #podcast3-modal .modal-colabs { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-  #event-modal .modal-colab-logo, #miqui-modal .modal-colab-logo, #llefia-modal .modal-colab-logo, #podcast1-modal .modal-colab-logo, #podcast2-modal .modal-colab-logo, #podcast3-modal .modal-colab-logo {
+  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast2-modal .modal-colabs, #podcast3-modal .modal-colabs { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  #event-modal .modal-colab-logo, #miqui-modal .modal-colab-logo, #llefia-modal .modal-colab-logo, #podcast2-modal .modal-colab-logo, #podcast3-modal .modal-colab-logo {
     background: #fff; border-radius: 10px; padding: 6px 10px;
     display: flex; align-items: center; justify-content: center;
     height: 58px; min-width: 58px;
     transition: transform .22s ease, box-shadow .22s ease;
     cursor: default; position: relative;
   }
-  #event-modal .modal-colab-logo:hover, #miqui-modal .modal-colab-logo:hover, #llefia-modal .modal-colab-logo:hover, #podcast1-modal .modal-colab-logo:hover, #podcast2-modal .modal-colab-logo:hover, #podcast3-modal .modal-colab-logo:hover {
+  #event-modal .modal-colab-logo:hover, #miqui-modal .modal-colab-logo:hover, #llefia-modal .modal-colab-logo:hover, #podcast2-modal .modal-colab-logo:hover, #podcast3-modal .modal-colab-logo:hover {
     transform: scale(1.55);
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     z-index: 10;
   }
-  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast1-modal .modal-colabs, #podcast2-modal .modal-colabs, #podcast3-modal .modal-colabs { overflow: visible !important; }
-  #event-modal .modal-colab-logo img, #miqui-modal .modal-colab-logo img, #llefia-modal .modal-colab-logo img, #podcast1-modal .modal-colab-logo img, #podcast2-modal .modal-colab-logo img, #podcast3-modal .modal-colab-logo img { height: 46px; width: auto; object-fit: contain; display: block; }
+  #event-modal .modal-colabs, #miqui-modal .modal-colabs, #llefia-modal .modal-colabs, #podcast2-modal .modal-colabs, #podcast3-modal .modal-colabs { overflow: visible !important; }
+  #event-modal .modal-colab-logo img, #miqui-modal .modal-colab-logo img, #llefia-modal .modal-colab-logo img, #podcast2-modal .modal-colab-logo img, #podcast3-modal .modal-colab-logo img { height: 46px; width: auto; object-fit: contain; display: block; }
   /* ✕ enganxada (sticky) dalt a la dreta: segueix visible encara que es desplaci el contingut del modal.
      El marge inferior negatiu la fa flotar sobre la imatge sense empènyer-la avall. */
-  #event-modal-close, #miqui-modal-close, #llefia-modal-close, #podcast1-modal-close, #podcast2-modal-close, #podcast3-modal-close {
+  #event-modal-close, #miqui-modal-close, #llefia-modal-close, #podcast2-modal-close, #podcast3-modal-close {
     position: sticky; top: 12px; z-index: 3;
     margin: 12px 12px -56px auto;
     background: rgba(0,0,0,0.72); border: 1px solid rgba(255,255,255,0.25); color: #fff;
@@ -515,8 +514,8 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.4);
     backdrop-filter: blur(4px); transition: background .2s;
   }
-  #event-modal-close:hover, #miqui-modal-close:hover, #llefia-modal-close:hover, #podcast1-modal-close:hover, #podcast2-modal-close:hover, #podcast3-modal-close:hover { background: rgba(60,60,60,0.9); }
-  #event-modal-close:focus-visible, #miqui-modal-close:focus-visible, #llefia-modal-close:focus-visible, #podcast1-modal-close:focus-visible, #podcast2-modal-close:focus-visible, #podcast3-modal-close:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+  #event-modal-close:hover, #miqui-modal-close:hover, #llefia-modal-close:hover, #podcast2-modal-close:hover, #podcast3-modal-close:hover { background: rgba(60,60,60,0.9); }
+  #event-modal-close:focus-visible, #miqui-modal-close:focus-visible, #llefia-modal-close:focus-visible, #podcast2-modal-close:focus-visible, #podcast3-modal-close:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
   .modal-close-bottom {
     display: inline-flex; align-items: center; margin: 4px 0 0 6px; padding: 11px 22px;
     background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 999px;
@@ -525,11 +524,11 @@
   }
   .modal-close-bottom:hover { background: rgba(255,255,255,0.1); }
   @media (max-width: 600px) {
-    #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast1-modal-overlay, #podcast2-modal-overlay, #podcast3-modal-overlay { padding: 28px 16px; }
-    #event-modal, #miqui-modal, #llefia-modal, #podcast1-modal, #podcast2-modal, #podcast3-modal { max-height: 85vh; max-height: 85dvh; border-radius: 20px; }
-    #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast1-modal img.modal-img, #podcast2-modal img.modal-img, #podcast3-modal img.modal-img { height: 200px; border-radius: 20px 20px 0 0; }
-    #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast1-modal .modal-body, #podcast2-modal .modal-body, #podcast3-modal .modal-body { padding: 22px 20px 26px; }
-    #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast1-modal .modal-body h3, #podcast2-modal .modal-body h3, #podcast3-modal .modal-body h3 { font-size: 19px; }
+    #event-modal-overlay, #miqui-modal-overlay, #llefia-modal-overlay, #podcast2-modal-overlay, #podcast3-modal-overlay { padding: 28px 16px; }
+    #event-modal, #miqui-modal, #llefia-modal, #podcast2-modal, #podcast3-modal { max-height: 85vh; max-height: 85dvh; border-radius: 20px; }
+    #event-modal img.modal-img, #miqui-modal img.modal-img, #llefia-modal img.modal-img, #podcast2-modal img.modal-img, #podcast3-modal img.modal-img { height: 200px; border-radius: 20px 20px 0 0; }
+    #event-modal .modal-body, #miqui-modal .modal-body, #llefia-modal .modal-body, #podcast2-modal .modal-body, #podcast3-modal .modal-body { padding: 22px 20px 26px; }
+    #event-modal .modal-body h3, #miqui-modal .modal-body h3, #llefia-modal .modal-body h3, #podcast2-modal .modal-body h3, #podcast3-modal .modal-body h3 { font-size: 19px; }
   }
   .event-card.clickable { cursor: pointer; }
   .event-card.clickable:active { transform: scale(0.98); }
