@@ -1,5 +1,5 @@
   (function() {
-    var overlay = document.getElementById('podcast1-modal-overlay');
+    var overlay = document.getElementById('podcast3-modal-overlay');
     overlay.addEventListener('click', function(e) {
       if (e.target === overlay) overlay.classList.remove('active');
     });
