@@ -40,71 +40,35 @@ async function geocodeAdreca(adreca, city = 'Badalona') {
 
 
 
-const PISTES = [
-  { nom: 'Pista dels Carmelites Descalços', pais: 'Espanya', ciutat: 'Badalona', barri: 'Badalona Centre', estat: 'projecte',
-    descripcio: 'Pista cedida pels Pares Carmelites Descalços. Entrada pel Carrer del Mar, 47. Espai inclusiu per a tothom, amb especial atenció a persones amb mobilitat reduïda i diversitat funcional. En procés de renovació.',
-    descripcio_en: 'Court lent by the Discalced Carmelite Fathers. Entrance at Carrer del Mar, 47. Inclusive space for everyone, with special attention to people with reduced mobility and functional diversity. Under renovation.',
-    descripcio_es: 'Pista cedida por los Padres Carmelitas Descalzos. Entrada por Carrer del Mar, 47. Espacio inclusivo para todos, con especial atención a personas con movilidad reducida y diversidad funcional. En proceso de renovación.',
-    adreca: 'Carrer del Mar, 47', coords: [41.4488, 2.2486] },
-  { nom: 'Pista Iris-sol-casagemes', pais: 'Espanya', ciutat: 'Badalona', barri: 'Canyadó', estat: 'regular',
-    descripcio: '', descripcio_en: '', descripcio_es: '',
-    adreca: 'Carrer de Santa Madrona, 158-160', coords: [41.4541, 2.2584] },
-  { nom: 'La gàbia', pais: 'Espanya', ciutat: 'Badalona', barri: 'Canyadó', estat: 'bon',
-    descripcio: '', descripcio_en: '', descripcio_es: '',
-    adreca: 'Eduard Maristany, 18', coords: [41.4567, 2.2586] },
-  { nom: 'la Baixadeta', pais: 'Espanya', ciutat: 'Badalona', barri: 'Canyadó', estat: 'malmes',
-    descripcio: 'Cistella de ferro amb paviment de sorra',
-    descripcio_en: 'Iron hoop with sand surface',
-    descripcio_es: 'Canasta de hierro con pavimento de arena',
-    adreca: 'Plaça de la Baixadeta', coords: [41.4573, 2.2577] },
-  { nom: 'Can soley i Ca l\'arnús', pais: 'Espanya', ciutat: 'Badalona', barri: 'Casagemes', estat: 'regular',
-    descripcio: 'Cistelles de ferro i paviment lliscant',
-    descripcio_en: 'Iron hoops and slippery surface',
-    descripcio_es: 'Canastas de hierro y pavimento resbaladizo',
-    adreca: 'Carrer de Sant Bru', coords: [41.4554, 2.2535] },
-  { nom: 'Pista Joaquim Ruyra', pais: 'Espanya', ciutat: 'Badalona', barri: 'Gorg', estat: 'regular',
-    descripcio: '', descripcio_en: '', descripcio_es: '',
-    adreca: 'Carrer Joaquim Ruyra, s/n', coords: [41.4402, 2.2310] },
-  { nom: 'Pista Plaça Joan Miró', pais: 'Espanya', ciutat: 'Badalona', barri: 'Gorg', estat: 'malmes',
-    descripcio: 'les cistelles sense xarxe formen part del fanals de la plaça, paviment de ciment i lineas de camp sense pintar, us recreatiu, sense poder fer partits',
-    descripcio_en: 'Hoops without nets are part of the square lampposts, cement surface, unpainted court lines, recreational use only, no proper games possible.',
-    descripcio_es: 'Las canastas sin red forman parte de las farolas de la plaza, pavimento de cemento y líneas de campo sin pintar, uso recreativo, sin poder hacer partidos.',
-    adreca: 'Plaça Joan Miró', coords: [41.4431, 2.2331] },
-  { nom: 'Pista Plaça Pompeu Fabra', pais: 'Espanya', ciutat: 'Badalona', barri: 'Centre', estat: 'regular',
-    descripcio: 'Cistelles: Una cistella gran i una petita | Paviment: Ciment relliscant | Pintura: Sense pintar | Estat per jugar: No es pot jugar partits, ja que les cistelles estan en diferents posicions | Enllumenat: Llum parcial | Accessibilitat: Accessibilitat per tothom',
-    descripcio_en: 'Hoops: One large and one small hoop | Surface: Slippery cement | Lines: No painted lines | Playability: Games not possible, hoops are at different positions | Lighting: Partial lighting | Accessibility: Accessible for everyone',
-    descripcio_es: 'Canastas: Una grande y una pequeña | Pavimento: Cemento resbaladizo | Pintura: Sin pintar | Estado para jugar: No se puede jugar partidos, las canastas están en posiciones distintas | Iluminación: Luz parcial | Accesibilidad: Accesibilidad para todos',
-    adreca: 'Plaça de Pompeu Fabra', coords: [41.4484, 2.2428] },
-  { nom: 'Pista La Mora', pais: 'Espanya', ciutat: 'Badalona', barri: 'La Mora', estat: 'regular',
-    descripcio: 'Cistelles ja amb xarxes, paviment amb inclinació, sense línies pintades. Es pot jugar partits tot i que cal recordar que la pista té una inclinació.',
-    descripcio_en: 'Hoops with nets, sloped surface, no painted lines. Games can be played but the slope must be taken into account.',
-    descripcio_es: 'Canastas con red, pavimento con inclinación, sin líneas pintadas. Se pueden hacer partidos teniendo en cuenta la inclinación de la pista.',
-    adreca: 'La Mora, Badalona', coords: [41.4312, 2.2376] },
-  { nom: 'Plaça d\'Oriol Martorell', pais: 'Espanya', ciutat: 'Badalona', barri: 'Coll i Pujol', estat: 'malmes',
-    descripcio: 'Cistelles: Sense xarxa | Paviment: Desnivellat | Pintura: Sense',
-    descripcio_en: 'Hoops: No net | Surface: Uneven | Markings: None',
-    descripcio_es: 'Canastas: Sin red | Pavimento: Desnivel | Pintura: Sin',
-    adreca: 'Plaça d\'Oriol Martorell, Badalona', coords: [41.4520, 2.2429] },
-
-  { nom: 'Plaça Països Catalans', pais: 'Espanya', ciutat: 'Badalona', barri: 'Progrés', estat: 'regular',
-    descripcio: 'Cistelles: Metàl·liques, amb xarxes malmeses o inexistents (segons la cistella) | Paviment: Ciment, relliscós | Pintura: Pràcticament esborrades les línies | Estat per jugar: Tirs encara, perillós 1x1 o 3x3 per relliscades. Risc elevat de lesió | Enllumenat: Té llum | Accessibilitat: Accessible | Comentari: Doble pista (dues cistelles). Si s\'acondicionés el paviment (per evitar les relliscades) i es pintessin les línies... Baixaríem a jugar molts dies cada setmana!!',
-    descripcio_es: 'Canastas: Metálicas, con redes deterioradas o inexistentes (según la canasta) | Pavimento: Cemento, resbaladizo | Pintura: Líneas prácticamente borradas | Estado para jugar: Tiros aún posibles, peligroso 1x1 o 3x3 por resbalones. Riesgo elevado de lesión | Iluminación: Tiene luz | Accesibilidad: Accesible | Comentario: Pista doble (dos canastas). ¡Si se acondicionara el pavimento y se pintaran las líneas, bajaríamos a jugar muchos días!',
-    descripcio_en: 'Hoops: Metal, with damaged or missing nets (depending on the hoop) | Surface: Cement, slippery | Markings: Lines almost completely worn off | Playability: Free throws still possible, dangerous for 1v1 or 3v3 due to slipping. High injury risk | Lighting: Yes | Accessibility: Accessible | Note: Double court (two hoops). If the surface were resurfaced and lines repainted, we\'d be down here playing every week!!',
-    adreca: 'Plaça Països Catalans, Badalona', coords: [41.4439, 2.2390] },
-];
+/* Pistes del mapa: font única a assets/data/pistes.json (inventari de Badalona) */
+const PISTES_URL = 'assets/data/pistes.json';
+// Es carrega una sola vegada i la comparteixen el mapa i l'informe (informe-modal.js)
+let pistesPromise = null;
+function fetchPistes() {
+  if (!pistesPromise) {
+    pistesPromise = fetch(PISTES_URL, { cache: 'no-cache' })
+      .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then(pistes => pistes.map(p => ({ pais: 'Espanya', ciutat: 'Badalona', ...p })))
+      .catch(e => { console.warn('No s\'han pogut carregar les pistes:', e); pistesPromise = null; return []; });
+  }
+  return pistesPromise;
+}
 
 const ESTAT_TXTS = {
   ca: { bon: 'En bon estat', regular: 'Estat regular', malmes: 'Necessita millora', projecte: '⭐ Projecte actiu',
+        sense_valorar: 'Sense valorar', desapareguda: 'Desapareguda',
         arribar: '↗ Com arribar', reporta: '⚠ Reporta',
         incidencia: 'Incidència a', incBody: 'Hola Juguem a Bàsquet,\n\nVull reportar una incidència a la pista:\n',
         incDetall: 'Descripció del problema:\n[explica què has vist]\n\nAdjunto fotos si en tens.\n\nGràcies!',
         capPista: 'Cap pista trobada' },
   es: { bon: 'En buen estado', regular: 'Estado regular', malmes: 'Necesita mejora', projecte: '⭐ Proyecto activo',
+        sense_valorar: 'Sin valorar', desapareguda: 'Desaparecida',
         arribar: '↗ Cómo llegar', reporta: '⚠ Reportar',
         incidencia: 'Incidencia en', incBody: 'Hola Juguem a Bàsquet,\n\nQuiero reportar una incidencia en la pista:\n',
         incDetall: 'Descripción del problema:\n[explica qué has visto]\n\nAdjunto fotos si tienes.\n\n¡Gracias!',
         capPista: 'No se ha encontrado ninguna pista' },
   en: { bon: 'Good condition', regular: 'Fair condition', malmes: 'Needs repair', projecte: '⭐ Active project',
+        sense_valorar: 'Not yet rated', desapareguda: 'No longer exists',
         arribar: '↗ Get directions', reporta: '⚠ Report',
         incidencia: 'Issue at', incBody: 'Hi Juguem a Bàsquet,\n\nI want to report an issue at the court:\n',
         incDetall: 'Description of the problem:\n[explain what you saw]\n\nI\'ll attach photos if I have any.\n\nThank you!',
@@ -126,11 +90,13 @@ const ESTAT_LBL = {
   bon: { text: 'En bon estat', cls: 'bon' },
   regular: { text: 'Estat regular', cls: 'regular' },
   malmes: { text: 'Necessita millora', cls: 'malmes' },
-  projecte: { text: '⭐ Projecte actiu', cls: 'projecte' }
+  projecte: { text: '⭐ Projecte actiu', cls: 'projecte' },
+  sense_valorar: { text: 'Sense valorar', cls: 'sense_valorar' },
+  desapareguda: { text: 'Desapareguda', cls: 'desapareguda' }
 };
 function getEstatLbl(estat) {
   const t = getEstatTxts();
-  const cls = { bon:'bon', regular:'regular', malmes:'malmes', projecte:'projecte' };
+  const cls = { bon:'bon', regular:'regular', malmes:'malmes', projecte:'projecte', sense_valorar:'sense_valorar', desapareguda:'desapareguda' };
   return { text: t[estat] || t.regular, cls: cls[estat] || 'regular' };
 }
 
@@ -260,19 +226,19 @@ const COUNTRY_FLAGS = {
 };
 function getFlag(pais) { return COUNTRY_FLAGS[pais] || '🌍'; }
 
+/* Ordre de la llista: projecte primer, desaparegudes al final */
+function ordrePista(p) { return p.estat === 'projecte' ? 0 : p.estat === 'desapareguda' ? 2 : 1; }
+function ordenaPistes(a, b) { return ordrePista(a) - ordrePista(b); }
+
 /* ---------- Inicialització del mapa i la llista ---------- */
-function initMapa() {
+async function initMapa() {
   const mapEl = document.getElementById('mapa-pistes');
   if (!mapEl || typeof L === 'undefined') return;
 
   setupProposaBtn();
 
-  // Mostrar pistes locals immediatament; sheet s'afegeix en background
-  let allPistes = [...PISTES].sort((a, b) => {
-    if (a.estat === 'projecte' && b.estat !== 'projecte') return -1;
-    if (b.estat === 'projecte' && a.estat !== 'projecte') return 1;
-    return 0;
-  });
+  // Pistes de l'inventari (JSON); el full de propostes s'afegeix en background
+  let allPistes = [...await fetchPistes()].sort(ordenaPistes);
 
   const map = window.jabMap = L.map('mapa-pistes', {
     center: [41.4520, 2.2470],
@@ -490,7 +456,7 @@ function initMapa() {
   function updateStats() {
     const cnt = { bon: 0, regular: 0, malmes: 0 };
     allPistes.forEach(p => { if (cnt[p.estat] !== undefined) cnt[p.estat]++; });
-    document.getElementById('stat-total').textContent = allPistes.length;
+    document.getElementById('stat-total').textContent = allPistes.filter(p => p.estat !== 'desapareguda').length;
     document.getElementById('stat-bon').textContent = cnt.bon;
     document.getElementById('stat-regular').textContent = cnt.regular;
     document.getElementById('stat-malmes').textContent = cnt.malmes;
@@ -665,11 +631,7 @@ function initMapa() {
     if (!sheetPistes.length) return;
     const offset = allPistes.length;
     sheetPistes.forEach(p => allPistes.push(p));
-    allPistes.sort((a, b) => {
-      if (a.estat === 'projecte' && b.estat !== 'projecte') return -1;
-      if (b.estat === 'projecte' && a.estat !== 'projecte') return 1;
-      return 0;
-    });
+    allPistes.sort(ordenaPistes);
     addMarkers(sheetPistes, offset);
     updateStats();
     renderLlista();

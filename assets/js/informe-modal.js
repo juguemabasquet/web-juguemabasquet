@@ -32,15 +32,15 @@ function filterInforme(estat) {
   renderInforme(estat);
 }
 
-function renderInforme(filtre) {
+async function renderInforme(filtre) {
   const t = getEstatTxts();
-  // Usar PISTES (global) + sheetPistes si existeix
-  const base = PISTES.concat(typeof window._sheetPistes !== 'undefined' ? window._sheetPistes : []);
+  // Pistes del JSON (fetchPistes, a map.js) + sheetPistes si existeix
+  const base = (await fetchPistes()).concat(typeof window._sheetPistes !== 'undefined' ? window._sheetPistes : []);
   const pistes = base
     .filter(p => filtre === 'all' || p.estat === filtre)
     .sort((a,b) => { if(a.estat==='projecte') return -1; if(b.estat==='projecte') return 1; return a.barri.localeCompare(b.barri); });
 
-  const colors = { bon:'#2ECC71', regular:'#F39C12', malmes:'#E74C3C', projecte:'#5DADE2' };
+  const colors = { bon:'#2ECC71', regular:'#F39C12', malmes:'#E74C3C', projecte:'#5DADE2', sense_valorar:'#7F8C8D', desapareguda:'#5D6D7E' };
   const countTxt = { ca:`${pistes.length} pistes`, en:`${pistes.length} courts`, es:`${pistes.length} pistas` };
   document.getElementById('informe-count').textContent = countTxt[currentLang] || countTxt.ca;
 
