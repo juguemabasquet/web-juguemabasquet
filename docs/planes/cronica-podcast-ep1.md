@@ -11,7 +11,10 @@ Segueix el patró del tancament de Halloween & Castanyada (commit `be6ed19`).
 4. **Inici (`index.html`)**: la targeta de l'ep. 1 a Activitats enllaça a la pàgina ("Veure la galeria →"); s'elimina el modal de l'ep. 1 (`podcast1-modal.js` i els seus selectors CSS); el fallback estàtic del destacat del bento passa a l'ep. 2.
 5. **Crònica genèrica**: només fets coneguts (primer episodi, en directe al Temps Mort, sala plena, Jose Hita com a convidat). Es pot ampliar quan hi hagi detalls.
 
+6. **Episodi publicat (25/11/2026)**: el bloc "Escolta l'episodi" mostra la portada del vídeo de YouTube (`Li6CTrP63yE`) a dalt, al costat del cartell, i a sota els botons de Spotify i YouTube.
+   - No s'incrusta el reproductor: es veu la portada local `assets/events/podcast-ep1-youtube-portada.webp` amb un botó de play (`.listen-video`, `.listen-play`), i és un enllaç que obre el vídeo a youtube.com en una pestanya nova. Així la web no carrega res de YouTube i es controla el consum d'ample de banda a Netlify.
+   - La crònica diu "Ja podeu escoltar l'episodi sencer…" i la targeta de l'inici passa a "Escolta l'episodi →" (`act.escoltaepisodi` a `assets/js/i18n.js`).
+
 ## Pendent
 
-- Enllaços de Spotify i YouTube.
 - Descripció de la foto de la cistella.

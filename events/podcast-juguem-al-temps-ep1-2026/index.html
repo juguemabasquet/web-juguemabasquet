@@ -51,16 +51,17 @@
       <a class="meta-pill" href="https://maps.google.com/maps?q=Temps+Mort+Badalona" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="f.location">Bar Esportiu Temps Mort · Badalona</span></a>
     </div>
 
-    <!-- ESCOLTA L'EPISODI: quan es publiqui, treure el paràgraf .listen-pending i descomentar els enllaços amb les URL bones -->
+    <!-- ESCOLTA L'EPISODI: la portada amb el play obre el vídeo a YouTube (no s'incrusta per no gastar ample de banda) -->
     <div class="listen-block">
       <div class="listen-label" data-i18n="l.label">Escolta l'episodi</div>
-      <p class="listen-pending" data-i18n="l.pending">Molt aviat a Spotify i YouTube.</p>
-      <!--
+      <a class="listen-video" href="https://www.youtube.com/watch?v=Li6CTrP63yE" target="_blank" rel="noopener" aria-label="Mira l'episodi 1 a YouTube">
+        <img src="../../assets/events/podcast-ep1-youtube-portada.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+        <span class="listen-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
       <div class="listen-links">
-        <a class="listen-btn" href="https://open.spotify.com/..." target="_blank" rel="noopener">Spotify</a>
-        <a class="listen-btn" href="https://www.youtube.com/..." target="_blank" rel="noopener">YouTube</a>
+        <a class="listen-btn" href="https://open.spotify.com/episode/12CLr9zlTbQRSr6U92tPCm" target="_blank" rel="noopener">Spotify</a>
+        <a class="listen-btn" href="https://www.youtube.com/watch?v=Li6CTrP63yE" target="_blank" rel="noopener">YouTube</a>
       </div>
-      -->
     </div>
   </div>
 </main>
@@ -70,7 +71,7 @@
   <div class="story-eyebrow" data-i18n="s.eyebrow">La crònica</div>
   <h2 data-i18n="s.title">Arrenca «Juguem al Temps», el pòdcast de Juguem a Bàsquet</h2>
   <p data-i18n="s.p1">El 12 de novembre vam gravar en directe el primer episodi de «Temps de Bàsquet · Juguem al Temps» al Bar Esportiu Temps Mort de Badalona, envoltats de samarretes històriques i amb la sala plena de gent.</p>
-  <p data-i18n="s.p2">El primer convidat va ser <strong>Jose Hita, president de Juguem a Bàsquet</strong>. Gràcies a tothom que va venir a escoltar-lo i a compartir una estona de <strong>bàsquet i conversa</strong>; vam acabar amb una foto de grup amb tota la sala. Aviat podreu escoltar l'episodi a Spotify i YouTube.</p>
+  <p data-i18n="s.p2">El primer convidat va ser <strong>Jose Hita, president de Juguem a Bàsquet</strong>. Gràcies a tothom que va venir a escoltar-lo i a compartir una estona de <strong>bàsquet i conversa</strong>; vam acabar amb una foto de grup amb tota la sala. Ja podeu escoltar l'episodi sencer a Spotify i YouTube.</p>
 </section>
 
 <!-- PHOTO GALLERY -->
@@ -109,11 +110,10 @@ const TRAD = {
     'f.location': "Bar Esportiu Temps Mort · Badalona",
     'c.zoom': 'Amplia',
     'l.label': "Escolta l'episodi",
-    'l.pending': "Molt aviat a Spotify i YouTube.",
     's.eyebrow': 'La crònica',
     's.title': "Arrenca «Juguem al Temps», el pòdcast de Juguem a Bàsquet",
     's.p1': "El 12 de novembre vam gravar en directe el primer episodi de «Temps de Bàsquet · Juguem al Temps» al Bar Esportiu Temps Mort de Badalona, envoltats de samarretes històriques i amb la sala plena de gent.",
-    's.p2': "El primer convidat va ser <strong>Jose Hita, president de Juguem a Bàsquet</strong>. Gràcies a tothom que va venir a escoltar-lo i a compartir una estona de <strong>bàsquet i conversa</strong>; vam acabar amb una foto de grup amb tota la sala. Aviat podreu escoltar l'episodi a Spotify i YouTube.",
+    's.p2': "El primer convidat va ser <strong>Jose Hita, president de Juguem a Bàsquet</strong>. Gràcies a tothom que va venir a escoltar-lo i a compartir una estona de <strong>bàsquet i conversa</strong>; vam acabar amb una foto de grup amb tota la sala. Ja podeu escoltar l'episodi sencer a Spotify i YouTube.",
     'g.head': 'Galeria',
     'f.footer': '← Juguem a Bàsquet · Badalona',
     'f.transp': 'Transparència',
@@ -128,11 +128,10 @@ const TRAD = {
     'f.location': "Bar Esportiu Temps Mort · Badalona",
     'c.zoom': 'Zoom',
     'l.label': "Listen to the episode",
-    'l.pending': "Coming soon to Spotify and YouTube.",
     's.eyebrow': 'The story',
     's.title': "«Juguem al Temps», the Juguem a Bàsquet podcast, is under way",
     's.p1': "On 12 November we recorded the first episode of «Temps de Bàsquet · Juguem al Temps» live at Bar Esportiu Temps Mort in Badalona, surrounded by historic jerseys and with a full room.",
-    's.p2': "Our first guest was <strong>Jose Hita, president of Juguem a Bàsquet</strong>. Thanks to everyone who came to listen and share some <strong>basketball and conversation</strong>; we wrapped up with a group photo of the whole room. The episode will soon be available on Spotify and YouTube.",
+    's.p2': "Our first guest was <strong>Jose Hita, president of Juguem a Bàsquet</strong>. Thanks to everyone who came to listen and share some <strong>basketball and conversation</strong>; we wrapped up with a group photo of the whole room. The full episode is now available on Spotify and YouTube.",
     'g.head': 'Gallery',
     'f.footer': '← Juguem a Bàsquet · Badalona',
     'f.transp': 'Transparency',
@@ -147,11 +146,10 @@ const TRAD = {
     'f.location': "Bar Esportiu Temps Mort · Badalona",
     'c.zoom': 'Ampliar',
     'l.label': "Escucha el episodio",
-    'l.pending': "Muy pronto en Spotify y YouTube.",
     's.eyebrow': 'La crónica',
     's.title': "Arranca «Juguem al Temps», el pódcast de Juguem a Bàsquet",
     's.p1': "El 12 de noviembre grabamos en directo el primer episodio de «Temps de Bàsquet · Juguem al Temps» en el Bar Esportiu Temps Mort de Badalona, rodeados de camisetas históricas y con la sala llena.",
-    's.p2': "El primer invitado fue <strong>Jose Hita, presidente de Juguem a Bàsquet</strong>. Gracias a todos los que vinisteis a escucharlo y a compartir un rato de <strong>baloncesto y conversación</strong>; acabamos con una foto de grupo con toda la sala. Muy pronto podréis escuchar el episodio en Spotify y YouTube.",
+    's.p2': "El primer invitado fue <strong>Jose Hita, presidente de Juguem a Bàsquet</strong>. Gracias a todos los que vinisteis a escucharlo y a compartir un rato de <strong>baloncesto y conversación</strong>; acabamos con una foto de grupo con toda la sala. Ya podéis escuchar el episodio completo en Spotify y YouTube.",
     'g.head': 'Galería',
     'f.footer': '← Juguem a Bàsquet · Badalona',
     'f.transp': 'Transparencia',
