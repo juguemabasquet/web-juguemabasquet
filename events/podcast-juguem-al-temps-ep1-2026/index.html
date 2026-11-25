@@ -51,13 +51,13 @@
       <a class="meta-pill" href="https://maps.google.com/maps?q=Temps+Mort+Badalona" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="f.location">Bar Esportiu Temps Mort · Badalona</span></a>
     </div>
 
-    <!-- ESCOLTA L'EPISODI: el vídeo de YouTube només es carrega quan es prem el play -->
+    <!-- ESCOLTA L'EPISODI: la portada amb el play obre el vídeo a YouTube (no s'incrusta per no gastar ample de banda) -->
     <div class="listen-block">
       <div class="listen-label" data-i18n="l.label">Escolta l'episodi</div>
-      <button class="listen-video js-yt" type="button" data-yt="Li6CTrP63yE" aria-label="Reprodueix l'episodi 1 a YouTube">
+      <a class="listen-video" href="https://www.youtube.com/watch?v=Li6CTrP63yE" target="_blank" rel="noopener" aria-label="Mira l'episodi 1 a YouTube">
         <img src="../../assets/events/podcast-ep1-youtube-portada.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
         <span class="listen-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-      </button>
+      </a>
       <div class="listen-links">
         <a class="listen-btn" href="https://open.spotify.com/episode/12CLr9zlTbQRSr6U92tPCm" target="_blank" rel="noopener">Spotify</a>
         <a class="listen-btn" href="https://www.youtube.com/watch?v=Li6CTrP63yE" target="_blank" rel="noopener">YouTube</a>
@@ -194,20 +194,6 @@ setLang(savedLang);
   closeBtn.addEventListener('click', close);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 })();
-
-// YouTube: the player (youtube-nocookie) is only loaded when the play button is pressed
-document.querySelectorAll('.js-yt').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.yt + '?autoplay=1';
-    iframe.title = btn.getAttribute('aria-label');
-    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-    iframe.allowFullscreen = true;
-    iframe.className = 'listen-video';
-    btn.replaceWith(iframe);
-  });
-});
 </script>
 
 <script src="../../assets/js/swipe-back.js"></script>
