@@ -74,20 +74,21 @@ Notes:
 ## Revisió amb l'usuari (estat a 27/11/2026)
 
 **Ubicacions validades amb enllaç de Google Maps**: #4 Regalèssia, #7 Camí de Sistrells, #29 Torrents i Lladó,
-#21 Sant Jeroni de la Murtra (Google la situa a Montigalà; l'inventari diu Canyet), #24 Murillo, #35 Doctor Bassols, #41 Gran Sol.
+#21 Sant Jeroni de la Murtra (barri canviat a Montigalà; l'inventari deia Canyet), #24 Murillo, #35 Doctor Bassols, #41 Gran Sol,
+#5 Poli Verde ("Pista Verde" a Google, coincideix amb la "Pista poliesportiva Ronda Llefià" d'OSM).
 
-**Retirada a `pistes-pendents.json`**: #6 Eliseu Meifrèn, probable duplicat de la #42 (a 136 m).
+**Retirada a `pistes-pendents.json`**: #6 Eliseu Meifrèn, duplicat de la #42 (mateix carrer, confirmat per l'usuari).
 
 #32 Alfons XII Sant Roc: desapareguda, es deixa amb punt aproximat.
 
 **Estats i descripcions presos d'OSM** (fitxes MapComplete, validats amb l'usuari): #3, 4, 7, 11, 18, 22, 23, 26, 30, 33,
 38, 42. A la #7 es va treure la dada de les cistelles; a la #30 es deixa fora, a propòsit, el comentari sobre la polèmica veïnal.
 
+La Gàbia (#2): es manté "bon estat"; l'han reformat fa poc (OSM no està al dia).
+
 **Pendent**
 - Confiança mitjana: #36 Encants, #39 Pablo Picasso.
 - Sense valorar i sense dades a OSM: #1, 5, 8, 15, 17, 21, 24, 27, 28, 29, 35, 36, 37, 39, 40, 41.
-- #5 Poli Verde: candidata d'OSM per confirmar (41.44184, 2.21782).
-- La Gàbia (#2): la web diu "bon estat" i OSM, asfalt degradat.
 - #10 Alfons XII "Sant Jaume", a `pistes-pendents.json`.
 - Filtres de l'informe de catalogació per als estats nous.
 - Revisió visual i merge de la PR #28.

@@ -201,8 +201,8 @@
     "barri": "Llefià",
     "adreca": "Carrer de Sant Cebrià",
     "coords": [
-      41.44202,
-      2.21807
+      41.44184,
+      2.21782
     ],
     "estat": "sense_valorar",
     "descripcio": "",
@@ -296,7 +296,7 @@
   {
     "num": 21,
     "nom": "Pista Camí de Sant Jeroni de la Murtra",
-    "barri": "Canyet",
+    "barri": "Montigalà",
     "adreca": "Camí de Sant Jeroni de la Murtra",
     "coords": [
       41.45714,
