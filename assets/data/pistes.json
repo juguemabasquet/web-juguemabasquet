@@ -233,9 +233,9 @@
       2.23196
     ],
     "estat": "malmes",
-    "descripcio": "Cistelles: Dues, però inhàbils | Paviment: Degradat | Enllumenat: Sense llum | Comentari: Sembla de gestió veïnal",
-    "descripcio_es": "Canastas: Dos, pero inutilizables | Pavimento: Degradado | Iluminación: Sin luz | Comentario: Parece de gestión vecinal",
-    "descripcio_en": "Hoops: Two, but unusable | Surface: Degraded | Lighting: None | Note: Appears to be run by local residents"
+    "descripcio": "Paviment: Degradat | Enllumenat: Sense llum | Comentari: Sembla de gestió veïnal",
+    "descripcio_es": "Pavimento: Degradado | Iluminación: Sin luz | Comentario: Parece de gestión vecinal",
+    "descripcio_en": "Surface: Degraded | Lighting: None | Note: Appears to be run by local residents"
   },
   {
     "num": 8,
