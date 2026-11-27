@@ -176,10 +176,10 @@
       41.44542,
       2.23402
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "regular",
+    "descripcio": "Cistelles: En bon estat | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Té llum | Comentari: Espai obert per fer tirs i algun partit improvisat. Jocs infantils a prop.",
+    "descripcio_es": "Canastas: En buen estado | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Tiene luz | Comentario: Espacio abierto para tirar y algún partido improvisado. Juegos infantiles cerca.",
+    "descripcio_en": "Hoops: In good condition | Surface: Well-kept cement | Markings: No lines | Lighting: Yes | Note: Open space for shooting and the odd pick-up game. Playground nearby."
   },
   {
     "num": 4,
@@ -190,10 +190,10 @@
       41.43966,
       2.23
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "malmes",
+    "descripcio": "Cistelles: De les 4, només una està bé | Paviment: Ciment | Pintura: Amb línies | Enllumenat: Té llum",
+    "descripcio_es": "Canastas: De las 4, solo una está bien | Pavimento: Cemento | Pintura: Con líneas | Iluminación: Tiene luz",
+    "descripcio_en": "Hoops: Only one of the 4 is in good shape | Surface: Cement | Markings: Lines painted | Lighting: Yes"
   },
   {
     "num": 5,
@@ -260,10 +260,10 @@
       41.46073,
       2.24577
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "malmes",
+    "descripcio": "Cistelles: Una, pràcticament inservible i a tocar del sostre | Paviment: Ciment, en baixada | Pintura: Sense línies | Enllumenat: Sense llum",
+    "descripcio_es": "Canastas: Una, prácticamente inservible y pegada al techo | Pavimento: Cemento, en bajada | Pintura: Sin líneas | Iluminación: Sin luz",
+    "descripcio_en": "Hoops: One, practically unusable and right under the roof | Surface: Cement, sloping | Markings: No lines | Lighting: None"
   },
   {
     "num": 15,
@@ -302,10 +302,10 @@
       41.43857,
       2.21596
     ],
-    "estat": "sense_valorar",
-    "descripcio": "Cistella mini",
-    "descripcio_es": "Canasta mini",
-    "descripcio_en": "Mini hoop"
+    "estat": "regular",
+    "descripcio": "Cistelles: Dues | Paviment: Ciment cuidat | Enllumenat: Sense llum per fer esport",
+    "descripcio_es": "Canastas: Dos | Pavimento: Cemento cuidado | Iluminación: Sin luz para hacer deporte",
+    "descripcio_en": "Hoops: Two | Surface: Well-kept cement | Lighting: Not enough for sport"
   },
   {
     "num": 21,
@@ -330,10 +330,10 @@
       41.45397,
       2.22576
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "regular",
+    "descripcio": "Cistelles: Dues de ferro | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum",
+    "descripcio_es": "Canastas: Dos de hierro | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz",
+    "descripcio_en": "Hoops: Two iron hoops | Surface: Well-kept cement | Markings: No lines | Lighting: None"
   },
   {
     "num": 23,
@@ -344,10 +344,10 @@
       41.45551,
       2.23912
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "regular",
+    "descripcio": "Cistelles: Dues | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum | Comentari: Ideal per jugar a 21, però no per fer un partit.",
+    "descripcio_es": "Canastas: Dos | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz | Comentario: Ideal para jugar a 21, pero no para un partido.",
+    "descripcio_en": "Hoops: Two | Surface: Well-kept cement | Markings: No lines | Lighting: None | Note: Great for a game of 21, not for a full game."
   },
   {
     "num": 24,
@@ -372,10 +372,10 @@
       41.45479,
       2.25856
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "malmes",
+    "descripcio": "Cistelles: De ferro, amb xarxes de goma, una al costat de l'altra | Paviment: Asfalt desnivellat, en baixada cap al mar | Pintura: Sense línies | Enllumenat: Té llum",
+    "descripcio_es": "Canastas: De hierro, con redes de goma, una al lado de la otra | Pavimento: Asfalto con desnivel, en bajada hacia el mar | Pintura: Sin líneas | Iluminación: Tiene luz",
+    "descripcio_en": "Hoops: Iron, with rubber nets, side by side | Surface: Uneven asphalt, sloping towards the sea | Markings: No lines | Lighting: Yes"
   },
   {
     "num": 27,
@@ -428,10 +428,10 @@
       41.4525,
       2.23089
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "bon",
+    "descripcio": "Cistelles: Dues | Paviment: Ciment cuidat | Pintura: Amb línies | Enllumenat: Sense llum",
+    "descripcio_es": "Canastas: Dos | Pavimento: Cemento cuidado | Pintura: Con líneas | Iluminación: Sin luz",
+    "descripcio_en": "Hoops: Two | Surface: Well-kept cement | Markings: Lines painted | Lighting: None"
   },
   {
     "num": 32,
@@ -456,10 +456,10 @@
       41.4357,
       2.2197
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "malmes",
+    "descripcio": "Cistelles: A diferents altures, amb xarxes i taulers de metall | Paviment: Asfalt inclinat | Pintura: Sense línia de tres | Enllumenat: Té llum",
+    "descripcio_es": "Canastas: A distintas alturas, con redes y tableros de metal | Pavimento: Asfalto inclinado | Pintura: Sin línea de tres | Iluminación: Tiene luz",
+    "descripcio_en": "Hoops: At different heights, with metal nets and backboards | Surface: Sloping asphalt | Markings: No three-point line | Lighting: Yes"
   },
   {
     "num": 34,
@@ -526,10 +526,10 @@
       41.45351,
       2.22065
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "regular",
+    "descripcio": "Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum",
+    "descripcio_es": "Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz",
+    "descripcio_en": "Surface: Well-kept cement | Markings: No lines | Lighting: None"
   },
   {
     "num": 39,
@@ -582,9 +582,9 @@
       41.46653,
       2.24013
     ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
+    "estat": "regular",
+    "descripcio": "Cistelles: Una sola | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum | Comentari: No és una pista de bàsquet sencera; ideal per jugar a 21.",
+    "descripcio_es": "Canastas: Una sola | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz | Comentario: No es una pista de baloncesto completa; ideal para jugar a 21.",
+    "descripcio_en": "Hoops: Just one | Surface: Well-kept cement | Markings: No lines | Lighting: None | Note: Not a full basketball court; great for a game of 21."
   }
 ]
