@@ -70,3 +70,22 @@ Notes:
    - El comptador "Pistes al mapa" no compta les desaparegudes.
    - Pendent: els filtres de l'informe de catalogació encara són només Totes/Bon/Regular/Malmesa.
 5. Revisió visual de l'usuari (`npm run dev`: amb `file://` el JSON no es pot carregar).
+
+## Revisió amb l'usuari (estat a 27/11/2026)
+
+**Ubicacions validades amb enllaç de Google Maps**: #4 Regalèssia, #7 Camí de Sistrells, #29 Torrents i Lladó.
+
+**Estats i descripcions presos d'OSM** (fitxes MapComplete, validats amb l'usuari): #3, 4, 7, 11, 18, 22, 23, 26, 30, 33,
+38, 42. A la #7 es va treure la dada de les cistelles; a la #30 es deixa fora, a propòsit, el comentari sobre la polèmica veïnal.
+
+**Pendent**
+- Ubicació sense cap candidata: #21 Sant Jeroni de la Murtra, #24 Murillo.
+- Candidates d'OSM per confirmar: #5 Poli Verde (41.44184, 2.21782), #6 Eliseu Meifrèn (41.4675, 2.23949),
+  #35 Doctor Bassols (41.43961, 2.22274), #41 Gran Sol (41.44279, 2.2224; el punt actual cau a la petanca),
+  #32 Alfons XII Sant Roc, desapareguda (41.43519, 2.22901).
+- Confiança mitjana: #36 Encants, #39 Pablo Picasso.
+- Sense valorar i sense dades a OSM: #1, 5, 6, 8, 15, 17, 21, 24, 27, 28, 29, 35, 36, 37, 39, 40, 41.
+- La Gàbia (#2): la web diu "bon estat" i OSM, asfalt degradat.
+- #10 Alfons XII "Sant Jaume", a `pistes-pendents.json`.
+- Filtres de l'informe de catalogació per als estats nous.
+- Revisió visual i merge de la PR #28.
