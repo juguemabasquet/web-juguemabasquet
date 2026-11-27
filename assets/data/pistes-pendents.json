@@ -13,5 +13,20 @@
     "descripcio_es": "",
     "descripcio_en": "",
     "motiu": "No localitzada. A OSM les úniques pistes d'Alfons XII són dins d'escoles (Sant Domènec Savio, Maristes Champagnat, EOI) o la de Plaça Països Catalans (#20). 'Sant Jaume' no és un barri oficial. Coordenades provisionals (dins de l'escola Sant Domènec Savio): no fer-les servir."
+  },
+  {
+    "num": 6,
+    "nom": "Pista Carrer d'Eliseu Meifrèn",
+    "barri": "Bonavista",
+    "adreca": "Carrer d'Eliseu Meifrèn",
+    "coords": [
+      41.46651,
+      2.2385
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": "",
+    "motiu": "Probable duplicat de la #42 (Pintor Modest Urgell), a 136 m, segons l'usuari. Nota: a OSM hi ha una 'Pista Poliesportiva Bonavista' a 41.4675, 2.23949 (a 120 m de la #42), per si fos una pista diferent."
   }
 ]

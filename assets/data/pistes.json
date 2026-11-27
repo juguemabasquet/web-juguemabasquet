@@ -210,20 +210,6 @@
     "descripcio_en": ""
   },
   {
-    "num": 6,
-    "nom": "Pista Carrer d'Eliseu Meifrèn",
-    "barri": "Bonavista",
-    "adreca": "Carrer d'Eliseu Meifrèn",
-    "coords": [
-      41.46651,
-      2.2385
-    ],
-    "estat": "sense_valorar",
-    "descripcio": "",
-    "descripcio_es": "",
-    "descripcio_en": ""
-  },
-  {
     "num": 7,
     "nom": "Pista Camí de Sistrells",
     "barri": "Lloreda Nord",
@@ -313,8 +299,8 @@
     "barri": "Canyet",
     "adreca": "Camí de Sant Jeroni de la Murtra",
     "coords": [
-      41.46786,
-      2.22128
+      41.45714,
+      2.23391
     ],
     "estat": "sense_valorar",
     "descripcio": "",
@@ -355,8 +341,8 @@
     "barri": "Manresà",
     "adreca": "Carrer de Murillo",
     "coords": [
-      41.46165,
-      2.26748
+      41.46226,
+      2.26726
     ],
     "estat": "sense_valorar",
     "descripcio": "Pista de sorra",
@@ -481,8 +467,8 @@
     "barri": "Llefià",
     "adreca": "Carrer del Doctor Bassols",
     "coords": [
-      41.43932,
-      2.22265
+      41.43943,
+      2.22266
     ],
     "estat": "sense_valorar",
     "descripcio": "",
@@ -565,8 +551,8 @@
     "barri": "Llefià",
     "adreca": "Avinguda d'Àfrica, parc del Gran Sol",
     "coords": [
-      41.44313,
-      2.22144
+      41.44304,
+      2.22004
     ],
     "estat": "sense_valorar",
     "descripcio": "",
