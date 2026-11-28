@@ -86,8 +86,21 @@ Notes:
 
 La Gàbia (#2): es manté "bon estat"; l'han reformat fa poc (OSM no està al dia).
 
+**Lliçons**
+- OSM etiqueta moltes pistes com a `sport=multi` (poliesportiva) i no com a bàsquet: cal buscar-les totes.
+- `access=private` no vol dir sempre escola (la #7 és de gestió veïnal), i a l'inrevés: pistes d'escola sense `access=private`.
+
 **Pendent**
-- Confiança mitjana: #36 Encants, #39 Pablo Picasso.
+- **Pistes que cauen dins d'una escola** (comprovació automàtica contra els 98 recintes educatius i poliesportius
+  d'OSM a Badalona, 28/11/2026). De moment es deixen tal com estan, per decisió de l'usuari:
+  - #27 Manuel Moreno Mauricio → Escola Montigalà. L'altra candidata d'OSM és privada.
+  - #36 Passatge dels Encants → Institut Enric Borràs. Les altres pistes del voltant són de l'Institut Escola Turó d'en Caritg.
+  - #39 Pablo Picasso → Escola Pau Picasso. Una altra és de l'Institut Pau Casals. Única candidata pública:
+    poliesportiva a ~100 m (41.44928, 2.22517), sense confirmar que sigui de sorra.
+  - #34 Carrer de París (desapareguda) → Escola Rafael Casanova.
+  - Proposta pendent: apartar #27, #36 i #39 a `pistes-pendents.json` si no se'n troba la ubicació real, i moure
+    la #34 a un punt del carrer.
+  - Límit: només detecta escoles que tenen el recinte dibuixat a OSM.
 - Sense valorar i sense dades a OSM: #1, 5, 8, 15, 17, 21, 24, 27, 28, 29, 35, 36, 37, 39, 40, 41.
 - #10 Alfons XII "Sant Jaume", a `pistes-pendents.json`.
 - Filtres de l'informe de catalogació per als estats nous.
