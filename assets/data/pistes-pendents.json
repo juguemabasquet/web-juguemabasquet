@@ -1,0 +1,32 @@
+[
+  {
+    "num": 10,
+    "nom": "Pista Carrer d'Alfons XII (Sant Jaume)",
+    "barri": "Sant Jaume",
+    "adreca": "Carrer d'Alfons XII",
+    "coords": [
+      41.44342,
+      2.23971
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": "",
+    "motiu": "No localitzada. A OSM les úniques pistes d'Alfons XII són dins d'escoles (Sant Domènec Savio, Maristes Champagnat, EOI) o la de Plaça Països Catalans (#20). 'Sant Jaume' no és un barri oficial. Coordenades provisionals (dins de l'escola Sant Domènec Savio): no fer-les servir."
+  },
+  {
+    "num": 6,
+    "nom": "Pista Carrer d'Eliseu Meifrèn",
+    "barri": "Bonavista",
+    "adreca": "Carrer d'Eliseu Meifrèn",
+    "coords": [
+      41.46651,
+      2.2385
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": "",
+    "motiu": "Duplicat de la #42 (Pintor Modest Urgell): és el mateix carrer, segons l'usuari. Es conserva només com a referència."
+  }
+]

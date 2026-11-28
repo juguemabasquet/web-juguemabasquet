@@ -1,0 +1,576 @@
+[
+  {
+    "num": null,
+    "nom": "Pista dels Carmelites Descalços",
+    "barri": "Badalona Centre",
+    "adreca": "Carrer del Mar, 47",
+    "coords": [
+      41.4488,
+      2.2486
+    ],
+    "estat": "projecte",
+    "descripcio": "Pista cedida pels Pares Carmelites Descalços. Entrada pel Carrer del Mar, 47. Espai inclusiu per a tothom, amb especial atenció a persones amb mobilitat reduïda i diversitat funcional. En procés de renovació.",
+    "descripcio_es": "Pista cedida por los Padres Carmelitas Descalzos. Entrada por Carrer del Mar, 47. Espacio inclusivo para todos, con especial atención a personas con movilidad reducida y diversidad funcional. En proceso de renovación.",
+    "descripcio_en": "Court lent by the Discalced Carmelite Fathers. Entrance at Carrer del Mar, 47. Inclusive space for everyone, with special attention to people with reduced mobility and functional diversity. Under renovation."
+  },
+  {
+    "num": 13,
+    "nom": "Pista Iris-sol-casagemes",
+    "barri": "Canyadó",
+    "adreca": "Carrer de Santa Madrona, 158-160",
+    "coords": [
+      41.4541,
+      2.2584
+    ],
+    "estat": "desapareguda",
+    "descripcio": "Desapareguda des del juny.",
+    "descripcio_es": "Desaparecida desde junio.",
+    "descripcio_en": "Gone since June."
+  },
+  {
+    "num": 2,
+    "nom": "La gàbia",
+    "barri": "Canyadó",
+    "adreca": "Eduard Maristany, 18",
+    "coords": [
+      41.4567,
+      2.2586
+    ],
+    "estat": "bon",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 25,
+    "nom": "la Baixadeta",
+    "barri": "Canyadó",
+    "adreca": "Plaça de la Baixadeta",
+    "coords": [
+      41.4573,
+      2.2577
+    ],
+    "estat": "malmes",
+    "descripcio": "Cistella de ferro amb paviment de sorra",
+    "descripcio_es": "Canasta de hierro con pavimento de arena",
+    "descripcio_en": "Iron hoop with sand surface"
+  },
+  {
+    "num": 16,
+    "nom": "Can soley i Ca l'arnús",
+    "barri": "Casagemes",
+    "adreca": "Carrer de Sant Bru",
+    "coords": [
+      41.4554,
+      2.2535
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles de ferro i paviment lliscant",
+    "descripcio_es": "Canastas de hierro y pavimento resbaladizo",
+    "descripcio_en": "Iron hoops and slippery surface"
+  },
+  {
+    "num": 9,
+    "nom": "Pista Joaquim Ruyra",
+    "barri": "Gorg",
+    "adreca": "Carrer Joaquim Ruyra, s/n",
+    "coords": [
+      41.4402,
+      2.231
+    ],
+    "estat": "regular",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 12,
+    "nom": "Pista Plaça Joan Miró",
+    "barri": "Gorg",
+    "adreca": "Plaça Joan Miró",
+    "coords": [
+      41.4431,
+      2.2331
+    ],
+    "estat": "malmes",
+    "descripcio": "les cistelles sense xarxe formen part del fanals de la plaça, paviment de ciment i lineas de camp sense pintar, us recreatiu, sense poder fer partits",
+    "descripcio_es": "Las canastas sin red forman parte de las farolas de la plaza, pavimento de cemento y líneas de campo sin pintar, uso recreativo, sin poder hacer partidos.",
+    "descripcio_en": "Hoops without nets are part of the square lampposts, cement surface, unpainted court lines, recreational use only, no proper games possible."
+  },
+  {
+    "num": 19,
+    "nom": "Pista Plaça Pompeu Fabra",
+    "barri": "Centre",
+    "adreca": "Plaça de Pompeu Fabra",
+    "coords": [
+      41.4484,
+      2.2428
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles: Una cistella gran i una petita | Paviment: Ciment relliscant | Pintura: Sense pintar | Estat per jugar: No es pot jugar partits, ja que les cistelles estan en diferents posicions | Enllumenat: Llum parcial | Accessibilitat: Accessibilitat per tothom",
+    "descripcio_es": "Canastas: Una grande y una pequeña | Pavimento: Cemento resbaladizo | Pintura: Sin pintar | Estado para jugar: No se puede jugar partidos, las canastas están en posiciones distintas | Iluminación: Luz parcial | Accesibilidad: Accesibilidad para todos",
+    "descripcio_en": "Hoops: One large and one small hoop | Surface: Slippery cement | Lines: No painted lines | Playability: Games not possible, hoops are at different positions | Lighting: Partial lighting | Accessibility: Accessible for everyone"
+  },
+  {
+    "num": 31,
+    "nom": "Pista La Mora",
+    "barri": "La Mora",
+    "adreca": "La Mora, Badalona",
+    "coords": [
+      41.4312,
+      2.2376
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles ja amb xarxes, paviment amb inclinació, sense línies pintades. Es pot jugar partits tot i que cal recordar que la pista té una inclinació.",
+    "descripcio_es": "Canastas con red, pavimento con inclinación, sin líneas pintadas. Se pueden hacer partidos teniendo en cuenta la inclinación de la pista.",
+    "descripcio_en": "Hoops with nets, sloped surface, no painted lines. Games can be played but the slope must be taken into account."
+  },
+  {
+    "num": 14,
+    "nom": "Plaça d'Oriol Martorell",
+    "barri": "Coll i Pujol",
+    "adreca": "Plaça d'Oriol Martorell, Badalona",
+    "coords": [
+      41.452,
+      2.2429
+    ],
+    "estat": "malmes",
+    "descripcio": "Cistelles: Sense xarxa | Paviment: Desnivellat | Pintura: Sense",
+    "descripcio_es": "Canastas: Sin red | Pavimento: Desnivel | Pintura: Sin",
+    "descripcio_en": "Hoops: No net | Surface: Uneven | Markings: None"
+  },
+  {
+    "num": 20,
+    "nom": "Plaça Països Catalans",
+    "barri": "Progrés",
+    "adreca": "Plaça Països Catalans, Badalona",
+    "coords": [
+      41.4439,
+      2.239
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles: Metàl·liques, amb xarxes malmeses o inexistents (segons la cistella) | Paviment: Ciment, relliscós | Pintura: Pràcticament esborrades les línies | Estat per jugar: Tirs encara, perillós 1x1 o 3x3 per relliscades. Risc elevat de lesió | Enllumenat: Té llum | Accessibilitat: Accessible | Comentari: Doble pista (dues cistelles). Si s'acondicionés el paviment (per evitar les relliscades) i es pintessin les línies... Baixaríem a jugar molts dies cada setmana!!",
+    "descripcio_es": "Canastas: Metálicas, con redes deterioradas o inexistentes (según la canasta) | Pavimento: Cemento, resbaladizo | Pintura: Líneas prácticamente borradas | Estado para jugar: Tiros aún posibles, peligroso 1x1 o 3x3 por resbalones. Riesgo elevado de lesión | Iluminación: Tiene luz | Accesibilidad: Accesible | Comentario: Pista doble (dos canastas). ¡Si se acondicionara el pavimento y se pintaran las líneas, bajaríamos a jugar muchos días!",
+    "descripcio_en": "Hoops: Metal, with damaged or missing nets (depending on the hoop) | Surface: Cement, slippery | Markings: Lines almost completely worn off | Playability: Free throws still possible, dangerous for 1v1 or 3v3 due to slipping. High injury risk | Lighting: Yes | Accessibility: Accessible | Note: Double court (two hoops). If the surface were resurfaced and lines repainted, we'd be down here playing every week!!"
+  },
+  {
+    "num": 1,
+    "nom": "La Solitària",
+    "barri": "Llefià",
+    "adreca": "Carrer Azorín",
+    "coords": [
+      41.43978,
+      2.21364
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 3,
+    "nom": "Pista Plaça de Badalona",
+    "barri": "Can Claris / Raval",
+    "adreca": "Plaça de Badalona",
+    "coords": [
+      41.44542,
+      2.23402
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles: En bon estat | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Té llum | Comentari: Espai obert per fer tirs i algun partit improvisat. Jocs infantils a prop.",
+    "descripcio_es": "Canastas: En buen estado | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Tiene luz | Comentario: Espacio abierto para tirar y algún partido improvisado. Juegos infantiles cerca.",
+    "descripcio_en": "Hoops: In good condition | Surface: Well-kept cement | Markings: No lines | Lighting: Yes | Note: Open space for shooting and the odd pick-up game. Playground nearby."
+  },
+  {
+    "num": 4,
+    "nom": "Pista de la Regalèssia",
+    "barri": "Congrés",
+    "adreca": "Carrer de Tortosa",
+    "coords": [
+      41.43966,
+      2.23
+    ],
+    "estat": "malmes",
+    "descripcio": "Cistelles: De les 4, només una està bé | Paviment: Ciment | Pintura: Amb línies | Enllumenat: Té llum",
+    "descripcio_es": "Canastas: De las 4, solo una está bien | Pavimento: Cemento | Pintura: Con líneas | Iluminación: Tiene luz",
+    "descripcio_en": "Hoops: Only one of the 4 is in good shape | Surface: Cement | Markings: Lines painted | Lighting: Yes"
+  },
+  {
+    "num": 5,
+    "nom": "El Poli Verde",
+    "barri": "Llefià",
+    "adreca": "Carrer de Sant Cebrià",
+    "coords": [
+      41.44184,
+      2.21782
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 7,
+    "nom": "Pista Camí de Sistrells",
+    "barri": "Lloreda Nord",
+    "adreca": "Camí de Sistrells",
+    "coords": [
+      41.45084,
+      2.23196
+    ],
+    "estat": "malmes",
+    "descripcio": "Paviment: Degradat | Enllumenat: Sense llum | Comentari: Sembla de gestió veïnal",
+    "descripcio_es": "Pavimento: Degradado | Iluminación: Sin luz | Comentario: Parece de gestión vecinal",
+    "descripcio_en": "Surface: Degraded | Lighting: None | Note: Appears to be run by local residents"
+  },
+  {
+    "num": 8,
+    "nom": "Pista Carrer de la Tècnica",
+    "barri": "Bufalà",
+    "adreca": "Carrer de la Tècnica",
+    "coords": [
+      41.45962,
+      2.23624
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 11,
+    "nom": "Pista Carrer de Bac de Roda",
+    "barri": "la Morera",
+    "adreca": "Carrer de Bac de Roda",
+    "coords": [
+      41.46073,
+      2.24577
+    ],
+    "estat": "malmes",
+    "descripcio": "Cistelles: Una, pràcticament inservible i a tocar del sostre | Paviment: Ciment, en baixada | Pintura: Sense línies | Enllumenat: Sense llum",
+    "descripcio_es": "Canastas: Una, prácticamente inservible y pegada al techo | Pavimento: Cemento, en bajada | Pintura: Sin líneas | Iluminación: Sin luz",
+    "descripcio_en": "Hoops: One, practically unusable and right under the roof | Surface: Cement, sloping | Markings: No lines | Lighting: None"
+  },
+  {
+    "num": 15,
+    "nom": "Pista Carrer de Joan XXIII",
+    "barri": "Artigues",
+    "adreca": "Carrer de Joan XXIII",
+    "coords": [
+      41.43284,
+      2.21838
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 17,
+    "nom": "Pista Carrer de Pere Martell",
+    "barri": "Sistrells",
+    "adreca": "Carrer de Pere Martell",
+    "coords": [
+      41.44721,
+      2.22665
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 18,
+    "nom": "Pista Carrer de Ramiro de Maeztu",
+    "barri": "Llefià",
+    "adreca": "Carrer de Ramiro de Maeztu",
+    "coords": [
+      41.43857,
+      2.21596
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles: Dues | Paviment: Ciment cuidat | Enllumenat: Sense llum per fer esport",
+    "descripcio_es": "Canastas: Dos | Pavimento: Cemento cuidado | Iluminación: Sin luz para hacer deporte",
+    "descripcio_en": "Hoops: Two | Surface: Well-kept cement | Lighting: Not enough for sport"
+  },
+  {
+    "num": 21,
+    "nom": "Pista Camí de Sant Jeroni de la Murtra",
+    "barri": "Montigalà",
+    "adreca": "Camí de Sant Jeroni de la Murtra",
+    "coords": [
+      41.45714,
+      2.23391
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 22,
+    "nom": "Pista Parc de les Muntanyes",
+    "barri": "Montigalà",
+    "adreca": "Carrer dels Apenins, parc de les Muntanyes",
+    "coords": [
+      41.45397,
+      2.22576
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles: Dues de ferro | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum",
+    "descripcio_es": "Canastas: Dos de hierro | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz",
+    "descripcio_en": "Hoops: Two iron hoops | Surface: Well-kept cement | Markings: No lines | Lighting: None"
+  },
+  {
+    "num": 23,
+    "nom": "Pista Carrer de Nelson Mandela",
+    "barri": "Bufalà",
+    "adreca": "Carrer de Nelson Mandela",
+    "coords": [
+      41.45551,
+      2.23912
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles: Dues | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum | Comentari: Ideal per jugar a 21, però no per fer un partit.",
+    "descripcio_es": "Canastas: Dos | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz | Comentario: Ideal para jugar a 21, pero no para un partido.",
+    "descripcio_en": "Hoops: Two | Surface: Well-kept cement | Markings: No lines | Lighting: None | Note: Great for a game of 21, not for a full game."
+  },
+  {
+    "num": 24,
+    "nom": "Pista Carrer de Murillo",
+    "barri": "Manresà",
+    "adreca": "Carrer de Murillo",
+    "coords": [
+      41.46226,
+      2.26726
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "Pista de sorra",
+    "descripcio_es": "Pista de arena",
+    "descripcio_en": "Sand court"
+  },
+  {
+    "num": 26,
+    "nom": "Pista Plaça de Mateu Rotger",
+    "barri": "Casagemas",
+    "adreca": "Riera de Canyadó, plaça de Mateu Rotger",
+    "coords": [
+      41.45479,
+      2.25856
+    ],
+    "estat": "malmes",
+    "descripcio": "Cistelles: De ferro, amb xarxes de goma, una al costat de l'altra | Paviment: Asfalt desnivellat, en baixada cap al mar | Pintura: Sense línies | Enllumenat: Té llum",
+    "descripcio_es": "Canastas: De hierro, con redes de goma, una al lado de la otra | Pavimento: Asfalto con desnivel, en bajada hacia el mar | Pintura: Sin líneas | Iluminación: Tiene luz",
+    "descripcio_en": "Hoops: Iron, with rubber nets, side by side | Surface: Uneven asphalt, sloping towards the sea | Markings: No lines | Lighting: Yes"
+  },
+  {
+    "num": 27,
+    "nom": "Pista Carrer de Manuel Moreno Mauricio",
+    "barri": "Montigalà",
+    "adreca": "Carrer de Manuel Moreno Mauricio",
+    "coords": [
+      41.45591,
+      2.22541
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 28,
+    "nom": "Pista Passatge del Riu Mogent",
+    "barri": "Nova Lloreda Sud",
+    "adreca": "Passatge del Riu Mogent",
+    "coords": [
+      41.44952,
+      2.2336
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 29,
+    "nom": "Pista Plaça de Torrents i Lladó",
+    "barri": "Bufalà",
+    "adreca": "Carrer de Martí Pujol, plaça de Torrents i Lladó",
+    "coords": [
+      41.4616,
+      2.23911
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 30,
+    "nom": "Pista Plaça de Valentí Almirall",
+    "barri": "Nova Lloreda Nord",
+    "adreca": "Avinguda de Catalunya, plaça de Valentí Almirall",
+    "coords": [
+      41.4525,
+      2.23089
+    ],
+    "estat": "bon",
+    "descripcio": "Cistelles: Dues | Paviment: Ciment cuidat | Pintura: Amb línies | Enllumenat: Sense llum",
+    "descripcio_es": "Canastas: Dos | Pavimento: Cemento cuidado | Pintura: Con líneas | Iluminación: Sin luz",
+    "descripcio_en": "Hoops: Two | Surface: Well-kept cement | Markings: Lines painted | Lighting: None"
+  },
+  {
+    "num": 32,
+    "nom": "Pista Carrer d'Alfons XII (Sant Roc)",
+    "barri": "Sant Roc",
+    "adreca": "Carrer d'Alfons XII",
+    "coords": [
+      41.43773,
+      2.23219
+    ],
+    "estat": "desapareguda",
+    "descripcio": "La pista ja no existeix.",
+    "descripcio_es": "La pista ya no existe.",
+    "descripcio_en": "The court no longer exists."
+  },
+  {
+    "num": 33,
+    "nom": "Pista Plaça de les Brigades Internacionals",
+    "barri": "Artigues / Llefià Baix",
+    "adreca": "Carrer d'Aribau, plaça de les Brigades Internacionals",
+    "coords": [
+      41.4357,
+      2.2197
+    ],
+    "estat": "malmes",
+    "descripcio": "Cistelles: A diferents altures, amb xarxes i taulers de metall | Paviment: Asfalt inclinat | Pintura: Sense línia de tres | Enllumenat: Té llum",
+    "descripcio_es": "Canastas: A distintas alturas, con redes y tableros de metal | Pavimento: Asfalto inclinado | Pintura: Sin línea de tres | Iluminación: Tiene luz",
+    "descripcio_en": "Hoops: At different heights, with metal nets and backboards | Surface: Sloping asphalt | Markings: No three-point line | Lighting: Yes"
+  },
+  {
+    "num": 34,
+    "nom": "Pista Carrer de París",
+    "barri": "Llefià",
+    "adreca": "Carrer de París",
+    "coords": [
+      41.43592,
+      2.21731
+    ],
+    "estat": "desapareguda",
+    "descripcio": "La pista ja no existeix.",
+    "descripcio_es": "La pista ya no existe.",
+    "descripcio_en": "The court no longer exists."
+  },
+  {
+    "num": 35,
+    "nom": "Pista Carrer del Doctor Bassols",
+    "barri": "Llefià",
+    "adreca": "Carrer del Doctor Bassols",
+    "coords": [
+      41.43943,
+      2.22266
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 36,
+    "nom": "Pista Passatge dels Encants",
+    "barri": "la Salut",
+    "adreca": "Passatge dels Encants",
+    "coords": [
+      41.44348,
+      2.22779
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 37,
+    "nom": "Pista Carrer de Vélez Rubio",
+    "barri": "Sant Roc",
+    "adreca": "Carrer de Vélez Rubio",
+    "coords": [
+      41.43558,
+      2.22756
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 38,
+    "nom": "Pista Carrer d'Itàlia",
+    "barri": "Puigfred",
+    "adreca": "Carrer d'Itàlia / carrer de Mònaco",
+    "coords": [
+      41.45351,
+      2.22065
+    ],
+    "estat": "regular",
+    "descripcio": "Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum",
+    "descripcio_es": "Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz",
+    "descripcio_en": "Surface: Well-kept cement | Markings: No lines | Lighting: None"
+  },
+  {
+    "num": 39,
+    "nom": "Pista Carrer de Pablo Picasso",
+    "barri": "Sistrells",
+    "adreca": "Carrer de Pablo Picasso",
+    "coords": [
+      41.45022,
+      2.22673
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "Pista de sorra",
+    "descripcio_es": "Pista de arena",
+    "descripcio_en": "Sand court"
+  },
+  {
+    "num": 40,
+    "nom": "Pista Plaça dels Músics",
+    "barri": "la Pau",
+    "adreca": "Carrer de Liszt, plaça dels Músics",
+    "coords": [
+      41.45145,
+      2.22197
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 41,
+    "nom": "Pista Parc del Gran Sol",
+    "barri": "Llefià",
+    "adreca": "Avinguda d'Àfrica, parc del Gran Sol",
+    "coords": [
+      41.44304,
+      2.22004
+    ],
+    "estat": "sense_valorar",
+    "descripcio": "",
+    "descripcio_es": "",
+    "descripcio_en": ""
+  },
+  {
+    "num": 42,
+    "nom": "Pista Carrer del Pintor Modest Urgell",
+    "barri": "Bonavista",
+    "adreca": "Carrer del Pintor Modest Urgell",
+    "coords": [
+      41.46653,
+      2.24013
+    ],
+    "estat": "regular",
+    "descripcio": "Cistelles: Una sola | Paviment: Ciment cuidat | Pintura: Sense línies | Enllumenat: Sense llum | Comentari: No és una pista de bàsquet sencera; ideal per jugar a 21.",
+    "descripcio_es": "Canastas: Una sola | Pavimento: Cemento cuidado | Pintura: Sin líneas | Iluminación: Sin luz | Comentario: No es una pista de baloncesto completa; ideal para jugar a 21.",
+    "descripcio_en": "Hoops: Just one | Surface: Well-kept cement | Markings: No lines | Lighting: None | Note: Not a full basketball court; great for a game of 21."
+  }
+]
